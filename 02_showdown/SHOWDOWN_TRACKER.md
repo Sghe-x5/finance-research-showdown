@@ -131,3 +131,26 @@ clear reproducible numerical recovery or treatment classification. Full
 evidence, the external audit and blockers are recorded in
 `docs/research/DAY2_RESULTS.md` and
 `docs/research/05_DAY2_EXTERNAL_AUDIT.md`.
+
+---
+
+# Day 3 measurement repair — pre-reveal, 2026-08-14
+
+No new frozen nowcast sample, no reveal and no result tag.
+
+| item | status |
+|---|---|
+| SEC history | 8 acceptance archives, 2024Q1–2025Q4 |
+| Aggregated economic facilities | 151,284 |
+| Aggregated candidate pairs | 25,628 |
+| Blind match sample | 60 unlabeled; seen development borrowers excluded before sampling |
+| Alias audit | 30 ARCC borrowers, 80 review rows, unlabeled |
+| Untouched movement events | 2025Q1: 5; 2025Q2: 5; total 10 < guard 20 |
+| Reveal permission | **No — expand fund/reporting-order universe first** |
+| Old Japan Day 3 freeze | `invalid_window_design`, retained |
+| Valid Japan universe | 2024-09-01…2026-05-15; 4,448 raw / 3,999 clean |
+| Valid Japan freeze | 20 IDs; hash `3a510bef6cfe937ac6eb192fef87ff311ac85826927fdd30053a9586f3cdc5a6` |
+| Japan archive-only result | 0/20 complete; TDnet 20×404, Wayback 0 snapshots |
+| Japan gate verdict | Not evaluated; J-Quants V2 pending local API key |
+
+Full pre-reveal evidence: `docs/research/DAY3_MEASUREMENT_REPAIR.md`.

@@ -1,0 +1,11 @@
+{
+  "complete_numeric_recoveries_without_jquants": 0,
+  "complete_numeric_recovery_rate_without_jquants": 0.0,
+  "gate_threshold": "at least 12/20 only after official/issuer, J-Quants and Wayback stages",
+  "gate_verdict": "not_evaluated",
+  "jquants_requests_made": 0,
+  "no_403_bypass": true,
+  "sample_size": 20,
+  "status": "intermediate_awaiting_jquants_api_key",
+  "wayback_snapshots_available_unparsed": 0
+}

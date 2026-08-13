@@ -151,12 +151,16 @@ def test_japan_valid_window_month_chunks_are_exact_and_bounded():
 def test_day3_freezes_and_power_guard_are_explicit():
     legacy = json.loads(Path("data/day3/japan_gate_meta.json").read_text(encoding="utf-8"))
     valid = json.loads(Path("data/day3/japan_valid_window_meta.json").read_text(encoding="utf-8"))
+    japan_summary = json.loads(Path("data/day3/japan_valid_window_summary.json").read_text(encoding="utf-8"))
     movement = json.loads(Path("data/day3/movement_power_guard.json").read_text(encoding="utf-8"))
     blind = Path("data/day3/blind_facility_pairs.csv").read_text(encoding="utf-8").lower()
     assert legacy["design_status"] == "invalid_window_design"
     assert valid["design_status"] == "valid_window_frozen"
     assert valid["sample_size"] == 20
     assert valid["outcomes_used_for_selection"] == []
+    assert japan_summary["status"] == "intermediate_awaiting_jquants_api_key"
+    assert japan_summary["jquants_requests_made"] == 0
+    assert japan_summary["gate_verdict"] == "not_evaluated"
     assert movement["untouched_movement_source_facility_events_total"] == 10
     assert movement["power_guard_passed_for_planning"] is False
     assert all(name not in blind for name in SEEN_DEVELOPMENT_BORROWERS)

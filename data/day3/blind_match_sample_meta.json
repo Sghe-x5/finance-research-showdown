@@ -1,4 +1,12 @@
 {
+  "design_status": "superseded_seen_development_borrowers",
+  "do_not_label": true,
+  "superseded_by": "data/day3/blind_facility_pairs.csv",
+  "seen_borrowers_found": [
+    "anaplan",
+    "petvet care centers",
+    "pye barker"
+  ],
   "blind_file_sha256": "cc9e3461e6ae7eae59e3dd2e1f97cd2d1bf59dfbe9c22771c740d519a1909e1f",
   "blind_ids_sha256": "517a01531ebc488a0d2ee4f78e62b4a8a5879e181329bf9a5b8f9817c29f27fb",
   "forbidden_columns_absent": [

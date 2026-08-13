@@ -1,5 +1,6 @@
 {
-  "archive_attempts_started": false,
+  "archive_attempts_complete": true,
+  "archive_attempts_started": true,
   "clean_numeric_revision_intent_universe_count": 3999,
   "clean_universe_ids_sha256": "f31ece6ecd40e4f22d45789a9d62daafa5e190d17d73a020d260da4aacd51c6e",
   "design_status": "valid_window_frozen",
