@@ -1,6 +1,6 @@
 {
-  "candidate_pair_count": 25628,
-  "input_file_sha256": "d6809512d190aec70574eabda308bc1875d03204ff481e29f3e26e7e8f3a9942",
+  "candidate_pair_count": 40340,
+  "input_file_sha256": "61459c462ab77a342b0306ad9255f1f17aea52a0473706e0789ee936d0cea2ff",
   "input_unit": "BDC x observation_date x borrower x economic_facility",
   "note": "Candidate construction uses aggregated economic facilities and excludes principal, cost and fair-value outcomes.",
   "outcome_columns_used": [],
@@ -15,10 +15,10 @@
     "2025-09-30"
   ],
   "prediction_counts": {
-    "same_borrower_different_facility:high": 5166,
-    "same_borrower_different_facility:medium": 1885,
-    "same_facility:high": 5114,
-    "uncertain:low": 13084,
-    "unrelated:high": 379
+    "same_borrower_different_facility:high": 6886,
+    "same_borrower_different_facility:medium": 2615,
+    "same_facility:high": 6118,
+    "uncertain:low": 23928,
+    "unrelated:high": 793
   }
 }

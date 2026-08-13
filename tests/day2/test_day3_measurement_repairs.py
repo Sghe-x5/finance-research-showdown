@@ -1,4 +1,5 @@
 import json
+import importlib.util
 from pathlib import Path
 
 import pytest
@@ -6,11 +7,18 @@ import run_japan_valid_window_gate as japan_gate
 
 from aggregate_facilities import aggregate, validate
 from build_alias_recall_audit import build as build_alias_audit
-from evaluate_nowcasts import verify_frozen_evaluator
 from export_blind_match_benchmark import FORBIDDEN_SOURCE_FIELDS, SEEN_DEVELOPMENT_BORROWERS, export
 from run_japan_valid_window_gate import (
     END, START, monthly_periods, reconstruct_forecast_pair,
 )
+
+
+_DAY3_EVALUATOR_SPEC = importlib.util.spec_from_file_location(
+    "day3_evaluate_nowcasts", Path("scripts/day3/evaluate_nowcasts.py")
+)
+_DAY3_EVALUATOR = importlib.util.module_from_spec(_DAY3_EVALUATOR_SPEC)
+_DAY3_EVALUATOR_SPEC.loader.exec_module(_DAY3_EVALUATOR)
+verify_frozen_evaluator = _DAY3_EVALUATOR.verify_frozen_evaluator
 
 
 def raw_facility(**overrides):
@@ -53,7 +61,7 @@ def candidate(pair_id):
 
 def test_aggregation_sums_lots_but_separates_economic_facilities():
     lot_b = raw_facility(
-        facility_row_id="row-b", investment_identifier="Borrower First Lien Term Loan tranche B",
+        facility_row_id="row-b", investment_identifier="Borrower First Lien Term Loan",
         principal="50", cost="49", fair_value="48", raw_provenance="2025q4:2",
     )
     revolver = raw_facility(
@@ -74,6 +82,35 @@ def test_aggregation_sums_lots_but_separates_economic_facilities():
     assert term["source_row_count"] == 2
     assert {row["funded_status"] for row in facilities if row["facility_type"] == "revolver"} == {"funded", "unfunded"}
     validate(facilities)
+
+
+def test_aggregation_uses_exact_spread_maturity_and_tranche_within_bdc():
+    base = raw_facility()
+    close_spread = raw_facility(
+        facility_row_id="row-spread", spread="0.052", raw_provenance="2025q4:2",
+    )
+    same_month_maturity = raw_facility(
+        facility_row_id="row-maturity", maturity="2028-10-15", raw_provenance="2025q4:3",
+    )
+    other_tranche = raw_facility(
+        facility_row_id="row-tranche", investment_identifier="Borrower First Lien Term Loan B",
+        raw_provenance="2025q4:4",
+    )
+    facilities, _ = aggregate([base, close_spread, same_month_maturity, other_tranche])
+    assert len(facilities) == 4
+
+
+def test_aggregation_unknown_tranche_is_not_merged_aggressively():
+    left = raw_facility(
+        facility_row_id="row-left", investment_identifier="Borrower LLC", facility_type="other_debt",
+        lien="unknown", reference_rate="UNKNOWN", spread="", maturity="", raw_provenance="2025q4:1",
+    )
+    right = raw_facility(
+        facility_row_id="row-right", investment_identifier="Borrower LLC", facility_type="other_debt",
+        lien="unknown", reference_rate="UNKNOWN", spread="", maturity="", raw_provenance="2025q4:2",
+    )
+    facilities, _ = aggregate([left, right])
+    assert len(facilities) == 2
 
 
 def test_aggregation_drops_unspecified_borrower_total():
@@ -164,11 +201,46 @@ def test_day3_freezes_and_power_guard_are_explicit():
     assert valid["outcomes_used_for_selection"] == []
     assert japan_summary["status_code"] == "pending_jquants_execution"
     assert japan_summary["jquants_requests_made"] == 0
+    assert japan_summary["historical_tdnet_recovered"] == 0
+    assert japan_summary["wayback_recovered"] == 0
+    assert japan_summary["issuer_ir_status"] == "not_attempted"
     assert japan_summary["gate_verdict"] == "not_evaluated"
     assert movement["untouched_movement_source_facility_events_total"] == 6
     assert movement["power_guard_passed_for_planning"] is False
     excluded_aliases = {alias for aliases in SEEN_DEVELOPMENT_BORROWERS.values() for alias in aliases}
     assert all(name not in blind for name in excluded_aliases)
+
+
+def test_corrected_blind_files_hide_strata_predictions_and_similarity_scores():
+    import csv
+
+    facility_path = Path("data/day3/blind_facility_pairs_v2.csv")
+    with facility_path.open(newline="", encoding="utf-8") as handle:
+        facility_rows = list(csv.DictReader(handle))
+    assert len(facility_rows) == 120
+    facility_headers = {name.lower() for name in facility_rows[0]}
+    assert not any(
+        token in header
+        for header in facility_headers
+        for token in ("hidden", "predicted", "confidence", "evidence", "stratum")
+    )
+    assert all(not row["manual_label"] for row in facility_rows)
+
+    facility_meta = json.loads(Path("data/day3/blind_facility_pairs_v2_meta.json").read_text(encoding="utf-8"))
+    assert facility_meta["aggregate_hidden_stratum_counts"] == {
+        "hard_same_borrower_different_facility": 30,
+        "predicted_same_facility_high": 60,
+        "uncertain_alias_distractor": 30,
+    }
+    assert facility_meta["private_key_tracked_by_git"] is False
+
+    with Path("data/day3/blind_alias_candidates.csv").open(newline="", encoding="utf-8") as handle:
+        alias_rows = list(csv.DictReader(handle))
+    forbidden = ("exact_borrower_block", "substring", "sequence_similarity", "token_jaccard", "shared")
+    assert not any(token in header.lower() for header in alias_rows[0] for token in forbidden)
+    alias_meta = json.loads(Path("data/day3/blind_alias_candidates_meta.json").read_text(encoding="utf-8"))
+    assert alias_meta["primary_audit_debt_facilities_only"] is True
+    assert alias_meta["sampled_borrower_count"] == 30
 
 
 def test_japan_full_eligible_universe_matches_frozen_hash():

@@ -10,8 +10,10 @@ Fixed seed: `20260813`
 
 This branch repairs measurement and freezes review artifacts. It does **not**
 create a new nowcast sample, reveal target outcomes, finalize preregistration
-v3, or create a results tag. The Day 2 frozen sample remains byte-identical and
-is retained as a failed pilot.
+v3, or create a results tag. The complete `data/day2/` and `scripts/day2/`
+trees are restored exactly from tag `showdown-day2-mechanism-2026-08-13`;
+`git diff` against the tag is empty for both paths. The Day 2 frozen sample is
+retained as a failed pilot.
 
 ## ShadowNAV
 
@@ -30,18 +32,28 @@ interpretation error, not a lost eligible-row bug.
 | SEC acceptance archives | 2024Q1–2025Q4 (8) |
 | Raw SOI rows in 19-fund universe | 268,080 |
 | Normalized rows | 201,164 |
-| Aggregated economic-facility rows | 151,284 |
-| Current-period aggregated facilities | 79,200 |
-| Borrower-blocked candidate pairs | 25,628 |
+| Aggregated economic-facility rows | 188,999 |
+| Current-period aggregated facilities | 99,366 |
+| Borrower-blocked candidate pairs | 40,340 |
 
 Raw ZIPs and normalized/aggregated caches remain outside Git. Git contains the
 official URLs, retrieval timestamps, sizes, SHA-256 values, parser/aggregation
 metadata and deterministic code.
 
-The economic-facility unit is BDC × position quarter × normalized borrower ×
-debt/equity × facility type × lien × currency × reference-rate family × 25 bp
-spread bucket × maturity month × funded status. Lots within that unit are
-summed; funded/unfunded, currencies, revolvers and term loans remain separate.
+The corrected within-BDC `economic_facility_v2` unit is BDC accession ×
+position date × normalized borrower × debt/equity × facility type × lien ×
+currency × reference-rate family × **exact spread × exact maturity × canonical
+tranche text** × funded status. Cross-lender 25 bp and maturity tolerances are
+used only later in matching. Borrower-only or blank tranche text receives a
+row-specific key so `UNKNOWN` fields cannot merge rows aggressively.
+
+Before changing the key, two deterministic aggregation-review files were
+locked. The multi-lot universe contained 22,560 `economic_facility_v1` groups;
+100 were sampled and 99/100 are mechanically flagged as groups that v2 would
+split. This is a triage signal, not a human error rate: manual labels remain
+blank. A separate 100-row sample was drawn from 9,834 rows removed as issuer
+totals; its manual keep/drop labels also remain blank. The review files retain
+raw row identifiers and proposed grouping/split evidence.
 
 ### Matching benchmark
 
@@ -49,21 +61,35 @@ The Day 2 100%/100% statistic is invalid as an independent benchmark because
 the adjudication defaulted manual labels to predicted labels. It is now marked
 as an upper bound by construction.
 
-The replacement blind file contains 60 unlabeled pairs. Before sampling, 1,549
-pairs involving already viewed development borrowers were excluded in every
-period: PetVet Care Centers, MRI Software, Anaplan, Viant Medical, Hyland
-Software, Fortis Solutions, PPV Intermediate, Ping Identity, Pye-Barker,
-Auctane and Medallia. Predicted label, confidence, evidence and match-feature
-columns are absent.
+The earlier 60-row simple-random file is retained but marked
+`superseded_wrong_sampling_design`; it cannot estimate high-confidence
+same-facility precision. The corrected replacement contains 120 unlabeled
+pairs sampled internally as 60 predicted `same_facility/high`, 30 hard
+same-borrower/different-facility and 30 uncertain/alias/distractor pairs. Those
+strata, model decisions and source candidate IDs are present only in the
+ignored local private key. Left/right order and final row order are randomized.
 
-- blind ID hash: `c03a68867d9660d13d4c06387b4a7765b38b349069094ca433481b16fc121518`;
-- blind file hash: `3e85fbbdaa5a02fddac4edf570c2c30a78257312d7624810accdbadc499ac730`;
-- labels entered: **0/60**;
+All eleven previously viewed borrowers are excluded across every period:
+PetVet Care Centers, MRI Software, Anaplan, Viant Medical, Hyland Software,
+Fortis Solutions, PPV Intermediate, Ping Identity, Pye-Barker, Auctane and
+Medallia. Predicted labels, confidence and evidence are absent from the blind
+CSV.
+
+- candidate file hash: `47ed2aa00f90f5a4d5545d05dc185da4bdf8be3c45a365b07528a417232017cc`;
+- blind file hash: `98876afb05fc9d9f1ff0fefad93f461762d4e297f3454d9c64fc8e242ad47d4f`;
+- private key hash: `a714fe614130444ccc8b4fb1e1557eb4f5f0184d047f3dd3ada75a106886fb8a`;
+- classifier source commit: `1b51413aeb7748745294dac94343cae1ae864d94`;
+- labels entered: **0/120**;
 - measured precision/recall: **pending blind human labels**.
 
-The alias-recall review separately fixes 30 random ARCC borrowers and 80
-review rows against OBDC/NMFC. It contains no target outcomes and no manual
-labels yet.
+The previous alias CSV is also superseded. The corrected primary alias-recall
+review contains 30 random debt-facility ARCC borrowers and 128 shuffled OBDC/
+NMFC candidate rows, excluding the eleven viewed borrowers. Exact-block,
+substring, sequence, token-Jaccard, shared-token and all other similarity
+scores appear only in the ignored private key. Blind file hash:
+`d37f5daeb4eb6cee9e4ddb2e7690978a6ac899c30305b4fda268bb7424a8b64e`;
+private key hash:
+`7edab165ea1d8de1617bdc92483b4c16bafc173fb1544075f16caddbad41aacc`.
 
 ### Movement power guard
 
@@ -108,7 +134,7 @@ cutoffs:
 | Raw earnings-forecast-revision universe | 4,448 |
 | Clean numeric-revision-intent universe | 3,999 |
 | Excluded dirty titles | 449 |
-| Filter | `業績予想の修正`; exclude dividend, withdrawal/cancellation, undetermined and actual-vs-forecast-difference patterns |
+| Event class/filter | forecast-revision titles containing `業績予想の修正`, excluding any dividend, withdrawal/cancellation, undetermined or actual-difference wording |
 | Fixed sample | 20, seed `20260813` |
 | Sample ID hash | `3a510bef6cfe937ac6eb192fef87ff311ac85826927fdd30053a9586f3cdc5a6` |
 | Post-April-2025 sample rows | 12/20 |
@@ -132,7 +158,8 @@ The freeze was committed before archive attempts. Intermediate results:
 |---|---:|
 | Historical TDnet document | 20/20 HTTP 404 |
 | Wayback availability | 0/20 snapshots |
-| Complete numeric recovery without J-Quants | 0/20 |
+| Issuer IR | not attempted |
+| Complete numeric recovery so far | 0/20 |
 | J-Quants V2 `/v2/fins/summary` | 0 requests; pending local `JQUANTS_API_KEY` |
 | Gate verdict | **not evaluated** |
 
@@ -154,8 +181,8 @@ Record IDs, timestamps, units, basis, rule and confidence are retained. Missing
 unambiguous history is `ambiguous_old_forecast`; when the fiscal-year start lies
 before the fixed available-from date it is `prior_outside_window`.
 
-Current status: **Japan gate pending J-Quants execution; 0/20 recovered through
-issuer/archives only.** No PASS/FAIL/demotion verdict is permitted until
+Current status: **Japan gate pending J-Quants execution; TDnet 0/20, Wayback
+0/20, issuer IR not attempted.** No PASS/FAIL/demotion verdict is permitted until
 J-Quants, issuer IR and reproducible archive stages are all complete. Outputs
 are marked `private research only` pending a distribution-license review. No
 403 was bypassed.

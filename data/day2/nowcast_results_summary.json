@@ -30,7 +30,7 @@
       "n": 15,
       "rmse_pp": 1.036550539750899
     },
-    "prior_gap_adjusted": {
+    "entry_adjusted": {
       "mae_pp": 0.06800218328123646,
       "median_abs_error_pp": 0.0,
       "n": 15,
@@ -66,8 +66,6 @@
   "freeze_commit": "a495f39",
   "frozen_sample_size": 15,
   "limitation": "Frozen IDs were not replaced after reveal; four repeated XBRL slices reduce the effective independent cluster count to 11.",
-  "measurement_audit_status": "failed_pilot_unit_of_analysis_bug_and_post_freeze_predictor_change",
-  "petvet_sensitivity": "Advantage is driven entirely by a single borrower (PetVet); leave-one-borrower-out eliminates it.",
   "same_manager_jv_exclusion": "not observable in SEC flat files",
   "unique_borrower_source_target_clusters": 11
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Aggregate XBRL investment slices to one BDC economic facility per quarter."""
+"""Aggregate exact within-BDC XBRL lots to economic_facility_v2."""
 
 import argparse
 import csv
@@ -7,7 +7,6 @@ import json
 import math
 import sys
 from collections import Counter, defaultdict
-from datetime import date
 from pathlib import Path
 
 DAY2 = Path(__file__).resolve().parents[1] / "day2"
@@ -27,9 +26,10 @@ FIELDS = [
     "facility_row_id", "economic_facility_id", "archive_id", "adsh", "accepted",
     "cik", "ticker", "filer_name", "form", "filed", "period_end",
     "observation_date", "is_current_period", "investment_identifier",
-    "borrower_raw", "borrower_norm", "debt_equity", "facility_type", "lien",
+    "borrower_raw", "borrower_norm", "canonical_tranche_text", "debt_equity", "facility_type", "lien",
     "currency", "reference_rate", "spread", "spread_bucket_25bp",
-    "total_interest_rate", "pik_rate", "maturity", "maturity_month",
+    "within_bdc_spread_key", "total_interest_rate", "pik_rate", "maturity", "maturity_month",
+    "within_bdc_maturity_key",
     "funded_status", "acquisition_date", "principal", "cost", "fair_value",
     "mark_fv_to_principal", "non_accrual", "restructuring_flag",
     "issuer_affiliation", "lot_count", "source_row_count", "source_row_ids_sha256",
@@ -56,11 +56,29 @@ def spread_bucket(value, width=0.0025):
 
 
 def maturity_month(value):
-    try:
-        parsed = date.fromisoformat((value or "")[:10])
-    except ValueError:
-        return ""
-    return f"{parsed.year:04d}-{parsed.month:02d}"
+    value = (value or "")[:10]
+    return value[:7] if len(value) == 10 else ""
+
+
+def exact_number(value):
+    parsed = decimal_or_none(value)
+    return "UNKNOWN" if parsed is None else f"{parsed:.12f}".rstrip("0").rstrip(".")
+
+
+def canonical_tranche_text(row):
+    """Keep exact tranche wording; remove borrower tokens but not tranche numbers."""
+    from common import normalize_text
+
+    identifier = normalize_text(row.get("investment_identifier", ""))
+    borrower_tokens = set(normalize_text(row.get("borrower_norm", "")).split())
+    legal_suffixes = {"llc", "inc", "corp", "corporation", "company", "co", "lp", "ltd"}
+    tranche_tokens = [
+        token for token in identifier.split()
+        if token not in borrower_tokens and token not in legal_suffixes
+    ]
+    tranche = " ".join(tranche_tokens).strip()
+    # Borrower-only/blank identifiers with UNKNOWN attributes are never merged.
+    return tranche or f"ROW:{row['facility_row_id']}"
 
 
 def weighted_average(rows, field):
@@ -81,8 +99,9 @@ def facility_key(row):
     return (
         row["adsh"], row["observation_date"], row["borrower_norm"],
         row["debt_equity"], row["facility_type"], row["lien"], row["currency"],
-        row["reference_rate"], spread_bucket(row["spread"]),
-        maturity_month(row["maturity"]), row["funded_status"],
+        row["reference_rate"], exact_number(row["spread"]),
+        row.get("maturity") or "UNKNOWN", row["funded_status"],
+        canonical_tranche_text(row),
     )
 
 
@@ -156,6 +175,7 @@ def aggregate_group(rows):
         "investment_identifier": " | ".join(identifiers),
         "borrower_raw": " | ".join(raw_names),
         "borrower_norm": first["borrower_norm"],
+        "canonical_tranche_text": canonical_tranche_text(first),
         "debt_equity": first["debt_equity"],
         "facility_type": first["facility_type"],
         "lien": first["lien"],
@@ -163,10 +183,12 @@ def aggregate_group(rows):
         "reference_rate": first["reference_rate"],
         "spread": fmt_number(weighted_average(rows, "spread")),
         "spread_bucket_25bp": spread_bucket(first["spread"]),
+        "within_bdc_spread_key": exact_number(first["spread"]),
         "total_interest_rate": fmt_number(weighted_average(rows, "total_interest_rate")),
         "pik_rate": fmt_number(weighted_average(rows, "pik_rate")),
         "maturity": min((row["maturity"] for row in rows if row["maturity"]), default=""),
         "maturity_month": maturity_month(first["maturity"]),
+        "within_bdc_maturity_key": first["maturity"] or "UNKNOWN",
         "funded_status": first["funded_status"],
         "acquisition_date": min((row["acquisition_date"] for row in rows if row["acquisition_date"]), default=""),
         "principal": fmt_number(principal) if has_principal else "",
@@ -181,7 +203,7 @@ def aggregate_group(rows):
         "source_row_ids_sha256": sha256_bytes(canonical_json(source_ids).encode("utf-8")),
         "source_row_ids_json": canonical_json(source_ids),
         "raw_provenance_json": canonical_json(provenance),
-        "aggregation_rule_version": "economic_facility_v1",
+        "aggregation_rule_version": "economic_facility_v2",
     }
 
 
@@ -231,7 +253,7 @@ def main():
     validate(facilities)
     write_csv(args.output, facilities, FIELDS)
     metadata = {
-        "aggregation_rule_version": "economic_facility_v1",
+        "aggregation_rule_version": "economic_facility_v2",
         "input_sha256": sha256_file(args.input),
         "output_sha256": sha256_file(args.output),
         "normalized_input_rows": len(rows),
@@ -244,8 +266,14 @@ def main():
         "grouping": [
             "BDC accession", "observation date", "normalized borrower", "debt/equity",
             "facility type", "lien", "currency", "reference-rate family",
-            "25bp spread bucket", "maturity month", "funded status",
+            "exact spread", "exact maturity", "funded status", "canonical tranche text",
         ],
+        "cross_lender_tolerances_not_used_within_bdc": {
+            "spread_25bp": True,
+            "maturity_45_days": True,
+            "maturity_month": True
+        },
+        "unknown_guard": "borrower-only or blank canonical tranche uses the source row ID and cannot merge",
     }
     write_json(args.metadata, metadata)
     print(json.dumps(metadata, indent=2, sort_keys=True))

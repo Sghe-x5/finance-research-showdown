@@ -1,0 +1,16 @@
+{
+  "audit_target": "economic_facility_v1 before key correction",
+  "conclusion": "review files locked; automated v2-key split diagnostic recorded; human review labels pending",
+  "issuer_total_drop_universe_count": 9834,
+  "issuer_total_sample_file_sha256": "8800e7c06791496c85f3dd18aa99883631ec6d4c06883a68e0c9614b58dedb8d",
+  "issuer_total_sample_size": 100,
+  "manual_issuer_total_reviews_complete": 0,
+  "manual_multilot_reviews_complete": 0,
+  "multilot_sample_file_sha256": "d4ef6b3679f79f074454283ca2f0f5612e9df534de6bbc7900ae36cec317de6c",
+  "multilot_sample_size": 100,
+  "multilot_universe_count": 22560,
+  "normalized_input_sha256": "d5133ef097fafbccde2ebac7a886280c9615f9099cec8ce51580951f1df33082",
+  "sampled_v1_groups_split_by_proposed_v2": 99,
+  "seed": 20260813,
+  "v1_aggregate_sha256": "d6809512d190aec70574eabda308bc1875d03204ff481e29f3e26e7e8f3a9942"
+}

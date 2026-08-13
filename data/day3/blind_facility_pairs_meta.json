@@ -1,4 +1,8 @@
 {
+  "design_status": "superseded_wrong_sampling_design",
+  "do_not_send_for_labeling": true,
+  "superseded_reason": "60 simple-random pairs cannot estimate high-confidence same_facility precision",
+  "superseded_by": "data/day3/blind_facility_pairs_v2.csv",
   "blind_file_sha256": "3e85fbbdaa5a02fddac4edf570c2c30a78257312d7624810accdbadc499ac730",
   "blind_ids_sha256": "c03a68867d9660d13d4c06387b4a7765b38b349069094ca433481b16fc121518",
   "correction_reason": "Auctane and Medallia added; all 11 seen borrowers excluded across every period",

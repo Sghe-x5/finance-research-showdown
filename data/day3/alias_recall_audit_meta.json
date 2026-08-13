@@ -1,4 +1,8 @@
 {
+  "design_status": "superseded_wrong_blinding_design",
+  "do_not_send_for_labeling": true,
+  "superseded_reason": "contained similarity features and did not globally exclude all 11 seen borrowers",
+  "superseded_by": "data/day3/blind_alias_candidates.csv",
   "aggregated_input_sha256": "d6809512d190aec70574eabda308bc1875d03204ff481e29f3e26e7e8f3a9942",
   "export_sha256": "8d3d025d32197989451612601107e282ed933fe29b5845bf989b8b93e03b1926",
   "exported_review_rows": 80,

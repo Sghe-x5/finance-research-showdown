@@ -9,6 +9,7 @@ from pathlib import Path
 
 DAY2 = Path(__file__).resolve().parents[1] / "day2"
 sys.path.insert(0, str(DAY2))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from build_eligible_nowcasts import build_eligible  # noqa: E402
 from common import decimal_or_none, read_csv, sha256_file, write_json  # noqa: E402

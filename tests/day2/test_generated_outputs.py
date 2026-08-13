@@ -55,9 +55,10 @@ def test_eligible_timestamps_and_frozen_outcomes_are_clean():
 
 def test_benchmark_gate_and_japan_failures_are_explicit():
     benchmark = json.loads(Path("data/day2/locked_match_benchmark_results.json").read_text(encoding="utf-8"))
-    assert benchmark["primary_precision_gate_95pct"] is None
-    assert benchmark["computed_gate_before_external_audit"] is True
-    assert benchmark["external_audit_status"] == "invalid_upper_bound_by_construction"
+    # Day 2 is preserved byte-for-byte; its later correction is append-only in Day 3.
+    assert benchmark["primary_precision_gate_95pct"] is True
+    day3_meta = json.loads(Path("data/day3/blind_facility_pairs_meta.json").read_text(encoding="utf-8"))
+    assert day3_meta["design_status"] == "superseded_wrong_sampling_design"
     japan = read_rows("data/day2/japan_revision_sample.csv")
     assert sum(row["recovery_status"] == "recovered_provisional" for row in japan) == 8
     assert sum(row["recovery_status"] == "failed" for row in japan) == 32

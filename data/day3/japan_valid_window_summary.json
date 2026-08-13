@@ -3,11 +3,16 @@
   "complete_numeric_recovery_rate_without_jquants": 0.0,
   "distribution_status": "private research only",
   "gate_verdict": "not_evaluated",
+  "historical_tdnet_recovered": 0,
+  "historical_tdnet_http_404": 20,
+  "issuer_ir_status": "not_attempted",
   "issuer_ir_requests_made": 0,
+  "jquants_status": "pending",
   "jquants_requests_made": 0,
   "no_403_bypass": true,
   "sample_size": 20,
-  "status": "Japan gate pending J-Quants execution; 0/20 recovered through issuer/archives only.",
+  "status": "Japan gate pending J-Quants execution; TDnet 0/20, Wayback 0/20, issuer IR not attempted.",
   "status_code": "pending_jquants_execution",
+  "wayback_recovered": 0,
   "wayback_snapshots_available_unparsed": 0
 }

@@ -10,3 +10,4 @@ __pycache__/
 *.sqlite*
 data/raw/
 artifacts/raw/
+private/

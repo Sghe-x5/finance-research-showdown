@@ -1,0 +1,17 @@
+{
+  "aggregated_input_sha256": "61459c462ab77a342b0306ad9255f1f17aea52a0473706e0789ee936d0cea2ff",
+  "blind_candidate_row_count": 128,
+  "blind_file_sha256": "d37f5daeb4eb6cee9e4ddb2e7690978a6ac899c30305b4fda268bb7424a8b64e",
+  "candidate_order_randomized": true,
+  "design_status": "ready_for_blind_labeling",
+  "manual_labels_entered": false,
+  "period_end": "2025-09-30",
+  "primary_audit_debt_facilities_only": true,
+  "private_key_sha256": "7edab165ea1d8de1617bdc92483b4c16bafc173fb1544075f16caddbad41aacc",
+  "private_key_tracked_by_git": false,
+  "sampled_borrower_count": 30,
+  "sampled_borrower_ids_sha256": "c5082c047c653e94dee40fd32bb11ac6256683a04156ce0f61831bbeffaebb54",
+  "seed": 20260813,
+  "seen_borrowers_excluded_all_periods": true,
+  "similarity_scores_in_blind_file": false
+}

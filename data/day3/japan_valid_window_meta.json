@@ -55,7 +55,7 @@
   "sample_ids_sha256": "3a510bef6cfe937ac6eb192fef87ff311ac85826927fdd30053a9586f3cdc5a6",
   "sample_size": 20,
   "seed": 20260813,
-  "selection_filter": "title contains 業績予想の修正; excludes dividend, withdrawal, cancellation, undetermined and actual-vs-forecast difference patterns",
+  "selection_filter": "forecast-revision titles containing 業績予想の修正 and excluding any dividend, withdrawal/cancellation, undetermined, or actual-difference wording",
   "selection_uses_recovery_success": false,
   "source_periods": [
     "20240901-20240930",
