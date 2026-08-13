@@ -1,0 +1,7 @@
+period,items,forecast_rev,pdf_checks,xbrl_checks
+20230110-20230131,4031,313,"0/2 alive; tested links returned 404","0/2 alive; tested links returned 404"
+20230701-20230731,5380,237,"0/2 alive; tested links returned 404","0/2 alive; tested links returned 404"
+20240110-20240131,4027,296,"0/2 alive; tested links returned 404","0/2 alive; tested links returned 404"
+20240701-20240731,5848,229,"0/2 alive; tested links returned 404","0/2 alive; tested links returned 404"
+20250110-20250131,4162,304,"0/2 alive; tested links returned 404","0/2 alive; tested links returned 404"
+20250701-20250731,6216,244,"0/2 alive; tested links returned 404","0/2 alive; tested links returned 404"
