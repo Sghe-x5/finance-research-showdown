@@ -1,0 +1,42 @@
+[
+  {
+    "file": "CODEX_DAY2_PROMPT.md",
+    "bytes": 11425,
+    "sha256": "0433348c6cd2a61e7cd49f2e0e31c2b0e370e951738281db2ad0460b3327e6e8"
+  },
+  {
+    "file": "DAY2_RESEARCH_MEMO.md",
+    "bytes": 7591,
+    "sha256": "9e62c43e98239dfa153a64d0b0224ce8b7ca717a7661ca2a24a7b95458636625"
+  },
+  {
+    "file": "README_DAY2.md",
+    "bytes": 457,
+    "sha256": "12daa133427851a1be746538c867e95704c7916efdd780c754d066a108493591"
+  },
+  {
+    "file": "bdc_contaminated_examples.csv",
+    "bytes": 557,
+    "sha256": "745948242381aa41b09f2e072da503d577b519812701cc3858e5a75945414f13"
+  },
+  {
+    "file": "day2_dashboard_preview.png",
+    "bytes": 312431,
+    "sha256": "1f762fa70266e629523ef7dd727981f17120607096d2f916443e7e5355825564"
+  },
+  {
+    "file": "day2_decision_log.csv",
+    "bytes": 437,
+    "sha256": "ef0ae8f9b82ba19bf1776e6cf55c6d1da06f296ddd03493b33e13d13231305b5"
+  },
+  {
+    "file": "finance_project_day2_tracker.xlsx",
+    "bytes": 73329,
+    "sha256": "e8a6ef3feca5afaaa1868450f84bf342b58914e246bfe96e9257ee494c450c26"
+  },
+  {
+    "file": "japan_numeric_recovery_seed.csv",
+    "bytes": 1366,
+    "sha256": "0f9eb1be333665965a0f829513cfc82270b76eeeaf083fa0bee0dfde17e8d103"
+  }
+]

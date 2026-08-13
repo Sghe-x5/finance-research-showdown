@@ -7,7 +7,7 @@ import json
 import random
 import re
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -173,7 +173,7 @@ def merge_seed_values(rows):
 
 def attempt_official(row, order):
     url = row["yanoshin_document_url"]
-    attempted = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    attempted = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     if not url:
         return {
             "event_id": row["event_id"], "attempt_order": order, "source_type": "issuer_or_tdnet_pdf",
@@ -208,7 +208,7 @@ def recover():
         if row["seed_fixture"] == "True":
             attempts.append({
                 "event_id": row["event_id"], "attempt_order": 1, "source_type": "IRBank",
-                "source_url": row["evidence_url"], "attempted_utc": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+                "source_url": row["evidence_url"], "attempted_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
                 "http_status": 403, "content_bytes": 0, "result": "blocked",
                 "evidence_note": "Automated source validation denied; no evasion or mass-copy attempted",
             })

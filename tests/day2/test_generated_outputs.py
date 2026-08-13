@@ -1,5 +1,6 @@
 import csv
 import json
+from datetime import datetime
 from pathlib import Path
 
 
@@ -33,3 +34,30 @@ def test_frozen_hash_metadata_precedes_recovery():
     meta = json.loads(Path("data/day2/japan_revision_sample_meta.json").read_text(encoding="utf-8"))
     assert meta["sample_size"] == 40
     assert len(meta["locked_event_ids_sha256"]) == 64
+
+
+def test_eligible_timestamps_and_frozen_outcomes_are_clean():
+    eligible = read_rows("data/day2/eligible_nowcast_ids.csv")
+    frozen = json.loads(Path("data/day2/frozen_nowcast_sample.json").read_text(encoding="utf-8"))
+    assert len(eligible) == 45
+    assert len({row["observation_id"] for row in eligible}) == len(eligible)
+    for row in eligible:
+        source = datetime.fromisoformat(row["source_results_timestamp_utc"].replace("Z", "+00:00"))
+        cutoff = datetime.fromisoformat(row["target_cutoff_timestamp_utc"].replace("Z", "+00:00"))
+        assert source < cutoff
+        assert row["source_public_before_target_cutoff"] == "True"
+        assert row["target_held_previous_filing"] == "True"
+        assert row["outcomes_revealed"] == "False"
+    results = read_rows("data/day2/nowcast_results.csv")
+    assert {row["observation_id"] for row in results} == set(frozen["observation_ids"])
+    assert all(row["contaminated_fixture"] == "False" for row in results)
+
+
+def test_benchmark_gate_and_japan_failures_are_explicit():
+    benchmark = json.loads(Path("data/day2/locked_match_benchmark_results.json").read_text(encoding="utf-8"))
+    assert benchmark["primary_precision_gate_95pct"] is True
+    assert benchmark["high_confidence_same_facility"]["fp"] == 0
+    japan = read_rows("data/day2/japan_revision_sample.csv")
+    assert sum(row["recovery_status"] == "recovered_provisional" for row in japan) == 8
+    assert sum(row["recovery_status"] == "failed" for row in japan) == 32
+    assert sum(row["treatment_status"] == "complete" for row in japan[:10]) == 0

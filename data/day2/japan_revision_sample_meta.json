@@ -41,10 +41,15 @@
     "JP_Y981145",
     "JP_Y981529"
   ],
+  "failed": 32,
   "locked_event_ids_sha256": "5cc23bf6b10c149b16d479c455db8cf8df20aea1eec70e4d32cc3f243d30bbe4",
+  "note": "Seed values are supplied fixtures; independent IRBank validation was blocked by HTTP 403.",
   "random_universe_count": 678,
-  "recovery_attempts_started": false,
+  "recovered_provisional": 8,
+  "recovery_attempts_started": true,
+  "recovery_rate_provisional": 0.2,
   "sample_size": 40,
   "seed": 20260813,
-  "seed_fixture_count": 8
+  "seed_fixture_count": 8,
+  "treatment_complete": 0
 }

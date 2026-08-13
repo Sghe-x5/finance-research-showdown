@@ -62,3 +62,66 @@ The historical index is alive. All tested old PDF/XBRL URLs returned 404 after
 redirect, so underlying historical documents are not shown to be available.
 The main Day 2 gate is reproducible recovery of numerical old/new earnings
 forecast revisions and event-level Japanese/English treatment.
+
+---
+
+# Day 2 mechanism pilot — 2026-08-13
+
+**Flagship still not selected.** Fixed seed `20260813`; freeze commit
+`a495f39`.
+
+## ShadowNAV Day 2
+
+| stage/gate | result |
+|---|---:|
+| Official SEC archives | 2025 Q3 + Q4 |
+| Raw SOI rows in 19-fund universe | 73,845 |
+| Normalized facility rows | 54,285 |
+| Candidate pairs | 13,672 |
+| Locked match benchmark | 240 |
+| High-confidence same-facility precision | 100% (80 TP, 0 FP) |
+| Eligible nowcast IDs | 45 |
+| Frozen IDs before outcomes | 15 |
+| Unique borrower/source/target clusters after reveal | 11 |
+| Contaminated fixtures in estimates | 0 |
+
+Frozen sample hash:
+`6932fa6156029562badf9abf98605ce81fd240aee5f723a95dfbbd3dbe7c7c5f`.
+
+| baseline | n | MAE pp | RMSE pp | median AE pp |
+|---|---:|---:|---:|---:|
+| B0 unchanged target mark | 15 | 0.3270 | 0.7668 | 0.0000 |
+| B1 target momentum | 0 | — | — | — |
+| B2 co-holder median | 15 | 0.3901 | 0.7775 | 0.0000 |
+| B3 earliest exact co-holder | 15 | 0.8101 | 1.6034 | 0.0000 |
+| B4 prior cross-lender median | 15 | 0.5648 | 1.0366 | 0.0000 |
+| Prior-gap adjusted source | 15 | 0.0680 | 0.2348 | 0.0000 |
+
+The naive earliest-co-holder rule failed against persistence. The adjusted
+source result is exploratory only: four frozen IDs are repeated XBRL slices,
+and no failed/ugly ID was replaced. B1 and categorical transition tests lacked
+usable observations. Same-manager/JV/appraiser exclusions were not observable.
+
+## Japan Day 2
+
+| stage/gate | result |
+|---|---:|
+| Historical forecast-revision universe | 678 |
+| Frozen sample | 40 |
+| Supplied seed rows retained provisionally | 8 |
+| New rows independently recovered | 0/32 |
+| Provisional total recovery | 8/40 (20%) |
+| Old official/Tdnet links | 32/32 returned 404 |
+| IRBank validation | HTTP 403 |
+| First-ten treatment completion | 0/10 |
+
+Locked Japan ID hash:
+`5cc23bf6b10c149b16d479c455db8cf8df20aea1eec70e4d32cc3f243d30bbe4`.
+Failures remain in the denominator and no price event study was run.
+
+## Day 2 decision
+
+No flagship. ShadowNAV passed the facility-matching infrastructure gate but
+not the naive signal gate. Japan did not clear reproducible numerical recovery
+or treatment classification. Full evidence and blockers are frozen in
+`docs/research/DAY2_RESULTS.md`.

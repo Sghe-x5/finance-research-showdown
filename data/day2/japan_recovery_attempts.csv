@@ -1,1 +1,137 @@
 event_id,attempt_order,source_type,source_url,attempted_utc,http_status,content_bytes,result,evidence_note
+JP_1887_20240115,1,IRBank,https://irbank.net/1887/140120240115515111,2026-08-13T18:30:14Z,403,0,blocked,Automated source validation denied; no evasion or mass-copy attempted
+JP_2173_20231212,1,IRBank,https://irbank.net/E05737/091220231211501221,2026-08-13T18:30:14Z,403,0,blocked,Automated source validation denied; no evasion or mass-copy attempted
+JP_2294_20231212,1,IRBank,https://irbank.net/2294/140120231211501703,2026-08-13T18:30:14Z,403,0,blocked,Automated source validation denied; no evasion or mass-copy attempted
+JP_3657_20231212,1,IRBank,https://irbank.net/3657/ir,2026-08-13T18:30:14Z,403,0,blocked,Automated source validation denied; no evasion or mass-copy attempted
+JP_7347_20231212,1,IRBank,https://irbank.net/7347/140120231211501232,2026-08-13T18:30:14Z,403,0,blocked,Automated source validation denied; no evasion or mass-copy attempted
+JP_7494_20231212,1,IRBank,https://irbank.net/7494/140120231209500019,2026-08-13T18:30:14Z,403,0,blocked,Automated source validation denied; no evasion or mass-copy attempted
+JP_7561_20231212,1,IRBank,https://irbank.net/7561,2026-08-13T18:30:14Z,403,0,blocked,Automated source validation denied; no evasion or mass-copy attempted
+JP_7829_20231212,1,IRBank,https://irbank.net/7829,2026-08-13T18:30:14Z,403,0,blocked,Automated source validation denied; no evasion or mass-copy attempted
+JP_Y1023659,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240711548061.pdf,2026-08-13T18:30:14Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240711548061.pdf; required status=200 and bytes>500
+JP_Y1023659,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y1023659,3,IRBank,https://irbank.net/4250/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y1023659,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y1024273,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240716549358.pdf,2026-08-13T18:30:20Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240716549358.pdf; required status=200 and bytes>500
+JP_Y1024273,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y1024273,3,IRBank,https://irbank.net/7172/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y1024273,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y1024520,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240718551130.pdf,2026-08-13T18:30:25Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240718551130.pdf; required status=200 and bytes>500
+JP_Y1024520,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y1024520,3,IRBank,https://irbank.net/4849/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y1024520,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y1026373,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240730557298.pdf,2026-08-13T18:30:32Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240730557298.pdf; required status=200 and bytes>500
+JP_Y1026373,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y1026373,3,IRBank,https://irbank.net/6623/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y1026373,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y1026377,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240729556849.pdf,2026-08-13T18:30:36Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240729556849.pdf; required status=200 and bytes>500
+JP_Y1026377,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y1026377,3,IRBank,https://irbank.net/2208/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y1026377,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y1026561,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240729556234.pdf,2026-08-13T18:30:41Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240729556234.pdf; required status=200 and bytes>500
+JP_Y1026561,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y1026561,3,IRBank,https://irbank.net/6902/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y1026561,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y1026847,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240725554911.pdf,2026-08-13T18:30:45Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240725554911.pdf; required status=200 and bytes>500
+JP_Y1026847,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y1026847,3,IRBank,https://irbank.net/6857/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y1026847,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y900061,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230112587965.pdf,2026-08-13T18:30:49Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230112587965.pdf; required status=200 and bytes>500
+JP_Y900061,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y900061,3,IRBank,https://irbank.net/4432/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y900061,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y900686,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230111587701.pdf,2026-08-13T18:30:54Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230111587701.pdf; required status=200 and bytes>500
+JP_Y900686,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y900686,3,IRBank,https://irbank.net/1822/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y900686,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y900691,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230113589326.pdf,2026-08-13T18:30:58Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230113589326.pdf; required status=200 and bytes>500
+JP_Y900691,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y900691,3,IRBank,https://irbank.net/2798/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y900691,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y900998,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230112588385.pdf,2026-08-13T18:31:02Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230112588385.pdf; required status=200 and bytes>500
+JP_Y900998,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y900998,3,IRBank,https://irbank.net/8143/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y900998,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y901009,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230116590046.pdf,2026-08-13T18:31:07Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230116590046.pdf; required status=200 and bytes>500
+JP_Y901009,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y901009,3,IRBank,https://irbank.net/7074/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y901009,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y901913,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230123592243.pdf,2026-08-13T18:31:11Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230123592243.pdf; required status=200 and bytes>500
+JP_Y901913,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y901913,3,IRBank,https://irbank.net/6356/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y901913,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y902243,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230120591927.pdf,2026-08-13T18:31:15Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230120591927.pdf; required status=200 and bytes>500
+JP_Y902243,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y902243,3,IRBank,https://irbank.net/6042/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y902243,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y902654,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230124592704.pdf,2026-08-13T18:31:19Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230124592704.pdf; required status=200 and bytes>500
+JP_Y902654,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y902654,3,IRBank,https://irbank.net/7995/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y902654,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y903088,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230130596539.pdf,2026-08-13T18:31:23Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230130596539.pdf; required status=200 and bytes>500
+JP_Y903088,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y903088,3,IRBank,https://irbank.net/4531/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y903088,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y903094,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230130596597.pdf,2026-08-13T18:31:27Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230130596597.pdf; required status=200 and bytes>500
+JP_Y903094,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y903094,3,IRBank,https://irbank.net/4617/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y903094,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y903108,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230131597237.pdf,2026-08-13T18:31:32Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230131597237.pdf; required status=200 and bytes>500
+JP_Y903108,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y903108,3,IRBank,https://irbank.net/5332/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y903108,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y943118,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230711520391.pdf,2026-08-13T18:31:36Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230711520391.pdf; required status=200 and bytes>500
+JP_Y943118,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y943118,3,IRBank,https://irbank.net/4673/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y943118,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y944027,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230718523409.pdf,2026-08-13T18:31:40Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230718523409.pdf; required status=200 and bytes>500
+JP_Y944027,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y944027,3,IRBank,https://irbank.net/9145/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y944027,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y944991,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230724526013.pdf,2026-08-13T18:31:44Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230724526013.pdf; required status=200 and bytes>500
+JP_Y944991,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y944991,3,IRBank,https://irbank.net/6176/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y944991,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y945400,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230726527590.pdf,2026-08-13T18:31:48Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230726527590.pdf; required status=200 and bytes>500
+JP_Y945400,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y945400,3,IRBank,https://irbank.net/7625/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y945400,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y945813,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230728529326.pdf,2026-08-13T18:31:56Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230728529326.pdf; required status=200 and bytes>500
+JP_Y945813,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y945813,3,IRBank,https://irbank.net/6524/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y945813,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y945955,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230728529266.pdf,2026-08-13T18:32:00Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230728529266.pdf; required status=200 and bytes>500
+JP_Y945955,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y945955,3,IRBank,https://irbank.net/4186/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y945955,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y945969,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120230720524731.pdf,2026-08-13T18:32:13Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120230720524731.pdf; required status=200 and bytes>500
+JP_Y945969,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y945969,3,IRBank,https://irbank.net/5572/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y945969,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y978846,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240115515165.pdf,2026-08-13T18:32:18Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240115515165.pdf; required status=200 and bytes>500
+JP_Y978846,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y978846,3,IRBank,https://irbank.net/6047/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y978846,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y979335,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240118516645.pdf,2026-08-13T18:32:23Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240118516645.pdf; required status=200 and bytes>500
+JP_Y979335,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y979335,3,IRBank,https://irbank.net/5135/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y979335,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y979390,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240116515626.pdf,2026-08-13T18:32:27Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240116515626.pdf; required status=200 and bytes>500
+JP_Y979390,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y979390,3,IRBank,https://irbank.net/2411/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y979390,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y980360,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240125519135.pdf,2026-08-13T18:32:34Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240125519135.pdf; required status=200 and bytes>500
+JP_Y980360,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y980360,3,IRBank,https://irbank.net/6882/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y980360,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y981136,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240130521672.pdf,2026-08-13T18:32:38Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240130521672.pdf; required status=200 and bytes>500
+JP_Y981136,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y981136,3,IRBank,https://irbank.net/6135/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y981136,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y981145,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240130522485.pdf,2026-08-13T18:32:44Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240130522485.pdf; required status=200 and bytes>500
+JP_Y981145,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y981145,3,IRBank,https://irbank.net/6262/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y981145,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained
+JP_Y981529,1,issuer_or_tdnet_pdf,https://webapi.yanoshin.jp/rd.php?https://www.release.tdnet.info/inbs/140120240131523044.pdf,2026-08-13T18:32:48Z,404,225,dead,final_url=https://www.release.tdnet.info/inbs/140120240131523044.pdf; required status=200 and bytes>500
+JP_Y981529,2,J-Quants_or_official_statement_data,,,,0,not_configured,No J-Quants entitlement or credential was supplied
+JP_Y981529,3,IRBank,https://irbank.net/7358/ir,,403,0,blocked_after_probe,Site rejected validation probe; no automated circumvention or bulk copying
+JP_Y981529,4,Wayback_or_other_archive,,,,0,not_attempted,Deferred after primary/mirror access blockers; failure retained

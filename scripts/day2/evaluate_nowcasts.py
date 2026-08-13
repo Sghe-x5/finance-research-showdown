@@ -77,6 +77,16 @@ def prior_match(current, rows, cik=None):
     return candidates
 
 
+def exact_prior_identifier_rows(current, rows, observation_date):
+    return [
+        row for row in rows
+        if row["observation_date"] == observation_date
+        and row["accepted"] <= current["accepted"]
+        and row["cik"] == current["cik"]
+        and row["investment_identifier"] == current["investment_identifier"]
+    ]
+
+
 def metric_summary(values):
     values = [value for value in values if value is not None]
     if not values:
@@ -102,6 +112,13 @@ def evaluate(normalized, eligible, frozen_ids, freeze_commit):
         target_actual = mark(target)
         target_prior_mark = mark(target_prior)
 
+        prior_prior_date = previous_quarter_end(target_prior["observation_date"])
+        target_prior_prior_rows = exact_prior_identifier_rows(target_prior, normalized, prior_prior_date)
+        target_prior_prior_mark = aggregate_mark(target_prior_prior_rows) if target_prior_prior_rows else None
+        b1 = None
+        if target_prior_mark is not None and target_prior_prior_mark is not None:
+            b1 = target_prior_mark + (target_prior_mark - target_prior_prior_mark)
+
         coholder_marks = []
         for other in eligible:
             if other["period_end"] != item["period_end"] or other["target_row_id"] != item["target_row_id"]:
@@ -116,8 +133,8 @@ def evaluate(normalized, eligible, frozen_ids, freeze_commit):
         prior_cross = [value for value in prior_cross if value is not None]
         b4 = statistics.median(prior_cross) if prior_cross else None
 
-        source_prior_rows = prior_match(source, normalized, source["cik"])
-        source_prior = aggregate_mark(source_prior_rows)
+        source_prior_rows = exact_prior_identifier_rows(source, normalized, previous_quarter_end(source["period_end"]))
+        source_prior = aggregate_mark(source_prior_rows) if source_prior_rows else None
         entry_adjusted = None
         if source_mark is not None and source_prior is not None and target_prior_mark is not None:
             entry_adjusted = source_mark + (target_prior_mark - source_prior)
@@ -138,14 +155,14 @@ def evaluate(normalized, eligible, frozen_ids, freeze_commit):
             "reporting_window_bucket": window_bucket(hours),
             "target_actual_mark": "" if target_actual is None else f"{target_actual:.10f}",
             "b0_unchanged_target_prior": "" if target_prior_mark is None else f"{target_prior_mark:.10f}",
-            "b1_target_momentum": "",
+            "b1_target_momentum": "" if b1 is None else f"{b1:.10f}",
             "b2_already_filed_exact_coholder_median": "" if b2 is None else f"{b2:.10f}",
             "b3_earliest_exact_coholder": "" if source_mark is None else f"{source_mark:.10f}",
             "b4_prior_quarter_cross_lender_median": "" if b4 is None else f"{b4:.10f}",
             "b5_distress_flags_only": f"pik={target_pik};nonaccrual={target['non_accrual']};restructuring={target['restructuring_flag']}",
             "entry_price_bias_adjusted_source": "" if entry_adjusted is None else f"{entry_adjusted:.10f}",
             "b0_abs_error_pp": abs_error_pp(target_prior_mark, target_actual),
-            "b1_abs_error_pp": "",
+            "b1_abs_error_pp": abs_error_pp(b1, target_actual),
             "b2_abs_error_pp": abs_error_pp(b2, target_actual),
             "b3_abs_error_pp": abs_error_pp(source_mark, target_actual),
             "b4_abs_error_pp": abs_error_pp(b4, target_actual),
@@ -190,14 +207,27 @@ def main():
             "b0_mae_pp": metric_summary([decimal_or_none(row["b0_abs_error_pp"]) for row in group])["mae_pp"],
             "b3_mae_pp": metric_summary([decimal_or_none(row["b3_abs_error_pp"]) for row in group])["mae_pp"],
         }
+    clusters = {
+        (row["period_end"], row["borrower_norm"], row["source_ticker"], row["target_ticker"])
+        for row in results
+    }
     summary = {
         "frozen_sample_size": len(results),
+        "unique_borrower_source_target_clusters": len(clusters),
+        "duplicate_xbrl_slice_ids": len(results) - len(clusters),
         "freeze_commit": args.freeze_commit,
         "baselines": baselines,
         "by_reporting_window": by_window,
         "same_manager_jv_exclusion": "not observable in SEC flat files",
         "common_appraiser_exclusion": "not observable in SEC flat files",
         "contaminated_fixture_rows_in_estimate": 0,
+        "categorical_transitions": {
+            "pik": sum(row["target_pik_transition"] == "True" for row in results),
+            "nonaccrual": sum(row["target_nonaccrual_transition"] == "True" for row in results),
+            "restructuring": sum(row["target_restructuring_transition"] == "True" for row in results),
+            "disappearance": sum(row["target_position_disappeared"] == "True" for row in results),
+        },
+        "limitation": "Frozen IDs were not replaced after reveal; four repeated XBRL slices reduce the effective independent cluster count to 11.",
     }
     write_json(args.summary, summary)
     print(json.dumps(summary, indent=2, sort_keys=True))

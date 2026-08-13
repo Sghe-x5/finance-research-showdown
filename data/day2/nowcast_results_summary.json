@@ -1,0 +1,71 @@
+{
+  "baselines": {
+    "b0": {
+      "mae_pp": 0.32704344937790397,
+      "median_abs_error_pp": 0.0,
+      "n": 15,
+      "rmse_pp": 0.7668056527175408
+    },
+    "b1": {
+      "mae_pp": null,
+      "median_abs_error_pp": null,
+      "n": 0,
+      "rmse_pp": null
+    },
+    "b2": {
+      "mae_pp": 0.39006207634467566,
+      "median_abs_error_pp": 0.0,
+      "n": 15,
+      "rmse_pp": 0.7774532618113871
+    },
+    "b3": {
+      "mae_pp": 0.8101328838790792,
+      "median_abs_error_pp": 0.0,
+      "n": 15,
+      "rmse_pp": 1.6034101375767773
+    },
+    "b4": {
+      "mae_pp": 0.5647776412663489,
+      "median_abs_error_pp": 0.0,
+      "n": 15,
+      "rmse_pp": 1.036550539750899
+    },
+    "entry_adjusted": {
+      "mae_pp": 0.06800218328123646,
+      "median_abs_error_pp": 0.0,
+      "n": 15,
+      "rmse_pp": 0.23475940915893195
+    }
+  },
+  "by_reporting_window": {
+    "1-3d": {
+      "b0_mae_pp": 0.5003629572804508,
+      "b3_mae_pp": 1.787860088518911,
+      "n": 4
+    },
+    "<=1d": {
+      "b0_mae_pp": null,
+      "b3_mae_pp": null,
+      "n": 0
+    },
+    ">3d": {
+      "b0_mae_pp": 0.26401817377697784,
+      "b3_mae_pp": 0.454595718555504,
+      "n": 11
+    }
+  },
+  "categorical_transitions": {
+    "disappearance": 0,
+    "nonaccrual": 0,
+    "pik": 0,
+    "restructuring": 0
+  },
+  "common_appraiser_exclusion": "not observable in SEC flat files",
+  "contaminated_fixture_rows_in_estimate": 0,
+  "duplicate_xbrl_slice_ids": 4,
+  "freeze_commit": "a495f39",
+  "frozen_sample_size": 15,
+  "limitation": "Frozen IDs were not replaced after reveal; four repeated XBRL slices reduce the effective independent cluster count to 11.",
+  "same_manager_jv_exclusion": "not observable in SEC flat files",
+  "unique_borrower_source_target_clusters": 11
+}
