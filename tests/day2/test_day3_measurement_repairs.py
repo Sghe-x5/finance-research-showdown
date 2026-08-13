@@ -2,12 +2,15 @@ import json
 from pathlib import Path
 
 import pytest
+import run_japan_valid_window_gate as japan_gate
 
 from aggregate_facilities import aggregate, validate
 from build_alias_recall_audit import build as build_alias_audit
 from evaluate_nowcasts import verify_frozen_evaluator
 from export_blind_match_benchmark import FORBIDDEN_SOURCE_FIELDS, SEEN_DEVELOPMENT_BORROWERS, export
-from run_japan_valid_window_gate import END, START, monthly_periods
+from run_japan_valid_window_gate import (
+    END, START, monthly_periods, reconstruct_forecast_pair,
+)
 
 
 def raw_facility(**overrides):
@@ -91,9 +94,10 @@ def test_blind_export_removes_prediction_and_evidence_columns():
     assert len(exported) == 60
     assert not (set(exported[0]) & FORBIDDEN_SOURCE_FIELDS)
     assert all(not row["manual_label"] for row in exported)
+    excluded_aliases = {alias for aliases in SEEN_DEVELOPMENT_BORROWERS.values() for alias in aliases}
     assert all(
-        name not in " ".join((row["left_borrower_norm"], row["right_borrower_norm"]))
-        for row in exported for name in SEEN_DEVELOPMENT_BORROWERS
+        row[side] not in excluded_aliases
+        for row in exported for side in ("left_borrower_norm", "right_borrower_norm")
     )
 
 
@@ -158,9 +162,107 @@ def test_day3_freezes_and_power_guard_are_explicit():
     assert valid["design_status"] == "valid_window_frozen"
     assert valid["sample_size"] == 20
     assert valid["outcomes_used_for_selection"] == []
-    assert japan_summary["status"] == "intermediate_awaiting_jquants_api_key"
+    assert japan_summary["status_code"] == "pending_jquants_execution"
     assert japan_summary["jquants_requests_made"] == 0
     assert japan_summary["gate_verdict"] == "not_evaluated"
-    assert movement["untouched_movement_source_facility_events_total"] == 10
+    assert movement["untouched_movement_source_facility_events_total"] == 6
     assert movement["power_guard_passed_for_planning"] is False
-    assert all(name not in blind for name in SEEN_DEVELOPMENT_BORROWERS)
+    excluded_aliases = {alias for aliases in SEEN_DEVELOPMENT_BORROWERS.values() for alias in aliases}
+    assert all(name not in blind for name in excluded_aliases)
+
+
+def test_japan_full_eligible_universe_matches_frozen_hash():
+    import hashlib
+
+    meta = json.loads(Path("data/day3/japan_valid_window_meta.json").read_text(encoding="utf-8"))
+    rows = Path("data/day3/japan_valid_window_universe_ids.csv").read_text(encoding="utf-8").splitlines()[1:]
+    assert len(rows) == len(set(rows)) == 3999
+    payload = json.dumps(rows, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    assert hashlib.sha256(payload).hexdigest() == meta["clean_universe_ids_sha256"]
+    assert meta["selection_uses_recovery_success"] is False
+    assert meta["failed_rows_replaceable"] is False
+
+
+def jq_record(**overrides):
+    row = {
+        "DiscDate": "2025-05-01", "DiscTime": "15:00:00", "Code": "12340",
+        "DiscNo": "old-record", "DocType": "FYFinancialStatements",
+        "CurFYSt": "2025-01-01", "CurFYEn": "2025-12-31",
+        "FSales": 100, "FOP": 10, "FOdP": 9, "FNP": 6,
+    }
+    row.update(overrides)
+    return row
+
+
+def test_jquants_reconstruction_requires_exact_revision_type_and_preserves_provenance():
+    event = {"publication_timestamp_jst": "2025-08-01 15:00:00"}
+    revision = jq_record(
+        DiscDate="2025-08-01", DiscTime="15:00:00", DiscNo="new-record",
+        DocType="EarnForecastRevision", FSales=90, FOP=7, FOdP=6, FNP=4,
+    )
+    status, values, _ = reconstruct_forecast_pair(
+        event, [jq_record(), revision], {"EarnForecastRevision"},
+    )
+    assert status == "recovered"
+    assert values["old_source_record_id"] == "old-record"
+    assert values["new_source_record_id"] == "new-record"
+    assert values["old_revenue"] == "100"
+    assert values["new_revenue"] == "90"
+    assert values["basis"] == "consolidated"
+
+
+def test_jquants_reconstruction_separates_prior_outside_window():
+    event = {"publication_timestamp_jst": "2024-10-01 15:00:00"}
+    revision = jq_record(
+        DiscDate="2024-10-01", DiscNo="new-record", DocType="EarnForecastRevision",
+        CurFYSt="2024-04-01", CurFYEn="2025-03-31",
+    )
+    status, values, _ = reconstruct_forecast_pair(event, [revision], {"EarnForecastRevision"})
+    assert status == "prior_outside_window"
+    assert values == {}
+
+
+def test_jquants_reconstruction_does_not_guess_document_type():
+    event = {"publication_timestamp_jst": "2025-08-01 15:00:00"}
+    quarterly = jq_record(DiscDate="2025-08-01", DiscNo="quarterly", DocType="FYFinancialStatements")
+    status, _, _ = reconstruct_forecast_pair(event, [quarterly], {"EarnForecastRevision"})
+    assert status == "revision_record_not_found"
+
+
+def test_jquants_pagination_is_complete_and_cached_outside_git(monkeypatch, tmp_path):
+    first = jq_record(DiscNo="one")
+    second = jq_record(DiscNo="two", DiscDate="2025-06-01")
+    payloads = iter([
+        {"data": [first], "pagination_key": "next-page"},
+        {"data": [second]},
+    ])
+    monkeypatch.setattr(japan_gate, "request_jquants_page", lambda api_key, params: next(payloads))
+    monkeypatch.setattr(japan_gate, "RAW_CACHE_DIR", tmp_path)
+    monkeypatch.setattr(japan_gate.time, "sleep", lambda seconds: None)
+    rows, meta = japan_gate.fetch_jquants_rows("secret-not-written", "1234")
+    assert [row["DiscNo"] for row in rows] == ["one", "two"]
+    assert meta["page_count"] == 2
+    assert len(meta["raw_cache_sha256"]) == 64
+    assert (tmp_path / "fin_summary_1234.json").exists()
+
+
+def test_jquants_429_uses_backoff(monkeypatch):
+    class Response:
+        def __init__(self, status, payload=None):
+            self.status_code = status
+            self.headers = {"Retry-After": "13"} if status == 429 else {}
+            self._payload = payload or {}
+
+        def raise_for_status(self):
+            if self.status_code >= 400:
+                raise AssertionError("unexpected status")
+
+        def json(self):
+            return self._payload
+
+    responses = iter([Response(429), Response(200, {"data": []})])
+    waits = []
+    monkeypatch.setattr(japan_gate.requests, "get", lambda *args, **kwargs: next(responses))
+    monkeypatch.setattr(japan_gate.time, "sleep", waits.append)
+    assert japan_gate.request_jquants_page("secret", {"code": "12340"}) == {"data": []}
+    assert waits == [13.0]

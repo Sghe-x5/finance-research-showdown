@@ -49,14 +49,15 @@ The Day 2 100%/100% statistic is invalid as an independent benchmark because
 the adjudication defaulted manual labels to predicted labels. It is now marked
 as an upper bound by construction.
 
-The replacement blind file contains 60 unlabeled pairs. Before sampling, 1,502
-pairs involving already viewed development borrowers were excluded: PetVet,
-MRI Software, Anaplan, Viant, Hyland, Fortis, PPV, Ping Identity and
-Pye-Barker. Predicted label, confidence, evidence and match-feature columns are
-absent.
+The replacement blind file contains 60 unlabeled pairs. Before sampling, 1,549
+pairs involving already viewed development borrowers were excluded in every
+period: PetVet Care Centers, MRI Software, Anaplan, Viant Medical, Hyland
+Software, Fortis Solutions, PPV Intermediate, Ping Identity, Pye-Barker,
+Auctane and Medallia. Predicted label, confidence, evidence and match-feature
+columns are absent.
 
-- blind ID hash: `b748cd5b992e4ffcb8e9d8c95d745ffbe2ab5f58330256452ca53b174bf03a1f`;
-- blind file hash: `3e3cff65e5c5a85b4fc5b3bbf115727f42cc14459a54d260414b8d90d414b8d7`;
+- blind ID hash: `c03a68867d9660d13d4c06387b4a7765b38b349069094ca433481b16fc121518`;
+- blind file hash: `3e85fbbdaa5a02fddac4edf570c2c30a78257312d7624810accdbadc499ac730`;
 - labels entered: **0/60**;
 - measured precision/recall: **pending blind human labels**.
 
@@ -73,13 +74,15 @@ it never reads the target same-quarter outcome.
 
 | period | classification | eligible IDs | movement eligible IDs | unique movement source facilities |
 |---|---|---:|---:|---:|
-| 2025Q1 | untouched target outcomes | 29 | 5 | 5 |
-| 2025Q2 | untouched target outcomes | 26 | 6 | 5 |
-| 2025Q3 | development; excluded from guard | 26 | 7 | 6 |
+| 2025Q1 | untouched target outcomes | 16 | 3 | 3 |
+| 2025Q2 | untouched target outcomes | 15 | 3 | 3 |
+| 2025Q3 | development; excluded from guard | 12 | 4 | 4 |
 
-Untouched total is **10**, below the preregistration planning guard of 20.
+Untouched total is **6**, below the preregistration planning guard of 20.
 Therefore no reveal should be planned; the fund/reporting-order universe must
-be expanded first.
+be expanded first. The corrected per-period counts and formula are copied into
+`docs/research/PREREGISTRATION_V3_DRAFT.md`; that file is explicitly not an
+approved preregistration or freeze authorization.
 
 ### Day 2 sensitivity correction
 
@@ -110,6 +113,11 @@ cutoffs:
 | Sample ID hash | `3a510bef6cfe937ac6eb192fef87ff311ac85826927fdd30053a9586f3cdc5a6` |
 | Post-April-2025 sample rows | 12/20 |
 
+All 3,999 eligible universe IDs are stored separately in
+`data/day3/japan_valid_window_universe_ids.csv`. Re-materialization matched the
+original pre-recovery universe hash exactly; the ID-file SHA-256 is
+`749b25e06ada86633e244169ee461a100213ae4a8ee96dbfe43c1f7ffe1cd282`.
+
 Frozen IDs:
 
 `JP_Y1043551`, `JP_Y1047004`, `JP_Y1049072`, `JP_Y1054727`,
@@ -128,15 +136,36 @@ The freeze was committed before archive attempts. Intermediate results:
 | J-Quants V2 `/v2/fins/summary` | 0 requests; pending local `JQUANTS_API_KEY` |
 | Gate verdict | **not evaluated** |
 
+Universe eligibility used only deterministic title/metadata rules before any
+recovery attempt. Numeric availability never affected selection, every frozen
+row remains in the denominator and failed rows cannot be replaced.
+
 New accounts use V2 `x-api-key` authentication. The key is read only from the
-environment and is never written to Git. The ≥12/20 gate must not be evaluated
-until the J-Quants stage is executed. No 403 was bypassed.
+environment and is never written to Git. Before reconstruction, the pipeline
+must fetch and expose a DocType distribution for one frozen company; recovery
+is blocked until the revision types are approved. Raw paginated responses are
+stored only in an outside-Git cache. Pagination-key cycles fail loudly and HTTP
+429 uses bounded backoff.
+
+For a recovered pair, `new` is the approved revision record at the exact event
+timestamp. `old` is the latest earlier compatible forecast with the same
+security, fiscal dates/length, horizon and consolidated/standalone basis.
+Record IDs, timestamps, units, basis, rule and confidence are retained. Missing
+unambiguous history is `ambiguous_old_forecast`; when the fiscal-year start lies
+before the fixed available-from date it is `prior_outside_window`.
+
+Current status: **Japan gate pending J-Quants execution; 0/20 recovered through
+issuer/archives only.** No PASS/FAIL/demotion verdict is permitted until
+J-Quants, issuer IR and reproducible archive stages are all complete. Outputs
+are marked `private research only` pending a distribution-license review. No
+403 was bypassed.
 
 ## Current blockers and next authorized action
 
-1. `JQUANTS_API_KEY` must be placed locally in `.env` before the J-Quants stage.
+1. `JQUANTS_API_KEY` must be placed locally in `.env`; then run only the DocType
+   probe and review it before authorizing reconstruction.
 2. Blind facility and alias labels require independent human adjudication.
-3. The untouched movement total is 10 < 20, so expand the eligible fund and
+3. The untouched movement total is 6 < 20, so expand the eligible fund and
    reporting-order universe before any new reveal.
 4. Preregistration v3 has not been supplied; the freeze script fails loudly
    without it and hash-locks the evaluator once it exists.

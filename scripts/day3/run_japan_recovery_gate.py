@@ -231,6 +231,9 @@ def read_rows(path):
 
 def recover(today=None):
     today = today or date.today()
+    existing_meta = json.loads(META_PATH.read_text(encoding="utf-8"))
+    if existing_meta.get("design_status") == "invalid_window_design":
+        raise RuntimeError("Legacy Japan sample is invalid_window_design and must never be recovered")
     rows = read_rows(SAMPLE_PATH)
     if len(rows) != 20 or any(row["sample_locked"] != "True" for row in rows):
         raise RuntimeError("Expected the locked 20-event Japan gate sample")
@@ -280,8 +283,8 @@ def recover(today=None):
         "jquants_api_key_present": bool(api_key),
         "wayback_attempted": len(rows),
         "wayback_snapshots_available": sum(a["source_type"] == "wayback" and a["result"] == "snapshot_available" for a in attempts),
-        "gate_threshold": "at least 12/20 complete old/new numeric recoveries",
-        "gate_passed": counts["recovered"] >= 12,
+        "gate_verdict": "not_evaluated",
+        "status": "Legacy sample only; no PASS/FAIL/demotion verdict is permitted",
         "no_403_bypass": True,
     }
     write_json(SUMMARY_PATH, summary)

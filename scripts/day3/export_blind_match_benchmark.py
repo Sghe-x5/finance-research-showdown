@@ -18,8 +18,17 @@ DEFAULT_OUTPUT = Path("data/day3/blind_facility_pairs.csv")
 DEFAULT_METADATA = Path("data/day3/blind_facility_pairs_meta.json")
 
 SEEN_DEVELOPMENT_BORROWERS = {
-    "petvet care centers", "mri software", "anaplan", "viant", "hyland",
-    "fortis", "ppv", "ping identity", "pye barker",
+    "PetVet Care Centers": {"petvet care centers", "romulus intermediate dba petvet care centers a stock"},
+    "MRI Software": {"mri software"},
+    "Anaplan": {"anaplan"},
+    "Viant Medical": {"viant medical"},
+    "Hyland Software": {"hyland software"},
+    "Fortis Solutions": {"fortis solutions"},
+    "PPV Intermediate": {"ppv intermediate"},
+    "Ping Identity": {"ping identity"},
+    "Pye-Barker": {"pye barker fire and safety"},
+    "Auctane": {"auctane"},
+    "Medallia": {"medallia"},
 }
 
 FIELDS = [
@@ -43,8 +52,17 @@ FORBIDDEN_SOURCE_FIELDS = {
 
 
 def contains_seen_borrower(row):
-    borrower_text = " ".join((row.get("left_borrower_norm", ""), row.get("right_borrower_norm", ""))).lower()
-    return any(name == borrower_text.strip() or name in borrower_text for name in SEEN_DEVELOPMENT_BORROWERS)
+    borrowers = {row.get("left_borrower_norm", "").lower(), row.get("right_borrower_norm", "").lower()}
+    aliases = {alias for values in SEEN_DEVELOPMENT_BORROWERS.values() for alias in values}
+    return bool(borrowers & aliases)
+
+
+def seen_borrower_name(value):
+    value = (value or "").lower()
+    for canonical, aliases in SEEN_DEVELOPMENT_BORROWERS.items():
+        if value in aliases:
+            return canonical
+    return ""
 
 
 def export(rows, sample_size=60, seed=SEED):
@@ -115,7 +133,14 @@ def main():
         "forbidden_columns_absent": sorted(FORBIDDEN_SOURCE_FIELDS),
         "labels_entered": False,
         "sampling": "simple random sample after pre-sampling exclusion of seen development borrowers",
+        "correction_status": "resampled_before_any_manual_labels",
+        "superseded_blind_ids_sha256": "b748cd5b992e4ffcb8e9d8c95d745ffbe2ab5f58330256452ca53b174bf03a1f",
+        "correction_reason": "Auctane and Medallia added; all 11 seen borrowers excluded across every period",
         "development_borrowers_excluded_before_sampling": sorted(SEEN_DEVELOPMENT_BORROWERS),
+        "development_borrower_aliases": {
+            key: sorted(values) for key, values in sorted(SEEN_DEVELOPMENT_BORROWERS.items())
+        },
+        "exclusion_scope": "all candidate periods, not only the development quarter",
         "development_borrower_pair_count_excluded": sum(contains_seen_borrower(row) for row in read_csv(args.input)),
         "pair_ids": ids,
     }

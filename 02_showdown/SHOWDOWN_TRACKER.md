@@ -143,14 +143,17 @@ No new frozen nowcast sample, no reveal and no result tag.
 | SEC history | 8 acceptance archives, 2024Q1–2025Q4 |
 | Aggregated economic facilities | 151,284 |
 | Aggregated candidate pairs | 25,628 |
-| Blind match sample | 60 unlabeled; seen development borrowers excluded before sampling |
+| Blind match sample | 60 unlabeled; 11 seen borrowers excluded globally before sampling |
 | Alias audit | 30 ARCC borrowers, 80 review rows, unlabeled |
-| Untouched movement events | 2025Q1: 5; 2025Q2: 5; total 10 < guard 20 |
+| Untouched movement events | 2025Q1: 3; 2025Q2: 3; total 6 < guard 20 |
 | Reveal permission | **No — expand fund/reporting-order universe first** |
 | Old Japan Day 3 freeze | `invalid_window_design`, retained |
 | Valid Japan universe | 2024-09-01…2026-05-15; 4,448 raw / 3,999 clean |
+| Japan universe ID file | 3,999 IDs; original frozen universe SHA matched exactly |
 | Valid Japan freeze | 20 IDs; hash `3a510bef6cfe937ac6eb192fef87ff311ac85826927fdd30053a9586f3cdc5a6` |
 | Japan archive-only result | 0/20 complete; TDnet 20×404, Wayback 0 snapshots |
-| Japan gate verdict | Not evaluated; J-Quants V2 pending local API key |
+| Japan gate verdict | Not evaluated; DocType probe then J-Quants pending local API key |
 
 Full pre-reveal evidence: `docs/research/DAY3_MEASUREMENT_REPAIR.md`.
+Draft guard only: `docs/research/PREREGISTRATION_V3_DRAFT.md` (not approved;
+does not authorize freeze or reveal).

@@ -81,8 +81,10 @@ universe after excluding dividend-only, withdrawal and actual-versus-forecast
 notices. Attempt official/J-Quants recovery first, then issuer IR and Wayback.
 Retain every failure. Do not bypass HTTP 403.
 
-- at least 12/20 reproducibly recovered: Japan remains a candidate;
-- fewer than 12/20: demote it to a live-data product and close the showdown.
+- The original audit proposed a 12/20 decision threshold. A subsequent
+  correction supersedes that instruction: no PASS/FAIL/demotion verdict may be
+  produced until J-Quants, issuer IR and a reproducible archive stage have all
+  been executed on the fixed valid-window sample.
 
 The quota is one half-day. Account creation, user authentication or tokens are
 external prerequisites and must never be committed.

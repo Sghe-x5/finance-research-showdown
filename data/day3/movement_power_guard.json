@@ -1,46 +1,63 @@
 {
   "aggregated_input_sha256": "d6809512d190aec70574eabda308bc1875d03204ff481e29f3e26e7e8f3a9942",
+  "development_borrower_exclusion_scope": "all periods",
+  "development_borrowers_excluded_globally": [
+    "Anaplan",
+    "Auctane",
+    "Fortis Solutions",
+    "Hyland Software",
+    "MRI Software",
+    "Medallia",
+    "PPV Intermediate",
+    "PetVet Care Centers",
+    "Ping Identity",
+    "Pye-Barker",
+    "Viant Medical"
+  ],
   "development_quarter_excluded_from_power_guard": "2025Q3",
-  "movement_definition": "absolute aggregated facility mark change >= 0.5 percentage points",
+  "movement_definition": "abs(source_current_aggregated_mark - source_prior_aggregated_mark) >= 0.005 (0.5 percentage points)",
   "note": "Eligibility uses source current, source prior and target prior only. It never reads target same-quarter facilities.",
   "periods": {
     "2025Q1": {
       "classification": "untouched_target_outcome_period",
-      "eligible_observations_with_source_delta": 28,
-      "eligible_pre_reveal_observations": 29,
+      "eligible_development_borrower_rows_excluded": 13,
+      "eligible_observations_with_source_delta": 15,
+      "eligible_pre_reveal_observations": 16,
       "movement_by_source_ticker": {
-        "ARCC": 2,
-        "NMFC": 3
+        "ARCC": 1,
+        "NMFC": 2
       },
-      "movement_eligible_observations": 5,
-      "movement_source_facility_events": 5,
-      "movement_unique_borrowers": 5,
+      "movement_eligible_observations": 3,
+      "movement_source_facility_events": 3,
+      "movement_unique_borrowers": 3,
       "period_end": "2025-03-31"
     },
     "2025Q2": {
       "classification": "untouched_target_outcome_period",
-      "eligible_observations_with_source_delta": 26,
-      "eligible_pre_reveal_observations": 26,
+      "eligible_development_borrower_rows_excluded": 11,
+      "eligible_observations_with_source_delta": 15,
+      "eligible_pre_reveal_observations": 15,
       "movement_by_source_ticker": {
-        "ARCC": 2,
-        "NMFC": 3
+        "ARCC": 1,
+        "NMFC": 2
       },
-      "movement_eligible_observations": 6,
-      "movement_source_facility_events": 5,
-      "movement_unique_borrowers": 4,
+      "movement_eligible_observations": 3,
+      "movement_source_facility_events": 3,
+      "movement_unique_borrowers": 3,
       "period_end": "2025-06-30"
     },
     "2025Q3": {
       "classification": "development",
-      "eligible_observations_with_source_delta": 26,
-      "eligible_pre_reveal_observations": 26,
+      "eligible_development_borrower_rows_excluded": 14,
+      "eligible_observations_with_source_delta": 12,
+      "eligible_pre_reveal_observations": 12,
       "movement_by_source_ticker": {
-        "ARCC": 3,
-        "NMFC": 3
+        "ARCC": 2,
+        "NMFC": 2
       },
-      "movement_eligible_observations": 7,
-      "movement_source_facility_events": 6,
-      "movement_unique_borrowers": 4,
+      "movement_eligible_observations": 4,
+      "movement_source_facility_events": 4,
+      "movement_unique_borrowers": 3,
       "period_end": "2025-09-30"
     }
   },
@@ -50,6 +67,6 @@
   "required_action_if_failed": "Do not plan a reveal; expand the fund/reporting-order universe first.",
   "target_outcomes_revealed_by_this_script": false,
   "unit": "unique source BDC x quarter_end x borrower x economic_facility among pre-reveal eligible source-target observations",
-  "untouched_movement_source_facility_events_total": 10,
-  "untouched_period_unique_borrower_counts_sum_not_deduplicated_across_time": 9
+  "untouched_movement_source_facility_events_total": 6,
+  "untouched_period_unique_borrower_counts_sum_not_deduplicated_across_time": 6
 }
