@@ -14,8 +14,13 @@ from common import SEED, canonical_json, read_csv, sha256_bytes, sha256_file, wr
 
 
 DEFAULT_INPUT = Path("/private/tmp/finance-day3-sec-cache/facility_candidates.csv")
-DEFAULT_OUTPUT = Path("data/day3/blind_match_sample.csv")
-DEFAULT_METADATA = Path("data/day3/blind_match_sample_meta.json")
+DEFAULT_OUTPUT = Path("data/day3/blind_facility_pairs.csv")
+DEFAULT_METADATA = Path("data/day3/blind_facility_pairs_meta.json")
+
+SEEN_DEVELOPMENT_BORROWERS = {
+    "petvet care centers", "mri software", "anaplan", "viant", "hyland",
+    "fortis", "ppv", "ping identity", "pye barker",
+}
 
 FIELDS = [
     "blind_pair_id", "period_end", "quarter", "left_ticker", "right_ticker",
@@ -37,10 +42,16 @@ FORBIDDEN_SOURCE_FIELDS = {
 }
 
 
+def contains_seen_borrower(row):
+    borrower_text = " ".join((row.get("left_borrower_norm", ""), row.get("right_borrower_norm", ""))).lower()
+    return any(name == borrower_text.strip() or name in borrower_text for name in SEEN_DEVELOPMENT_BORROWERS)
+
+
 def export(rows, sample_size=60, seed=SEED):
-    if len(rows) < sample_size:
-        raise RuntimeError(f"Need {sample_size} candidates, found {len(rows)}")
-    ordered = sorted(rows, key=lambda row: row["pair_id"])
+    eligible = [row for row in rows if not contains_seen_borrower(row)]
+    if len(eligible) < sample_size:
+        raise RuntimeError(f"Need {sample_size} uncontaminated candidates, found {len(eligible)}")
+    ordered = sorted(eligible, key=lambda row: row["pair_id"])
     rng = random.Random(seed)
     selected = rng.sample(ordered, sample_size)
     selected.sort(key=lambda row: row["pair_id"])
@@ -103,7 +114,9 @@ def main():
         "blind_file_sha256": sha256_file(args.output),
         "forbidden_columns_absent": sorted(FORBIDDEN_SOURCE_FIELDS),
         "labels_entered": False,
-        "sampling": "simple random sample from the full aggregated candidate-pair universe",
+        "sampling": "simple random sample after pre-sampling exclusion of seen development borrowers",
+        "development_borrowers_excluded_before_sampling": sorted(SEEN_DEVELOPMENT_BORROWERS),
+        "development_borrower_pair_count_excluded": sum(contains_seen_borrower(row) for row in read_csv(args.input)),
         "pair_ids": ids,
     }
     write_json(args.metadata, metadata)

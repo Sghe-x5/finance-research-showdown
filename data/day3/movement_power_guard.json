@@ -1,0 +1,55 @@
+{
+  "aggregated_input_sha256": "d6809512d190aec70574eabda308bc1875d03204ff481e29f3e26e7e8f3a9942",
+  "development_quarter_excluded_from_power_guard": "2025Q3",
+  "movement_definition": "absolute aggregated facility mark change >= 0.5 percentage points",
+  "note": "Eligibility uses source current, source prior and target prior only. It never reads target same-quarter facilities.",
+  "periods": {
+    "2025Q1": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_observations_with_source_delta": 28,
+      "eligible_pre_reveal_observations": 29,
+      "movement_by_source_ticker": {
+        "ARCC": 2,
+        "NMFC": 3
+      },
+      "movement_eligible_observations": 5,
+      "movement_source_facility_events": 5,
+      "movement_unique_borrowers": 5,
+      "period_end": "2025-03-31"
+    },
+    "2025Q2": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_observations_with_source_delta": 26,
+      "eligible_pre_reveal_observations": 26,
+      "movement_by_source_ticker": {
+        "ARCC": 2,
+        "NMFC": 3
+      },
+      "movement_eligible_observations": 6,
+      "movement_source_facility_events": 5,
+      "movement_unique_borrowers": 4,
+      "period_end": "2025-06-30"
+    },
+    "2025Q3": {
+      "classification": "development",
+      "eligible_observations_with_source_delta": 26,
+      "eligible_pre_reveal_observations": 26,
+      "movement_by_source_ticker": {
+        "ARCC": 3,
+        "NMFC": 3
+      },
+      "movement_eligible_observations": 7,
+      "movement_source_facility_events": 6,
+      "movement_unique_borrowers": 4,
+      "period_end": "2025-09-30"
+    }
+  },
+  "power_guard_minimum": 20,
+  "power_guard_passed_for_planning": false,
+  "reporting_order_sha256": "4366ad5de99115eea196891fd051912abe0ca2c68c7b5f7809eb25a2dbdd474f",
+  "required_action_if_failed": "Do not plan a reveal; expand the fund/reporting-order universe first.",
+  "target_outcomes_revealed_by_this_script": false,
+  "unit": "unique source BDC x quarter_end x borrower x economic_facility among pre-reveal eligible source-target observations",
+  "untouched_movement_source_facility_events_total": 10,
+  "untouched_period_unique_borrower_counts_sum_not_deduplicated_across_time": 9
+}

@@ -1,6 +1,7 @@
 {
   "clean_event_universe_count": 652,
   "clean_universe_ids_sha256": "52b811cd409a0d55b8ce1c79ba4dcbc5a3de3e37d01131368c6b1eba903c70be",
+  "design_status": "invalid_window_design",
   "excluded_dirty_event_count": 26,
   "excluded_title_patterns": [
     "配当",
@@ -14,10 +15,16 @@
     "実績との差異",
     "差異に関する"
   ],
+  "invalidated_before_recovery": true,
+  "invalidated_reason": "Universe ended 2024-07-31; the official J-Quants Free plan exposes only two years of history with a 12-week delivery delay. Failure would be mechanical.",
   "outcomes_used_for_selection": [],
   "raw_forecast_revision_universe_count": 678,
   "raw_universe_ids_sha256": "b82954c955a3c81a28a9e30899ef63a5b74c28c5506aa59b3fcc9b4505a8232a",
   "recovery_started": false,
+  "replacement_window": {
+    "end": "2026-05-15",
+    "start": "2024-09-01"
+  },
   "sample_ids": [
     "JP_Y1024794",
     "JP_Y1026449",

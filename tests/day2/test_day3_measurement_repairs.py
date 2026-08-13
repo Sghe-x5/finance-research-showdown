@@ -6,7 +6,8 @@ import pytest
 from aggregate_facilities import aggregate, validate
 from build_alias_recall_audit import build as build_alias_audit
 from evaluate_nowcasts import verify_frozen_evaluator
-from export_blind_match_benchmark import FORBIDDEN_SOURCE_FIELDS, export
+from export_blind_match_benchmark import FORBIDDEN_SOURCE_FIELDS, SEEN_DEVELOPMENT_BORROWERS, export
+from run_japan_valid_window_gate import END, START, monthly_periods
 
 
 def raw_facility(**overrides):
@@ -84,10 +85,16 @@ def test_aggregation_drops_unspecified_borrower_total():
 
 
 def test_blind_export_removes_prediction_and_evidence_columns():
-    exported = export([candidate(f"pair-{index:03d}") for index in range(80)], 60, 20260813)
+    rows = [candidate(f"pair-{index:03d}") for index in range(80)]
+    rows[0]["left_borrower_norm"] = "petvet care centers"
+    exported = export(rows, 60, 20260813)
     assert len(exported) == 60
     assert not (set(exported[0]) & FORBIDDEN_SOURCE_FIELDS)
     assert all(not row["manual_label"] for row in exported)
+    assert all(
+        name not in " ".join((row["left_borrower_norm"], row["right_borrower_norm"]))
+        for row in exported for name in SEEN_DEVELOPMENT_BORROWERS
+    )
 
 
 def test_alias_export_has_30_locked_borrowers_and_no_outcomes():
@@ -131,3 +138,25 @@ def test_day2_frozen_sample_remains_byte_identical():
 
     assert hashlib.sha256(path.read_bytes()).hexdigest() == "ff8bd2262a83463fe8f01f4897421dcb579ccf77fa958c8da58c2282ce8d871d"
     assert json.loads(path.read_text(encoding="utf-8"))["outcomes_revealed"] is False
+
+
+def test_japan_valid_window_month_chunks_are_exact_and_bounded():
+    periods = monthly_periods()
+    assert periods[0] == "20240901-20240930"
+    assert periods[-1] == "20260501-20260515"
+    assert START.isoformat() == "2024-09-01"
+    assert END.isoformat() == "2026-05-15"
+
+
+def test_day3_freezes_and_power_guard_are_explicit():
+    legacy = json.loads(Path("data/day3/japan_gate_meta.json").read_text(encoding="utf-8"))
+    valid = json.loads(Path("data/day3/japan_valid_window_meta.json").read_text(encoding="utf-8"))
+    movement = json.loads(Path("data/day3/movement_power_guard.json").read_text(encoding="utf-8"))
+    blind = Path("data/day3/blind_facility_pairs.csv").read_text(encoding="utf-8").lower()
+    assert legacy["design_status"] == "invalid_window_design"
+    assert valid["design_status"] == "valid_window_frozen"
+    assert valid["sample_size"] == 20
+    assert valid["outcomes_used_for_selection"] == []
+    assert movement["untouched_movement_source_facility_events_total"] == 10
+    assert movement["power_guard_passed_for_planning"] is False
+    assert all(name not in blind for name in SEEN_DEVELOPMENT_BORROWERS)
