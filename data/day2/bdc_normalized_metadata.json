@@ -1,0 +1,24 @@
+{
+  "by_archive": [
+    {
+      "archive_id": "2025q3",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 26897,
+      "raw_soi_rows_for_universe": 36530
+    },
+    {
+      "archive_id": "2025q4",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 27388,
+      "raw_soi_rows_for_universe": 37315
+    }
+  ],
+  "duplicates_removed": 0,
+  "manifest_sha256": "7c64dda2d1a223052e7131f63688a3eca3a4c77e7c304c0b153cb1db95e4d03a",
+  "normalized_facility_rows": 54285,
+  "normalized_sha256": "2668e99a024038c7a05a91bb0f058130e2d936769025fe806d0355ea5450d6c1",
+  "raw_soi_rows_for_universe": 73845,
+  "schema_version": 1,
+  "storage": "normalized rows cached outside Git; only this metadata is committed",
+  "universe_cik_count": 19
+}

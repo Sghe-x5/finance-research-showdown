@@ -1,0 +1,29 @@
+{
+  "contaminated_case_ids_excluded": [
+    "AUCTANE_ARCC_BXSL_2025Q4",
+    "MEDALLIA_BXSL_FSK_2025Q4"
+  ],
+  "eligible_count": 45,
+  "eligible_file_sha256": "ce2589de83407660b7f1af764b8de44e1026d784e07317181bf8529706bd4d9e",
+  "eligible_ids_sha256": "5d3a41022b1e115c66faaa65ba5881e67be6c326c972168f5a2655b27a395605",
+  "frozen_sample_sha256": "6932fa6156029562badf9abf98605ce81fd240aee5f723a95dfbbd3dbe7c7c5f",
+  "observation_ids": [
+    "SN_0ea81960e0d0ec4e7edc6015d9cf",
+    "SN_20f87564c76eba6de15122b0d3c9",
+    "SN_2bb23c574e6c0aa1c0c638f896bd",
+    "SN_3038d25aa68ce91b0f5482cba93b",
+    "SN_4753ff4bf81dd68eaa4fedf7cf6d",
+    "SN_51ed5f084dcb1ea92166479a5308",
+    "SN_67fe3cd270c61ca8e3a6fbedaa90",
+    "SN_801a4f892c9d17c81f65138791ba",
+    "SN_9da5909e318d86603bc422917d01",
+    "SN_a3e3f3aa800a65d67147e50a91df",
+    "SN_a6e39d492ccb86d8b21d95b17afb",
+    "SN_cd51c776b890ffc669456e345708",
+    "SN_d177c3c46cff595bf4710ba5b5d6",
+    "SN_f77ecbde1959d559e98d040651b9",
+    "SN_f8888675a960555c509c024b6c05"
+  ],
+  "outcomes_revealed": false,
+  "seed": 20260813
+}

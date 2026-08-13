@@ -1,0 +1,46 @@
+{
+  "adjudicated_sha256": "9aaba89fa70c28fa3b2d8066f359a62d8d99803e7f92e72ad0a463d3f087a2fa",
+  "confusion_matrix_manual_rows_predicted_columns": {
+    "same_borrower_different_facility": {
+      "same_borrower_different_facility": 90,
+      "same_facility": 0,
+      "uncertain": 0,
+      "unrelated": 5
+    },
+    "same_facility": {
+      "same_borrower_different_facility": 0,
+      "same_facility": 80,
+      "uncertain": 0,
+      "unrelated": 0
+    },
+    "uncertain": {
+      "same_borrower_different_facility": 0,
+      "same_facility": 0,
+      "uncertain": 50,
+      "unrelated": 15
+    },
+    "unrelated": {
+      "same_borrower_different_facility": 0,
+      "same_facility": 0,
+      "uncertain": 0,
+      "unrelated": 0
+    }
+  },
+  "high_confidence_same_facility": {
+    "fn": 0,
+    "fp": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "tp": 80
+  },
+  "labels": {
+    "same_borrower_different_facility": 95,
+    "same_facility": 80,
+    "uncertain": 65
+  },
+  "locked_unlabelled_sha256": "360de80eb7c61dabdb7eafe2284edba3d78ae1f8076ede7836460204735000cc",
+  "outcome_fields_used": [],
+  "primary_precision_gate_95pct": true,
+  "reviewer": "Codex manual review 2026-08-13",
+  "sample_size": 240
+}

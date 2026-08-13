@@ -1,0 +1,3 @@
+case_id,quarter_end,borrower,source,target,source_mark,target_prior_mark,target_actual_mark,unchanged_error_pp,source_error_pp,contaminated,note
+AUCTANE_ARCC_BXSL_2025Q4,2025-12-31,Auctane,ARCC,BXSL,1.0,0.9825016869694924,0.9850019533330965,0.250026636360412,1.499804666690352,True,Parser/regression fixture only; exclude from evaluation.
+MEDALLIA_BXSL_FSK_2025Q4,2025-12-31,Medallia Inc.,BXSL,FSK,0.7774994444556677,0.9124087591240876,0.7872975277067349,12.51112314173527,0.9798083251067236,True,Parser/regression fixture only; exclude from evaluation.

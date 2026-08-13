@@ -1,0 +1,16 @@
+{
+  "candidate_pair_count": 13672,
+  "note": "Candidate construction excludes principal, cost and fair-value outcomes.",
+  "outcome_columns_used": [],
+  "periods": [
+    "2025-06-30",
+    "2025-09-30"
+  ],
+  "prediction_counts": {
+    "same_borrower_different_facility:high": 1518,
+    "same_borrower_different_facility:medium": 852,
+    "same_facility:high": 1649,
+    "uncertain:low": 9387,
+    "unrelated:high": 266
+  }
+}

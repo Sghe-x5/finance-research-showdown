@@ -1,0 +1,9 @@
+event_id,timestamp_jst,code,company,old_revenue,new_revenue,old_operating,new_operating,old_ordinary,new_ordinary,old_net,new_net,status,source_type,source_url
+JP_2294_20231212,2023-12-12 15:30,2294,Kakiyasu Honten,38700,37000,3050,2400,3050,2400,1900,1500,Recovered,IRBank,https://irbank.net/2294/140120231211501703
+JP_2173_20231212,2023-12-12 15:00,2173,Hakuten,11000,12900,400,690,370,695,250,390,Recovered,IRBank,https://irbank.net/E05737/091220231211501221
+JP_3657_20231212,2023-12-12 15:30,3657,Pole To Win Holdings,47113,46217,1744,644,1776,788,440,-514,Recovered,IRBank,https://irbank.net/3657/ir
+JP_7347_20231212,2023-12-12 15:00,7347,Mercuria Holdings,6700,5800,2450,1000,2450,1200,1700,800,Recovered,IRBank,https://irbank.net/7347/140120231211501232
+JP_7494_20231212,2023-12-12 15:00,7494,Konaka,71194,70015,1414,683,1593,887,777,85,Recovered,IRBank,https://irbank.net/7494/140120231209500019
+JP_7561_20231212,2023-12-12 15:00,7561,HURXLEY,44500,47335,1650,2259,1750,2561,1400,2038,Recovered,IRBank,https://irbank.net/7561
+JP_7829_20231212,2023-12-12 15:00,7829,Samantha Thavasa Japan,26119,23640,430,-1050,241,-1225,326,-1140,Recovered,IRBank,https://irbank.net/7829
+JP_1887_20240115,2024-01-15 17:00,1887,Japan National Land Development,149000,139000,6500,-5600,6500,-5700,4600,-3800,Recovered,IRBank,https://irbank.net/1887/140120240115515111
