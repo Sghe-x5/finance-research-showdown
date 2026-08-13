@@ -2,17 +2,39 @@
   "complete_numeric_recoveries_without_jquants": 0,
   "complete_numeric_recovery_rate_without_jquants": 0.0,
   "distribution_status": "private research only",
-  "gate_verdict": "not_evaluated",
+  "gate_verdict": "demoted_to_live_data_product_under_current_constraints",
+  "verdict_reason": "Historical event indexing is viable, but no scalable and reproducible path to old/new numerical forecast content was available under the current budget, regional-access and licensing constraints. J-Quants access was blocked from the researcher region; historical TDnet documents were unavailable; Wayback returned no snapshots.",
+  "verdict_date": "2026-08-14",
   "historical_tdnet_recovered": 0,
   "historical_tdnet_http_404": 20,
   "issuer_ir_status": "not_attempted",
   "issuer_ir_requests_made": 0,
-  "jquants_status": "pending",
+  "jquants_status": "blocked_at_cdn_from_researcher_region",
   "jquants_requests_made": 0,
   "no_403_bypass": true,
   "sample_size": 20,
-  "status": "Japan gate pending J-Quants execution; TDnet 0/20, Wayback 0/20, issuer IR not attempted.",
-  "status_code": "pending_jquants_execution",
+  "status": "Demoted from equal historical-alpha flagship to a live-data product under current constraints; the track is not declared dead.",
+  "status_code": "demoted_to_live_data_product_under_current_constraints",
+  "scalable_legal_path_status": "no scalable legal path was demonstrated under current access and budget constraints",
+  "reactivation_conditions": [
+    "working J-Quants access",
+    "licensed historical TDnet",
+    "institutional data access",
+    "scalable issuer-IR recovery with acceptable licensing",
+    "prospective live collection"
+  ],
+  "retained_asset": {
+    "tdnet_index_period": "2023-2026",
+    "raw_revision_events_valid_window": 4448,
+    "clean_revision_intent_events_valid_window": 3999,
+    "fields": [
+      "timestamps",
+      "event IDs",
+      "event titles/classes"
+    ],
+    "potential": "live English-normalized event pipeline"
+  },
+  "equal_historical_alpha_flagship": false,
   "wayback_recovered": 0,
   "wayback_snapshots_available_unparsed": 0
 }

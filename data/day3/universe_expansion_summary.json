@@ -1,0 +1,28 @@
+{
+  "additional_listed_targets": 21,
+  "additional_nonlisted_or_unknown_sources": 66,
+  "all_aggregate_cache_sha256": "535ec3a3e8e0e986881dbaa417cba441dd913be6186224ce166da6caea523a71",
+  "archive_manifest_sha256": "7388df3155acf644120b465886bb2916a29fe6ad348c0bde1c5d8789c67500df",
+  "base_estimated_movement_count": 1917,
+  "conservative_estimated_movement_count": 1308,
+  "current_untouched_movement_count": 37,
+  "estimate_definitions": {
+    "base": "conservative universe plus recommended additional listed targets; periodic acceptance is the added-fund results cutoff",
+    "conservative": "current events plus recommended additional sources that have exact prior-facility and timing opportunities versus existing listed targets",
+    "optimistic": "all additional funds with >=100 current facilities and >=4 periods; all exchange-ticker funds may be targets"
+  },
+  "estimated_candidate_pair_multiplier": 4.939,
+  "estimated_movement_event_multiplier_base": 51.811,
+  "freeze_or_reveal_authorized": false,
+  "funds_with_at_least_100_aggregated_facilities": 163,
+  "funds_with_both_spread_and_maturity_at_least_50pct": 60,
+  "funds_with_maturity_completeness_at_least_50pct": 78,
+  "funds_with_spread_completeness_at_least_50pct": 123,
+  "manager_field_status": "left blank because manager is not a deterministic field in the SEC BDC flat-file/submission metadata used for this screen",
+  "optimistic_estimated_movement_count": 1925,
+  "output_sha256": "46890894e4df532b073a95f803aab2bf92d7edf0234474e44f2f3030ad6dee31",
+  "raw_normalized_or_aggregate_data_committed": false,
+  "recommended_additional_funds": 87,
+  "total_unique_bdc_cik_in_archives": 186,
+  "working_sample_expanded": false
+}

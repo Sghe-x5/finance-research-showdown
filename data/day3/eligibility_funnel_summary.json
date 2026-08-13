@@ -1,0 +1,40 @@
+{
+  "aggregated_input_sha256": "61459c462ab77a342b0306ad9255f1f17aea52a0473706e0789ee936d0cea2ff",
+  "category_definitions": {
+    "A": "A_missing_reporting_calendar",
+    "B": "B_weak_XBRL_tagging",
+    "C": "C_borrower_matching",
+    "D": "D_facility_matching",
+    "E": "E_missing_prior_quarter_position",
+    "F": "F_insufficient_reporting_window",
+    "G": "G_limited_19_fund_universe"
+  },
+  "denominator_definition": "non-seen current source economic_facility_v2 rows x other listed target funds",
+  "eligible_output_sha256": "81c2cde597fd1b64499787da2ffa719682a27bd88f27d097e5eb459f410ddc24",
+  "eligible_pre_reveal_observations": 131,
+  "first_loss_counts": {
+    "A_missing_reporting_calendar": 0,
+    "B_weak_XBRL_tagging": 604775,
+    "C_borrower_matching": 95246,
+    "D_facility_matching": 4577,
+    "E_missing_prior_quarter_position": 336,
+    "F_insufficient_reporting_window": 3369,
+    "G_limited_19_fund_universe": 701746
+  },
+  "first_loss_percent_of_possible": {
+    "A_missing_reporting_calendar": 0.0,
+    "B_weak_XBRL_tagging": 42.886,
+    "C_borrower_matching": 6.754,
+    "D_facility_matching": 0.325,
+    "E_missing_prior_quarter_position": 0.024,
+    "F_insufficient_reporting_window": 0.239,
+    "G_limited_19_fund_universe": 49.763
+  },
+  "possible_directional_source_facility_target_observations": 1410180,
+  "primary_bottleneck": "G_limited_19_fund_universe",
+  "primary_bottleneck_code": "G",
+  "primary_bottleneck_count": 701746,
+  "primary_bottleneck_percent_of_otherwise_possible": 49.763,
+  "reporting_order_extended_sha256": "11bfabd0faf0507c47cee950d82dc89f77e6d2b827bba44b666df6f42005ca8b",
+  "target_current_outcome_used": false
+}

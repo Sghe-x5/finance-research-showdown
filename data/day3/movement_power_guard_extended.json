@@ -1,0 +1,253 @@
+{
+  "aggregated_input_sha256": "61459c462ab77a342b0306ad9255f1f17aea52a0473706e0789ee936d0cea2ff",
+  "development_borrowers_excluded_globally": [
+    "Anaplan",
+    "Auctane",
+    "Fortis Solutions",
+    "Hyland Software",
+    "MRI Software",
+    "Medallia",
+    "PPV Intermediate",
+    "PetVet Care Centers",
+    "Ping Identity",
+    "Pye-Barker",
+    "Viant Medical"
+  ],
+  "development_quarter_excluded_from_power_guard": "2025Q3",
+  "eligibility_diagnostics": {
+    "development_borrower_excluded": 686,
+    "source_not_before_target": 3369,
+    "source_prior_not_unique": 71040,
+    "target_prior_not_unique": 389370
+  },
+  "eligible_output_sha256": "81c2cde597fd1b64499787da2ffa719682a27bd88f27d097e5eb459f410ddc24",
+  "freeze_or_reveal_authorized": false,
+  "movement_definition": "abs(source_current_aggregated_mark - source_prior_aggregated_mark) >= 0.005",
+  "periods": {
+    "2023Q4": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_pre_reveal_observations": 0,
+      "movement_eligible_observations": 0,
+      "movement_source_tickers": {},
+      "observations_with_computable_source_delta": 0,
+      "report_period_end": "2023-12-31",
+      "reporting_window_days": {
+        "median": null,
+        "p25": null,
+        "p75": null
+      },
+      "source_tickers": [],
+      "target_tickers": [],
+      "unique_movement_borrowers": 0,
+      "unique_movement_source_facilities": 0
+    },
+    "2024Q1": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_pre_reveal_observations": 24,
+      "movement_eligible_observations": 11,
+      "movement_source_tickers": {
+        "ARCC": 4,
+        "NMFC": 5,
+        "OCSL": 1
+      },
+      "observations_with_computable_source_delta": 20,
+      "report_period_end": "2024-03-31",
+      "reporting_window_days": {
+        "median": 6.964711,
+        "p25": 5.773979,
+        "p75": 7.937685
+      },
+      "source_tickers": [
+        "ARCC",
+        "HTGC",
+        "NMFC",
+        "OCSL",
+        "TSLX"
+      ],
+      "target_tickers": [
+        "ARCC",
+        "GSBD",
+        "HTGC",
+        "NMFC",
+        "OBDC"
+      ],
+      "unique_movement_borrowers": 9,
+      "unique_movement_source_facilities": 10
+    },
+    "2024Q2": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_pre_reveal_observations": 31,
+      "movement_eligible_observations": 14,
+      "movement_source_tickers": {
+        "ARCC": 6,
+        "NMFC": 6,
+        "OCSL": 1
+      },
+      "observations_with_computable_source_delta": 27,
+      "report_period_end": "2024-06-30",
+      "reporting_window_days": {
+        "median": 6.967755,
+        "p25": 6.967755,
+        "p75": 8.962859
+      },
+      "source_tickers": [
+        "ARCC",
+        "HTGC",
+        "NMFC",
+        "OCSL",
+        "TSLX"
+      ],
+      "target_tickers": [
+        "GSBD",
+        "HTGC",
+        "NMFC",
+        "OBDC",
+        "OCSL"
+      ],
+      "unique_movement_borrowers": 9,
+      "unique_movement_source_facilities": 13
+    },
+    "2024Q3": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_pre_reveal_observations": 33,
+      "movement_eligible_observations": 9,
+      "movement_source_tickers": {
+        "ARCC": 2,
+        "NMFC": 6
+      },
+      "observations_with_computable_source_delta": 30,
+      "report_period_end": "2024-09-30",
+      "reporting_window_days": {
+        "median": 7.036331,
+        "p25": 7.036331,
+        "p75": 8.007581
+      },
+      "source_tickers": [
+        "ARCC",
+        "HTGC",
+        "NMFC",
+        "TSLX"
+      ],
+      "target_tickers": [
+        "GSBD",
+        "NMFC",
+        "OBDC",
+        "TSLX"
+      ],
+      "unique_movement_borrowers": 7,
+      "unique_movement_source_facilities": 8
+    },
+    "2024Q4": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_pre_reveal_observations": 9,
+      "movement_eligible_observations": 1,
+      "movement_source_tickers": {
+        "OBDC": 1
+      },
+      "observations_with_computable_source_delta": 8,
+      "report_period_end": "2024-12-31",
+      "reporting_window_days": {
+        "median": 7.203229,
+        "p25": 7.203229,
+        "p75": 21.992812
+      },
+      "source_tickers": [
+        "ARCC",
+        "OBDC",
+        "TSLX"
+      ],
+      "target_tickers": [
+        "HTGC",
+        "NMFC"
+      ],
+      "unique_movement_borrowers": 1,
+      "unique_movement_source_facilities": 1
+    },
+    "2025Q1": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_pre_reveal_observations": 13,
+      "movement_eligible_observations": 2,
+      "movement_source_tickers": {
+        "ARCC": 1,
+        "NMFC": 1
+      },
+      "observations_with_computable_source_delta": 12,
+      "report_period_end": "2025-03-31",
+      "reporting_window_days": {
+        "median": 6.934873,
+        "p25": 1.999375,
+        "p75": 8.934248
+      },
+      "source_tickers": [
+        "ARCC",
+        "NMFC",
+        "TSLX"
+      ],
+      "target_tickers": [
+        "HTGC",
+        "NMFC",
+        "OBDC"
+      ],
+      "unique_movement_borrowers": 2,
+      "unique_movement_source_facilities": 2
+    },
+    "2025Q2": {
+      "classification": "untouched_target_outcome_period",
+      "eligible_pre_reveal_observations": 10,
+      "movement_eligible_observations": 3,
+      "movement_source_tickers": {
+        "ARCC": 1,
+        "NMFC": 2
+      },
+      "observations_with_computable_source_delta": 10,
+      "report_period_end": "2025-06-30",
+      "reporting_window_days": {
+        "median": 6.969769,
+        "p25": 1.976655,
+        "p75": 8.45226
+      },
+      "source_tickers": [
+        "ARCC",
+        "NMFC"
+      ],
+      "target_tickers": [
+        "NMFC",
+        "OBDC"
+      ],
+      "unique_movement_borrowers": 3,
+      "unique_movement_source_facilities": 3
+    },
+    "2025Q3": {
+      "classification": "development",
+      "eligible_pre_reveal_observations": 11,
+      "movement_eligible_observations": 4,
+      "movement_source_tickers": {
+        "ARCC": 2,
+        "NMFC": 2
+      },
+      "observations_with_computable_source_delta": 11,
+      "report_period_end": "2025-09-30",
+      "reporting_window_days": {
+        "median": 1.997766,
+        "p25": 1.997766,
+        "p75": 7.035648
+      },
+      "source_tickers": [
+        "ARCC",
+        "NMFC"
+      ],
+      "target_tickers": [
+        "NMFC",
+        "OBDC"
+      ],
+      "unique_movement_borrowers": 3,
+      "unique_movement_source_facilities": 4
+    }
+  },
+  "power_guard_minimum": 20,
+  "power_guard_passed_for_planning": true,
+  "reporting_order_extended_sha256": "11bfabd0faf0507c47cee950d82dc89f77e6d2b827bba44b666df6f42005ca8b",
+  "source_information_timestamp_rule": "max(verified source results timestamp, source SOI acceptance); no earlier facility mark claimed without EX-99 evidence",
+  "target_current_outcome_used": false,
+  "untouched_independent_movement_facilities_total": 37
+}

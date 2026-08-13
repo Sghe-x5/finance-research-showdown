@@ -1,5 +1,8 @@
 import json
 import importlib.util
+import csv
+import hashlib
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -11,6 +14,7 @@ from export_blind_match_benchmark import FORBIDDEN_SOURCE_FIELDS, SEEN_DEVELOPME
 from run_japan_valid_window_gate import (
     END, START, monthly_periods, reconstruct_forecast_pair,
 )
+from build_reporting_order_extended import output_row
 
 
 _DAY3_EVALUATOR_SPEC = importlib.util.spec_from_file_location(
@@ -199,12 +203,12 @@ def test_day3_freezes_and_power_guard_are_explicit():
     assert valid["design_status"] == "valid_window_frozen"
     assert valid["sample_size"] == 20
     assert valid["outcomes_used_for_selection"] == []
-    assert japan_summary["status_code"] == "pending_jquants_execution"
+    assert japan_summary["status_code"] == "demoted_to_live_data_product_under_current_constraints"
     assert japan_summary["jquants_requests_made"] == 0
     assert japan_summary["historical_tdnet_recovered"] == 0
     assert japan_summary["wayback_recovered"] == 0
     assert japan_summary["issuer_ir_status"] == "not_attempted"
-    assert japan_summary["gate_verdict"] == "not_evaluated"
+    assert japan_summary["gate_verdict"] == "demoted_to_live_data_product_under_current_constraints"
     assert movement["untouched_movement_source_facility_events_total"] == 6
     assert movement["power_guard_passed_for_planning"] is False
     excluded_aliases = {alias for aliases in SEEN_DEVELOPMENT_BORROWERS.values() for alias in aliases}
@@ -212,8 +216,6 @@ def test_day3_freezes_and_power_guard_are_explicit():
 
 
 def test_corrected_blind_files_hide_strata_predictions_and_similarity_scores():
-    import csv
-
     facility_path = Path("data/day3/blind_facility_pairs_v2.csv")
     with facility_path.open(newline="", encoding="utf-8") as handle:
         facility_rows = list(csv.DictReader(handle))
@@ -241,6 +243,91 @@ def test_corrected_blind_files_hide_strata_predictions_and_similarity_scores():
     alias_meta = json.loads(Path("data/day3/blind_alias_candidates_meta.json").read_text(encoding="utf-8"))
     assert alias_meta["primary_audit_debt_facilities_only"] is True
     assert alias_meta["sampled_borrower_count"] == 30
+
+
+def test_extended_reporting_order_is_complete_and_keeps_missing_rows_explicit():
+    with Path("data/day3/reporting_order_extended.csv").open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    assert len(rows) == 19 * 8
+    assert len({(row["ticker"], row["report_period_end"]) for row in rows}) == len(rows)
+    assert {row["report_period_label"] for row in rows} == {
+        "2023Q4", "2024Q1", "2024Q2", "2024Q3", "2024Q4", "2025Q1", "2025Q2", "2025Q3",
+    }
+    missing = output_row("TEST", "1", "2024-12-31", None, None, ["no valid candidate"])
+    assert missing["verification_status"] == "explicit_missing"
+    assert missing["event_type"] == "missing"
+
+
+def test_extended_reporting_order_rejects_known_scheduling_announcements():
+    with Path("data/day3/reporting_order_extended.csv").open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    indexed = {(row["ticker"], row["report_period_end"]): row for row in rows}
+    obdc = indexed[("OBDC", "2025-06-30")]
+    gbdc = indexed[("GBDC", "2025-06-30")]
+    fsk = indexed[("FSK", "2025-09-30")]
+    assert not obdc["acceptance_timestamp_utc"].startswith("2025-07-01")
+    assert "0001193125-25-153464" in obdc["exclusion_reason"]
+    assert not gbdc["acceptance_timestamp_utc"].startswith("2025-07-07")
+    assert "0001476765-25-000066" in gbdc["exclusion_reason"]
+    assert "0001104659-26-005404" in fsk["exclusion_reason"]
+    meta = json.loads(Path("data/day3/reporting_order_extended_meta.json").read_text(encoding="utf-8"))
+    assert meta["excluded_scheduling"] >= 3
+    assert meta["candidate_search_window_days"] == [0, 120]
+
+
+def test_extended_eligibility_is_aggregated_prefreeze_only():
+    with Path("data/day3/eligible_prefreeze_extended.csv").open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    assert rows
+    assert all(row["source_facility_id"].startswith("EF_") for row in rows)
+    assert all(row["target_current_outcome_used_for_eligibility"] == "False" for row in rows)
+    assert all(row["outcomes_revealed"] == "False" for row in rows)
+    excluded_aliases = {alias for aliases in SEEN_DEVELOPMENT_BORROWERS.values() for alias in aliases}
+    assert not ({row["borrower_norm"] for row in rows} & excluded_aliases)
+    movements = json.loads(Path("data/day3/movement_power_guard_extended.json").read_text(encoding="utf-8"))
+    computed = sum(
+        period["unique_movement_source_facilities"]
+        for label, period in movements["periods"].items()
+        if label != "2025Q3"
+    )
+    assert computed == movements["untouched_independent_movement_facilities_total"] == 37
+    assert movements["power_guard_passed_for_planning"] is True
+    assert movements["freeze_or_reveal_authorized"] is False
+
+
+def test_locked_blind_and_japan_samples_are_byte_identical_to_00ee149():
+    expected = {
+        "data/day3/blind_facility_pairs_v2.csv": "98876afb05fc9d9f1ff0fefad93f461762d4e297f3454d9c64fc8e242ad47d4f",
+        "data/day3/blind_alias_candidates.csv": "d37f5daeb4eb6cee9e4ddb2e7690978a6ac899c30305b4fda268bb7424a8b64e",
+        "data/day3/japan_valid_window_sample.csv": "23c327026276b03e44e6a7bf3b54fc9d4324e3cdb91fc228944251a419290f49",
+    }
+    for path, digest in expected.items():
+        assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == digest
+        baseline = subprocess.check_output(["git", "show", f"00ee149:{path}"])
+        assert hashlib.sha256(baseline).hexdigest() == digest
+    japan_meta = json.loads(Path("data/day3/japan_valid_window_meta.json").read_text(encoding="utf-8"))
+    assert japan_meta["sample_ids_sha256"] == "3a510bef6cfe937ac6eb192fef87ff311ac85826927fdd30053a9586f3cdc5a6"
+
+
+def test_machine_phase_did_not_create_freeze_reveal_or_results_tag():
+    tags = set(subprocess.check_output(["git", "tag", "--list"], text=True).splitlines())
+    assert tags == {
+        "showdown-day1-reconciled-2026-08-12",
+        "showdown-day2-mechanism-2026-08-13",
+    }
+    assert not Path("data/day3/frozen_nowcast_sample_v3.json").exists()
+    movement = json.loads(Path("data/day3/movement_power_guard_extended.json").read_text(encoding="utf-8"))
+    assert movement["target_current_outcome_used"] is False
+    assert movement["freeze_or_reveal_authorized"] is False
+
+
+def test_universe_expansion_is_estimate_only():
+    summary = json.loads(Path("data/day3/universe_expansion_summary.json").read_text(encoding="utf-8"))
+    assert summary["total_unique_bdc_cik_in_archives"] == 186
+    assert summary["recommended_additional_funds"] == 87
+    assert summary["working_sample_expanded"] is False
+    assert summary["freeze_or_reveal_authorized"] is False
+    assert summary["raw_normalized_or_aggregate_data_committed"] is False
 
 
 def test_japan_full_eligible_universe_matches_frozen_hash():

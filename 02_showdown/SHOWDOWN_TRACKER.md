@@ -4,7 +4,9 @@ Frozen: **2026-08-12**, before manual Day 2 outcomes.
 
 ## Decision status
 
-**Flagship not selected.** ShadowNAV and Japanese Language Wall remain alive.
+**No confirmatory flagship selected.** ShadowNAV remains the active candidate;
+Japanese Language Wall is retained as a live-data product but is no longer an
+equal historical-alpha flagship under current constraints.
 Old dashboard scores (89/82) and priors (52/48) are explicitly not selection
 criteria.
 
@@ -146,15 +148,25 @@ No new frozen nowcast sample, no reveal and no result tag.
 | Aggregation audit | 100 v1 multi-lot groups + 100 issuer-total drops; manual review pending |
 | Blind match sample | corrected 120 unlabeled (60/30/30); old 60-row file superseded; 11 seen borrowers excluded globally |
 | Alias audit | corrected debt-only blind file: 30 ARCC borrowers, 128 shuffled candidate rows; scores private |
-| Untouched movement events | 2025Q1: 3; 2025Q2: 3; total 6 < guard 20 |
+| Initial pre-extension movement events | 2025Q1: 3; 2025Q2: 3; total 6 < guard 20; superseded by final extended count below |
 | Reveal permission | **No — expand fund/reporting-order universe first** |
 | Old Japan Day 3 freeze | `invalid_window_design`, retained |
 | Valid Japan universe | 2024-09-01…2026-05-15; 4,448 raw / 3,999 clean |
 | Japan universe ID file | 3,999 IDs; original frozen universe SHA matched exactly |
 | Valid Japan freeze | 20 IDs; hash `3a510bef6cfe937ac6eb192fef87ff311ac85826927fdd30053a9586f3cdc5a6` |
-| Japan intermediate status | TDnet 0/20; Wayback 0/20; issuer IR not attempted; J-Quants pending |
-| Japan gate verdict | Not evaluated; DocType probe then J-Quants pending local API key |
+| Japan intermediate status at `00ee149` | TDnet 0/20; Wayback 0/20; issuer IR not attempted; J-Quants pending |
+| Final Japan status | Demoted to live-data product under current constraints; not declared dead |
 
 Full pre-reveal evidence: `docs/research/DAY3_MEASUREMENT_REPAIR.md`.
 Draft guard only: `docs/research/PREREGISTRATION_V3_DRAFT.md` (not approved;
 does not authorize freeze or reveal).
+
+## Final Day 3 machine phase
+
+Extended reporting order covers 152/152 fund-periods from 2023Q4 through
+2025Q3. Untouched independent movement facilities are 37 versus guard 20;
+planning power passes, but freeze and reveal remain prohibited pending blind
+review and preregistration v3 approval. The primary first-loss bottleneck is
+the limited 19-fund universe (~49.8%). Japan is demoted to a live-data product
+under current access/budget constraints, not declared dead. Full final report:
+`docs/research/DAY3_FINAL_PRE_REVEAL.md`.

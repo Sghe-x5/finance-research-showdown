@@ -93,6 +93,11 @@ private key hash:
 
 ### Movement power guard
 
+The table immediately below records the **initial 2025-only guard at commit
+`00ee149`**. It is retained as provenance and is superseded for current planning
+by the 2023Q4–2025Q3 extended-calendar result of 37 untouched movements in
+`docs/research/DAY3_FINAL_PRE_REVEAL.md`.
+
 Movement is `|source aggregated-facility mark change| >= 0.5 pp`. Counts below
 are unique source-facility events among pre-reveal eligible source→target
 observations. Eligibility reads source current, source prior and target prior;
@@ -104,9 +109,8 @@ it never reads the target same-quarter outcome.
 | 2025Q2 | untouched target outcomes | 15 | 3 | 3 |
 | 2025Q3 | development; excluded from guard | 12 | 4 | 4 |
 
-Untouched total is **6**, below the preregistration planning guard of 20.
-Therefore no reveal should be planned; the fund/reporting-order universe must
-be expanded first. The corrected per-period counts and formula are copied into
+The initial untouched total was **6**, below the preregistration planning guard
+of 20. The corrected per-period counts and formula were copied into
 `docs/research/PREREGISTRATION_V3_DRAFT.md`; that file is explicitly not an
 approved preregistration or freeze authorization.
 
@@ -152,7 +156,8 @@ Frozen IDs:
 `JP_Y1195470`, `JP_Y1199291`, `JP_Y1199316`, `JP_Y1200898`,
 `JP_Y1203177`, `JP_Y1220656`, `JP_Y1227719`, `JP_Y1241435`.
 
-The freeze was committed before archive attempts. Intermediate results:
+The freeze was committed before archive attempts. Intermediate results before
+the final machine-phase disposition:
 
 | stage | result |
 |---|---:|
@@ -181,20 +186,19 @@ Record IDs, timestamps, units, basis, rule and confidence are retained. Missing
 unambiguous history is `ambiguous_old_forecast`; when the fiscal-year start lies
 before the fixed available-from date it is `prior_outside_window`.
 
-Current status: **Japan gate pending J-Quants execution; TDnet 0/20, Wayback
-0/20, issuer IR not attempted.** No PASS/FAIL/demotion verdict is permitted until
-J-Quants, issuer IR and reproducible archive stages are all complete. Outputs
-are marked `private research only` pending a distribution-license review. No
-403 was bypassed.
+Final machine-phase status (2026-08-14): **demoted to a live-data product under
+current constraints**. TDnet was 0/20, Wayback was 0/20, issuer IR was not
+executed at scale, and J-Quants access was blocked at CDN level from the
+researcher region. No scalable legal path was demonstrated under current access
+and budget constraints; this is not a claim that no legal path exists and does
+not declare the track dead. See `docs/research/DAY3_FINAL_PRE_REVEAL.md`.
 
 ## Current blockers and next authorized action
 
-1. `JQUANTS_API_KEY` must be placed locally in `.env`; then run only the DocType
-   probe and review it before authorizing reconstruction.
-2. Blind facility and alias labels require independent human adjudication.
-3. The untouched movement total is 6 < 20, so expand the eligible fund and
-   reporting-order universe before any new reveal.
-4. Preregistration v3 has not been supplied; the freeze script fails loudly
+1. Blind facility and alias labels require independent human adjudication.
+2. Extended reporting-order coverage raises the untouched planning count to
+   37; this does not authorize a freeze or reveal.
+3. Preregistration v3 has not been approved; the freeze script fails loudly
    without it and hash-locks the evaluator once it exists.
 
 ## Sources
