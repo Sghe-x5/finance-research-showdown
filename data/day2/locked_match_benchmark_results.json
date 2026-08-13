@@ -40,7 +40,10 @@
   },
   "locked_unlabelled_sha256": "360de80eb7c61dabdb7eafe2284edba3d78ae1f8076ede7836460204735000cc",
   "outcome_fields_used": [],
-  "primary_precision_gate_95pct": true,
-  "reviewer": "Codex manual review 2026-08-13",
+  "primary_precision_gate_95pct": null,
+  "computed_gate_before_external_audit": true,
+  "external_audit_status": "invalid_upper_bound_by_construction",
+  "external_audit_reason": "manual_label defaulted to predicted_label; corrections covered only predicted-unrelated rows",
+  "reviewer": "programmatic default-plus-corrections; not independent blind review",
   "sample_size": 240
 }

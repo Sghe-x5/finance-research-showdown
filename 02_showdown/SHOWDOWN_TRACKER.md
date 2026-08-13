@@ -79,7 +79,7 @@ forecast revisions and event-level Japanese/English treatment.
 | Normalized facility rows | 54,285 |
 | Candidate pairs | 13,672 |
 | Locked match benchmark | 240 |
-| High-confidence same-facility precision | 100% (80 TP, 0 FP) |
+| High-confidence same-facility precision | Not adjudicated; reported 100% is an upper bound by construction |
 | Eligible nowcast IDs | 45 |
 | Frozen IDs before outcomes | 15 |
 | Unique borrower/source/target clusters after reveal | 11 |
@@ -97,10 +97,14 @@ Frozen sample hash:
 | B4 prior cross-lender median | 15 | 0.5648 | 1.0366 | 0.0000 |
 | Prior-gap adjusted source | 15 | 0.0680 | 0.2348 | 0.0000 |
 
-The naive earliest-co-holder rule failed against persistence. The adjusted
-source result is exploratory only: four frozen IDs are repeated XBRL slices,
-and no failed/ugly ID was replaced. B1 and categorical transition tests lacked
-usable observations. Same-manager/JV/appraiser exclusions were not observable.
+The naive earliest-co-holder rule failed against persistence. The 0.0680 pp
+adjusted result is a failed-pilot diagnostic, not confirmatory evidence: its
+definition changed after freeze, 13/15 predictions equal B0, and its entire
+advantage is driven by PetVet. Leave-one-borrower-out eliminates the advantage;
+without PetVet both adjusted and B0 MAE are 0.0696 pp. Four frozen IDs are also
+repeated XBRL slices. The old sample remains untouched and will not be
+recomputed. B1 and categorical transition tests lacked usable observations.
+Same-manager/JV/appraiser exclusions were not observable.
 
 ## Japan Day 2
 
@@ -121,7 +125,9 @@ Failures remain in the denominator and no price event study was run.
 
 ## Day 2 decision
 
-No flagship. ShadowNAV passed the facility-matching infrastructure gate but
-not the naive signal gate. Japan did not clear reproducible numerical recovery
-or treatment classification. Full evidence and blockers are frozen in
-`docs/research/DAY2_RESULTS.md`.
+No flagship. ShadowNAV did not clear an independently adjudicated matching gate
+and did not beat persistence outside one PetVet movement event. Japan did not
+clear reproducible numerical recovery or treatment classification. Full
+evidence, the external audit and blockers are recorded in
+`docs/research/DAY2_RESULTS.md` and
+`docs/research/05_DAY2_EXTERNAL_AUDIT.md`.

@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
-"""Build eligible exact-facility nowcast IDs without exposing target outcomes."""
+"""Build pre-reveal nowcast IDs from aggregated facilities only.
+
+Eligibility is based on a source's current public facility and the target's
+previously public facility. The target's same-quarter row is deliberately not
+read, so survival/disappearance remains an outcome to reveal after freezing.
+"""
 
 import argparse
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -19,28 +25,33 @@ CONTAMINATED_KEYS = {
     ("auctane", "ARCC", "BXSL", "2025Q4"),
     ("medallia", "BXSL", "FSK", "2025Q4"),
 }
-DEFAULT_NORMALIZED = Path("/private/tmp/finance-day2-sec-cache/bdc_soi_normalized.csv")
-DEFAULT_CANDIDATES = Path("data/day2/facility_candidates.csv")
+DEFAULT_FACILITIES = Path("/private/tmp/finance-day3-sec-cache/bdc_facilities_agg.csv")
 DEFAULT_REPORTING = Path("02_showdown/reporting_order.csv")
-DEFAULT_OUTPUT = Path("data/day2/eligible_nowcast_ids.csv")
+DEFAULT_OUTPUT = Path("data/day3/eligible_prefreeze_ids.csv")
 
 FIELDS = [
     "observation_id", "period_end", "quarter", "borrower_norm", "source_ticker",
-    "target_ticker", "source_cik", "target_cik", "source_row_id", "target_row_id",
-    "target_prior_row_id", "source_results_timestamp_utc", "target_cutoff_timestamp_utc",
-    "source_soi_acceptance", "source_public_before_target_cutoff",
-    "target_held_previous_filing", "exact_facility_evidence", "candidate_pair_id",
-    "contaminated_excluded", "outcomes_revealed",
+    "target_ticker", "source_cik", "target_cik", "source_facility_id",
+    "source_prior_facility_id", "target_prior_facility_id",
+    "source_results_timestamp_utc", "source_soi_acceptance",
+    "source_information_timestamp_utc", "target_cutoff_timestamp_utc",
+    "source_public_before_target_cutoff", "target_prior_public_before_source",
+    "target_held_previous_filing", "exact_facility_evidence",
+    "target_current_outcome_used_for_eligibility", "contaminated_excluded",
+    "outcomes_revealed", "unit_of_analysis",
 ]
 
 
 def parse_timestamp(value):
-    value = (value or "").replace("Z", "+00:00")
-    value = value.replace(" ", "T", 1)
+    value = (value or "").replace("Z", "+00:00").replace(" ", "T", 1)
     parsed = datetime.fromisoformat(value)
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=timezone.utc)
     return parsed.astimezone(timezone.utc)
+
+
+def later_timestamp(left, right):
+    return left if parse_timestamp(left) >= parse_timestamp(right) else right
 
 
 def strict_same_facility(left, right):
@@ -68,103 +79,111 @@ def strict_same_facility(left, right):
 def reporting_map(rows):
     output = {}
     for row in rows:
-        if row["ticker"] in LISTED or row["ticker"]:
-            output[(row["ticker"], row["quarter"])] = row["first_results_timestamp_utc"]
+        output[(row["ticker"], row["quarter"])] = row["first_results_timestamp_utc"]
     return output
 
 
-def find_prior(target, rows_by_observation_cik):
-    prior_period = previous_quarter_end(target["period_end"])
-    options = rows_by_observation_cik.get((prior_period, target["cik"]), [])
-    matches = [
-        row for row in options
-        if row["accepted"] <= target["accepted"] and strict_same_facility(target, row)
-    ]
-    if not matches:
+def index_facilities(rows):
+    by_period_ticker_borrower = defaultdict(list)
+    by_id = {}
+    for row in rows:
+        by_id[row["economic_facility_id"]] = row
+        if row["is_current_period"] == "True":
+            by_period_ticker_borrower[(row["period_end"], row["ticker"], row["borrower_norm"])].append(row)
+    return by_id, by_period_ticker_borrower
+
+
+def unique_match(facility, options):
+    matches = [row for row in options if strict_same_facility(facility, row)]
+    if len(matches) != 1:
         return None
-    return sorted(matches, key=lambda row: row["facility_row_id"])[0]
+    return matches[0]
 
 
-def build_eligible(normalized_rows, candidate_rows, reporting_rows):
-    by_id = {row["facility_row_id"]: row for row in normalized_rows}
-    by_observation_cik = {}
-    for row in normalized_rows:
-        by_observation_cik.setdefault((row["observation_date"], row["cik"]), []).append(row)
+def build_eligible(facilities, reporting_rows):
+    """Construct IDs without consulting target current-quarter facilities."""
+    _, indexed = index_facilities(facilities)
     results = reporting_map(reporting_rows)
+    sources = [row for row in facilities if row["is_current_period"] == "True" and row["ticker"] in LISTED]
     eligible = []
     seen = set()
-    for pair in candidate_rows:
-        if pair["predicted_label"] != "same_facility" or pair["match_confidence"] != "high":
+    for source in sources:
+        quarter = quarter_label(source["period_end"])
+        source_results = results.get((source["ticker"], quarter))
+        if not source_results:
             continue
-        left, right = by_id.get(pair["left_row_id"]), by_id.get(pair["right_row_id"])
-        if not left or not right or not strict_same_facility(left, right):
-            continue
-        quarter = quarter_label(left["period_end"])
-        left_time = results.get((left["ticker"], quarter))
-        right_time = results.get((right["ticker"], quarter))
-        if not left_time or not right_time or left_time == right_time:
-            continue
-        if parse_timestamp(left_time) < parse_timestamp(right_time):
-            source, target = left, right
-            source_results, target_cutoff = left_time, right_time
-        else:
-            source, target = right, left
-            source_results, target_cutoff = right_time, left_time
-        if target["ticker"] not in LISTED:
-            continue
-        contaminated_key = (target["borrower_norm"], source["ticker"], target["ticker"], quarter)
-        if contaminated_key in CONTAMINATED_KEYS:
-            continue
-        if parse_timestamp(source_results) >= parse_timestamp(target_cutoff):
-            continue
-        if parse_timestamp(source["accepted"]) >= parse_timestamp(target_cutoff):
-            continue
-        prior = find_prior(target, by_observation_cik)
-        if not prior:
-            continue
-        observation_id = "SN_" + stable_id(
-            left["period_end"], source["facility_row_id"], target["facility_row_id"], prior["facility_row_id"], length=28
+        source_information = later_timestamp(source_results, source["accepted"])
+        prior_period = previous_quarter_end(source["period_end"])
+        source_prior = unique_match(
+            source, indexed.get((prior_period, source["ticker"], source["borrower_norm"]), [])
         )
-        if observation_id in seen:
+        if not source_prior:
             continue
-        seen.add(observation_id)
-        eligible.append({
-            "observation_id": observation_id,
-            "period_end": left["period_end"],
-            "quarter": quarter,
-            "borrower_norm": target["borrower_norm"],
-            "source_ticker": source["ticker"],
-            "target_ticker": target["ticker"],
-            "source_cik": source["cik"],
-            "target_cik": target["cik"],
-            "source_row_id": source["facility_row_id"],
-            "target_row_id": target["facility_row_id"],
-            "target_prior_row_id": prior["facility_row_id"],
-            "source_results_timestamp_utc": source_results,
-            "target_cutoff_timestamp_utc": target_cutoff,
-            "source_soi_acceptance": source["accepted"],
-            "source_public_before_target_cutoff": "True",
-            "target_held_previous_filing": "True",
-            "exact_facility_evidence": pair["evidence"],
-            "candidate_pair_id": pair["pair_id"],
-            "contaminated_excluded": "True",
-            "outcomes_revealed": "False",
-        })
+
+        for target_ticker in sorted(LISTED - {source["ticker"]}):
+            target_cutoff = results.get((target_ticker, quarter))
+            if not target_cutoff or parse_timestamp(source_information) >= parse_timestamp(target_cutoff):
+                continue
+            target_prior = unique_match(
+                source, indexed.get((prior_period, target_ticker, source["borrower_norm"]), [])
+            )
+            if not target_prior:
+                continue
+            if parse_timestamp(target_prior["accepted"]) >= parse_timestamp(source_information):
+                continue
+            contaminated_key = (source["borrower_norm"], source["ticker"], target_ticker, quarter)
+            if contaminated_key in CONTAMINATED_KEYS:
+                continue
+            observation_id = "SN3_" + stable_id(
+                source["period_end"], source["economic_facility_id"],
+                source_prior["economic_facility_id"], target_prior["economic_facility_id"],
+                target_ticker, length=28,
+            )
+            if observation_id in seen:
+                continue
+            seen.add(observation_id)
+            eligible.append({
+                "observation_id": observation_id,
+                "period_end": source["period_end"],
+                "quarter": quarter,
+                "borrower_norm": source["borrower_norm"],
+                "source_ticker": source["ticker"],
+                "target_ticker": target_ticker,
+                "source_cik": source["cik"],
+                "target_cik": target_prior["cik"],
+                "source_facility_id": source["economic_facility_id"],
+                "source_prior_facility_id": source_prior["economic_facility_id"],
+                "target_prior_facility_id": target_prior["economic_facility_id"],
+                "source_results_timestamp_utc": source_results,
+                "source_soi_acceptance": source["accepted"],
+                "source_information_timestamp_utc": source_information,
+                "target_cutoff_timestamp_utc": target_cutoff,
+                "source_public_before_target_cutoff": "True",
+                "target_prior_public_before_source": "True",
+                "target_held_previous_filing": "True",
+                "exact_facility_evidence": "aggregated economic facility; target current row not consulted",
+                "target_current_outcome_used_for_eligibility": "False",
+                "contaminated_excluded": "True",
+                "outcomes_revealed": "False",
+                "unit_of_analysis": "BDC x quarter_end x borrower x economic_facility",
+            })
     return sorted(eligible, key=lambda row: row["observation_id"])
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--normalized", type=Path, default=DEFAULT_NORMALIZED)
-    parser.add_argument("--candidates", type=Path, default=DEFAULT_CANDIDATES)
+    parser.add_argument("--facilities", type=Path, default=DEFAULT_FACILITIES)
     parser.add_argument("--reporting-order", type=Path, default=DEFAULT_REPORTING)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
-    eligible = build_eligible(read_csv(args.normalized), read_csv(args.candidates), read_csv(args.reporting_order))
+    eligible = build_eligible(read_csv(args.facilities), read_csv(args.reporting_order))
     if not eligible:
-        raise RuntimeError("No eligible nowcasts passed the preregistered filters")
+        raise RuntimeError("No pre-reveal nowcasts passed the aggregated eligibility filters")
     write_csv(args.output, eligible, FIELDS)
-    print(f"eligible_nowcast_count={len(eligible)} periods={sorted({row['period_end'] for row in eligible})}")
+    print(
+        f"eligible_prefreeze_count={len(eligible)} "
+        f"periods={sorted({row['period_end'] for row in eligible})}; no target current outcomes read"
+    )
 
 
 if __name__ == "__main__":

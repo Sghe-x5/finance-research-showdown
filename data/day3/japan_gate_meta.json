@@ -1,0 +1,52 @@
+{
+  "clean_event_universe_count": 652,
+  "clean_universe_ids_sha256": "52b811cd409a0d55b8ce1c79ba4dcbc5a3de3e37d01131368c6b1eba903c70be",
+  "excluded_dirty_event_count": 26,
+  "excluded_title_patterns": [
+    "配当",
+    "撤回",
+    "取下げ",
+    "取り下げ",
+    "中止",
+    "未定",
+    "実績値との差異",
+    "予想と実績",
+    "実績との差異",
+    "差異に関する"
+  ],
+  "outcomes_used_for_selection": [],
+  "raw_forecast_revision_universe_count": 678,
+  "raw_universe_ids_sha256": "b82954c955a3c81a28a9e30899ef63a5b74c28c5506aa59b3fcc9b4505a8232a",
+  "recovery_started": false,
+  "sample_ids": [
+    "JP_Y1024794",
+    "JP_Y1026449",
+    "JP_Y1026467",
+    "JP_Y1026602",
+    "JP_Y1027010",
+    "JP_Y900826",
+    "JP_Y900848",
+    "JP_Y901193",
+    "JP_Y901194",
+    "JP_Y902769",
+    "JP_Y903221",
+    "JP_Y943479",
+    "JP_Y945914",
+    "JP_Y946339",
+    "JP_Y979668",
+    "JP_Y980013",
+    "JP_Y980033",
+    "JP_Y980930",
+    "JP_Y981544",
+    "JP_Y981567"
+  ],
+  "sample_ids_sha256": "001b246ea137ececd24195edfd8c079fe858275f576e82b27051bef16c1df5f8",
+  "sample_size": 20,
+  "seed": 20260813,
+  "source_periods": [
+    "20230110-20230131",
+    "20230701-20230731",
+    "20240110-20240131",
+    "20240701-20240731"
+  ]
+}

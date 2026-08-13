@@ -10,12 +10,15 @@ Freeze commit: `a495f39`
 **No flagship is selected.** Both tracks remain alive, but neither has yet
 passed the full preregistered mechanism gate.
 
-ShadowNAV produced a valid frozen pilot. A strict exact-facility matcher passed
-its locked precision gate, but the naive earliest-co-holder signal lost to
-target persistence. A source/target prior-bias adjustment looked much stronger,
-but the 15 IDs contain four repeated XBRL slices and only 11 unique
-borrower/source/target clusters. That adjusted result is therefore an
-engineering clue, not a flagship-grade finding.
+ShadowNAV produced a useful but failed frozen pilot: the freeze itself preceded
+the outcome reveal, but the unit of analysis contained repeated XBRL slices and
+the adjusted-predictor definition changed after the freeze. The naive
+earliest-co-holder signal lost to target persistence. The apparent adjusted
+advantage is driven entirely by one borrower, PetVet Care Centers;
+leave-one-borrower-out eliminates it. The matching benchmark is also an upper
+bound by construction because adjudication defaulted to the predicted label.
+These defects invalidate confirmatory claims while preserving the pilot as a
+diagnostic artifact.
 
 Japan produced a valid frozen failure-denominator pilot. The eight supplied
 numeric seeds were retained, but independent IRBank validation was blocked by
@@ -62,7 +65,11 @@ for either candidate generation or adjudication.
 
 The locked benchmark contains 240 pairs. The unlabelled ID-set hash is
 `7c06768b13f1c4f27e85662613f50b93338cfa9c15474cd63ea8468ac28a6a69`.
-All 240 identifiers and evidence columns were reviewed after locking.
+All 240 identifiers and evidence columns were processed after locking, but the
+adjudication script assigned `manual_label = predicted_label` unless a row
+appeared in a correction table. The correction table covered 20
+predicted-`unrelated` rows and did not independently test the 80 predicted
+`same_facility` rows.
 
 | manual label \ predicted | same facility | same borrower, other facility | uncertain | unrelated |
 |---|---:|---:|---:|---:|
@@ -71,10 +78,13 @@ All 240 identifiers and evidence columns were reviewed after locking.
 | Uncertain | 0 | 0 | 50 | 15 |
 | Unrelated | 0 | 0 | 0 | 0 |
 
-For the preregistered high-confidence `same_facility` class: TP = 80, FP = 0,
-FN = 0, precision = 100%, recall = 100%. The 95% precision gate passed. This
-does not prove perfect population performance; it describes the fixed locked
-sample and should be expanded in future work.
+The resulting table mechanically reports TP = 80, FP = 0, FN = 0, precision =
+100% and recall = 100%, but these are not independently measured performance
+statistics. The 95% precision gate is therefore **not adjudicated**. A new
+60-pair blind export removes predicted label, confidence and evidence columns;
+its labels must be entered before any new matching claim. Recall also remains
+conditional on exact normalized-borrower blocking and requires a separate
+alias audit.
 
 ### 1.3 Eligibility and frozen nowcasts
 
@@ -93,7 +103,9 @@ Fifteen IDs were selected with seed `20260813` and committed before outcomes.
 
 No missing, ugly or repeated frozen ID was replaced after reveal. Four IDs are
 repeat XBRL slices, leaving 11 unique borrower/source/target clusters. The
-statistics below remain observation-ID statistics exactly as frozen.
+statistics below remain observation-ID statistics exactly as frozen. However,
+the adjusted predictor's source-prior lookup was changed after the freeze and
+B1 was added after the freeze, so neither is confirmatory.
 
 ### 1.4 Frozen baseline results
 
@@ -110,6 +122,14 @@ provide the required two clean prior target marks for frozen facilities.
 | B4 prior-quarter cross-lender median | 15 | 0.5648 | 1.0366 | 0.0000 |
 | Source mark adjusted by prior source-target gap | 15 | 0.0680 | 0.2348 | 0.0000 |
 
+**Measurement-audit warning:** the 0.0680 pp number must not be quoted as a
+general signal result. The advantage is driven entirely by a single borrower
+(PetVet); leave-one-borrower-out eliminates it. Thirteen of 15 rows have the
+prior-gap-adjusted prediction exactly equal to B0. Excluding PetVet, B0 and the
+adjusted method both have MAE 0.0696 pp. The old frozen sample is retained
+unchanged as a failed pilot with a unit-of-analysis bug; it will not be
+recomputed or silently repaired.
+
 By reporting window, B3 MAE was 1.7879 pp versus B0 0.5004 pp for four 1–3 day
 IDs; for eleven >3 day IDs, B3 was 0.4546 pp versus B0 0.2640 pp. No frozen ID
 had a window of one day or less.
@@ -120,9 +140,11 @@ Same-manager/JV and common-appraiser exclusions were not computable from the
 flat-file fields and remain explicit blockers.
 
 **Interpretation:** the naive “copy the first reporter” rule failed this pilot.
-Persistent source-target valuation bias appears important, consistent with the
-two contaminated fixtures, but the adjusted result needs a deduplicated,
-clustered frozen sample before it is treated as evidence.
+One clean PetVet event is consistent with the proposed difference-in-differences
+mechanism, but there is only one independent movement event. Outside PetVet the
+adjusted method is indistinguishable from persistence. A new event-conditional
+design, aggregated facilities, more quarters and predictor formulas frozen in
+preregistration v3 are required before another reveal.
 
 ### 1.5 Quarantined fixtures
 
@@ -187,8 +209,8 @@ foreign ownership at the event date. Treatment completion is therefore 0/10
 | gate | result |
 |---|---|
 | Official SEC download/provenance | Pass for 2025 Q3/Q4 |
-| Strict facility matching precision ≥95% | Pass: 100% on locked n=240 |
-| Frozen ShadowNAV sample before outcomes | Pass: n=15, commit `a495f39` |
+| Strict facility matching precision ≥95% | Not adjudicated: reported 100% is an upper bound by construction |
+| Frozen ShadowNAV sample before outcomes | Freeze passed; confirmatory inference failed because predictor changed and rows were unaggregated |
 | Naive early co-holder beats B0 | Fail: 0.8101 pp vs 0.3270 pp MAE |
 | Deduplicated independent ShadowNAV sample | Blocked: 4 repeated XBRL slices |
 | B1 two-quarter momentum | Blocked by insufficient period depth |
@@ -201,11 +223,11 @@ foreign ownership at the event date. Treatment completion is therefore 0/10
 ## 4. Day 2 conclusion
 
 No flagship should be chosen from these results. ShadowNAV has the stronger
-mechanism infrastructure and passed the matching gate, but its naive signal
-failed and its promising bias adjustment needs a newly frozen deduplicated
-sample. Japan retained its historical universe but did not clear reproducible
-numeric recovery or treatment classification. Day 3, if authorized separately,
-should address those exact blockers; this Day 2 branch does not begin it.
+mechanism infrastructure, but the current matching statistic is circular, its
+naive signal failed, and its apparent adjusted advantage reduces to one PetVet
+event. Japan retained its historical universe but did not clear reproducible
+numeric recovery or treatment classification. Day 3 must repair measurement
+and complete the omitted recovery steps before any new reveal.
 
 ## Sources
 

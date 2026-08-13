@@ -1,0 +1,60 @@
+{
+  "by_archive": [
+    {
+      "archive_id": "2024q1",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 22195,
+      "raw_soi_rows_for_universe": 29344
+    },
+    {
+      "archive_id": "2024q2",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 23770,
+      "raw_soi_rows_for_universe": 31097
+    },
+    {
+      "archive_id": "2024q3",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 24551,
+      "raw_soi_rows_for_universe": 32048
+    },
+    {
+      "archive_id": "2024q4",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 25192,
+      "raw_soi_rows_for_universe": 32888
+    },
+    {
+      "archive_id": "2025q1",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 24455,
+      "raw_soi_rows_for_universe": 32492
+    },
+    {
+      "archive_id": "2025q2",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 26716,
+      "raw_soi_rows_for_universe": 36366
+    },
+    {
+      "archive_id": "2025q3",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 26897,
+      "raw_soi_rows_for_universe": 36530
+    },
+    {
+      "archive_id": "2025q4",
+      "duplicates_removed": 0,
+      "normalized_facility_rows": 27388,
+      "raw_soi_rows_for_universe": 37315
+    }
+  ],
+  "duplicates_removed": 0,
+  "manifest_sha256": "7388df3155acf644120b465886bb2916a29fe6ad348c0bde1c5d8789c67500df",
+  "normalized_facility_rows": 201164,
+  "normalized_sha256": "d5133ef097fafbccde2ebac7a886280c9615f9099cec8ce51580951f1df33082",
+  "raw_soi_rows_for_universe": 268080,
+  "schema_version": 1,
+  "storage": "normalized rows cached outside Git; only this metadata is committed",
+  "universe_cik_count": 19
+}

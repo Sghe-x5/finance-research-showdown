@@ -7,12 +7,12 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from common import days_apart, decimal_or_none, quarter_label, read_csv, stable_id, write_csv, write_json
+from common import days_apart, decimal_or_none, quarter_label, read_csv, sha256_file, stable_id, write_csv, write_json
 
 
-DEFAULT_INPUT = Path("/private/tmp/finance-day2-sec-cache/bdc_soi_normalized.csv")
-DEFAULT_OUTPUT = Path("data/day2/facility_candidates.csv")
-DEFAULT_METADATA = Path("data/day2/facility_candidates_metadata.json")
+DEFAULT_INPUT = Path("/private/tmp/finance-day3-sec-cache/bdc_facilities_agg.csv")
+DEFAULT_OUTPUT = Path("/private/tmp/finance-day3-sec-cache/facility_candidates.csv")
+DEFAULT_METADATA = Path("data/day3/facility_candidates_metadata.json")
 
 FIELDS = [
     "pair_id", "period_end", "quarter", "left_row_id", "right_row_id",
@@ -167,10 +167,12 @@ def main():
         counts[f"{row['predicted_label']}:{row['match_confidence']}"] += 1
     metadata = {
         "candidate_pair_count": len(candidates),
+        "input_file_sha256": sha256_file(args.input),
+        "input_unit": "BDC x observation_date x borrower x economic_facility",
         "periods": sorted({row["period_end"] for row in candidates}),
         "prediction_counts": dict(sorted(counts.items())),
         "outcome_columns_used": [],
-        "note": "Candidate construction excludes principal, cost and fair-value outcomes.",
+        "note": "Candidate construction uses aggregated economic facilities and excludes principal, cost and fair-value outcomes.",
     }
     write_json(args.metadata, metadata)
     print(json.dumps(metadata, indent=2, sort_keys=True))

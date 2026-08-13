@@ -1,0 +1,91 @@
+{
+  "cluster_level": {
+    "b0_mae_pp": 0.4459220684157656,
+    "cluster_count": 11,
+    "prior_gap_adjusted_mae_pp": 0.09268397828394624
+  },
+  "conclusion": "The apparent adjusted advantage is driven entirely by PetVet Care Centers; after removing that borrower, B0 and prior-gap-adjusted MAE are equal to rounding.",
+  "degenerate_prior_gap_equals_b0_rows": 13,
+  "leave_one_borrower_out": {
+    "anaplan": {
+      "adjusted_advantage_pp": 0.2988937685730779,
+      "b0_mae_pp": 0.3773578262052738,
+      "n_rows": 13,
+      "prior_gap_adjusted_mae_pp": 0.07846405763219591
+    },
+    "fortis solutions": {
+      "adjusted_advantage_pp": 0.29889376857307787,
+      "b0_mae_pp": 0.3772795203444833,
+      "n_rows": 13,
+      "prior_gap_adjusted_mae_pp": 0.07838575177140543
+    },
+    "hyland software": {
+      "adjusted_advantage_pp": 0.2775442136750009,
+      "b0_mae_pp": 0.35040369576203995,
+      "n_rows": 14,
+      "prior_gap_adjusted_mae_pp": 0.07285948208703906
+    },
+    "mri software": {
+      "adjusted_advantage_pp": 0.35323809013181934,
+      "b0_mae_pp": 0.4459683400607781,
+      "n_rows": 11,
+      "prior_gap_adjusted_mae_pp": 0.0927302499289588
+    },
+    "petvet care centers": {
+      "adjusted_advantage_pp": 0.0,
+      "b0_mae_pp": 0.06959877190811584,
+      "n_rows": 13,
+      "prior_gap_adjusted_mae_pp": 0.06959877190811584
+    },
+    "ping identity": {
+      "adjusted_advantage_pp": 0.2775442136750009,
+      "b0_mae_pp": 0.35040369576203995,
+      "n_rows": 14,
+      "prior_gap_adjusted_mae_pp": 0.07285948208703906
+    },
+    "ppv intermediate": {
+      "adjusted_advantage_pp": 0.2775442136750009,
+      "b0_mae_pp": 0.35040369576203995,
+      "n_rows": 14,
+      "prior_gap_adjusted_mae_pp": 0.07285948208703906
+    },
+    "pye barker fire and safety": {
+      "adjusted_advantage_pp": 0.27754421367500093,
+      "b0_mae_pp": 0.35038783871422946,
+      "n_rows": 14,
+      "prior_gap_adjusted_mae_pp": 0.07284362503922852
+    },
+    "viant medical": {
+      "adjusted_advantage_pp": 0.27754421367500093,
+      "b0_mae_pp": 0.2858648343373341,
+      "n_rows": 14,
+      "prior_gap_adjusted_mae_pp": 0.008320620662333189
+    }
+  },
+  "periods": [
+    "2025-09-30"
+  ],
+  "petvet_removed": {
+    "adjusted_advantage_pp": 0.0,
+    "b0_mae_pp": 0.06959877190811584,
+    "n_rows": 13,
+    "prior_gap_adjusted_mae_pp": 0.06959877190811584
+  },
+  "row_count": 15,
+  "row_level": {
+    "b0_mae_pp": 0.32704344937790397,
+    "prior_gap_adjusted_mae_pp": 0.06800218328123646
+  },
+  "source_funds": [
+    "ARCC",
+    "NMFC"
+  ],
+  "source_results_sha256": "6f79cdbbda83046839b79d4e36729f83ebc0ae34ef6e662e53e8ff26f01cd5ec",
+  "target_funds": [
+    "NMFC",
+    "OBDC"
+  ],
+  "unique_borrower_source_target_clusters": 11,
+  "unique_borrower_target_exposures": 10,
+  "unique_borrowers": 9
+}

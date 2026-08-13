@@ -1,0 +1,32 @@
+{
+  "accepted_calendar_quarters": {
+    "2025Q3": 13998,
+    "2025Q4": 14545
+  },
+  "candidate_position_periods": {
+    "2025-06-30": 6533,
+    "2025-09-30": 7139
+  },
+  "day2_archive_current_position_periods": {
+    "2025q3": {
+      "2025-06-30": 13998
+    },
+    "2025q4": {
+      "2025-09-30": 14545
+    }
+  },
+  "eligible_result_quarters": {
+    "2025Q3": 45
+  },
+  "q4_mapping_bug": false,
+  "reporting_order_quarters": {
+    "2025Q1": 19,
+    "2025Q2": 19,
+    "2025Q3": 19,
+    "2025Q4": 19,
+    "2026Q1": 19,
+    "2026Q2": 17
+  },
+  "required_fix": "Name archive periods as acceptance quarters in manifests and derive result quarter only from the SOI/submission period_end. Do not claim 2025Q4 coverage until an official archive containing period_end=2025-12-31 is discovered and checksummed.",
+  "root_cause": "SEC BDC archive labels are filing-acceptance quarters, not investment position quarter ends. The 2025q4 archive contains filings accepted in 2025Q4 for positions through 2025-09-30. Positions at 2025-12-31 are filed in 2026Q1 and require a 2026q1 BDC archive, which was not linked by the official SEC index during Day 2. Therefore the Day 2 parser correctly produced 2025Q3 positions and zero 2025Q4 eligible nowcasts; downloading 2025q4 did not provide Q4 positions."
+}
