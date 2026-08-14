@@ -1,0 +1,13 @@
+hidden_stratum,human_consensus_label,count,stratum_rows,share_within_stratum
+predicted_same_facility_high,same_borrower_different_facility,2,60,0.03333333333333333
+predicted_same_facility_high,same_facility,58,60,0.9666666666666667
+predicted_same_facility_high,uncertain,0,60,0.0
+predicted_same_facility_high,unrelated,0,60,0.0
+hard_same_borrower_different_facility,same_borrower_different_facility,25,30,0.8333333333333334
+hard_same_borrower_different_facility,same_facility,3,30,0.1
+hard_same_borrower_different_facility,uncertain,2,30,0.06666666666666667
+hard_same_borrower_different_facility,unrelated,0,30,0.0
+uncertain_alias_distractor,same_borrower_different_facility,4,30,0.13333333333333333
+uncertain_alias_distractor,same_facility,3,30,0.1
+uncertain_alias_distractor,uncertain,23,30,0.7666666666666667
+uncertain_alias_distractor,unrelated,0,30,0.0

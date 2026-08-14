@@ -1,0 +1,6 @@
+primary_conflict_reason,definite_false_positive_count,share_of_definite_false_positives,definition
+debt_equity_conflict,0,0.0,Both official fields are observed and debt/equity classes conflict.
+lien_conflict,0,0.0,Both official lien fields are observed and conflict.
+facility_type_conflict,0,0.0,Both official facility-type fields are observed and conflict.
+spread_conflict_over_25bp,0,0.0,Both spreads are observed and differ by more than 25 basis points.
+other_or_insufficient_official_fields,2,1.0,No preceding structured-field conflict explains the human nonmatch.

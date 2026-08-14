@@ -1,0 +1,371 @@
+{
+  "abstention": {
+    "model_positive_human_uncertain_count": 0,
+    "model_positive_human_uncertain_rate": 0.0
+  },
+  "all_sample_manager_relationship_confusion": [
+    {
+      "count": 2,
+      "hidden_stratum": "predicted_same_facility_high",
+      "human_consensus_label": "same_borrower_different_facility",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 47,
+      "hidden_stratum": "predicted_same_facility_high",
+      "human_consensus_label": "same_facility",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "predicted_same_facility_high",
+      "human_consensus_label": "uncertain",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "predicted_same_facility_high",
+      "human_consensus_label": "unrelated",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 21,
+      "hidden_stratum": "hard_same_borrower_different_facility",
+      "human_consensus_label": "same_borrower_different_facility",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "hard_same_borrower_different_facility",
+      "human_consensus_label": "same_facility",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "hard_same_borrower_different_facility",
+      "human_consensus_label": "uncertain",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "hard_same_borrower_different_facility",
+      "human_consensus_label": "unrelated",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 2,
+      "hidden_stratum": "uncertain_alias_distractor",
+      "human_consensus_label": "same_borrower_different_facility",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 3,
+      "hidden_stratum": "uncertain_alias_distractor",
+      "human_consensus_label": "same_facility",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 9,
+      "hidden_stratum": "uncertain_alias_distractor",
+      "human_consensus_label": "uncertain",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "uncertain_alias_distractor",
+      "human_consensus_label": "unrelated",
+      "manager_relationship": "same_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "predicted_same_facility_high",
+      "human_consensus_label": "same_borrower_different_facility",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 11,
+      "hidden_stratum": "predicted_same_facility_high",
+      "human_consensus_label": "same_facility",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "predicted_same_facility_high",
+      "human_consensus_label": "uncertain",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "predicted_same_facility_high",
+      "human_consensus_label": "unrelated",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 4,
+      "hidden_stratum": "hard_same_borrower_different_facility",
+      "human_consensus_label": "same_borrower_different_facility",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 3,
+      "hidden_stratum": "hard_same_borrower_different_facility",
+      "human_consensus_label": "same_facility",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 2,
+      "hidden_stratum": "hard_same_borrower_different_facility",
+      "human_consensus_label": "uncertain",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "hard_same_borrower_different_facility",
+      "human_consensus_label": "unrelated",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 2,
+      "hidden_stratum": "uncertain_alias_distractor",
+      "human_consensus_label": "same_borrower_different_facility",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "uncertain_alias_distractor",
+      "human_consensus_label": "same_facility",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 14,
+      "hidden_stratum": "uncertain_alias_distractor",
+      "human_consensus_label": "uncertain",
+      "manager_relationship": "cross_manager"
+    },
+    {
+      "count": 0,
+      "hidden_stratum": "uncertain_alias_distractor",
+      "human_consensus_label": "unrelated",
+      "manager_relationship": "cross_manager"
+    }
+  ],
+  "benchmark": "facility_blind_v3_post_consensus_measurement",
+  "consensus_freeze_commit": "f6abde5700ae1afc20d342cad335112fdd156817",
+  "decision_rule": {
+    "point_precision_threshold": 0.95,
+    "target_reveal_automatically_authorized": false
+  },
+  "evidence_completeness": {
+    "fields": [
+      "debt_equity",
+      "facility_type",
+      "lien",
+      "currency",
+      "reference_rate",
+      "spread",
+      "maturity",
+      "funded_status",
+      "acquisition_date"
+    ],
+    "positive_stratum_buckets": [
+      {
+        "conditional_precision_exact_one_sided_95_lower": 0.36840314986403866,
+        "conditional_precision_resolved": 1.0,
+        "conditional_precision_wilson_two_sided_95": {
+          "lower": 0.4385029682449546,
+          "upper": 1.0
+        },
+        "definite_false_positive": 0,
+        "definite_resolution_coverage": 1.0,
+        "informative_official_field_count": 4,
+        "sample_rows": 3,
+        "strict_confirmation_rate": 1.0,
+        "true_positive": 3,
+        "uncertain_rate": 0.0,
+        "unresolved": 0
+      },
+      {
+        "conditional_precision_exact_one_sided_95_lower": 0.8936369740620431,
+        "conditional_precision_resolved": 0.9649122807017544,
+        "conditional_precision_wilson_two_sided_95": {
+          "lower": 0.8807921863237419,
+          "upper": 0.9903243356550672
+        },
+        "definite_false_positive": 2,
+        "definite_resolution_coverage": 1.0,
+        "informative_official_field_count": 5,
+        "sample_rows": 57,
+        "strict_confirmation_rate": 0.9649122807017544,
+        "true_positive": 55,
+        "uncertain_rate": 0.0,
+        "unresolved": 0
+      }
+    ]
+  },
+  "false_positive_primary_reason_counts": {
+    "other_or_insufficient_official_fields": 2
+  },
+  "input_integrity": {
+    "blind_file_sha256": "f4ec256bf4502f5cb6979ff218d3b5457481f0ae21bdb75841d4bb3c1d357c2b",
+    "consensus_file_sha256": "09daa1904a2c90fcfbd533ea72130a3ec80a1f6ea032d539ef10e49950d30455",
+    "manager_map_sha256": "e3850b8721d192cd93f758b79e4824bb7993fc74ac8f9b56da36d7e82934bdb6",
+    "private_key_sha256_verified_locally": "38527a306e18393ecd58c5896462d1a96f78c9a07896773b3282ac2f283f001c",
+    "private_row_level_mapping_published": false
+  },
+  "manager_pair_metrics": [
+    {
+      "conditional_precision_exact_one_sided_95_lower": 0.8360256052546928,
+      "conditional_precision_resolved": 0.9629629629629629,
+      "conditional_precision_wilson_two_sided_95": {
+        "lower": 0.8171653406642414,
+        "upper": 0.9934318540192149
+      },
+      "definite_false_positive": 1,
+      "definite_resolution_coverage": 1.0,
+      "manager_pair": "Ares Management | Ares Management",
+      "sample_rows": 27,
+      "strict_confirmation_rate": 0.9629629629629629,
+      "true_positive": 26,
+      "uncertain_rate": 0.0,
+      "unresolved": 0
+    },
+    {
+      "conditional_precision_exact_one_sided_95_lower": 0.36840314986403866,
+      "conditional_precision_resolved": 1.0,
+      "conditional_precision_wilson_two_sided_95": {
+        "lower": 0.4385029682449546,
+        "upper": 1.0
+      },
+      "definite_false_positive": 0,
+      "definite_resolution_coverage": 1.0,
+      "manager_pair": "Ares Management | Blue Owl Credit",
+      "sample_rows": 3,
+      "strict_confirmation_rate": 1.0,
+      "true_positive": 3,
+      "uncertain_rate": 0.0,
+      "unresolved": 0
+    },
+    {
+      "conditional_precision_exact_one_sided_95_lower": 0.223606797749979,
+      "conditional_precision_resolved": 1.0,
+      "conditional_precision_wilson_two_sided_95": {
+        "lower": 0.34238022750665303,
+        "upper": 1.0
+      },
+      "definite_false_positive": 0,
+      "definite_resolution_coverage": 1.0,
+      "manager_pair": "Ares Management | New Mountain Capital",
+      "sample_rows": 2,
+      "strict_confirmation_rate": 1.0,
+      "true_positive": 2,
+      "uncertain_rate": 0.0,
+      "unresolved": 0
+    },
+    {
+      "conditional_precision_exact_one_sided_95_lower": 0.8018778683631185,
+      "conditional_precision_resolved": 0.9545454545454546,
+      "conditional_precision_wilson_two_sided_95": {
+        "lower": 0.7820195416134267,
+        "upper": 0.991930572378736
+      },
+      "definite_false_positive": 1,
+      "definite_resolution_coverage": 1.0,
+      "manager_pair": "Blue Owl Credit | Blue Owl Credit",
+      "sample_rows": 22,
+      "strict_confirmation_rate": 0.9545454545454546,
+      "true_positive": 21,
+      "uncertain_rate": 0.0,
+      "unresolved": 0
+    },
+    {
+      "conditional_precision_exact_one_sided_95_lower": 0.5492802716530589,
+      "conditional_precision_resolved": 1.0,
+      "conditional_precision_wilson_two_sided_95": {
+        "lower": 0.5655175352168251,
+        "upper": 1.0
+      },
+      "definite_false_positive": 0,
+      "definite_resolution_coverage": 1.0,
+      "manager_pair": "Blue Owl Credit | New Mountain Capital",
+      "sample_rows": 5,
+      "strict_confirmation_rate": 1.0,
+      "true_positive": 5,
+      "uncertain_rate": 0.0,
+      "unresolved": 0
+    },
+    {
+      "conditional_precision_exact_one_sided_95_lower": 0.05,
+      "conditional_precision_resolved": 1.0,
+      "conditional_precision_wilson_two_sided_95": {
+        "lower": 0.20654931437723745,
+        "upper": 1.0
+      },
+      "definite_false_positive": 0,
+      "definite_resolution_coverage": 1.0,
+      "manager_pair": "Blue Owl Credit | Oaktree Capital Management",
+      "sample_rows": 1,
+      "strict_confirmation_rate": 1.0,
+      "true_positive": 1,
+      "uncertain_rate": 0.0,
+      "unresolved": 0
+    }
+  ],
+  "measurement_status": "MEASUREMENT_INCONCLUSIVE_REQUIRES_HUMAN_INTERPRETATION",
+  "primary_hidden_stratum": "predicted_same_facility_high",
+  "primary_measurement": {
+    "conditional_precision_exact_one_sided_95_lower": 0.8987641050758384,
+    "conditional_precision_resolved": 0.9666666666666667,
+    "conditional_precision_wilson_two_sided_95": {
+      "lower": 0.886362257256914,
+      "upper": 0.9908106807438021
+    },
+    "definite_false_positive": 2,
+    "definite_resolution_coverage": 1.0,
+    "sample_rows": 60,
+    "strict_confirmation_rate": 0.9666666666666667,
+    "true_positive": 58,
+    "uncertain_rate": 0.0,
+    "unresolved": 0
+  },
+  "research_boundaries": {
+    "human_consensus_labels_modified": false,
+    "results_tag_created": false,
+    "target_error_metrics_calculated": false,
+    "target_outcomes_read": false,
+    "target_same_quarter_marks_read": false,
+    "universe_expanded": false
+  },
+  "same_manager_vs_cross_manager": {
+    "cross_manager": {
+      "conditional_precision_exact_one_sided_95_lower": 0.7615958096191473,
+      "conditional_precision_resolved": 1.0,
+      "conditional_precision_wilson_two_sided_95": {
+        "lower": 0.7411670330319684,
+        "upper": 1.0
+      },
+      "definite_false_positive": 0,
+      "definite_resolution_coverage": 1.0,
+      "sample_rows": 11,
+      "strict_confirmation_rate": 1.0,
+      "true_positive": 11,
+      "uncertain_rate": 0.0,
+      "unresolved": 0
+    },
+    "same_manager": {
+      "conditional_precision_exact_one_sided_95_lower": 0.8770324955946354,
+      "conditional_precision_resolved": 0.9591836734693877,
+      "conditional_precision_wilson_two_sided_95": {
+        "lower": 0.8628696769391992,
+        "upper": 0.9887343666338142
+      },
+      "definite_false_positive": 2,
+      "definite_resolution_coverage": 1.0,
+      "sample_rows": 49,
+      "strict_confirmation_rate": 0.9591836734693877,
+      "true_positive": 47,
+      "uncertain_rate": 0.0,
+      "unresolved": 0
+    }
+  },
+  "scope_statement": "Recall is conditional on the generated candidate universe and is not population recall."
+}

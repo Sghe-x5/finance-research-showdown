@@ -1,0 +1,49 @@
+{
+  "benchmark": "alias_blind_post_consensus_measurement",
+  "blank_candidate_policy": {
+    "blank_candidate_rows": 37,
+    "classification": "non_observation",
+    "counted_as_true_negatives": false,
+    "included_in_metric_denominators": false
+  },
+  "consensus_freeze_commit": "f6abde5700ae1afc20d342cad335112fdd156817",
+  "facility_identity_within_confirmed_borrower_aliases": {
+    "confirmed_alias_rows": 18,
+    "same_facility_no": 16,
+    "same_facility_uncertain": 2,
+    "same_facility_yes": 0
+  },
+  "group_level_30_borrowers": {
+    "groups_with_confirmed_alias_outside_exact_block": 1,
+    "lower_bound_alias_loss_rate_over_all_sampled_groups": 0.03333333333333333,
+    "sampled_source_borrowers": 30,
+    "status_counts": {
+      "at_least_one_confirmed_alias": 1,
+      "no_candidate_observed": 20,
+      "only_definite_nonmatches": 8,
+      "unresolved_candidate_set": 1
+    }
+  },
+  "input_integrity": {
+    "blind_file_sha256": "d37f5daeb4eb6cee9e4ddb2e7690978a6ac899c30305b4fda268bb7424a8b64e",
+    "consensus_file_sha256": "d7a09d15bf832719b24c0a69b182cce2c5331acbf16b75a811106f173f127c2f",
+    "private_key_sha256_verified_locally": "7edab165ea1d8de1617bdc92483b4c16bafc173fb1544075f16caddbad41aacc",
+    "private_row_level_mapping_published": false
+  },
+  "research_boundaries": {
+    "human_consensus_labels_modified": false,
+    "target_outcomes_read": false,
+    "target_same_quarter_marks_read": false,
+    "universe_expanded": false
+  },
+  "row_level_borrower_alias_measurement": {
+    "confirmed_same_borrower": 18,
+    "definite_nonmatch": 71,
+    "nonblank_candidate_rows": 91,
+    "resolution_coverage": 0.978021978021978,
+    "resolved_candidate_precision": 0.20224719101123595,
+    "uncertain_rate": 0.02197802197802198,
+    "unresolved": 2
+  },
+  "scope_statement": "Recall is conditional on the generated candidate universe and is not population recall."
+}

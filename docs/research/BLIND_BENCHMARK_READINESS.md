@@ -24,4 +24,4 @@ SHA-256: `d37f5daeb4eb6cee9e4ddb2e7690978a6ac899c30305b4fda268bb7424a8b64e`
 
 The alias sample is ARCC against NMFC/OBDC (plus explicit no-candidate rows), while the restored supporting facts affected HTGC/TSLX. No facility-level alias display or label definition changed, so no alias rebuild is required.
 
-No human labels were accepted, entered, or inspected. No freeze, reveal, result tag, or target-error calculation was performed.
+At this readiness stage: No human labels were accepted, entered, or inspected. The later independent consensus was frozen separately in commit `f6abde5700ae1afc20d342cad335112fdd156817`; its aggregate measurement evaluation is documented in `BLIND_BENCHMARK_RESULTS.md`. No ShadowNAV target reveal or target-error calculation was performed.

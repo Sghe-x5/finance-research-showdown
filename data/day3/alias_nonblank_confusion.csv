@@ -1,0 +1,7 @@
+candidate_scope,human_same_borrower_consensus,count,scope_rows,share_within_scope
+inside_exact_name_block,no,0,0,
+inside_exact_name_block,uncertain,0,0,
+inside_exact_name_block,yes,0,0,
+outside_exact_name_block,no,71,91,0.7802197802197802
+outside_exact_name_block,uncertain,2,91,0.02197802197802198
+outside_exact_name_block,yes,18,91,0.1978021978021978

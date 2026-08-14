@@ -1,0 +1,31 @@
+source_group_id,source_ticker,source_borrower_norm,candidate_rows,confirmed_alias_rows,definite_nonmatch_rows,unresolved_rows,group_status,confirmed_alias_outside_exact_block_rows,lower_bound_exact_block_miss
+36a12343d0a0b3358310,ARCC,ap adhesives,0,0,0,0,no_candidate_observed,0,False
+011cb8748e1f4c9be8a5,ARCC,aq sunshine,0,0,0,0,no_candidate_observed,0,False
+d1d39d0cc29989aa23bf,ARCC,argenbright v amberstone security unifi aviation north america and unifi aviation canada,12,0,12,0,only_definite_nonmatches,0,False
+38b1369339f79c197479,ARCC,bgi purchaser,0,0,0,0,no_candidate_observed,0,False
+1d8b4e376f3a15d5ee61,ARCC,bobcat purchaser and bobcat topco,0,0,0,0,no_candidate_observed,0,False
+521e6248354177bb3e2b,ARCC,burgess point purchaser,0,0,0,0,no_candidate_observed,0,False
+9a5be7519a82dd817b59,ARCC,continental acquisition,2,0,0,2,unresolved_candidate_set,0,False
+82373b94a4410f9791f0,ARCC,cpig holdco,0,0,0,0,no_candidate_observed,0,False
+6f342bf15a4232ecdb78,ARCC,dorado bidco,0,0,0,0,no_candidate_observed,0,False
+dadf952cf1d0f06b8d27,ARCC,dynamic nc aerospace and dynamic nc investment,0,0,0,0,no_candidate_observed,0,False
+5a4575ef719f43462b2c,ARCC,eresearch technology and astorg vii invest ert,2,0,2,0,only_definite_nonmatches,0,False
+7d9b5a7e97c9ca67225d,ARCC,flint opco,0,0,0,0,no_candidate_observed,0,False
+8bd5b72c5968e5cbd6ff,ARCC,florida food products,0,0,0,0,no_candidate_observed,0,False
+b0d83e259ee773ac6777,ARCC,hbh buyer,0,0,0,0,no_candidate_observed,0,False
+e2b6638c32201419d6d9,ARCC,hpcc parent and patriot container,1,0,1,0,only_definite_nonmatches,0,False
+0139a0701d9a56b6d7ba,ARCC,johnnie o and johnnie o,0,0,0,0,no_candidate_observed,0,False
+22d07f1ac3d7ba46482c,ARCC,laboratories bidco and laboratories topco,0,0,0,0,no_candidate_observed,0,False
+ac5c14ce91bc1d472102,ARCC,new churchill holdco and victory topco,0,0,0,0,no_candidate_observed,0,False
+7a914613ebe2a369e9d4,ARCC,nordic ferry infrastructure as,6,0,6,0,only_definite_nonmatches,0,False
+c113823d282f89e5dc37,ARCC,north american science associates cardinal purchaser and cardinal topco,36,18,18,0,at_least_one_confirmed_alias,18,True
+becf9bfb8a08ea0c1d23,ARCC,pcia spv and ase royal aggregator,0,0,0,0,no_candidate_observed,0,False
+d9a827c4c592c9ffcad5,ARCC,premiere buyer,0,0,0,0,no_candidate_observed,0,False
+ae3bd3842ddb697af58b,ARCC,psc parent,14,0,14,0,only_definite_nonmatches,0,False
+855ef202d998458cc8a2,ARCC,quick quack car wash and kkr game changer invest feeder ii,4,0,4,0,only_definite_nonmatches,0,False
+12cae5a82e2390041d9a,ARCC,registrar intermediate and psp registrar investment fund,0,0,0,0,no_candidate_observed,0,False
+580b0fa6f636e68230f2,ARCC,surescripts,0,0,0,0,no_candidate_observed,0,False
+6629f44b6cef24347469,ARCC,the hiller companies,9,0,9,0,only_definite_nonmatches,0,False
+42f3f461bc17c50022e2,ARCC,w s connelly and and wsc ultimate,0,0,0,0,no_candidate_observed,0,False
+ca1d4dfbf07226ed7d53,ARCC,watermill express and watermill express,5,0,5,0,only_definite_nonmatches,0,False
+6bde6d49757bf7c4783a,ARCC,wshp fc acquisition and wshp fc,0,0,0,0,no_candidate_observed,0,False
