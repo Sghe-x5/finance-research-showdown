@@ -9,6 +9,7 @@ section below rather than the newest-looking filename.
 | Document | Role |
 |---|---|
 | [`DAY3_FINAL_PRE_REVEAL.md`](DAY3_FINAL_PRE_REVEAL.md) | Machine-phase boundary, extended reporting calendar, power count, bottleneck, and expansion estimate |
+| [`PROJECT_HISTORY_RU.md`](PROJECT_HISTORY_RU.md) | Подробная русскоязычная история проекта: действия, ошибки, исправления, результаты и текущая граница |
 | [`FIELD_LINEAGE_AND_MANAGER_AUDIT.md`](FIELD_LINEAGE_AND_MANAGER_AUDIT.md) | Official SEC field lineage, repaired join/parser findings, manager overlap, and fallback audit |
 | [`BLIND_BENCHMARK_READINESS.md`](BLIND_BENCHMARK_READINESS.md) | Canonical decision that v3—not v2—is the facility file for clean reviewers |
 | [`REVIEWER_GUIDE.md`](REVIEWER_GUIDE.md) | Operational handoff for independent reviewers |

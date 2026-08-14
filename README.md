@@ -3,6 +3,10 @@
 An evidence-first research repository testing whether public filings contain a
 reproducible information advantage before anyone builds a product around it.
 
+Подробный русскоязычный журнал всей работы:
+
+[`docs/research/PROJECT_HISTORY_RU.md`](docs/research/PROJECT_HISTORY_RU.md)
+
 > **Current boundary — 14 August 2026:** Day 3 measurement repair is complete.
 > No new outcome reveal, target-error calculation, results tag, or flagship
 > selection is authorized. The next step is independent blind review.
@@ -102,11 +106,12 @@ More detailed indexes are available in
 ## Canonical reading order
 
 1. [`docs/research/DAY3_FINAL_PRE_REVEAL.md`](docs/research/DAY3_FINAL_PRE_REVEAL.md)
-2. [`docs/research/FIELD_LINEAGE_AND_MANAGER_AUDIT.md`](docs/research/FIELD_LINEAGE_AND_MANAGER_AUDIT.md)
-3. [`docs/research/BLIND_BENCHMARK_READINESS.md`](docs/research/BLIND_BENCHMARK_READINESS.md)
-4. [`docs/research/PREREGISTRATION_V3_DRAFT.md`](docs/research/PREREGISTRATION_V3_DRAFT.md) — draft only, not approval
-5. [`docs/research/01_DAY1_CANONICAL_FINDINGS.md`](docs/research/01_DAY1_CANONICAL_FINDINGS.md)
-6. [`docs/research/DAY2_RESULTS.md`](docs/research/DAY2_RESULTS.md) — failed exploratory pilot, preserved as evidence
+2. [`docs/research/PROJECT_HISTORY_RU.md`](docs/research/PROJECT_HISTORY_RU.md) — подробная история работы и решений
+3. [`docs/research/FIELD_LINEAGE_AND_MANAGER_AUDIT.md`](docs/research/FIELD_LINEAGE_AND_MANAGER_AUDIT.md)
+4. [`docs/research/BLIND_BENCHMARK_READINESS.md`](docs/research/BLIND_BENCHMARK_READINESS.md)
+5. [`docs/research/PREREGISTRATION_V3_DRAFT.md`](docs/research/PREREGISTRATION_V3_DRAFT.md) — draft only, not approval
+6. [`docs/research/01_DAY1_CANONICAL_FINDINGS.md`](docs/research/01_DAY1_CANONICAL_FINDINGS.md)
+7. [`docs/research/DAY2_RESULTS.md`](docs/research/DAY2_RESULTS.md) — failed exploratory pilot, preserved as evidence
 
 Files under `docs/research/history/` are archival snapshots and are never the
 current source of truth.
