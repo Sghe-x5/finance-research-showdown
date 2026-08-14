@@ -10,10 +10,12 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import math
 import random
 import statistics
+import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -31,13 +33,32 @@ ALLOWED_POSITION_STATUSES = {
     "sale_exit",
     "refinancing_amendment",
     "unmatched_disappearance",
+    "uncertain",
 }
+REQUIRED_AUTHORIZATION_FIELDS = (
+    "event_review_consensus_sha256",
+    "included_sample_sha256",
+    "sample_freeze_commit",
+    "structural_mapping_consensus_sha256",
+    "structural_mapping_freeze_commit",
+    "preregistration_sha256",
+    "evaluator_sha256",
+    "revealed_outcomes_sha256",
+)
 
 
 def mean(values):
     if not values:
         raise ValueError("A non-empty sequence is required")
     return sum(values) / len(values)
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def prediction_b0(target_prior_mark: float) -> float:
@@ -270,6 +291,16 @@ def evaluate_revealed_rows(rows: list[dict]) -> dict:
     errors, missing_continuing = continuing_errors(rows)
     clusters = aggregate_source_event_clusters(errors)
     differences = [row["mean_paired_error_difference"] for row in clusters]
+    if missing_continuing:
+        return {
+            "status": "data_quality_inconclusive",
+            "attrition_flow": flow,
+            "continuing_rows_missing_marks": missing_continuing,
+            "continuing_rows_with_complete_marks": len(errors),
+            "independent_continuing_clusters_with_complete_marks": len(clusters),
+            "marks_imputed_or_rows_replaced": False,
+            "primary_test_run": False,
+        }
     if not clusters:
         return {
             "status": "underpowered_inconclusive",
@@ -333,28 +364,136 @@ def evaluate_revealed_rows(rows: list[dict]) -> dict:
     }
 
 
-def load_authorized_reveal(outcomes_path: Path, authorization_path: Path) -> list[dict]:
-    authorization = json.loads(authorization_path.read_text(encoding="utf-8"))
-    required = (
-        "sample_freeze_commit",
-        "preregistration_sha256",
-        "evaluator_sha256",
+def read_frozen_included_ids(path: Path) -> list[str]:
+    if path.suffix.lower() == ".json":
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        ids = payload.get("included_review_observation_ids")
+        if ids is None:
+            ids = payload.get("review_observation_ids")
+        if not isinstance(ids, list):
+            raise ValueError("Frozen included-sample JSON has no observation-ID list")
+    else:
+        with path.open(newline="", encoding="utf-8-sig") as handle:
+            ids = [row["review_observation_id"] for row in csv.DictReader(handle)]
+    if not ids or any(not value for value in ids) or len(ids) != len(set(ids)):
+        raise ValueError("Frozen included-sample IDs are blank, empty, or duplicated")
+    return ids
+
+
+def verify_commit_pair(sample_freeze_commit: str, structural_freeze_commit: str) -> None:
+    for name, commit in (
+        ("sample_freeze_commit", sample_freeze_commit),
+        ("structural_mapping_freeze_commit", structural_freeze_commit),
+    ):
+        if len(commit) != 40 or any(character not in "0123456789abcdef" for character in commit):
+            raise PermissionError(f"{name} is not a full lowercase Git commit SHA")
+        completed = subprocess.run(
+            ["git", "cat-file", "-e", f"{commit}^{{commit}}"],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if completed.returncode != 0:
+            raise PermissionError(f"{name} does not resolve to a local Git commit")
+    if sample_freeze_commit == structural_freeze_commit:
+        raise PermissionError("Sample and structural mapping require separate freeze commits")
+    ancestry = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", sample_freeze_commit, structural_freeze_commit],
+        check=False,
+        capture_output=True,
+        text=True,
     )
+    if ancestry.returncode != 0:
+        raise PermissionError("Structural freeze commit does not descend from sample freeze")
+
+
+def verify_file_hash(path: Path, expected: str, label: str) -> None:
+    actual = sha256_file(path)
+    if actual != expected:
+        raise PermissionError(f"{label} SHA-256 mismatch")
+
+
+def load_authorized_reveal(
+    outcomes_path: Path,
+    included_sample_path: Path,
+    event_review_consensus_path: Path,
+    structural_consensus_path: Path,
+    preregistration_path: Path,
+    authorization_path: Path,
+    evaluator_path: Path | None = None,
+) -> list[dict]:
+    authorization = json.loads(authorization_path.read_text(encoding="utf-8"))
     if authorization.get("reveal_authorized") is not True:
         raise PermissionError("Target-outcome reveal is not authorized")
-    if any(not authorization.get(field) for field in required):
+    if any(not authorization.get(field) for field in REQUIRED_AUTHORIZATION_FIELDS):
         raise PermissionError("Reveal authorization record is incomplete")
+    verify_commit_pair(
+        authorization["sample_freeze_commit"],
+        authorization["structural_mapping_freeze_commit"],
+    )
+    verify_file_hash(
+        event_review_consensus_path,
+        authorization["event_review_consensus_sha256"],
+        "Event-review consensus",
+    )
+    verify_file_hash(
+        included_sample_path,
+        authorization["included_sample_sha256"],
+        "Frozen included sample",
+    )
+    verify_file_hash(
+        structural_consensus_path,
+        authorization["structural_mapping_consensus_sha256"],
+        "Structural mapping consensus",
+    )
+    verify_file_hash(
+        preregistration_path,
+        authorization["preregistration_sha256"],
+        "Preregistration",
+    )
+    verify_file_hash(
+        evaluator_path or Path(__file__).resolve(),
+        authorization["evaluator_sha256"],
+        "Evaluator self-file",
+    )
+    verify_file_hash(
+        outcomes_path,
+        authorization["revealed_outcomes_sha256"],
+        "Revealed outcomes",
+    )
+    frozen_ids = read_frozen_included_ids(included_sample_path)
     with outcomes_path.open(newline="", encoding="utf-8-sig") as handle:
-        return list(csv.DictReader(handle))
+        rows = list(csv.DictReader(handle))
+    revealed_ids = [row.get("review_observation_id", "") for row in rows]
+    if (
+        any(not value for value in revealed_ids)
+        or len(revealed_ids) != len(set(revealed_ids))
+        or set(revealed_ids) != set(frozen_ids)
+    ):
+        raise PermissionError(
+            "Revealed outcome IDs do not exactly match the frozen included sample"
+        )
+    return rows
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--revealed-outcomes", type=Path, required=True)
+    parser.add_argument("--included-sample", type=Path, required=True)
+    parser.add_argument("--event-review-consensus", type=Path, required=True)
+    parser.add_argument("--structural-consensus", type=Path, required=True)
+    parser.add_argument("--preregistration", type=Path, required=True)
     parser.add_argument("--authorization", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    rows = load_authorized_reveal(args.revealed_outcomes, args.authorization)
+    rows = load_authorized_reveal(
+        args.revealed_outcomes,
+        args.included_sample,
+        args.event_review_consensus,
+        args.structural_consensus,
+        args.preregistration,
+        args.authorization,
+    )
     result = evaluate_revealed_rows(rows)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 

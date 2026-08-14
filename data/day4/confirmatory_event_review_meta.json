@@ -133,7 +133,9 @@
   },
   "source_event_cluster_ids_sha256": "b7f58e05e5fb0c69ac948082b9e50f92c1696b8a9b495860d467be04efef421d",
   "source_or_target_numeric_marks_in_packet": false,
-  "status": "outcome_blind_human_review_packet_not_labeled",
+  "status": "superseded_indirect_outcome_linkage_risk",
+  "superseded_by": "data/day4/confirmatory_event_review_blind_v2.csv",
+  "supersession_reason": "Direct filing and reporting links can expose source marks or target-current outcomes",
   "target_current_fields_present": false,
   "target_outcomes_opened": false
 }

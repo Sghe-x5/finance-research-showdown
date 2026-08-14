@@ -4,9 +4,23 @@
     "seed": 20260814,
     "unit": "borrower cluster"
   },
+  "authorization_requirements": [
+    "event_review_consensus_sha256",
+    "included_sample_sha256",
+    "sample_freeze_commit",
+    "structural_mapping_consensus_sha256",
+    "structural_mapping_freeze_commit",
+    "preregistration_sha256",
+    "evaluator_sha256",
+    "revealed_outcomes_sha256",
+    "reveal_authorized=true"
+  ],
   "evaluator_path": "scripts/day4/evaluate_confirmatory_shadow_nav.py",
-  "evaluator_sha256": "92e19973ed0bc3e97d9b3c776d6a7e80737da563284eb1dd6ac592f887dbaa5a",
+  "evaluator_self_hash_verified_before_outcome_read": true,
+  "evaluator_sha256": "12b843467f27422fb8bb3fdd710703d1cb4ac3aea4cc77bc317078e030be8a53",
+  "exact_revealed_to_frozen_observation_id_match_required": true,
   "freeze_authorized": false,
+  "missing_continuing_mark_rule": "any human-confirmed continuing row missing target_prior/source_prior/source_current/target_current mark forces data_quality_inconclusive",
   "minimum_continuing_source_event_clusters": 25,
   "permutation": {
     "alternative": "mean paired error difference below zero",

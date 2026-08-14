@@ -88,9 +88,12 @@ Position disappearance is not silently excluded. Before reveal, every frozen row
 - `full_repayment`;
 - `sale_exit`;
 - `refinancing_amendment`;
-- `unmatched_disappearance`.
+- `unmatched_disappearance`;
+- `uncertain`.
 
 The primary mark test is calculated only for `continuing` facilities. The full persistence/attrition flow is published for all frozen rows. Failed, missing, ambiguous, and disappeared observations remain in the denominator and are never replaced.
+
+If any human-confirmed `continuing` row lacks `target_prior_mark`, `source_prior_mark`, `source_current_mark`, or `target_current_mark`, the overall result status is **`data_quality_inconclusive`**. Such a row remains in the attrition and missingness reports, is not imputed or replaced, and the result cannot be `PASS`.
 
 If fewer than **25 independent continuing source-event clusters** remain, the result is designated **underpowered/inconclusive** regardless of point estimates.
 
@@ -144,11 +147,77 @@ These outputs are secondary and cannot override a failed primary mechanism gate.
 - No alias-expanded events.
 - No same-manager primary observations.
 - No 2025Q3.
-- No target-current access before an approved sample freeze and reveal authorization.
+- No target-current structural access before Phase C authorization.
+- No numeric target-current or source-mark access before Phase D authorization.
 - No changes to formulas, sample rules, evaluator, or tests after freeze.
 
-## 12. Freeze boundary
+## 12. Mandatory staged review and reveal
+
+### Phase A — event measurement review
+
+Two independent clean reviewers label the sanitized 40-row review packet. They have no navigable filing links, marks, private outcome data, or evidence-key mapping. Disagreements are adjudicated without access to marks or private outcome data. No majority vote substitutes for explicit adjudication.
+
+Only rows with final consensus `yes` on all four measurement checks may have `include_for_confirmatory_test=yes` and enter the proposed sample. Failed and uncertain rows remain recorded and are not replaced.
+
+### Phase B — confirmatory sample freeze
+
+A separate commit must freeze all of the following before any target-current data is available:
+
+- final included `review_observation_id` values;
+- included `source_event_cluster_id` values;
+- human event-review consensus SHA-256;
+- preregistration SHA-256;
+- evaluator SHA-256;
+- sample-generation code SHA-256.
+
+The freeze record must contain no target-current structural or numeric data. It must be committed before Phase C begins.
+
+### Phase C — structural outcome reveal
+
+After Phase B, reveal only non-numeric target-current structure:
+
+- borrower/facility identifier;
+- facility type;
+- lien;
+- currency;
+- reference rate;
+- spread;
+- maturity;
+- funded status;
+- constituent descriptions;
+- aggregation lot count.
+
+Phase C must not reveal principal, cost, fair value, FV/principal, any mark, prediction, error, or return.
+
+Two independent reviewers label:
+
+- `target_current_same_facility`: `yes` / `no` / `uncertain`;
+- `target_current_aggregation_valid`: `yes` / `no` / `uncertain`;
+- `position_status`: `continuing` / `partial_repayment` / `full_repayment` / `sale_exit` / `refinancing_amendment` / `unmatched_disappearance` / `uncertain`;
+- `structural_notes`.
+
+Disagreements are adjudicated without numeric marks. The final structural consensus is frozen in a separate commit with its SHA-256. Rows classified `uncertain` remain reported and are not replaced.
+
+### Phase D — numeric reveal
+
+Only after the Phase C structural-mapping consensus freeze may numeric target-current marks, source marks, and prediction errors be materialized.
+
+The evaluator must refuse to open the numeric file unless authorization supplies and verifies:
+
+- `event_review_consensus_sha256`;
+- `included_sample_sha256`;
+- `sample_freeze_commit`;
+- `structural_mapping_consensus_sha256`;
+- `structural_mapping_freeze_commit`;
+- `preregistration_sha256`;
+- `evaluator_sha256`;
+- `revealed_outcomes_sha256`;
+- `reveal_authorized = true`.
+
+The evaluator independently hashes its own source file, the frozen included-sample file, and the revealed-outcome file. Revealed outcome IDs must equal the frozen included observation IDs exactly: no missing, duplicate, replacement, or extra ID is accepted.
+
+## 13. Freeze boundary
 
 The evaluator is prepared and tested only on synthetic data. Its SHA-256 is recorded separately. The outcome-blind review packet is not a frozen confirmatory sample and contains no human labels yet.
 
-The next authorized actions are human event review and independent approval of this draft. A sample freeze, target reveal, results calculation, and results tag remain explicitly prohibited.
+The next authorized actions are Phase A human event review and independent approval of this draft. No Phase B sample freeze, Phase C structural reveal, Phase D numeric reveal, results calculation, or results tag is authorized by this document.
