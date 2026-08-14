@@ -1,0 +1,22 @@
+{
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20260814,
+    "unit": "borrower cluster"
+  },
+  "evaluator_path": "scripts/day4/evaluate_confirmatory_shadow_nav.py",
+  "evaluator_sha256": "92e19973ed0bc3e97d9b3c776d6a7e80737da563284eb1dd6ac592f887dbaa5a",
+  "freeze_authorized": false,
+  "minimum_continuing_source_event_clusters": 25,
+  "permutation": {
+    "alternative": "mean paired error difference below zero",
+    "draws": 100000,
+    "seed": 20260814,
+    "type": "one-sided source-event-cluster sign flip with add-one correction"
+  },
+  "preregistration_status": "draft_not_approved",
+  "results_tag_authorized": false,
+  "reveal_authorized": false,
+  "status": "prepared_synthetic_tests_only",
+  "target_outcomes_opened": false
+}

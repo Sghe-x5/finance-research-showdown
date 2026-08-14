@@ -18,7 +18,7 @@ The primary model-positive stratum contained 60 hidden `predicted_same_facility_
 - Exact one-sided 95% lower bound: **89.9%**.
 - Status: **MEASUREMENT_INCONCLUSIVE_REQUIRES_HUMAN_INTERPRETATION**.
 
-The point estimate is tested against the preregistered 95% precision gate. An uncertain human consensus is not silently converted into either a true or false positive: it lowers coverage and remains in the strict denominator.
+The literal point-estimate precision gate passed: 58/60 = 96.7%. A strict statistical guarantee that precision is at least 95% was **not** established: the exact one-sided 95% lower bound is 89.9%. The matcher may therefore be used for confirmatory research only after human review of every included movement event; autonomous production precision of at least 95% is not claimed. An uncertain human consensus is not silently converted into either a true or false positive: it lowers coverage and remains in the strict denominator.
 
 ### Manager split within the model-positive stratum
 
@@ -27,7 +27,7 @@ The point estimate is tested against the preregistered 95% precision gate. An un
 | Same manager | 49 | 47 | 2 | 0 | 95.9% | 100.0% |
 | Cross manager | 11 | 11 | 0 | 0 | 100.0% | 100.0% |
 
-The manager relationship uses the canonical 19-fund manager map. Manager-pair and official-evidence-completeness breakdowns are stored as aggregates in `facility_blind_evaluation.json`; no blind pair IDs or private candidate IDs are exposed.
+The cross-manager benchmark was 11/11 confirmed, but the sample is small. Same-manager observations are excluded from the primary ShadowNAV hypothesis. The manager relationship uses the canonical 19-fund manager map. Manager-pair and official-evidence-completeness breakdowns are stored as aggregates in `facility_blind_evaluation.json`; no blind pair IDs or private candidate IDs are exposed.
 
 False-positive composition is reported in `facility_false_positive_audit.csv`. Categories are assigned deterministically from the public official fields, with one primary reason per definite false positive.
 
@@ -40,7 +40,7 @@ The alias file contained 128 rows. Its 37 blank candidate rows are **non-observa
 - Confirmed same-borrower aliases among nonblank rows: **18**.
 - Definite nonmatches: **71**.
 - Unresolved: **2**.
-- Resolved-candidate precision: **20.2%**.
+- Resolved-candidate alias yield: **20.2%**.
 - Resolution coverage: **97.8%**.
 - Uncertain rate: **2.2%**.
 
