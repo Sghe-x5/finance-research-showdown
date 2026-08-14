@@ -23,4 +23,5 @@ It does **not** contain:
 - hidden model chain-of-thought;
 - target outcomes that remain protected by the research protocol.
 
-Start with [`00_START_HERE.md`](00_START_HERE.md).
+Browse [`INDEX.md`](INDEX.md), then start with
+[`00_START_HERE.md`](00_START_HERE.md).

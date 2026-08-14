@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-08-14T20:27:24+00:00",
-  "base_commit_reference": "research/day4-shadow-nav-confirmatory @ 11cf1f44055beb88b1a0fed4c5bf09d5e2ae3414",
-  "file_count": 31,
+  "generated_utc": "2026-08-14T20:44:34+00:00",
+  "base_commit": "d83f91fe27048070200fe8f4af7c0d65bdd20873",
+  "file_count": 34,
   "files": [
     {
       "path": "00_START_HERE.md",
@@ -124,9 +124,24 @@
       "sha256": "42b4e110afd3524babf414c3fef77af0dc9d5215377a99e8c219bdc49022eecf"
     },
     {
+      "path": "INDEX.md",
+      "bytes": 5052,
+      "sha256": "9b6a29c319623a8085f3ebed39f586f3861675ebaead14f34b1e37133e49d349"
+    },
+    {
+      "path": "INTEGRATION_NOTES.md",
+      "bytes": 2794,
+      "sha256": "375d492f071b50939f0f8492b2004d4c0ea78ee5cd5d30834da2894b0169c3f2"
+    },
+    {
+      "path": "MAINTENANCE.md",
+      "bytes": 2229,
+      "sha256": "b2d8caa15af0918afe0c5f8aa749e9e356803ba1c5a016d8b28324a4fb6102e4"
+    },
+    {
       "path": "README.md",
-      "bytes": 1019,
-      "sha256": "be9309c4962783534fad4ffc34941278619cac245c1f1e98a28c31f98943ebb3"
+      "bytes": 1055,
+      "sha256": "38ca6776d7e0890ded709f3d4b2d9fb669eafd2454809f81227e9b3855145755"
     },
     {
       "path": "scripts/update_manifest.py",

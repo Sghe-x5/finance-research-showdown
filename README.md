@@ -14,6 +14,12 @@ The project is a 72-hour evidence-first comparison of two research tracks:
 No flagship has been selected. Dashboard scores and pre-data priors are not
 selection criteria.
 
+## Persistent Project Memory
+
+Start with [PROJECT_MEMORY_START_HERE.md](PROJECT_MEMORY_START_HERE.md).
+This folder contains visible research summaries, source links, decision history,
+invalidated claims, handoff prompts, and dated updates.
+
 ## Day 1 status
 
 - Corrected BDC reporting-order windows exist. The current provisional
