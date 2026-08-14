@@ -9,11 +9,11 @@ import pytest
 from evaluate_confirmatory_shadow_nav import (
     aggregate_source_event_clusters,
     attrition_flow,
+    borrower_clustered_permutation_pvalue,
     borrower_cluster_bootstrap_interval,
     evaluate_revealed_rows,
     leave_one_borrower_out,
     load_authorized_reveal,
-    paired_permutation_pvalue,
     prediction_b0,
     prediction_shadow_nav,
 )
@@ -195,8 +195,17 @@ def test_disappearance_flow_is_retained_without_mark_imputation():
 
 
 def test_permutation_bootstrap_and_leave_one_borrower_are_deterministic():
-    differences = [-0.10] * 8
-    p_value = paired_permutation_pvalue(differences, draws=10_000, seed=20260814)
+    permutation_clusters = [
+        {
+            "source_event_cluster_id": f"cluster-{index}",
+            "borrower_norm": f"borrower-{index}",
+            "mean_paired_error_difference": -0.10,
+        }
+        for index in range(8)
+    ]
+    p_value = borrower_clustered_permutation_pvalue(
+        permutation_clusters, draws=10_000, seed=20260814
+    )
     assert 0 < p_value < 0.05
     clusters = [
         {

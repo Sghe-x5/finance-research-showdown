@@ -1,0 +1,30 @@
+{
+  "affected_cluster_ids": [],
+  "affected_observation_ids": [],
+  "automatic_merge_or_row_selection_performed": false,
+  "dealer_tire_uncertain_rows_not_promoted": 2,
+  "different_cluster_duplicate_identities": 0,
+  "duplicate_identities_found": 0,
+  "duplicate_identity_fields": [
+    "report_period",
+    "normalized_borrower",
+    "source_ticker",
+    "target_ticker",
+    "source_prior_economic_facility_id",
+    "target_prior_economic_facility_id"
+  ],
+  "final_event_review_consensus_sha256": "2a0c763e423b5616b3f9093f54a0073d5e8577b0fe4f5769fb2ca60ff26f9591",
+  "included_rows_checked": 37,
+  "included_source_event_clusters_checked": 34,
+  "phase_b_freeze_created": false,
+  "source_inputs": {
+    "adjudication_sha256": "800f7370c09a9c33c8168bd24adffbfec0ecfab210abcdb6c03b69ec82110720",
+    "consensus_summary_sha256": "0c324daf8c4800c2da43599269160d4798250bc6b6a7445f5c91bbc67fc9dbd6",
+    "eligible_prefreeze_sha256": "81c2cde597fd1b64499787da2ffa719682a27bd88f27d097e5eb459f410ddc24",
+    "partial_consensus_sha256": "cdf5701d0e030ff075c136d916c82214f00584895c0bdaae75ea0b4dfb064b3b",
+    "sanitized_packet_sha256": "8d37ae3c2bbd9c4c4391c474e18347f9be5f15cf11056488a1bbbc11026f6db6"
+  },
+  "status": "pass_no_duplicate_independent_vote",
+  "target_current_structure_or_numeric_outcomes_opened": false,
+  "uncertain_observations_retained_in_audit_trail": 3
+}

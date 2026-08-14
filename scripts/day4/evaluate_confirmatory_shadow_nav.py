@@ -25,6 +25,7 @@ PERMUTATION_DRAWS = 100_000
 BOOTSTRAP_SEED = 20260814
 BOOTSTRAP_DRAWS = 10_000
 MIN_CONTINUING_CLUSTERS = 25
+MIN_CONTINUING_BORROWERS = 15
 REQUIRED_RELATIVE_MAE_IMPROVEMENT = 0.10
 ALLOWED_POSITION_STATUSES = {
     "continuing",
@@ -162,25 +163,103 @@ def aggregate_source_event_clusters(errors: list[dict]) -> list[dict]:
     return clusters
 
 
-def paired_permutation_pvalue(
-    differences: list[float],
+def _normalized_permutation_clusters(clusters: list[dict]) -> list[dict]:
+    normalized = []
+    for row in clusters:
+        cluster_id = row.get("source_event_cluster_id")
+        borrower = row.get("borrower_norm")
+        difference = row.get("mean_paired_error_difference")
+        if not cluster_id or not borrower or difference in (None, ""):
+            raise ValueError(
+                "Permutation clusters require cluster ID, borrower, and paired difference"
+            )
+        normalized.append({
+            "source_event_cluster_id": str(cluster_id),
+            "borrower_norm": str(borrower),
+            "mean_paired_error_difference": float(difference),
+        })
+    if not normalized:
+        raise ValueError("Permutation test requires source-event clusters")
+    if len({row["source_event_cluster_id"] for row in normalized}) != len(normalized):
+        raise ValueError("Permutation source-event cluster IDs must be unique")
+    return sorted(
+        normalized,
+        key=lambda row: (row["borrower_norm"], row["source_event_cluster_id"]),
+    )
+
+
+def borrower_clustered_sign_flip_draw(clusters: list[dict], rng) -> list[dict]:
+    """Apply exactly one random sign to every event from the same borrower."""
+    normalized = _normalized_permutation_clusters(clusters)
+    signs = {
+        borrower: (1 if rng.getrandbits(1) else -1)
+        for borrower in sorted({row["borrower_norm"] for row in normalized})
+    }
+    return [
+        {
+            **row,
+            "borrower_sign": signs[row["borrower_norm"]],
+            "signed_paired_error_difference": (
+                signs[row["borrower_norm"]]
+                * row["mean_paired_error_difference"]
+            ),
+        }
+        for row in normalized
+    ]
+
+
+def borrower_clustered_permutation_pvalue(
+    clusters: list[dict],
     draws: int = PERMUTATION_DRAWS,
     seed: int = PERMUTATION_SEED,
 ) -> float:
-    if not differences or draws <= 0:
-        raise ValueError("Permutation test requires differences and positive draws")
-    observed = mean(differences)
-    magnitudes = [abs(float(value)) for value in differences]
+    if draws <= 0:
+        raise ValueError("Permutation test requires positive draws")
+    normalized = _normalized_permutation_clusters(clusters)
+    observed = mean([
+        row["mean_paired_error_difference"] for row in normalized
+    ])
+    by_borrower = defaultdict(list)
+    for row in normalized:
+        by_borrower[row["borrower_norm"]].append(
+            row["mean_paired_error_difference"]
+        )
+    borrower_blocks = [by_borrower[borrower] for borrower in sorted(by_borrower)]
+    event_count = len(normalized)
     rng = random.Random(seed)
     extreme = 0
     for _ in range(draws):
-        permuted = mean([
-            magnitude if rng.getrandbits(1) else -magnitude
-            for magnitude in magnitudes
-        ])
+        signed_total = 0.0
+        for block in borrower_blocks:
+            sign = 1 if rng.getrandbits(1) else -1
+            signed_total += sign * sum(block)
+        permuted = signed_total / event_count
         if permuted <= observed + 1e-15:
             extreme += 1
     return (extreme + 1) / (draws + 1)
+
+
+def continuing_power_guard(clusters: list[dict]) -> dict:
+    cluster_count = len(clusters)
+    borrowers = {
+        row["borrower_norm"] for row in clusters if row.get("borrower_norm")
+    }
+    borrower_counts = Counter(row["borrower_norm"] for row in clusters)
+    reasons = []
+    if cluster_count < MIN_CONTINUING_CLUSTERS:
+        reasons.append("fewer_than_25_continuing_source_event_clusters")
+    if len(borrowers) < MIN_CONTINUING_BORROWERS:
+        reasons.append("fewer_than_15_unique_continuing_borrowers")
+    return {
+        "status": "underpowered_inconclusive" if reasons else "power_guard_passed",
+        "underpowered": bool(reasons),
+        "independent_continuing_source_event_clusters": cluster_count,
+        "minimum_continuing_source_event_clusters": MIN_CONTINUING_CLUSTERS,
+        "unique_continuing_borrowers": len(borrowers),
+        "minimum_unique_continuing_borrowers": MIN_CONTINUING_BORROWERS,
+        "maximum_clusters_from_one_borrower": max(borrower_counts.values(), default=0),
+        "failure_reasons": reasons,
+    }
 
 
 def percentile(sorted_values: list[float], probability: float) -> float:
@@ -302,17 +381,21 @@ def evaluate_revealed_rows(rows: list[dict]) -> dict:
             "primary_test_run": False,
         }
     if not clusters:
+        power_guard = continuing_power_guard(clusters)
         return {
             "status": "underpowered_inconclusive",
             "attrition_flow": flow,
             "continuing_rows_missing_marks": missing_continuing,
             "independent_continuing_clusters": 0,
+            "unique_continuing_borrowers": 0,
+            "power_guard": power_guard,
         }
 
+    power_guard = continuing_power_guard(clusters)
     mae_b0 = mean([row["mean_absolute_error_b0"] for row in clusters])
     mae_sn = mean([row["mean_absolute_error_sn"] for row in clusters])
     relative_improvement = None if mae_b0 == 0 else (mae_b0 - mae_sn) / mae_b0
-    permutation_p = paired_permutation_pvalue(differences)
+    permutation_p = borrower_clustered_permutation_pvalue(clusters)
     bootstrap_low, bootstrap_high = borrower_cluster_bootstrap_interval(clusters)
     loo = leave_one_borrower_out(clusters)
     periods = period_direction(clusters)
@@ -322,20 +405,25 @@ def evaluate_revealed_rows(rows: list[dict]) -> dict:
             relative_improvement is not None
             and relative_improvement >= REQUIRED_RELATIVE_MAE_IMPROVEMENT
         ),
-        "one_sided_paired_permutation_p_lt_0_05": permutation_p < 0.05,
+        "borrower_clustered_one_sided_sign_flip_permutation_p_lt_0_05": (
+            permutation_p < 0.05
+        ),
         "borrower_bootstrap_interval_below_zero": bootstrap_high < 0,
         "leave_one_borrower_out_direction_robust": (
             mean(differences) < 0 and bool(loo) and all(value < 0 for value in loo.values())
         ),
         "strict_majority_periods_negative": periods["strict_majority_negative"],
     }
-    underpowered = len(clusters) < MIN_CONTINUING_CLUSTERS
+    underpowered = power_guard["underpowered"]
     passed = not underpowered and all(criteria.values())
     status = "pass" if passed else ("underpowered_inconclusive" if underpowered else "exploratory_inconclusive")
     return {
         "status": status,
         "independent_continuing_clusters": len(clusters),
-        "underpowered_threshold": MIN_CONTINUING_CLUSTERS,
+        "unique_continuing_borrowers": power_guard["unique_continuing_borrowers"],
+        "minimum_continuing_source_event_clusters": MIN_CONTINUING_CLUSTERS,
+        "minimum_unique_continuing_borrowers": MIN_CONTINUING_BORROWERS,
+        "power_guard": power_guard,
         "attrition_flow": flow,
         "continuing_rows_missing_marks": missing_continuing,
         "primary": {
@@ -343,7 +431,7 @@ def evaluate_revealed_rows(rows: list[dict]) -> dict:
             "cluster_level_mae_sn": mae_sn,
             "mean_paired_error_difference": mean(differences),
             "relative_mae_improvement": relative_improvement,
-            "one_sided_paired_permutation_p": permutation_p,
+            "borrower_clustered_one_sided_sign_flip_permutation_p": permutation_p,
             "borrower_cluster_bootstrap_95": {
                 "lower": bootstrap_low,
                 "upper": bootstrap_high,

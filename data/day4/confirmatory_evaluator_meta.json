@@ -17,16 +17,19 @@
   ],
   "evaluator_path": "scripts/day4/evaluate_confirmatory_shadow_nav.py",
   "evaluator_self_hash_verified_before_outcome_read": true,
-  "evaluator_sha256": "12b843467f27422fb8bb3fdd710703d1cb4ac3aea4cc77bc317078e030be8a53",
+  "evaluator_sha256": "6663e71f42d17989b74f2bed0e6b88240f1a08b5fc39a98c996033537679c8de",
   "exact_revealed_to_frozen_observation_id_match_required": true,
   "freeze_authorized": false,
   "missing_continuing_mark_rule": "any human-confirmed continuing row missing target_prior/source_prior/source_current/target_current mark forces data_quality_inconclusive",
   "minimum_continuing_source_event_clusters": 25,
+  "minimum_unique_continuing_borrowers": 15,
   "permutation": {
     "alternative": "mean paired error difference below zero",
+    "borrower_sign_rule": "one shared sign for all source-event clusters from the same normalized borrower",
     "draws": 100000,
+    "estimand_weighting": "event-weighted mean across source-event clusters",
     "seed": 20260814,
-    "type": "one-sided source-event-cluster sign flip with add-one correction"
+    "type": "borrower-clustered one-sided sign-flip permutation test with add-one correction"
   },
   "preregistration_status": "draft_not_approved",
   "results_tag_authorized": false,
