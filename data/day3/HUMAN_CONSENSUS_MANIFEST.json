@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-14",
+  "private_mapping_opened": false,
+  "target_outcomes_revealed": false,
+  "inputs": {
+    "blind_facility_source_expected_sha256": "f4ec256bf4502f5cb6979ff218d3b5457481f0ae21bdb75841d4bb3c1d357c2b",
+    "blind_alias_source_expected_sha256": "d37f5daeb4eb6cee9e4ddb2e7690978a6ac899c30305b4fda268bb7424a8b64e",
+    "reviewer_b_facility_sha256": "eb3beb40046e6a2213c52b1bace0587a891e63758747c4e1e80a9f61157d53b3",
+    "reviewer_c_facility_sha256": "1007b7386f69cbaff8fd7b6ad90ea0e79aab7e5524b0964cddfaeaf51c79ac2e",
+    "reviewer_b_alias_sha256": "a7919b81d7aa54385c9a2025c0fde4a08aa5fb04abc67112be87966268d0b5b7",
+    "reviewer_c_alias_sha256": "554fba8b5cdc7b7f4b6ce716866aae5da79f27e1dbc359544b43655826ed6596",
+    "adjudicated_facility_sha256": "f06f92ff4592fd327019b283fa0bbec45d316b01be1a7c54277d67ac4d5d2390",
+    "adjudicated_alias_sha256": "31f5c0aebd93253ec5cc754e7cd828316367619320c012fe6ba1617fb0f3ee25"
+  },
+  "agreement": {
+    "facility_rows": 120,
+    "facility_agreement": 111,
+    "facility_disagreements": 9,
+    "facility_kappa": 0.876331157677774,
+    "alias_rows": 128,
+    "alias_joint_agreement": 73,
+    "alias_disagreements": 55,
+    "alias_joint_kappa": 0.11290322580645161
+  },
+  "consensus": {
+    "facility_distribution": {
+      "same_facility": 64,
+      "uncertain": 25,
+      "same_borrower_different_facility": 31
+    },
+    "alias_borrower_distribution": {
+      "no": 71,
+      "yes": 18,
+      "uncertain": 39
+    },
+    "alias_facility_distribution": {
+      "not_applicable": 71,
+      "uncertain": 41,
+      "no": 16
+    },
+    "alias_blank_candidate_rows": 37,
+    "alias_blank_candidate_policy": "non_observation_exclude_from_precision_recall_denominators"
+  },
+  "outputs": {
+    "human_consensus_facility_labels_v3.csv": {
+      "sha256": "09daa1904a2c90fcfbd533ea72130a3ec80a1f6ea032d539ef10e49950d30455",
+      "bytes": 63211
+    },
+    "human_consensus_alias_labels.csv": {
+      "sha256": "d7a09d15bf832719b24c0a69b182cce2c5331acbf16b75a811106f173f127c2f",
+      "bytes": 80292
+    },
+    "human_consensus_facility_audit.csv": {
+      "sha256": "7343811e21c4c0335515ebe70ae8c388768273f0053a5c60c994ea57bc4cd4ab",
+      "bytes": 100901
+    },
+    "human_consensus_alias_audit.csv": {
+      "sha256": "22d13c8e207ffb2fd0cc4d06cc28b3b3abf8796d76beb3fa66340b1f07fb8317",
+      "bytes": 146083
+    },
+    "HUMAN_LABELING_PROTOCOL.md": {
+      "sha256": "c1fc843a98c9d40bfe57311471bbbf6bf2e6108276cb5eff1442690da291e218",
+      "bytes": 3408
+    },
+    "CODEX_POST_CONSENSUS_REVEAL_PROMPT.md": {
+      "sha256": "9f0b4a9639edda549f22477db6b7ffc10654bd2fddbe9fac036d05a21fb28a51",
+      "bytes": 5863
+    },
+    "README.md": {
+      "sha256": "77200dad7ee5c7cfddbea322c6d063aace9953cd555e70b974250250af9f926c",
+      "bytes": 745
+    }
+  }
+}
