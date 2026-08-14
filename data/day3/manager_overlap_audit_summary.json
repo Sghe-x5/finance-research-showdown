@@ -1,0 +1,163 @@
+{
+  "cross_manager_movement_guard": 20,
+  "cross_manager_primary_preregistration_stratum_allowed": true,
+  "cross_manager_untouched_movement_facilities": 37,
+  "freeze_authorized": false,
+  "hidden_matcher_strata_read": false,
+  "human_labels_read": false,
+  "input_hashes": {
+    "blind": "f4ec256bf4502f5cb6979ff218d3b5457481f0ae21bdb75841d4bb3c1d357c2b",
+    "candidates": "47ed2aa00f90f5a4d5545d05dc185da4bdf8be3c45a365b07528a417232017cc",
+    "eligible": "81c2cde597fd1b64499787da2ffa719682a27bd88f27d097e5eb459f410ddc24",
+    "reporting_order": "11bfabd0faf0507c47cee950d82dc89f77e6d2b827bba44b666df6f42005ca8b"
+  },
+  "layers": {
+    "blind_facility_sample_v3": {
+      "cross_manager_count": 36,
+      "cross_manager_share": 0.3,
+      "observations": 120,
+      "same_manager_count": 84,
+      "same_manager_share": 0.7,
+      "unique_borrowers_by_relationship": {
+        "cross_manager": 32,
+        "same_manager": 75
+      },
+      "unique_source_facilities_by_relationship": {
+        "cross_manager": 36,
+        "same_manager": 84
+      },
+      "unique_source_managers": 8,
+      "unique_target_managers": 8
+    },
+    "eligible_pre_reveal": {
+      "cross_manager_count": 131,
+      "cross_manager_share": 1.0,
+      "observations": 131,
+      "same_manager_count": 0,
+      "same_manager_share": 0.0,
+      "unique_borrowers_by_relationship": {
+        "cross_manager": 41,
+        "same_manager": 0
+      },
+      "unique_source_facilities_by_relationship": {
+        "cross_manager": 125,
+        "same_manager": 0
+      },
+      "unique_source_managers": 6,
+      "unique_target_managers": 7
+    },
+    "facility_candidate_universe": {
+      "cross_manager_count": 22088,
+      "cross_manager_share": 0.5475458601883986,
+      "observations": 40340,
+      "same_manager_count": 18252,
+      "same_manager_share": 0.4524541398116014,
+      "unique_borrowers_by_relationship": {
+        "cross_manager": 563,
+        "same_manager": 1179
+      },
+      "unique_source_facilities_by_relationship": {
+        "cross_manager": 8815,
+        "same_manager": 11679
+      },
+      "unique_source_managers": 15,
+      "unique_target_managers": 15
+    },
+    "untouched_movement_facilities": {
+      "cross_manager_count": 40,
+      "cross_manager_share": 1.0,
+      "observations": 40,
+      "same_manager_count": 0,
+      "same_manager_share": 0.0,
+      "unique_borrowers_by_relationship": {
+        "cross_manager": 20,
+        "same_manager": 0
+      },
+      "unique_source_facilities_by_relationship": {
+        "cross_manager": 37,
+        "same_manager": 0
+      },
+      "unique_source_managers": 4,
+      "unique_target_managers": 4
+    }
+  },
+  "manager_map_rows": 19,
+  "official_evidence_only": true,
+  "target_current_outcomes_read": false,
+  "top_movement_manager_pairs": [
+    {
+      "observations": 20,
+      "relationship": "cross_manager",
+      "source_manager": "New Mountain Capital",
+      "target_manager": "Blue Owl Credit"
+    },
+    {
+      "observations": 10,
+      "relationship": "cross_manager",
+      "source_manager": "Ares Management",
+      "target_manager": "Blue Owl Credit"
+    },
+    {
+      "observations": 5,
+      "relationship": "cross_manager",
+      "source_manager": "Ares Management",
+      "target_manager": "New Mountain Capital"
+    },
+    {
+      "observations": 2,
+      "relationship": "cross_manager",
+      "source_manager": "Oaktree Capital Management",
+      "target_manager": "Blue Owl Credit"
+    },
+    {
+      "observations": 1,
+      "relationship": "cross_manager",
+      "source_manager": "Ares Management",
+      "target_manager": "Oaktree Capital Management"
+    },
+    {
+      "observations": 1,
+      "relationship": "cross_manager",
+      "source_manager": "Blue Owl Credit",
+      "target_manager": "New Mountain Capital"
+    },
+    {
+      "observations": 1,
+      "relationship": "cross_manager",
+      "source_manager": "Oaktree Capital Management",
+      "target_manager": "Ares Management"
+    }
+  ],
+  "untouched_movement_by_period": {
+    "2024Q1": {
+      "cross_manager_observations": 11,
+      "cross_manager_unique_source_facilities": 10,
+      "same_manager_observations": 0
+    },
+    "2024Q2": {
+      "cross_manager_observations": 14,
+      "cross_manager_unique_source_facilities": 13,
+      "same_manager_observations": 0
+    },
+    "2024Q3": {
+      "cross_manager_observations": 9,
+      "cross_manager_unique_source_facilities": 8,
+      "same_manager_observations": 0
+    },
+    "2024Q4": {
+      "cross_manager_observations": 1,
+      "cross_manager_unique_source_facilities": 1,
+      "same_manager_observations": 0
+    },
+    "2025Q1": {
+      "cross_manager_observations": 2,
+      "cross_manager_unique_source_facilities": 2,
+      "same_manager_observations": 0
+    },
+    "2025Q2": {
+      "cross_manager_observations": 3,
+      "cross_manager_unique_source_facilities": 3,
+      "same_manager_observations": 0
+    }
+  }
+}

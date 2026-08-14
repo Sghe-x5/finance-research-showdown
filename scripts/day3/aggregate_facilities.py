@@ -57,7 +57,9 @@ def spread_bucket(value, width=0.0025):
 
 def maturity_month(value):
     value = (value or "")[:10]
-    return value[:7] if len(value) == 10 else ""
+    if len(value) in {7, 10} and value[4:5] == "-":
+        return value[:7]
+    return ""
 
 
 def exact_number(value):

@@ -1,0 +1,8 @@
+{
+  "file": "data/day3/blind_facility_pairs_v2.csv",
+  "file_sha256_unchanged": "98876afb05fc9d9f1ff0fefad93f461762d4e297f3454d9c64fc8e242ad47d4f",
+  "human_labels_opened_or_used": false,
+  "private_v2_key_opened_or_used": false,
+  "replacement": "data/day3/blind_facility_pairs_v3.csv",
+  "status": "superseded_parser_or_join_omission"
+}

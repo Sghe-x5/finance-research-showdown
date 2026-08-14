@@ -1,0 +1,24 @@
+{
+  "candidate_pair_count": 40340,
+  "input_file_sha256": "60aee6b26872b65a0845a58db286e3409518498532d2eb69d0ffc7c1d356bbec",
+  "input_unit": "BDC x observation_date x borrower x economic_facility",
+  "note": "Candidate construction uses aggregated economic facilities and excludes principal, cost and fair-value outcomes.",
+  "outcome_columns_used": [],
+  "periods": [
+    "2023-12-31",
+    "2024-03-31",
+    "2024-06-30",
+    "2024-09-30",
+    "2024-12-31",
+    "2025-03-31",
+    "2025-06-30",
+    "2025-09-30"
+  ],
+  "prediction_counts": {
+    "same_borrower_different_facility:high": 6886,
+    "same_borrower_different_facility:medium": 2615,
+    "same_facility:high": 6118,
+    "uncertain:low": 23928,
+    "unrelated:high": 793
+  }
+}

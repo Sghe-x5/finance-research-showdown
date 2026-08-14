@@ -1,0 +1,192 @@
+{
+  "audit_scope": {
+    "archive_count": 8,
+    "archives": [
+      "2024q1",
+      "2024q2",
+      "2024q3",
+      "2024q4",
+      "2025q1",
+      "2025q2",
+      "2025q3",
+      "2025q4"
+    ],
+    "fields": [
+      "maturity",
+      "currency",
+      "reference_rate",
+      "acquisition_date"
+    ],
+    "fund_count": 19,
+    "identifier_text_used_to_infer_fields": false,
+    "zip_inventory_verified": {
+      "2024q1": [
+        "bdc_metadata.json",
+        "datasets/cal.tsv",
+        "datasets/non.tsv",
+        "datasets/num.tsv",
+        "datasets/pre.tsv",
+        "datasets/sub.tsv",
+        "datasets/tag.tsv",
+        "datasets/txt.tsv",
+        "readme.htm",
+        "soi.tsv"
+      ],
+      "2024q2": [
+        "bdc_metadata.json",
+        "datasets/cal.tsv",
+        "datasets/non.tsv",
+        "datasets/num.tsv",
+        "datasets/pre.tsv",
+        "datasets/sub.tsv",
+        "datasets/tag.tsv",
+        "datasets/txt.tsv",
+        "readme.htm",
+        "soi.tsv"
+      ],
+      "2024q3": [
+        "bdc_metadata.json",
+        "datasets/cal.tsv",
+        "datasets/non.tsv",
+        "datasets/num.tsv",
+        "datasets/pre.tsv",
+        "datasets/sub.tsv",
+        "datasets/tag.tsv",
+        "datasets/txt.tsv",
+        "readme.htm",
+        "soi.tsv"
+      ],
+      "2024q4": [
+        "bdc_metadata.json",
+        "datasets/cal.tsv",
+        "datasets/non.tsv",
+        "datasets/num.tsv",
+        "datasets/pre.tsv",
+        "datasets/sub.tsv",
+        "datasets/tag.tsv",
+        "datasets/txt.tsv",
+        "readme.htm",
+        "soi.tsv"
+      ],
+      "2025q1": [
+        "bdc_metadata.json",
+        "datasets/cal.tsv",
+        "datasets/non.tsv",
+        "datasets/num.tsv",
+        "datasets/pre.tsv",
+        "datasets/sub.tsv",
+        "datasets/tag.tsv",
+        "datasets/txt.tsv",
+        "readme.htm",
+        "soi.tsv"
+      ],
+      "2025q2": [
+        "bdc_metadata.json",
+        "datasets/cal.tsv",
+        "datasets/non.tsv",
+        "datasets/num.tsv",
+        "datasets/pre.tsv",
+        "datasets/sub.tsv",
+        "datasets/tag.tsv",
+        "datasets/txt.tsv",
+        "readme.htm",
+        "soi.tsv"
+      ],
+      "2025q3": [
+        "bdc_metadata.json",
+        "datasets/cal.tsv",
+        "datasets/non.tsv",
+        "datasets/num.tsv",
+        "datasets/pre.tsv",
+        "datasets/sub.tsv",
+        "datasets/tag.tsv",
+        "datasets/txt.tsv",
+        "readme.htm",
+        "soi.tsv"
+      ],
+      "2025q4": [
+        "bdc_metadata.json",
+        "datasets/cal.tsv",
+        "datasets/non.tsv",
+        "datasets/num.tsv",
+        "datasets/pre.tsv",
+        "datasets/sub.tsv",
+        "datasets/tag.tsv",
+        "datasets/txt.tsv",
+        "readme.htm",
+        "soi.tsv"
+      ]
+    }
+  },
+  "conditional_action": "rebuild_blind_v3",
+  "fields": {
+    "acquisition_date": {
+      "aggregated": 3077,
+      "aggregation_loss": 0,
+      "blind": 0,
+      "diagnosis": "join_loss",
+      "direct_parser_loss": 0,
+      "exact_loss_stage": "supporting_facts_to_normalized",
+      "export_loss": 0,
+      "normalized": 3077,
+      "raw_direct": 3077,
+      "raw_support": 7086,
+      "recommended_action": "Join explicitly tagged supporting facts to SOI rows and supersede the blind benchmark.",
+      "support_join_loss": 3349,
+      "support_unmatched": 660
+    },
+    "currency": {
+      "aggregated": 0,
+      "aggregation_loss": 0,
+      "blind": 0,
+      "diagnosis": "source_absent",
+      "direct_parser_loss": 0,
+      "exact_loss_stage": "official_source",
+      "export_loss": 0,
+      "normalized": 0,
+      "raw_direct": 0,
+      "raw_support": 0,
+      "recommended_action": "Treat the field as unavailable in the inspected free SEC archives; use abstention.",
+      "support_join_loss": 0,
+      "support_unmatched": 0
+    },
+    "maturity": {
+      "aggregated": 12653,
+      "aggregation_loss": 0,
+      "blind": 0,
+      "diagnosis": "join_loss",
+      "direct_parser_loss": 0,
+      "exact_loss_stage": "supporting_facts_to_normalized",
+      "export_loss": 0,
+      "normalized": 12668,
+      "raw_direct": 12668,
+      "raw_support": 15398,
+      "recommended_action": "Join explicitly tagged supporting facts to SOI rows and supersede the blind benchmark.",
+      "support_join_loss": 2320,
+      "support_unmatched": 497
+    },
+    "reference_rate": {
+      "aggregated": 12425,
+      "aggregation_loss": 0,
+      "blind": 0,
+      "diagnosis": "parser_loss",
+      "direct_parser_loss": 159,
+      "exact_loss_stage": "raw_soi_to_normalized",
+      "export_loss": 0,
+      "normalized": 12430,
+      "raw_direct": 6324,
+      "raw_support": 83,
+      "recommended_action": "Repair direct SOI parsing and supersede the blind benchmark.",
+      "support_join_loss": 6,
+      "support_unmatched": 0
+    }
+  },
+  "input_hashes": {
+    "aggregated": "61459c462ab77a342b0306ad9255f1f17aea52a0473706e0789ee936d0cea2ff",
+    "blind": "98876afb05fc9d9f1ff0fefad93f461762d4e297f3454d9c64fc8e242ad47d4f",
+    "manifest": "7388df3155acf644120b465886bb2916a29fe6ad348c0bde1c5d8789c67500df",
+    "normalized": "d5133ef097fafbccde2ebac7a886280c9615f9099cec8ce51580951f1df33082"
+  },
+  "output_sha256": "844a1fb7e068fce4daf8e37d3dcbab80e4f29efe54ca9241a54803cdba12f05e",
+  "pipeline_loss_found": true
+}

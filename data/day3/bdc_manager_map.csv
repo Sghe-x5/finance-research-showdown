@@ -1,0 +1,20 @@
+ticker,cik,canonical_manager,legal_adviser,listed_status,evidence_source,evidence_period,confidence
+ARCC,1287750,Ares Management,Ares Capital Management LLC,listed,https://www.sec.gov/Archives/edgar/data/1287750/000128775025000007/arcc-20241231.htm,2024Q4 official SEC 10-K,high
+ASIF,1918712,Ares Management,Ares Capital Management LLC,non-listed,https://www.sec.gov/Archives/edgar/data/1918712/000191871225000014/asif-20241231.htm,2024Q4 official SEC 10-K,high
+BBDC,1379785,Barings,Barings LLC,listed,https://www.sec.gov/Archives/edgar/data/1379785/000137978525000010/bbdc-20241231.htm,2024Q4 official SEC 10-K,high
+BCRED,1803498,Blackstone Credit & Insurance,Blackstone Private Credit Strategies LLC; Blackstone Credit BDC Advisors LLC (sub-adviser),non-listed,https://www.sec.gov/Archives/edgar/data/1803498/000180349825000021/bcred-20241231.htm,2024Q4 official SEC 10-K,high
+BXSL,1736035,Blackstone Credit & Insurance,Blackstone Private Credit Strategies LLC; Blackstone Credit BDC Advisors LLC (sub-adviser),listed,https://www.sec.gov/Archives/edgar/data/1736035/000173603525000008/bxsl-20241231.htm,2024Q4 official SEC 10-K,high
+CGBD,1544206,Carlyle,Carlyle Global Credit Investment Management L.L.C.,listed,https://www.sec.gov/Archives/edgar/data/1544206/000154420625000011/csl-20241231.htm,2024Q4 official SEC 10-K,high
+FSK,1422183,FS/KKR,"FS/KKR Advisor, LLC",listed,https://www.sec.gov/Archives/edgar/data/1422183/000162828025008175/fsk-20241231.htm,2024Q4 official SEC 10-K,high
+GBDC,1476765,Golub Capital,GC Advisors LLC,listed,https://www.sec.gov/Archives/edgar/data/1476765/000147676525000016/gbdc-20241231.htm,2024Q4 official SEC 10-K,high
+GSBD,1572694,Goldman Sachs Asset Management,"Goldman Sachs Asset Management, L.P.",listed,https://www.sec.gov/Archives/edgar/data/1572694/000095017025029231/gsbd-20241231.htm,2024Q4 official SEC 10-K,high
+HPS,1838126,HPS Investment Partners,"HPS Advisors, LLC",non-listed,https://www.sec.gov/Archives/edgar/data/1838126/000183812625000017/hps-20241231.htm,2024Q4 official SEC 10-K,high
+HTGC,1280784,Hercules Capital,internally managed,listed,https://www.sec.gov/Archives/edgar/data/1280784/000128078425000007/htgc-20241231.htm,2024Q4 official SEC 10-K,high
+MAIN,1396440,Main Street Capital,internally managed,listed,https://www.sec.gov/Archives/edgar/data/1396440/000139644025000018/main-20241231.htm,2024Q4 official SEC 10-K,high
+MFIC,1278752,Apollo Global Management,"Apollo Investment Management, L.P.",listed,https://www.sec.gov/Archives/edgar/data/1278752/000095017025026688/mfic-20241231.htm,2024Q4 official SEC 10-K,high
+NMFC,1496099,New Mountain Capital,"New Mountain Finance Advisers BDC, L.L.C.",listed,https://www.sec.gov/Archives/edgar/data/1496099/000149609925000010/nmfc-20241231.htm,2024Q4 official SEC 10-K,high
+OBDC,1655888,Blue Owl Credit,Blue Owl Credit Advisors LLC,listed,https://www.sec.gov/Archives/edgar/data/1655888/000165588825000007/obdc-20241231.htm,2024Q4 official SEC 10-K,high
+OCIC,1812554,Blue Owl Credit,Blue Owl Credit Advisors LLC,non-listed,https://www.sec.gov/Archives/edgar/data/1812554/000181255425000009/orcic-20241231.htm,2024Q4 official SEC 10-K,high
+OCSL,1414932,Oaktree Capital Management,"Oaktree Fund Advisors, LLC",listed,https://www.sec.gov/Archives/edgar/data/1414932/000141493225000004/ocsl-20241231.htm,2024Q4 official SEC 10-K,high
+PSEC,1287032,Prospect Capital Management,Prospect Capital Management LLC,listed,https://www.sec.gov/Archives/edgar/data/1287032/000128703225000012/psec-20241231.htm,2024Q4 official SEC 10-K,high
+TSLX,1508655,Sixth Street,"Sixth Street Specialty Lending Advisers, LLC",listed,https://www.sec.gov/Archives/edgar/data/1508655/000095017025019845/tslx-20241231.htm,2024Q4 official SEC 10-K,high

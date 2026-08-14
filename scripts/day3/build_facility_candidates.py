@@ -47,6 +47,13 @@ def compare_pair(left, right):
     spread_right = decimal_or_none(right["spread"])
     spread_diff = None if spread_left is None or spread_right is None else abs(spread_left - spread_right)
     maturity_diff = days_apart(left["maturity"], right["maturity"])
+    maturity_month_left = (left.get("maturity") or "")[:7]
+    maturity_month_right = (right.get("maturity") or "")[:7]
+    maturity_month_match = bool(
+        len(maturity_month_left) == 7
+        and len(maturity_month_right) == 7
+        and maturity_month_left == maturity_month_right
+    )
     feature_values = {
         "debt_equity_match": known_match(left["debt_equity"], right["debt_equity"]),
         "facility_type_match": known_match(left["facility_type"], right["facility_type"]),
@@ -54,7 +61,10 @@ def compare_pair(left, right):
         "currency_match": known_match(left["currency"], right["currency"]),
         "reference_rate_match": known_match(left["reference_rate"], right["reference_rate"]),
         "spread_match_25bp": "" if spread_diff is None else str(spread_diff <= 0.0025),
-        "maturity_match_45d": "" if maturity_diff is None else str(maturity_diff <= 45),
+        "maturity_match_45d": (
+            str(maturity_diff <= 45) if maturity_diff is not None
+            else ("True" if maturity_month_match else "")
+        ),
         "funded_status_match": known_match(left["funded_status"], right["funded_status"]),
     }
     conflicts = []

@@ -1,0 +1,1084 @@
+layer,report_period_label,source_ticker,target_ticker,source_manager,target_manager,manager_relationship,observation_count,unique_source_facilities,unique_borrowers
+blind_facility_sample_v3,2023Q4,ARCC,ASIF,Ares Management,Ares Management,same_manager,1,1,1
+blind_facility_sample_v3,2023Q4,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,1,1,1
+blind_facility_sample_v3,2023Q4,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,1,1,1
+blind_facility_sample_v3,2023Q4,BXSL,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,1,1,1
+blind_facility_sample_v3,2023Q4,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2023Q4,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2023Q4,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,6,6,6
+blind_facility_sample_v3,2023Q4,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,1,1,1
+blind_facility_sample_v3,2023Q4,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,1,1,1
+blind_facility_sample_v3,2023Q4,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,1,1,1
+blind_facility_sample_v3,2024Q1,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q1,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,2,2,2
+blind_facility_sample_v3,2024Q1,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q1,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q1,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q1,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,6,6,6
+blind_facility_sample_v3,2024Q1,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q1,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,3,3,3
+blind_facility_sample_v3,2024Q1,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,ARCC,ASIF,Ares Management,Ares Management,same_manager,2,2,2
+blind_facility_sample_v3,2024Q2,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,ASIF,ARCC,Ares Management,Ares Management,same_manager,2,2,2
+blind_facility_sample_v3,2024Q2,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q2,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,3,3,3
+blind_facility_sample_v3,2024Q2,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,1,1,1
+blind_facility_sample_v3,2024Q3,ARCC,ASIF,Ares Management,Ares Management,same_manager,2,2,2
+blind_facility_sample_v3,2024Q3,ASIF,ARCC,Ares Management,Ares Management,same_manager,3,3,3
+blind_facility_sample_v3,2024Q3,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,3,3,3
+blind_facility_sample_v3,2024Q3,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,1,1,1
+blind_facility_sample_v3,2024Q3,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,3,3,3
+blind_facility_sample_v3,2024Q4,ARCC,ASIF,Ares Management,Ares Management,same_manager,3,3,3
+blind_facility_sample_v3,2024Q4,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q4,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q4,ASIF,ARCC,Ares Management,Ares Management,same_manager,2,2,2
+blind_facility_sample_v3,2024Q4,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,2,2,2
+blind_facility_sample_v3,2024Q4,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q4,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,1,1,1
+blind_facility_sample_v3,2024Q4,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,3,3,2
+blind_facility_sample_v3,2024Q4,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,1,1,1
+blind_facility_sample_v3,2024Q4,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q1,ARCC,ASIF,Ares Management,Ares Management,same_manager,2,2,2
+blind_facility_sample_v3,2025Q1,ASIF,ARCC,Ares Management,Ares Management,same_manager,3,3,3
+blind_facility_sample_v3,2025Q1,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,1,1,1
+blind_facility_sample_v3,2025Q1,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,1,1,1
+blind_facility_sample_v3,2025Q1,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q1,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,2,2,2
+blind_facility_sample_v3,2025Q1,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q1,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q2,ARCC,ASIF,Ares Management,Ares Management,same_manager,2,2,2
+blind_facility_sample_v3,2025Q2,ASIF,ARCC,Ares Management,Ares Management,same_manager,6,6,6
+blind_facility_sample_v3,2025Q2,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,1,1,1
+blind_facility_sample_v3,2025Q2,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,1,1,1
+blind_facility_sample_v3,2025Q2,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,3,3,3
+blind_facility_sample_v3,2025Q2,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,1,1,1
+blind_facility_sample_v3,2025Q3,ARCC,ASIF,Ares Management,Ares Management,same_manager,1,1,1
+blind_facility_sample_v3,2025Q3,ASIF,ARCC,Ares Management,Ares Management,same_manager,4,4,4
+blind_facility_sample_v3,2025Q3,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q3,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q3,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q3,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,2,2,2
+blind_facility_sample_v3,2025Q3,GBDC,BBDC,Golub Capital,Barings,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q3,MFIC,HPS,Apollo Global Management,HPS Investment Partners,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q3,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,1,1,1
+blind_facility_sample_v3,2025Q3,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,1,1,1
+blind_facility_sample_v3,2025Q3,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,2,2,2
+eligible_pre_reveal,2024Q1,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,3,3,3
+eligible_pre_reveal,2024Q1,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,9,9,8
+eligible_pre_reveal,2024Q1,HTGC,GSBD,Hercules Capital,Goldman Sachs Asset Management,cross_manager,1,1,1
+eligible_pre_reveal,2024Q1,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,7,7,7
+eligible_pre_reveal,2024Q1,OCSL,ARCC,Oaktree Capital Management,Ares Management,cross_manager,1,1,1
+eligible_pre_reveal,2024Q1,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,1,1,1
+eligible_pre_reveal,2024Q1,TSLX,GSBD,Sixth Street,Goldman Sachs Asset Management,cross_manager,1,1,1
+eligible_pre_reveal,2024Q1,TSLX,HTGC,Sixth Street,Hercules Capital,cross_manager,1,1,1
+eligible_pre_reveal,2024Q2,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,4,4,4
+eligible_pre_reveal,2024Q2,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,12,12,10
+eligible_pre_reveal,2024Q2,ARCC,OCSL,Ares Management,Oaktree Capital Management,cross_manager,1,1,1
+eligible_pre_reveal,2024Q2,HTGC,GSBD,Hercules Capital,Goldman Sachs Asset Management,cross_manager,1,1,1
+eligible_pre_reveal,2024Q2,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,10,10,8
+eligible_pre_reveal,2024Q2,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,1,1,1
+eligible_pre_reveal,2024Q2,TSLX,GSBD,Sixth Street,Goldman Sachs Asset Management,cross_manager,1,1,1
+eligible_pre_reveal,2024Q2,TSLX,HTGC,Sixth Street,Hercules Capital,cross_manager,1,1,1
+eligible_pre_reveal,2024Q3,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,3,3,3
+eligible_pre_reveal,2024Q3,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,9,9,9
+eligible_pre_reveal,2024Q3,HTGC,GSBD,Hercules Capital,Goldman Sachs Asset Management,cross_manager,1,1,1
+eligible_pre_reveal,2024Q3,HTGC,TSLX,Hercules Capital,Sixth Street,cross_manager,1,1,1
+eligible_pre_reveal,2024Q3,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,18,18,18
+eligible_pre_reveal,2024Q3,TSLX,GSBD,Sixth Street,Goldman Sachs Asset Management,cross_manager,1,1,1
+eligible_pre_reveal,2024Q4,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,4,4,4
+eligible_pre_reveal,2024Q4,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,4,4,4
+eligible_pre_reveal,2024Q4,TSLX,HTGC,Sixth Street,Hercules Capital,cross_manager,1,1,1
+eligible_pre_reveal,2025Q1,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,3,3,3
+eligible_pre_reveal,2025Q1,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,5,5,5
+eligible_pre_reveal,2025Q1,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,4,4,4
+eligible_pre_reveal,2025Q1,TSLX,HTGC,Sixth Street,Hercules Capital,cross_manager,1,1,1
+eligible_pre_reveal,2025Q2,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,3,3,3
+eligible_pre_reveal,2025Q2,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,3,3,3
+eligible_pre_reveal,2025Q2,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,4,4,4
+eligible_pre_reveal,2025Q3,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,3,3,3
+eligible_pre_reveal,2025Q3,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,2,2,2
+eligible_pre_reveal,2025Q3,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,6,6,4
+facility_candidate_universe,2023Q4,ARCC,ASIF,Ares Management,Ares Management,same_manager,102,86,72
+facility_candidate_universe,2023Q4,ARCC,BBDC,Ares Management,Barings,cross_manager,4,4,4
+facility_candidate_universe,2023Q4,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,27,22,17
+facility_candidate_universe,2023Q4,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,15,13,12
+facility_candidate_universe,2023Q4,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,16,5,2
+facility_candidate_universe,2023Q4,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,26,17,15
+facility_candidate_universe,2023Q4,ARCC,MAIN,Ares Management,Main Street Capital,cross_manager,2,2,1
+facility_candidate_universe,2023Q4,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,13,11,9
+facility_candidate_universe,2023Q4,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,25,17,14
+facility_candidate_universe,2023Q4,ARCC,OCIC,Ares Management,Blue Owl Credit,cross_manager,31,15,14
+facility_candidate_universe,2023Q4,ARCC,OCSL,Ares Management,Oaktree Capital Management,cross_manager,8,4,2
+facility_candidate_universe,2023Q4,ASIF,ARCC,Ares Management,Ares Management,same_manager,85,72,60
+facility_candidate_universe,2023Q4,ASIF,BBDC,Ares Management,Barings,cross_manager,2,2,2
+facility_candidate_universe,2023Q4,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,40,32,25
+facility_candidate_universe,2023Q4,ASIF,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,4,3,2
+facility_candidate_universe,2023Q4,ASIF,GBDC,Ares Management,Golub Capital,cross_manager,3,1,1
+facility_candidate_universe,2023Q4,ASIF,HPS,Ares Management,HPS Investment Partners,cross_manager,21,16,13
+facility_candidate_universe,2023Q4,ASIF,NMFC,Ares Management,New Mountain Capital,cross_manager,13,10,7
+facility_candidate_universe,2023Q4,ASIF,OBDC,Ares Management,Blue Owl Credit,cross_manager,22,18,15
+facility_candidate_universe,2023Q4,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,76,44,34
+facility_candidate_universe,2023Q4,ASIF,OCSL,Ares Management,Oaktree Capital Management,cross_manager,6,5,5
+facility_candidate_universe,2023Q4,BBDC,ARCC,Barings,Ares Management,cross_manager,3,3,3
+facility_candidate_universe,2023Q4,BBDC,ASIF,Barings,Ares Management,cross_manager,3,2,2
+facility_candidate_universe,2023Q4,BBDC,BCRED,Barings,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,BBDC,CGBD,Barings,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,BBDC,GBDC,Barings,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,BBDC,HPS,Barings,HPS Investment Partners,cross_manager,5,4,3
+facility_candidate_universe,2023Q4,BBDC,MAIN,Barings,Main Street Capital,cross_manager,2,2,2
+facility_candidate_universe,2023Q4,BBDC,NMFC,Barings,New Mountain Capital,cross_manager,2,2,2
+facility_candidate_universe,2023Q4,BBDC,OCIC,Barings,Blue Owl Credit,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,BCRED,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,30,22,20
+facility_candidate_universe,2023Q4,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,35,28,25
+facility_candidate_universe,2023Q4,BCRED,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,9,8,6
+facility_candidate_universe,2023Q4,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,304,210,146
+facility_candidate_universe,2023Q4,BCRED,CGBD,Blackstone Credit & Insurance,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,BCRED,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,13,6,2
+facility_candidate_universe,2023Q4,BCRED,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,81,51,37
+facility_candidate_universe,2023Q4,BCRED,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,4,2,2
+facility_candidate_universe,2023Q4,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,84,53,38
+facility_candidate_universe,2023Q4,BCRED,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,47,30,21
+facility_candidate_universe,2023Q4,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,101,63,47
+facility_candidate_universe,2023Q4,BCRED,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,13,7,7
+facility_candidate_universe,2023Q4,BXSL,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,13,7,6
+facility_candidate_universe,2023Q4,BXSL,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,3,2,2
+facility_candidate_universe,2023Q4,BXSL,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,2,2,2
+facility_candidate_universe,2023Q4,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,305,199,141
+facility_candidate_universe,2023Q4,BXSL,CGBD,Blackstone Credit & Insurance,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,BXSL,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,7,4,1
+facility_candidate_universe,2023Q4,BXSL,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,42,25,19
+facility_candidate_universe,2023Q4,BXSL,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,2,1,1
+facility_candidate_universe,2023Q4,BXSL,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,36,20,13
+facility_candidate_universe,2023Q4,BXSL,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,19,8,7
+facility_candidate_universe,2023Q4,BXSL,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,20,11,8
+facility_candidate_universe,2023Q4,BXSL,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,3,1,1
+facility_candidate_universe,2023Q4,CGBD,BBDC,Carlyle,Barings,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,GBDC,ARCC,Golub Capital,Ares Management,cross_manager,33,16,3
+facility_candidate_universe,2023Q4,GBDC,ASIF,Golub Capital,Ares Management,cross_manager,12,12,2
+facility_candidate_universe,2023Q4,GBDC,BBDC,Golub Capital,Barings,cross_manager,6,6,2
+facility_candidate_universe,2023Q4,GBDC,BCRED,Golub Capital,Blackstone Credit & Insurance,cross_manager,14,5,2
+facility_candidate_universe,2023Q4,GBDC,BXSL,Golub Capital,Blackstone Credit & Insurance,cross_manager,13,4,1
+facility_candidate_universe,2023Q4,GBDC,HPS,Golub Capital,HPS Investment Partners,cross_manager,7,4,1
+facility_candidate_universe,2023Q4,GBDC,NMFC,Golub Capital,New Mountain Capital,cross_manager,5,2,2
+facility_candidate_universe,2023Q4,GBDC,OBDC,Golub Capital,Blue Owl Credit,cross_manager,9,4,1
+facility_candidate_universe,2023Q4,GBDC,OCIC,Golub Capital,Blue Owl Credit,cross_manager,8,4,1
+facility_candidate_universe,2023Q4,GBDC,OCSL,Golub Capital,Oaktree Capital Management,cross_manager,15,6,1
+facility_candidate_universe,2023Q4,GSBD,HTGC,Goldman Sachs Asset Management,Hercules Capital,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,GSBD,MFIC,Goldman Sachs Asset Management,Apollo Global Management,cross_manager,3,3,1
+facility_candidate_universe,2023Q4,GSBD,TSLX,Goldman Sachs Asset Management,Sixth Street,cross_manager,2,2,1
+facility_candidate_universe,2023Q4,HPS,ARCC,HPS Investment Partners,Ares Management,cross_manager,20,18,12
+facility_candidate_universe,2023Q4,HPS,ASIF,HPS Investment Partners,Ares Management,cross_manager,15,12,10
+facility_candidate_universe,2023Q4,HPS,BBDC,HPS Investment Partners,Barings,cross_manager,4,4,3
+facility_candidate_universe,2023Q4,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,68,44,29
+facility_candidate_universe,2023Q4,HPS,BXSL,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,50,28,13
+facility_candidate_universe,2023Q4,HPS,GBDC,HPS Investment Partners,Golub Capital,cross_manager,13,4,1
+facility_candidate_universe,2023Q4,HPS,MAIN,HPS Investment Partners,Main Street Capital,cross_manager,18,9,3
+facility_candidate_universe,2023Q4,HPS,NMFC,HPS Investment Partners,New Mountain Capital,cross_manager,45,25,15
+facility_candidate_universe,2023Q4,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,58,34,17
+facility_candidate_universe,2023Q4,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,89,51,31
+facility_candidate_universe,2023Q4,HPS,OCSL,HPS Investment Partners,Oaktree Capital Management,cross_manager,10,7,7
+facility_candidate_universe,2023Q4,HTGC,GSBD,Hercules Capital,Goldman Sachs Asset Management,cross_manager,7,4,1
+facility_candidate_universe,2023Q4,HTGC,TSLX,Hercules Capital,Sixth Street,cross_manager,4,4,1
+facility_candidate_universe,2023Q4,MAIN,ARCC,Main Street Capital,Ares Management,cross_manager,2,2,2
+facility_candidate_universe,2023Q4,MAIN,ASIF,Main Street Capital,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,MAIN,BBDC,Main Street Capital,Barings,cross_manager,8,8,4
+facility_candidate_universe,2023Q4,MAIN,BCRED,Main Street Capital,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,MAIN,HPS,Main Street Capital,HPS Investment Partners,cross_manager,10,5,2
+facility_candidate_universe,2023Q4,MAIN,NMFC,Main Street Capital,New Mountain Capital,cross_manager,4,1,1
+facility_candidate_universe,2023Q4,MFIC,GSBD,Apollo Global Management,Goldman Sachs Asset Management,cross_manager,2,1,1
+facility_candidate_universe,2023Q4,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,31,18,9
+facility_candidate_universe,2023Q4,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,17,15,10
+facility_candidate_universe,2023Q4,NMFC,BBDC,New Mountain Capital,Barings,cross_manager,2,2,2
+facility_candidate_universe,2023Q4,NMFC,BCRED,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,53,40,26
+facility_candidate_universe,2023Q4,NMFC,BXSL,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,44,33,17
+facility_candidate_universe,2023Q4,NMFC,HPS,New Mountain Capital,HPS Investment Partners,cross_manager,43,25,15
+facility_candidate_universe,2023Q4,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,67,41,16
+facility_candidate_universe,2023Q4,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,84,48,28
+facility_candidate_universe,2023Q4,NMFC,OCSL,New Mountain Capital,Oaktree Capital Management,cross_manager,19,10,4
+facility_candidate_universe,2023Q4,OBDC,ARCC,Blue Owl Credit,Ares Management,cross_manager,16,13,11
+facility_candidate_universe,2023Q4,OBDC,ASIF,Blue Owl Credit,Ares Management,cross_manager,12,11,10
+facility_candidate_universe,2023Q4,OBDC,BBDC,Blue Owl Credit,Barings,cross_manager,2,2,2
+facility_candidate_universe,2023Q4,OBDC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,36,24,18
+facility_candidate_universe,2023Q4,OBDC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,15,8,6
+facility_candidate_universe,2023Q4,OBDC,GBDC,Blue Owl Credit,Golub Capital,cross_manager,6,3,1
+facility_candidate_universe,2023Q4,OBDC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,55,27,16
+facility_candidate_universe,2023Q4,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,28,18,15
+facility_candidate_universe,2023Q4,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,395,229,154
+facility_candidate_universe,2023Q4,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,12,9,8
+facility_candidate_universe,2023Q4,OCIC,ARCC,Blue Owl Credit,Ares Management,cross_manager,25,24,15
+facility_candidate_universe,2023Q4,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,51,46,28
+facility_candidate_universe,2023Q4,OCIC,BBDC,Blue Owl Credit,Barings,cross_manager,5,5,3
+facility_candidate_universe,2023Q4,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,94,66,38
+facility_candidate_universe,2023Q4,OCIC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,30,19,9
+facility_candidate_universe,2023Q4,OCIC,GBDC,Blue Owl Credit,Golub Capital,cross_manager,17,5,1
+facility_candidate_universe,2023Q4,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,103,59,29
+facility_candidate_universe,2023Q4,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,67,42,24
+facility_candidate_universe,2023Q4,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,387,269,155
+facility_candidate_universe,2023Q4,OCIC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,13,11,6
+facility_candidate_universe,2023Q4,OCSL,ARCC,Oaktree Capital Management,Ares Management,cross_manager,7,4,3
+facility_candidate_universe,2023Q4,OCSL,ASIF,Oaktree Capital Management,Ares Management,cross_manager,15,9,5
+facility_candidate_universe,2023Q4,OCSL,BCRED,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,8,6,6
+facility_candidate_universe,2023Q4,OCSL,BXSL,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,2,2,2
+facility_candidate_universe,2023Q4,OCSL,GBDC,Oaktree Capital Management,Golub Capital,cross_manager,9,2,1
+facility_candidate_universe,2023Q4,OCSL,HPS,Oaktree Capital Management,HPS Investment Partners,cross_manager,4,4,4
+facility_candidate_universe,2023Q4,OCSL,MAIN,Oaktree Capital Management,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2023Q4,OCSL,NMFC,Oaktree Capital Management,New Mountain Capital,cross_manager,15,9,7
+facility_candidate_universe,2023Q4,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,9,9,5
+facility_candidate_universe,2023Q4,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,17,10,7
+facility_candidate_universe,2024Q1,ARCC,ASIF,Ares Management,Ares Management,same_manager,137,101,79
+facility_candidate_universe,2024Q1,ARCC,BBDC,Ares Management,Barings,cross_manager,5,5,4
+facility_candidate_universe,2024Q1,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,27,20,16
+facility_candidate_universe,2024Q1,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,13,10,8
+facility_candidate_universe,2024Q1,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,36,7,3
+facility_candidate_universe,2024Q1,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,23,15,14
+facility_candidate_universe,2024Q1,ARCC,MAIN,Ares Management,Main Street Capital,cross_manager,2,2,1
+facility_candidate_universe,2024Q1,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,18,12,11
+facility_candidate_universe,2024Q1,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,18,15,14
+facility_candidate_universe,2024Q1,ARCC,OCIC,Ares Management,Blue Owl Credit,cross_manager,31,19,19
+facility_candidate_universe,2024Q1,ARCC,OCSL,Ares Management,Oaktree Capital Management,cross_manager,2,2,2
+facility_candidate_universe,2024Q1,ASIF,ARCC,Ares Management,Ares Management,same_manager,120,94,75
+facility_candidate_universe,2024Q1,ASIF,BBDC,Ares Management,Barings,cross_manager,2,2,2
+facility_candidate_universe,2024Q1,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,38,33,29
+facility_candidate_universe,2024Q1,ASIF,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,7,5,3
+facility_candidate_universe,2024Q1,ASIF,GBDC,Ares Management,Golub Capital,cross_manager,6,2,2
+facility_candidate_universe,2024Q1,ASIF,HPS,Ares Management,HPS Investment Partners,cross_manager,13,11,10
+facility_candidate_universe,2024Q1,ASIF,MAIN,Ares Management,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q1,ASIF,NMFC,Ares Management,New Mountain Capital,cross_manager,13,12,12
+facility_candidate_universe,2024Q1,ASIF,OBDC,Ares Management,Blue Owl Credit,cross_manager,16,14,13
+facility_candidate_universe,2024Q1,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,70,45,39
+facility_candidate_universe,2024Q1,ASIF,OCSL,Ares Management,Oaktree Capital Management,cross_manager,13,10,8
+facility_candidate_universe,2024Q1,BBDC,ARCC,Barings,Ares Management,cross_manager,4,3,3
+facility_candidate_universe,2024Q1,BBDC,ASIF,Barings,Ares Management,cross_manager,4,3,3
+facility_candidate_universe,2024Q1,BBDC,BCRED,Barings,Blackstone Credit & Insurance,cross_manager,4,3,3
+facility_candidate_universe,2024Q1,BBDC,BXSL,Barings,Blackstone Credit & Insurance,cross_manager,2,2,2
+facility_candidate_universe,2024Q1,BBDC,CGBD,Barings,Carlyle,cross_manager,2,2,2
+facility_candidate_universe,2024Q1,BBDC,GBDC,Barings,Golub Capital,cross_manager,2,1,1
+facility_candidate_universe,2024Q1,BBDC,HPS,Barings,HPS Investment Partners,cross_manager,3,3,3
+facility_candidate_universe,2024Q1,BBDC,MAIN,Barings,Main Street Capital,cross_manager,5,3,3
+facility_candidate_universe,2024Q1,BBDC,NMFC,Barings,New Mountain Capital,cross_manager,2,1,1
+facility_candidate_universe,2024Q1,BBDC,OCIC,Barings,Blue Owl Credit,cross_manager,2,1,1
+facility_candidate_universe,2024Q1,BCRED,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,25,20,18
+facility_candidate_universe,2024Q1,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,43,36,32
+facility_candidate_universe,2024Q1,BCRED,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,6,4,3
+facility_candidate_universe,2024Q1,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,350,234,164
+facility_candidate_universe,2024Q1,BCRED,CGBD,Blackstone Credit & Insurance,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2024Q1,BCRED,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,16,4,2
+facility_candidate_universe,2024Q1,BCRED,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,84,54,39
+facility_candidate_universe,2024Q1,BCRED,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,2,1,1
+facility_candidate_universe,2024Q1,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,68,45,31
+facility_candidate_universe,2024Q1,BCRED,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,38,27,18
+facility_candidate_universe,2024Q1,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,100,61,47
+facility_candidate_universe,2024Q1,BCRED,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,5,5,4
+facility_candidate_universe,2024Q1,BXSL,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,17,13,11
+facility_candidate_universe,2024Q1,BXSL,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,2,2,2
+facility_candidate_universe,2024Q1,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,309,207,142
+facility_candidate_universe,2024Q1,BXSL,CGBD,Blackstone Credit & Insurance,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2024Q1,BXSL,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,19,4,1
+facility_candidate_universe,2024Q1,BXSL,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,54,28,18
+facility_candidate_universe,2024Q1,BXSL,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,2,1,1
+facility_candidate_universe,2024Q1,BXSL,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,35,20,15
+facility_candidate_universe,2024Q1,BXSL,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,21,14,11
+facility_candidate_universe,2024Q1,BXSL,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,26,11,8
+facility_candidate_universe,2024Q1,GBDC,ARCC,Golub Capital,Ares Management,cross_manager,14,13,3
+facility_candidate_universe,2024Q1,GBDC,ASIF,Golub Capital,Ares Management,cross_manager,12,12,2
+facility_candidate_universe,2024Q1,GBDC,BBDC,Golub Capital,Barings,cross_manager,7,7,2
+facility_candidate_universe,2024Q1,GBDC,BCRED,Golub Capital,Blackstone Credit & Insurance,cross_manager,11,5,1
+facility_candidate_universe,2024Q1,GBDC,BXSL,Golub Capital,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q1,GBDC,HPS,Golub Capital,HPS Investment Partners,cross_manager,6,5,1
+facility_candidate_universe,2024Q1,GBDC,NMFC,Golub Capital,New Mountain Capital,cross_manager,6,2,2
+facility_candidate_universe,2024Q1,GBDC,OBDC,Golub Capital,Blue Owl Credit,cross_manager,6,5,1
+facility_candidate_universe,2024Q1,GBDC,OCIC,Golub Capital,Blue Owl Credit,cross_manager,12,5,1
+facility_candidate_universe,2024Q1,GBDC,OCSL,Golub Capital,Oaktree Capital Management,cross_manager,11,5,1
+facility_candidate_universe,2024Q1,GSBD,HTGC,Goldman Sachs Asset Management,Hercules Capital,cross_manager,6,2,1
+facility_candidate_universe,2024Q1,GSBD,MFIC,Goldman Sachs Asset Management,Apollo Global Management,cross_manager,2,2,1
+facility_candidate_universe,2024Q1,GSBD,TSLX,Goldman Sachs Asset Management,Sixth Street,cross_manager,2,2,1
+facility_candidate_universe,2024Q1,HPS,ARCC,HPS Investment Partners,Ares Management,cross_manager,30,25,15
+facility_candidate_universe,2024Q1,HPS,ASIF,HPS Investment Partners,Ares Management,cross_manager,30,23,15
+facility_candidate_universe,2024Q1,HPS,BBDC,HPS Investment Partners,Barings,cross_manager,8,7,3
+facility_candidate_universe,2024Q1,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,72,50,29
+facility_candidate_universe,2024Q1,HPS,BXSL,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,46,37,17
+facility_candidate_universe,2024Q1,HPS,GBDC,HPS Investment Partners,Golub Capital,cross_manager,14,3,1
+facility_candidate_universe,2024Q1,HPS,MAIN,HPS Investment Partners,Main Street Capital,cross_manager,2,2,1
+facility_candidate_universe,2024Q1,HPS,NMFC,HPS Investment Partners,New Mountain Capital,cross_manager,44,28,15
+facility_candidate_universe,2024Q1,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,39,30,17
+facility_candidate_universe,2024Q1,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,104,53,30
+facility_candidate_universe,2024Q1,HPS,OCSL,HPS Investment Partners,Oaktree Capital Management,cross_manager,8,5,5
+facility_candidate_universe,2024Q1,HTGC,GSBD,Hercules Capital,Goldman Sachs Asset Management,cross_manager,2,1,1
+facility_candidate_universe,2024Q1,HTGC,TSLX,Hercules Capital,Sixth Street,cross_manager,1,1,1
+facility_candidate_universe,2024Q1,MAIN,ARCC,Main Street Capital,Ares Management,cross_manager,2,2,2
+facility_candidate_universe,2024Q1,MAIN,BBDC,Main Street Capital,Barings,cross_manager,5,5,3
+facility_candidate_universe,2024Q1,MAIN,BCRED,Main Street Capital,Blackstone Credit & Insurance,cross_manager,3,3,1
+facility_candidate_universe,2024Q1,MAIN,HPS,Main Street Capital,HPS Investment Partners,cross_manager,4,2,1
+facility_candidate_universe,2024Q1,MAIN,OCSL,Main Street Capital,Oaktree Capital Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q1,MFIC,GSBD,Apollo Global Management,Goldman Sachs Asset Management,cross_manager,3,1,1
+facility_candidate_universe,2024Q1,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,46,23,9
+facility_candidate_universe,2024Q1,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,25,21,14
+facility_candidate_universe,2024Q1,NMFC,BBDC,New Mountain Capital,Barings,cross_manager,2,2,1
+facility_candidate_universe,2024Q1,NMFC,BCRED,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,74,50,27
+facility_candidate_universe,2024Q1,NMFC,BXSL,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,52,37,18
+facility_candidate_universe,2024Q1,NMFC,GBDC,New Mountain Capital,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q1,NMFC,HPS,New Mountain Capital,HPS Investment Partners,cross_manager,60,26,16
+facility_candidate_universe,2024Q1,NMFC,MAIN,New Mountain Capital,Main Street Capital,cross_manager,5,5,1
+facility_candidate_universe,2024Q1,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,29,23,15
+facility_candidate_universe,2024Q1,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,87,47,31
+facility_candidate_universe,2024Q1,NMFC,OCSL,New Mountain Capital,Oaktree Capital Management,cross_manager,4,4,4
+facility_candidate_universe,2024Q1,OBDC,ARCC,Blue Owl Credit,Ares Management,cross_manager,31,25,14
+facility_candidate_universe,2024Q1,OBDC,ASIF,Blue Owl Credit,Ares Management,cross_manager,28,22,16
+facility_candidate_universe,2024Q1,OBDC,BBDC,Blue Owl Credit,Barings,cross_manager,2,2,2
+facility_candidate_universe,2024Q1,OBDC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,52,39,25
+facility_candidate_universe,2024Q1,OBDC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,26,21,11
+facility_candidate_universe,2024Q1,OBDC,GBDC,Blue Owl Credit,Golub Capital,cross_manager,9,2,1
+facility_candidate_universe,2024Q1,OBDC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,84,37,22
+facility_candidate_universe,2024Q1,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,59,27,15
+facility_candidate_universe,2024Q1,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,502,280,184
+facility_candidate_universe,2024Q1,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,10,7,6
+facility_candidate_universe,2024Q1,OCIC,ARCC,Blue Owl Credit,Ares Management,cross_manager,34,31,20
+facility_candidate_universe,2024Q1,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,71,62,40
+facility_candidate_universe,2024Q1,OCIC,BBDC,Blue Owl Credit,Barings,cross_manager,6,6,3
+facility_candidate_universe,2024Q1,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,94,70,40
+facility_candidate_universe,2024Q1,OCIC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,32,24,11
+facility_candidate_universe,2024Q1,OCIC,GBDC,Blue Owl Credit,Golub Capital,cross_manager,13,3,1
+facility_candidate_universe,2024Q1,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,103,63,32
+facility_candidate_universe,2024Q1,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,55,41,25
+facility_candidate_universe,2024Q1,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,466,318,182
+facility_candidate_universe,2024Q1,OCIC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,13,11,7
+facility_candidate_universe,2024Q1,OCSL,ARCC,Oaktree Capital Management,Ares Management,cross_manager,4,3,2
+facility_candidate_universe,2024Q1,OCSL,ASIF,Oaktree Capital Management,Ares Management,cross_manager,10,9,8
+facility_candidate_universe,2024Q1,OCSL,BCRED,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,8,7,7
+facility_candidate_universe,2024Q1,OCSL,BXSL,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q1,OCSL,GBDC,Oaktree Capital Management,Golub Capital,cross_manager,9,3,1
+facility_candidate_universe,2024Q1,OCSL,HPS,Oaktree Capital Management,HPS Investment Partners,cross_manager,4,4,3
+facility_candidate_universe,2024Q1,OCSL,NMFC,Oaktree Capital Management,New Mountain Capital,cross_manager,6,5,4
+facility_candidate_universe,2024Q1,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,4,4,3
+facility_candidate_universe,2024Q1,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,14,9,7
+facility_candidate_universe,2024Q1,TSLX,HTGC,Sixth Street,Hercules Capital,cross_manager,3,1,1
+facility_candidate_universe,2024Q2,ARCC,ASIF,Ares Management,Ares Management,same_manager,180,122,87
+facility_candidate_universe,2024Q2,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,37,28,20
+facility_candidate_universe,2024Q2,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,32,24,17
+facility_candidate_universe,2024Q2,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,57,7,2
+facility_candidate_universe,2024Q2,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,29,16,15
+facility_candidate_universe,2024Q2,ARCC,MAIN,Ares Management,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,44,20,13
+facility_candidate_universe,2024Q2,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,33,18,15
+facility_candidate_universe,2024Q2,ARCC,OCIC,Ares Management,Blue Owl Credit,cross_manager,39,24,21
+facility_candidate_universe,2024Q2,ARCC,OCSL,Ares Management,Oaktree Capital Management,cross_manager,4,2,1
+facility_candidate_universe,2024Q2,ASIF,ARCC,Ares Management,Ares Management,same_manager,170,127,98
+facility_candidate_universe,2024Q2,ASIF,BBDC,Ares Management,Barings,cross_manager,3,3,2
+facility_candidate_universe,2024Q2,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,52,49,39
+facility_candidate_universe,2024Q2,ASIF,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,11,10,5
+facility_candidate_universe,2024Q2,ASIF,GBDC,Ares Management,Golub Capital,cross_manager,11,3,2
+facility_candidate_universe,2024Q2,ASIF,HPS,Ares Management,HPS Investment Partners,cross_manager,30,18,15
+facility_candidate_universe,2024Q2,ASIF,MAIN,Ares Management,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,ASIF,NMFC,Ares Management,New Mountain Capital,cross_manager,23,17,14
+facility_candidate_universe,2024Q2,ASIF,OBDC,Ares Management,Blue Owl Credit,cross_manager,32,24,21
+facility_candidate_universe,2024Q2,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,56,42,38
+facility_candidate_universe,2024Q2,ASIF,OCSL,Ares Management,Oaktree Capital Management,cross_manager,12,9,9
+facility_candidate_universe,2024Q2,BBDC,ARCC,Barings,Ares Management,cross_manager,7,5,5
+facility_candidate_universe,2024Q2,BBDC,ASIF,Barings,Ares Management,cross_manager,3,2,2
+facility_candidate_universe,2024Q2,BBDC,BCRED,Barings,Blackstone Credit & Insurance,cross_manager,4,4,4
+facility_candidate_universe,2024Q2,BBDC,BXSL,Barings,Blackstone Credit & Insurance,cross_manager,4,3,3
+facility_candidate_universe,2024Q2,BBDC,CGBD,Barings,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,BBDC,GBDC,Barings,Golub Capital,cross_manager,6,2,2
+facility_candidate_universe,2024Q2,BBDC,HPS,Barings,HPS Investment Partners,cross_manager,3,3,3
+facility_candidate_universe,2024Q2,BBDC,MAIN,Barings,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,BBDC,NMFC,Barings,New Mountain Capital,cross_manager,6,3,3
+facility_candidate_universe,2024Q2,BBDC,OCIC,Barings,Blue Owl Credit,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,BCRED,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,30,23,18
+facility_candidate_universe,2024Q2,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,40,34,31
+facility_candidate_universe,2024Q2,BCRED,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,7,6,4
+facility_candidate_universe,2024Q2,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,378,244,168
+facility_candidate_universe,2024Q2,BCRED,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,3,1,1
+facility_candidate_universe,2024Q2,BCRED,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,105,61,42
+facility_candidate_universe,2024Q2,BCRED,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,3,2,2
+facility_candidate_universe,2024Q2,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,97,60,40
+facility_candidate_universe,2024Q2,BCRED,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,56,39,28
+facility_candidate_universe,2024Q2,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,101,63,49
+facility_candidate_universe,2024Q2,BCRED,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,9,9,8
+facility_candidate_universe,2024Q2,BXSL,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,16,11,9
+facility_candidate_universe,2024Q2,BXSL,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,9,5,5
+facility_candidate_universe,2024Q2,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,404,252,167
+facility_candidate_universe,2024Q2,BXSL,CGBD,Blackstone Credit & Insurance,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,BXSL,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,2,1,1
+facility_candidate_universe,2024Q2,BXSL,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,70,31,19
+facility_candidate_universe,2024Q2,BXSL,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,BXSL,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,46,29,20
+facility_candidate_universe,2024Q2,BXSL,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,37,16,11
+facility_candidate_universe,2024Q2,BXSL,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,42,16,13
+facility_candidate_universe,2024Q2,BXSL,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,CGBD,BBDC,Carlyle,Barings,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,CGBD,BCRED,Carlyle,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,GBDC,ARCC,Golub Capital,Ares Management,cross_manager,51,16,3
+facility_candidate_universe,2024Q2,GBDC,ASIF,Golub Capital,Ares Management,cross_manager,28,17,2
+facility_candidate_universe,2024Q2,GBDC,BBDC,Golub Capital,Barings,cross_manager,3,3,2
+facility_candidate_universe,2024Q2,GBDC,BXSL,Golub Capital,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,GBDC,HPS,Golub Capital,HPS Investment Partners,cross_manager,3,2,1
+facility_candidate_universe,2024Q2,GBDC,NMFC,Golub Capital,New Mountain Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,GBDC,OCIC,Golub Capital,Blue Owl Credit,cross_manager,3,2,1
+facility_candidate_universe,2024Q2,GSBD,HTGC,Goldman Sachs Asset Management,Hercules Capital,cross_manager,4,2,1
+facility_candidate_universe,2024Q2,GSBD,MFIC,Goldman Sachs Asset Management,Apollo Global Management,cross_manager,4,4,1
+facility_candidate_universe,2024Q2,HPS,ARCC,HPS Investment Partners,Ares Management,cross_manager,24,21,13
+facility_candidate_universe,2024Q2,HPS,ASIF,HPS Investment Partners,Ares Management,cross_manager,23,17,14
+facility_candidate_universe,2024Q2,HPS,BBDC,HPS Investment Partners,Barings,cross_manager,7,7,3
+facility_candidate_universe,2024Q2,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,95,58,39
+facility_candidate_universe,2024Q2,HPS,BXSL,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,55,37,18
+facility_candidate_universe,2024Q2,HPS,GBDC,HPS Investment Partners,Golub Capital,cross_manager,6,3,1
+facility_candidate_universe,2024Q2,HPS,MAIN,HPS Investment Partners,Main Street Capital,cross_manager,4,3,1
+facility_candidate_universe,2024Q2,HPS,NMFC,HPS Investment Partners,New Mountain Capital,cross_manager,49,26,16
+facility_candidate_universe,2024Q2,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,69,46,24
+facility_candidate_universe,2024Q2,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,104,55,33
+facility_candidate_universe,2024Q2,HPS,OCSL,HPS Investment Partners,Oaktree Capital Management,cross_manager,10,8,8
+facility_candidate_universe,2024Q2,HTGC,GSBD,Hercules Capital,Goldman Sachs Asset Management,cross_manager,4,2,1
+facility_candidate_universe,2024Q2,HTGC,TSLX,Hercules Capital,Sixth Street,cross_manager,2,2,1
+facility_candidate_universe,2024Q2,MAIN,ARCC,Main Street Capital,Ares Management,cross_manager,3,1,1
+facility_candidate_universe,2024Q2,MAIN,BBDC,Main Street Capital,Barings,cross_manager,6,6,3
+facility_candidate_universe,2024Q2,MAIN,BCRED,Main Street Capital,Blackstone Credit & Insurance,cross_manager,2,2,1
+facility_candidate_universe,2024Q2,MAIN,BXSL,Main Street Capital,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,MAIN,HPS,Main Street Capital,HPS Investment Partners,cross_manager,2,1,1
+facility_candidate_universe,2024Q2,MAIN,OCSL,Main Street Capital,Oaktree Capital Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,37,19,9
+facility_candidate_universe,2024Q2,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,28,23,17
+facility_candidate_universe,2024Q2,NMFC,BBDC,New Mountain Capital,Barings,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,NMFC,BCRED,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,106,66,36
+facility_candidate_universe,2024Q2,NMFC,BXSL,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,80,45,22
+facility_candidate_universe,2024Q2,NMFC,GBDC,New Mountain Capital,Golub Capital,cross_manager,6,6,1
+facility_candidate_universe,2024Q2,NMFC,HPS,New Mountain Capital,HPS Investment Partners,cross_manager,46,25,15
+facility_candidate_universe,2024Q2,NMFC,MAIN,New Mountain Capital,Main Street Capital,cross_manager,4,4,1
+facility_candidate_universe,2024Q2,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,59,34,21
+facility_candidate_universe,2024Q2,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,87,44,30
+facility_candidate_universe,2024Q2,NMFC,OCSL,New Mountain Capital,Oaktree Capital Management,cross_manager,6,5,5
+facility_candidate_universe,2024Q2,OBDC,ARCC,Blue Owl Credit,Ares Management,cross_manager,22,20,13
+facility_candidate_universe,2024Q2,OBDC,ASIF,Blue Owl Credit,Ares Management,cross_manager,28,21,15
+facility_candidate_universe,2024Q2,OBDC,BBDC,Blue Owl Credit,Barings,cross_manager,1,1,1
+facility_candidate_universe,2024Q2,OBDC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,59,39,26
+facility_candidate_universe,2024Q2,OBDC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,30,25,13
+facility_candidate_universe,2024Q2,OBDC,GBDC,Blue Owl Credit,Golub Capital,cross_manager,9,3,1
+facility_candidate_universe,2024Q2,OBDC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,52,30,22
+facility_candidate_universe,2024Q2,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,42,25,16
+facility_candidate_universe,2024Q2,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,612,325,194
+facility_candidate_universe,2024Q2,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,9,8,6
+facility_candidate_universe,2024Q2,OCIC,ARCC,Blue Owl Credit,Ares Management,cross_manager,34,29,19
+facility_candidate_universe,2024Q2,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,69,53,39
+facility_candidate_universe,2024Q2,OCIC,BBDC,Blue Owl Credit,Barings,cross_manager,2,2,1
+facility_candidate_universe,2024Q2,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,127,85,47
+facility_candidate_universe,2024Q2,OCIC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,52,35,15
+facility_candidate_universe,2024Q2,OCIC,GBDC,Blue Owl Credit,Golub Capital,cross_manager,6,3,1
+facility_candidate_universe,2024Q2,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,102,62,35
+facility_candidate_universe,2024Q2,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,55,42,29
+facility_candidate_universe,2024Q2,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,501,320,189
+facility_candidate_universe,2024Q2,OCIC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,18,14,10
+facility_candidate_universe,2024Q2,OCSL,ASIF,Oaktree Capital Management,Ares Management,cross_manager,10,9,6
+facility_candidate_universe,2024Q2,OCSL,BCRED,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,6,5,5
+facility_candidate_universe,2024Q2,OCSL,HPS,Oaktree Capital Management,HPS Investment Partners,cross_manager,8,7,7
+facility_candidate_universe,2024Q2,OCSL,NMFC,Oaktree Capital Management,New Mountain Capital,cross_manager,6,4,3
+facility_candidate_universe,2024Q2,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,7,6,5
+facility_candidate_universe,2024Q2,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,14,7,6
+facility_candidate_universe,2024Q2,TSLX,GSBD,Sixth Street,Goldman Sachs Asset Management,cross_manager,2,1,1
+facility_candidate_universe,2024Q2,TSLX,HTGC,Sixth Street,Hercules Capital,cross_manager,2,1,1
+facility_candidate_universe,2024Q3,ARCC,ASIF,Ares Management,Ares Management,same_manager,251,183,129
+facility_candidate_universe,2024Q3,ARCC,BBDC,Ares Management,Barings,cross_manager,3,3,3
+facility_candidate_universe,2024Q3,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,43,31,23
+facility_candidate_universe,2024Q3,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,29,21,17
+facility_candidate_universe,2024Q3,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,52,7,3
+facility_candidate_universe,2024Q3,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,36,19,18
+facility_candidate_universe,2024Q3,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,54,22,14
+facility_candidate_universe,2024Q3,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,28,16,13
+facility_candidate_universe,2024Q3,ARCC,OCIC,Ares Management,Blue Owl Credit,cross_manager,33,21,16
+facility_candidate_universe,2024Q3,ASIF,ARCC,Ares Management,Ares Management,same_manager,180,139,111
+facility_candidate_universe,2024Q3,ASIF,BBDC,Ares Management,Barings,cross_manager,2,2,1
+facility_candidate_universe,2024Q3,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,49,42,37
+facility_candidate_universe,2024Q3,ASIF,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,10,8,6
+facility_candidate_universe,2024Q3,ASIF,GBDC,Ares Management,Golub Capital,cross_manager,17,3,2
+facility_candidate_universe,2024Q3,ASIF,HPS,Ares Management,HPS Investment Partners,cross_manager,40,27,22
+facility_candidate_universe,2024Q3,ASIF,NMFC,Ares Management,New Mountain Capital,cross_manager,26,21,17
+facility_candidate_universe,2024Q3,ASIF,OBDC,Ares Management,Blue Owl Credit,cross_manager,33,22,18
+facility_candidate_universe,2024Q3,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,50,36,28
+facility_candidate_universe,2024Q3,ASIF,OCSL,Ares Management,Oaktree Capital Management,cross_manager,8,8,8
+facility_candidate_universe,2024Q3,BBDC,ARCC,Barings,Ares Management,cross_manager,4,4,4
+facility_candidate_universe,2024Q3,BBDC,ASIF,Barings,Ares Management,cross_manager,4,3,3
+facility_candidate_universe,2024Q3,BBDC,BCRED,Barings,Blackstone Credit & Insurance,cross_manager,8,6,5
+facility_candidate_universe,2024Q3,BBDC,BXSL,Barings,Blackstone Credit & Insurance,cross_manager,2,2,2
+facility_candidate_universe,2024Q3,BBDC,CGBD,Barings,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,BBDC,GBDC,Barings,Golub Capital,cross_manager,6,1,1
+facility_candidate_universe,2024Q3,BBDC,HPS,Barings,HPS Investment Partners,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,BBDC,MAIN,Barings,Main Street Capital,cross_manager,2,2,2
+facility_candidate_universe,2024Q3,BBDC,NMFC,Barings,New Mountain Capital,cross_manager,3,2,2
+facility_candidate_universe,2024Q3,BBDC,OBDC,Barings,Blue Owl Credit,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,BBDC,OCIC,Barings,Blue Owl Credit,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,BCRED,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,45,32,20
+facility_candidate_universe,2024Q3,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,41,36,32
+facility_candidate_universe,2024Q3,BCRED,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,5,5,4
+facility_candidate_universe,2024Q3,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,515,309,193
+facility_candidate_universe,2024Q3,BCRED,CGBD,Blackstone Credit & Insurance,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,BCRED,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,BCRED,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,112,69,46
+facility_candidate_universe,2024Q3,BCRED,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,2,2,2
+facility_candidate_universe,2024Q3,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,100,64,41
+facility_candidate_universe,2024Q3,BCRED,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,54,37,29
+facility_candidate_universe,2024Q3,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,106,70,52
+facility_candidate_universe,2024Q3,BCRED,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,9,9,8
+facility_candidate_universe,2024Q3,BXSL,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,34,24,14
+facility_candidate_universe,2024Q3,BXSL,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,14,10,8
+facility_candidate_universe,2024Q3,BXSL,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,3,3,2
+facility_candidate_universe,2024Q3,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,541,309,190
+facility_candidate_universe,2024Q3,BXSL,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,BXSL,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,84,34,21
+facility_candidate_universe,2024Q3,BXSL,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,66,41,27
+facility_candidate_universe,2024Q3,BXSL,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,33,19,13
+facility_candidate_universe,2024Q3,BXSL,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,54,29,17
+facility_candidate_universe,2024Q3,CGBD,BBDC,Carlyle,Barings,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,CGBD,BXSL,Carlyle,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,GBDC,ARCC,Golub Capital,Ares Management,cross_manager,54,23,2
+facility_candidate_universe,2024Q3,GBDC,ASIF,Golub Capital,Ares Management,cross_manager,26,17,2
+facility_candidate_universe,2024Q3,GBDC,BBDC,Golub Capital,Barings,cross_manager,3,3,1
+facility_candidate_universe,2024Q3,GBDC,NMFC,Golub Capital,New Mountain Capital,cross_manager,6,2,2
+facility_candidate_universe,2024Q3,HPS,ARCC,HPS Investment Partners,Ares Management,cross_manager,26,21,10
+facility_candidate_universe,2024Q3,HPS,ASIF,HPS Investment Partners,Ares Management,cross_manager,19,19,13
+facility_candidate_universe,2024Q3,HPS,BBDC,HPS Investment Partners,Barings,cross_manager,10,9,3
+facility_candidate_universe,2024Q3,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,102,67,41
+facility_candidate_universe,2024Q3,HPS,BXSL,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,57,40,21
+facility_candidate_universe,2024Q3,HPS,MAIN,HPS Investment Partners,Main Street Capital,cross_manager,5,3,1
+facility_candidate_universe,2024Q3,HPS,NMFC,HPS Investment Partners,New Mountain Capital,cross_manager,39,26,14
+facility_candidate_universe,2024Q3,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,50,37,20
+facility_candidate_universe,2024Q3,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,82,57,29
+facility_candidate_universe,2024Q3,HPS,OCSL,HPS Investment Partners,Oaktree Capital Management,cross_manager,5,5,4
+facility_candidate_universe,2024Q3,HTGC,GSBD,Hercules Capital,Goldman Sachs Asset Management,cross_manager,4,4,1
+facility_candidate_universe,2024Q3,HTGC,TSLX,Hercules Capital,Sixth Street,cross_manager,4,4,1
+facility_candidate_universe,2024Q3,MAIN,ARCC,Main Street Capital,Ares Management,cross_manager,4,2,2
+facility_candidate_universe,2024Q3,MAIN,ASIF,Main Street Capital,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,MAIN,BBDC,Main Street Capital,Barings,cross_manager,6,6,3
+facility_candidate_universe,2024Q3,MAIN,BCRED,Main Street Capital,Blackstone Credit & Insurance,cross_manager,6,4,2
+facility_candidate_universe,2024Q3,MAIN,BXSL,Main Street Capital,Blackstone Credit & Insurance,cross_manager,2,2,1
+facility_candidate_universe,2024Q3,MAIN,HPS,Main Street Capital,HPS Investment Partners,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,MAIN,NMFC,Main Street Capital,New Mountain Capital,cross_manager,4,1,1
+facility_candidate_universe,2024Q3,MFIC,GSBD,Apollo Global Management,Goldman Sachs Asset Management,cross_manager,3,1,1
+facility_candidate_universe,2024Q3,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,24,19,9
+facility_candidate_universe,2024Q3,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,16,14,12
+facility_candidate_universe,2024Q3,NMFC,BBDC,New Mountain Capital,Barings,cross_manager,4,4,2
+facility_candidate_universe,2024Q3,NMFC,BCRED,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,115,71,44
+facility_candidate_universe,2024Q3,NMFC,BXSL,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,71,48,24
+facility_candidate_universe,2024Q3,NMFC,GBDC,New Mountain Capital,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,NMFC,HPS,New Mountain Capital,HPS Investment Partners,cross_manager,54,27,20
+facility_candidate_universe,2024Q3,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,56,32,23
+facility_candidate_universe,2024Q3,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,55,34,23
+facility_candidate_universe,2024Q3,NMFC,OCSL,New Mountain Capital,Oaktree Capital Management,cross_manager,3,3,3
+facility_candidate_universe,2024Q3,OBDC,ARCC,Blue Owl Credit,Ares Management,cross_manager,17,15,9
+facility_candidate_universe,2024Q3,OBDC,ASIF,Blue Owl Credit,Ares Management,cross_manager,22,19,15
+facility_candidate_universe,2024Q3,OBDC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,59,44,29
+facility_candidate_universe,2024Q3,OBDC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,39,31,14
+facility_candidate_universe,2024Q3,OBDC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,63,32,20
+facility_candidate_universe,2024Q3,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,48,33,18
+facility_candidate_universe,2024Q3,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,532,338,213
+facility_candidate_universe,2024Q3,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,16,10,7
+facility_candidate_universe,2024Q3,OCIC,ARCC,Blue Owl Credit,Ares Management,cross_manager,21,18,13
+facility_candidate_universe,2024Q3,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,64,54,42
+facility_candidate_universe,2024Q3,OCIC,BBDC,Blue Owl Credit,Barings,cross_manager,2,2,1
+facility_candidate_universe,2024Q3,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,81,65,42
+facility_candidate_universe,2024Q3,OCIC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,36,30,16
+facility_candidate_universe,2024Q3,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,90,52,32
+facility_candidate_universe,2024Q3,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,68,50,32
+facility_candidate_universe,2024Q3,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,576,344,202
+facility_candidate_universe,2024Q3,OCIC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,17,14,7
+facility_candidate_universe,2024Q3,OCSL,ARCC,Oaktree Capital Management,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,OCSL,ASIF,Oaktree Capital Management,Ares Management,cross_manager,7,7,7
+facility_candidate_universe,2024Q3,OCSL,BCRED,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,6,6,6
+facility_candidate_universe,2024Q3,OCSL,BXSL,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,OCSL,HPS,Oaktree Capital Management,HPS Investment Partners,cross_manager,11,10,9
+facility_candidate_universe,2024Q3,OCSL,MAIN,Oaktree Capital Management,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q3,OCSL,NMFC,Oaktree Capital Management,New Mountain Capital,cross_manager,6,6,6
+facility_candidate_universe,2024Q3,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,9,6,3
+facility_candidate_universe,2024Q3,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,17,10,8
+facility_candidate_universe,2024Q3,TSLX,GSBD,Sixth Street,Goldman Sachs Asset Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,ARCC,ASIF,Ares Management,Ares Management,same_manager,267,185,136
+facility_candidate_universe,2024Q4,ARCC,BBDC,Ares Management,Barings,cross_manager,13,6,4
+facility_candidate_universe,2024Q4,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,53,39,24
+facility_candidate_universe,2024Q4,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,32,23,14
+facility_candidate_universe,2024Q4,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,54,7,3
+facility_candidate_universe,2024Q4,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,31,20,16
+facility_candidate_universe,2024Q4,ARCC,MAIN,Ares Management,Main Street Capital,cross_manager,2,2,1
+facility_candidate_universe,2024Q4,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,30,17,11
+facility_candidate_universe,2024Q4,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,13,12,8
+facility_candidate_universe,2024Q4,ARCC,OCIC,Ares Management,Blue Owl Credit,cross_manager,18,16,12
+facility_candidate_universe,2024Q4,ARCC,OCSL,Ares Management,Oaktree Capital Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,ASIF,ARCC,Ares Management,Ares Management,same_manager,273,201,150
+facility_candidate_universe,2024Q4,ASIF,BBDC,Ares Management,Barings,cross_manager,4,3,2
+facility_candidate_universe,2024Q4,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,62,54,44
+facility_candidate_universe,2024Q4,ASIF,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,17,13,10
+facility_candidate_universe,2024Q4,ASIF,GBDC,Ares Management,Golub Capital,cross_manager,4,1,1
+facility_candidate_universe,2024Q4,ASIF,HPS,Ares Management,HPS Investment Partners,cross_manager,46,34,30
+facility_candidate_universe,2024Q4,ASIF,NMFC,Ares Management,New Mountain Capital,cross_manager,27,23,21
+facility_candidate_universe,2024Q4,ASIF,OBDC,Ares Management,Blue Owl Credit,cross_manager,7,6,3
+facility_candidate_universe,2024Q4,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,32,28,23
+facility_candidate_universe,2024Q4,ASIF,OCSL,Ares Management,Oaktree Capital Management,cross_manager,5,5,4
+facility_candidate_universe,2024Q4,BBDC,ARCC,Barings,Ares Management,cross_manager,7,4,3
+facility_candidate_universe,2024Q4,BBDC,ASIF,Barings,Ares Management,cross_manager,7,4,2
+facility_candidate_universe,2024Q4,BBDC,BCRED,Barings,Blackstone Credit & Insurance,cross_manager,3,3,3
+facility_candidate_universe,2024Q4,BBDC,BXSL,Barings,Blackstone Credit & Insurance,cross_manager,6,5,3
+facility_candidate_universe,2024Q4,BBDC,GBDC,Barings,Golub Capital,cross_manager,7,3,2
+facility_candidate_universe,2024Q4,BBDC,HPS,Barings,HPS Investment Partners,cross_manager,7,4,4
+facility_candidate_universe,2024Q4,BBDC,MAIN,Barings,Main Street Capital,cross_manager,9,5,3
+facility_candidate_universe,2024Q4,BBDC,NMFC,Barings,New Mountain Capital,cross_manager,5,3,2
+facility_candidate_universe,2024Q4,BCRED,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,58,38,26
+facility_candidate_universe,2024Q4,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,39,32,26
+facility_candidate_universe,2024Q4,BCRED,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,8,5,3
+facility_candidate_universe,2024Q4,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,684,370,220
+facility_candidate_universe,2024Q4,BCRED,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,BCRED,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,104,61,44
+facility_candidate_universe,2024Q4,BCRED,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,3,2,1
+facility_candidate_universe,2024Q4,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,108,67,42
+facility_candidate_universe,2024Q4,BCRED,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,29,21,15
+facility_candidate_universe,2024Q4,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,56,47,34
+facility_candidate_universe,2024Q4,BCRED,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,8,8,7
+facility_candidate_universe,2024Q4,BXSL,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,53,31,18
+facility_candidate_universe,2024Q4,BXSL,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,14,10,7
+facility_candidate_universe,2024Q4,BXSL,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,2,2,2
+facility_candidate_universe,2024Q4,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,574,345,220
+facility_candidate_universe,2024Q4,BXSL,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,74,41,26
+facility_candidate_universe,2024Q4,BXSL,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,62,36,24
+facility_candidate_universe,2024Q4,BXSL,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,25,16,11
+facility_candidate_universe,2024Q4,BXSL,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,30,20,13
+facility_candidate_universe,2024Q4,CGBD,BCRED,Carlyle,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,CGBD,BXSL,Carlyle,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,GBDC,ARCC,Golub Capital,Ares Management,cross_manager,67,23,2
+facility_candidate_universe,2024Q4,GBDC,ASIF,Golub Capital,Ares Management,cross_manager,48,26,2
+facility_candidate_universe,2024Q4,GBDC,BBDC,Golub Capital,Barings,cross_manager,8,6,2
+facility_candidate_universe,2024Q4,GBDC,BXSL,Golub Capital,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,GBDC,NMFC,Golub Capital,New Mountain Capital,cross_manager,2,1,1
+facility_candidate_universe,2024Q4,GSBD,HTGC,Goldman Sachs Asset Management,Hercules Capital,cross_manager,4,1,1
+facility_candidate_universe,2024Q4,GSBD,MFIC,Goldman Sachs Asset Management,Apollo Global Management,cross_manager,2,2,1
+facility_candidate_universe,2024Q4,GSBD,TSLX,Goldman Sachs Asset Management,Sixth Street,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,HPS,ARCC,HPS Investment Partners,Ares Management,cross_manager,50,41,19
+facility_candidate_universe,2024Q4,HPS,ASIF,HPS Investment Partners,Ares Management,cross_manager,33,25,17
+facility_candidate_universe,2024Q4,HPS,BBDC,HPS Investment Partners,Barings,cross_manager,14,11,4
+facility_candidate_universe,2024Q4,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,171,105,54
+facility_candidate_universe,2024Q4,HPS,BXSL,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,116,64,26
+facility_candidate_universe,2024Q4,HPS,MAIN,HPS Investment Partners,Main Street Capital,cross_manager,4,3,1
+facility_candidate_universe,2024Q4,HPS,NMFC,HPS Investment Partners,New Mountain Capital,cross_manager,46,37,21
+facility_candidate_universe,2024Q4,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,34,33,13
+facility_candidate_universe,2024Q4,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,47,39,22
+facility_candidate_universe,2024Q4,HPS,OCSL,HPS Investment Partners,Oaktree Capital Management,cross_manager,9,6,6
+facility_candidate_universe,2024Q4,MAIN,ARCC,Main Street Capital,Ares Management,cross_manager,2,2,2
+facility_candidate_universe,2024Q4,MAIN,ASIF,Main Street Capital,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,MAIN,BBDC,Main Street Capital,Barings,cross_manager,5,4,3
+facility_candidate_universe,2024Q4,MAIN,BCRED,Main Street Capital,Blackstone Credit & Insurance,cross_manager,5,4,2
+facility_candidate_universe,2024Q4,MAIN,BXSL,Main Street Capital,Blackstone Credit & Insurance,cross_manager,2,2,1
+facility_candidate_universe,2024Q4,MAIN,HPS,Main Street Capital,HPS Investment Partners,cross_manager,2,1,1
+facility_candidate_universe,2024Q4,MAIN,NMFC,Main Street Capital,New Mountain Capital,cross_manager,3,1,1
+facility_candidate_universe,2024Q4,MFIC,GSBD,Apollo Global Management,Goldman Sachs Asset Management,cross_manager,2,1,1
+facility_candidate_universe,2024Q4,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,51,25,13
+facility_candidate_universe,2024Q4,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,34,24,15
+facility_candidate_universe,2024Q4,NMFC,BBDC,New Mountain Capital,Barings,cross_manager,9,6,3
+facility_candidate_universe,2024Q4,NMFC,BCRED,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,91,63,37
+facility_candidate_universe,2024Q4,NMFC,BXSL,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,61,44,23
+facility_candidate_universe,2024Q4,NMFC,GBDC,New Mountain Capital,Golub Capital,cross_manager,4,4,1
+facility_candidate_universe,2024Q4,NMFC,HPS,New Mountain Capital,HPS Investment Partners,cross_manager,29,16,11
+facility_candidate_universe,2024Q4,NMFC,MAIN,New Mountain Capital,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,26,25,12
+facility_candidate_universe,2024Q4,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,47,38,26
+facility_candidate_universe,2024Q4,NMFC,OCSL,New Mountain Capital,Oaktree Capital Management,cross_manager,2,1,1
+facility_candidate_universe,2024Q4,OBDC,ARCC,Blue Owl Credit,Ares Management,cross_manager,8,8,8
+facility_candidate_universe,2024Q4,OBDC,ASIF,Blue Owl Credit,Ares Management,cross_manager,2,2,2
+facility_candidate_universe,2024Q4,OBDC,BBDC,Blue Owl Credit,Barings,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,OBDC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,35,27,21
+facility_candidate_universe,2024Q4,OBDC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,24,18,13
+facility_candidate_universe,2024Q4,OBDC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,25,16,15
+facility_candidate_universe,2024Q4,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,18,10,8
+facility_candidate_universe,2024Q4,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,200,166,133
+facility_candidate_universe,2024Q4,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,3,2,1
+facility_candidate_universe,2024Q4,OCIC,ARCC,Blue Owl Credit,Ares Management,cross_manager,14,14,14
+facility_candidate_universe,2024Q4,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,25,20,18
+facility_candidate_universe,2024Q4,OCIC,BBDC,Blue Owl Credit,Barings,cross_manager,2,2,1
+facility_candidate_universe,2024Q4,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,63,47,37
+facility_candidate_universe,2024Q4,OCIC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,27,22,16
+facility_candidate_universe,2024Q4,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,51,29,26
+facility_candidate_universe,2024Q4,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,34,25,22
+facility_candidate_universe,2024Q4,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,225,177,145
+facility_candidate_universe,2024Q4,OCIC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,11,7,5
+facility_candidate_universe,2024Q4,OCSL,ARCC,Oaktree Capital Management,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2024Q4,OCSL,ASIF,Oaktree Capital Management,Ares Management,cross_manager,11,9,8
+facility_candidate_universe,2024Q4,OCSL,BCRED,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,11,7,5
+facility_candidate_universe,2024Q4,OCSL,HPS,Oaktree Capital Management,HPS Investment Partners,cross_manager,12,7,5
+facility_candidate_universe,2024Q4,OCSL,NMFC,Oaktree Capital Management,New Mountain Capital,cross_manager,6,5,5
+facility_candidate_universe,2024Q4,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,7,5,3
+facility_candidate_universe,2024Q4,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,15,11,6
+facility_candidate_universe,2024Q4,TSLX,HTGC,Sixth Street,Hercules Capital,cross_manager,4,1,1
+facility_candidate_universe,2025Q1,ARCC,ASIF,Ares Management,Ares Management,same_manager,283,210,154
+facility_candidate_universe,2025Q1,ARCC,BBDC,Ares Management,Barings,cross_manager,8,5,3
+facility_candidate_universe,2025Q1,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,65,41,26
+facility_candidate_universe,2025Q1,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,53,32,20
+facility_candidate_universe,2025Q1,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,78,7,2
+facility_candidate_universe,2025Q1,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,53,27,20
+facility_candidate_universe,2025Q1,ARCC,MAIN,Ares Management,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,28,18,10
+facility_candidate_universe,2025Q1,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,15,13,10
+facility_candidate_universe,2025Q1,ARCC,OCIC,Ares Management,Blue Owl Credit,cross_manager,14,11,9
+facility_candidate_universe,2025Q1,ASIF,ARCC,Ares Management,Ares Management,same_manager,276,203,165
+facility_candidate_universe,2025Q1,ASIF,BBDC,Ares Management,Barings,cross_manager,5,3,2
+facility_candidate_universe,2025Q1,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,43,33,30
+facility_candidate_universe,2025Q1,ASIF,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,13,10,9
+facility_candidate_universe,2025Q1,ASIF,GBDC,Ares Management,Golub Capital,cross_manager,53,3,1
+facility_candidate_universe,2025Q1,ASIF,HPS,Ares Management,HPS Investment Partners,cross_manager,55,37,31
+facility_candidate_universe,2025Q1,ASIF,NMFC,Ares Management,New Mountain Capital,cross_manager,11,11,11
+facility_candidate_universe,2025Q1,ASIF,OBDC,Ares Management,Blue Owl Credit,cross_manager,5,3,3
+facility_candidate_universe,2025Q1,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,35,24,20
+facility_candidate_universe,2025Q1,ASIF,OCSL,Ares Management,Oaktree Capital Management,cross_manager,5,5,4
+facility_candidate_universe,2025Q1,BBDC,ARCC,Barings,Ares Management,cross_manager,10,6,5
+facility_candidate_universe,2025Q1,BBDC,ASIF,Barings,Ares Management,cross_manager,4,4,2
+facility_candidate_universe,2025Q1,BBDC,BCRED,Barings,Blackstone Credit & Insurance,cross_manager,3,3,2
+facility_candidate_universe,2025Q1,BBDC,BXSL,Barings,Blackstone Credit & Insurance,cross_manager,3,2,1
+facility_candidate_universe,2025Q1,BBDC,GBDC,Barings,Golub Capital,cross_manager,7,2,2
+facility_candidate_universe,2025Q1,BBDC,HPS,Barings,HPS Investment Partners,cross_manager,6,3,3
+facility_candidate_universe,2025Q1,BBDC,MAIN,Barings,Main Street Capital,cross_manager,14,5,3
+facility_candidate_universe,2025Q1,BBDC,NMFC,Barings,New Mountain Capital,cross_manager,8,4,2
+facility_candidate_universe,2025Q1,BBDC,OBDC,Barings,Blue Owl Credit,cross_manager,2,1,1
+facility_candidate_universe,2025Q1,BCRED,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,54,34,22
+facility_candidate_universe,2025Q1,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,55,49,42
+facility_candidate_universe,2025Q1,BCRED,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,10,6,5
+facility_candidate_universe,2025Q1,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,668,372,223
+facility_candidate_universe,2025Q1,BCRED,CGBD,Blackstone Credit & Insurance,Carlyle,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,BCRED,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,BCRED,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,151,82,58
+facility_candidate_universe,2025Q1,BCRED,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,3,2,2
+facility_candidate_universe,2025Q1,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,99,64,42
+facility_candidate_universe,2025Q1,BCRED,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,42,31,19
+facility_candidate_universe,2025Q1,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,70,55,41
+facility_candidate_universe,2025Q1,BCRED,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,7,7,7
+facility_candidate_universe,2025Q1,BXSL,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,43,26,15
+facility_candidate_universe,2025Q1,BXSL,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,22,18,11
+facility_candidate_universe,2025Q1,BXSL,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,8,5,4
+facility_candidate_universe,2025Q1,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,632,364,225
+facility_candidate_universe,2025Q1,BXSL,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,BXSL,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,91,43,27
+facility_candidate_universe,2025Q1,BXSL,MAIN,Blackstone Credit & Insurance,Main Street Capital,cross_manager,2,1,1
+facility_candidate_universe,2025Q1,BXSL,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,61,40,23
+facility_candidate_universe,2025Q1,BXSL,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,35,26,16
+facility_candidate_universe,2025Q1,BXSL,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,37,26,16
+facility_candidate_universe,2025Q1,CGBD,BXSL,Carlyle,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,CGBD,FSK,Carlyle,FS/KKR,cross_manager,2,2,1
+facility_candidate_universe,2025Q1,FSK,CGBD,FS/KKR,Carlyle,cross_manager,4,2,1
+facility_candidate_universe,2025Q1,GBDC,ARCC,Golub Capital,Ares Management,cross_manager,49,17,1
+facility_candidate_universe,2025Q1,GBDC,ASIF,Golub Capital,Ares Management,cross_manager,10,6,1
+facility_candidate_universe,2025Q1,GBDC,BBDC,Golub Capital,Barings,cross_manager,8,7,2
+facility_candidate_universe,2025Q1,GBDC,NMFC,Golub Capital,New Mountain Capital,cross_manager,5,1,1
+facility_candidate_universe,2025Q1,GSBD,HTGC,Goldman Sachs Asset Management,Hercules Capital,cross_manager,3,1,1
+facility_candidate_universe,2025Q1,GSBD,MFIC,Goldman Sachs Asset Management,Apollo Global Management,cross_manager,2,2,1
+facility_candidate_universe,2025Q1,GSBD,TSLX,Goldman Sachs Asset Management,Sixth Street,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,HPS,ARCC,HPS Investment Partners,Ares Management,cross_manager,41,32,19
+facility_candidate_universe,2025Q1,HPS,ASIF,HPS Investment Partners,Ares Management,cross_manager,34,30,20
+facility_candidate_universe,2025Q1,HPS,BBDC,HPS Investment Partners,Barings,cross_manager,14,11,4
+facility_candidate_universe,2025Q1,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,136,91,44
+facility_candidate_universe,2025Q1,HPS,BXSL,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,114,74,29
+facility_candidate_universe,2025Q1,HPS,MAIN,HPS Investment Partners,Main Street Capital,cross_manager,10,5,1
+facility_candidate_universe,2025Q1,HPS,MFIC,HPS Investment Partners,Apollo Global Management,cross_manager,4,4,1
+facility_candidate_universe,2025Q1,HPS,NMFC,HPS Investment Partners,New Mountain Capital,cross_manager,39,29,19
+facility_candidate_universe,2025Q1,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,31,29,14
+facility_candidate_universe,2025Q1,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,48,42,29
+facility_candidate_universe,2025Q1,HPS,OCSL,HPS Investment Partners,Oaktree Capital Management,cross_manager,9,6,5
+facility_candidate_universe,2025Q1,HTGC,TSLX,Hercules Capital,Sixth Street,cross_manager,2,2,1
+facility_candidate_universe,2025Q1,MAIN,ARCC,Main Street Capital,Ares Management,cross_manager,3,1,1
+facility_candidate_universe,2025Q1,MAIN,ASIF,Main Street Capital,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,MAIN,BBDC,Main Street Capital,Barings,cross_manager,2,2,2
+facility_candidate_universe,2025Q1,MAIN,BCRED,Main Street Capital,Blackstone Credit & Insurance,cross_manager,5,3,1
+facility_candidate_universe,2025Q1,MAIN,HPS,Main Street Capital,HPS Investment Partners,cross_manager,10,3,1
+facility_candidate_universe,2025Q1,MFIC,GSBD,Apollo Global Management,Goldman Sachs Asset Management,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,50,24,11
+facility_candidate_universe,2025Q1,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,28,24,17
+facility_candidate_universe,2025Q1,NMFC,BBDC,New Mountain Capital,Barings,cross_manager,9,6,3
+facility_candidate_universe,2025Q1,NMFC,BCRED,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,91,58,40
+facility_candidate_universe,2025Q1,NMFC,BXSL,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,66,44,24
+facility_candidate_universe,2025Q1,NMFC,GBDC,New Mountain Capital,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,NMFC,HPS,New Mountain Capital,HPS Investment Partners,cross_manager,44,25,17
+facility_candidate_universe,2025Q1,NMFC,MAIN,New Mountain Capital,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q1,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,18,15,10
+facility_candidate_universe,2025Q1,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,41,32,24
+facility_candidate_universe,2025Q1,NMFC,OCSL,New Mountain Capital,Oaktree Capital Management,cross_manager,3,3,3
+facility_candidate_universe,2025Q1,OBDC,ARCC,Blue Owl Credit,Ares Management,cross_manager,8,7,6
+facility_candidate_universe,2025Q1,OBDC,ASIF,Blue Owl Credit,Ares Management,cross_manager,5,4,3
+facility_candidate_universe,2025Q1,OBDC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,18,14,9
+facility_candidate_universe,2025Q1,OBDC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,17,12,9
+facility_candidate_universe,2025Q1,OBDC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,19,11,9
+facility_candidate_universe,2025Q1,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,22,10,8
+facility_candidate_universe,2025Q1,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,205,160,127
+facility_candidate_universe,2025Q1,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,3,1,1
+facility_candidate_universe,2025Q1,OCIC,ARCC,Blue Owl Credit,Ares Management,cross_manager,17,16,12
+facility_candidate_universe,2025Q1,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,27,25,21
+facility_candidate_universe,2025Q1,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,58,42,31
+facility_candidate_universe,2025Q1,OCIC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,31,22,17
+facility_candidate_universe,2025Q1,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,60,29,26
+facility_candidate_universe,2025Q1,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,38,30,22
+facility_candidate_universe,2025Q1,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,219,175,141
+facility_candidate_universe,2025Q1,OCIC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,16,9,5
+facility_candidate_universe,2025Q1,OCSL,ARCC,Oaktree Capital Management,Ares Management,cross_manager,4,4,1
+facility_candidate_universe,2025Q1,OCSL,ASIF,Oaktree Capital Management,Ares Management,cross_manager,10,8,8
+facility_candidate_universe,2025Q1,OCSL,BCRED,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,13,9,7
+facility_candidate_universe,2025Q1,OCSL,HPS,Oaktree Capital Management,HPS Investment Partners,cross_manager,12,10,7
+facility_candidate_universe,2025Q1,OCSL,NMFC,Oaktree Capital Management,New Mountain Capital,cross_manager,4,4,4
+facility_candidate_universe,2025Q1,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,7,6,3
+facility_candidate_universe,2025Q1,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,13,7,6
+facility_candidate_universe,2025Q1,TSLX,HTGC,Sixth Street,Hercules Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,ARCC,ASIF,Ares Management,Ares Management,same_manager,342,251,178
+facility_candidate_universe,2025Q2,ARCC,BBDC,Ares Management,Barings,cross_manager,12,11,7
+facility_candidate_universe,2025Q2,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,50,29,20
+facility_candidate_universe,2025Q2,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,47,28,17
+facility_candidate_universe,2025Q2,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,17,10,1
+facility_candidate_universe,2025Q2,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,41,22,17
+facility_candidate_universe,2025Q2,ARCC,MAIN,Ares Management,Main Street Capital,cross_manager,5,5,2
+facility_candidate_universe,2025Q2,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,57,26,14
+facility_candidate_universe,2025Q2,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,11,9,8
+facility_candidate_universe,2025Q2,ARCC,OCIC,Ares Management,Blue Owl Credit,cross_manager,11,10,9
+facility_candidate_universe,2025Q2,ARCC,OCSL,Ares Management,Oaktree Capital Management,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,ASIF,ARCC,Ares Management,Ares Management,same_manager,370,244,187
+facility_candidate_universe,2025Q2,ASIF,BBDC,Ares Management,Barings,cross_manager,4,4,3
+facility_candidate_universe,2025Q2,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,56,48,41
+facility_candidate_universe,2025Q2,ASIF,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,12,10,8
+facility_candidate_universe,2025Q2,ASIF,GBDC,Ares Management,Golub Capital,cross_manager,10,5,1
+facility_candidate_universe,2025Q2,ASIF,HPS,Ares Management,HPS Investment Partners,cross_manager,51,36,32
+facility_candidate_universe,2025Q2,ASIF,MAIN,Ares Management,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,ASIF,NMFC,Ares Management,New Mountain Capital,cross_manager,30,25,22
+facility_candidate_universe,2025Q2,ASIF,OBDC,Ares Management,Blue Owl Credit,cross_manager,4,3,2
+facility_candidate_universe,2025Q2,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,33,28,24
+facility_candidate_universe,2025Q2,ASIF,OCSL,Ares Management,Oaktree Capital Management,cross_manager,10,9,7
+facility_candidate_universe,2025Q2,BBDC,ARCC,Barings,Ares Management,cross_manager,11,7,5
+facility_candidate_universe,2025Q2,BBDC,ASIF,Barings,Ares Management,cross_manager,7,5,3
+facility_candidate_universe,2025Q2,BBDC,BCRED,Barings,Blackstone Credit & Insurance,cross_manager,10,8,5
+facility_candidate_universe,2025Q2,BBDC,BXSL,Barings,Blackstone Credit & Insurance,cross_manager,9,7,4
+facility_candidate_universe,2025Q2,BBDC,GBDC,Barings,Golub Capital,cross_manager,7,2,2
+facility_candidate_universe,2025Q2,BBDC,HPS,Barings,HPS Investment Partners,cross_manager,9,3,3
+facility_candidate_universe,2025Q2,BBDC,MAIN,Barings,Main Street Capital,cross_manager,9,4,2
+facility_candidate_universe,2025Q2,BBDC,MFIC,Barings,Apollo Global Management,cross_manager,3,3,2
+facility_candidate_universe,2025Q2,BBDC,NMFC,Barings,New Mountain Capital,cross_manager,6,3,2
+facility_candidate_universe,2025Q2,BBDC,OBDC,Barings,Blue Owl Credit,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,BCRED,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,55,37,23
+facility_candidate_universe,2025Q2,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,62,52,42
+facility_candidate_universe,2025Q2,BCRED,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,6,4,3
+facility_candidate_universe,2025Q2,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,698,387,235
+facility_candidate_universe,2025Q2,BCRED,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,2,1,1
+facility_candidate_universe,2025Q2,BCRED,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,159,94,65
+facility_candidate_universe,2025Q2,BCRED,MFIC,Blackstone Credit & Insurance,Apollo Global Management,cross_manager,4,4,3
+facility_candidate_universe,2025Q2,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,110,66,42
+facility_candidate_universe,2025Q2,BCRED,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,40,32,21
+facility_candidate_universe,2025Q2,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,82,56,40
+facility_candidate_universe,2025Q2,BCRED,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,9,7,6
+facility_candidate_universe,2025Q2,BXSL,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,40,26,16
+facility_candidate_universe,2025Q2,BXSL,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,22,17,11
+facility_candidate_universe,2025Q2,BXSL,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,2,1,1
+facility_candidate_universe,2025Q2,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,679,395,238
+facility_candidate_universe,2025Q2,BXSL,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,87,48,31
+facility_candidate_universe,2025Q2,BXSL,MFIC,Blackstone Credit & Insurance,Apollo Global Management,cross_manager,3,3,2
+facility_candidate_universe,2025Q2,BXSL,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,59,37,24
+facility_candidate_universe,2025Q2,BXSL,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,27,24,15
+facility_candidate_universe,2025Q2,BXSL,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,36,25,15
+facility_candidate_universe,2025Q2,GBDC,ARCC,Golub Capital,Ares Management,cross_manager,24,4,2
+facility_candidate_universe,2025Q2,GBDC,ASIF,Golub Capital,Ares Management,cross_manager,10,3,1
+facility_candidate_universe,2025Q2,GBDC,BBDC,Golub Capital,Barings,cross_manager,8,6,1
+facility_candidate_universe,2025Q2,GBDC,BCRED,Golub Capital,Blackstone Credit & Insurance,cross_manager,3,3,2
+facility_candidate_universe,2025Q2,GBDC,BXSL,Golub Capital,Blackstone Credit & Insurance,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,GBDC,HPS,Golub Capital,HPS Investment Partners,cross_manager,2,2,1
+facility_candidate_universe,2025Q2,GBDC,MFIC,Golub Capital,Apollo Global Management,cross_manager,2,2,1
+facility_candidate_universe,2025Q2,GBDC,NMFC,Golub Capital,New Mountain Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,HPS,ARCC,HPS Investment Partners,Ares Management,cross_manager,52,39,18
+facility_candidate_universe,2025Q2,HPS,ASIF,HPS Investment Partners,Ares Management,cross_manager,60,50,29
+facility_candidate_universe,2025Q2,HPS,BBDC,HPS Investment Partners,Barings,cross_manager,9,6,2
+facility_candidate_universe,2025Q2,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,157,96,51
+facility_candidate_universe,2025Q2,HPS,BXSL,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,120,75,35
+facility_candidate_universe,2025Q2,HPS,GBDC,HPS Investment Partners,Golub Capital,cross_manager,2,1,1
+facility_candidate_universe,2025Q2,HPS,MAIN,HPS Investment Partners,Main Street Capital,cross_manager,6,2,1
+facility_candidate_universe,2025Q2,HPS,MFIC,HPS Investment Partners,Apollo Global Management,cross_manager,10,10,4
+facility_candidate_universe,2025Q2,HPS,NMFC,HPS Investment Partners,New Mountain Capital,cross_manager,60,33,18
+facility_candidate_universe,2025Q2,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,32,28,14
+facility_candidate_universe,2025Q2,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,57,51,28
+facility_candidate_universe,2025Q2,HPS,OCSL,HPS Investment Partners,Oaktree Capital Management,cross_manager,9,7,6
+facility_candidate_universe,2025Q2,MAIN,ARCC,Main Street Capital,Ares Management,cross_manager,4,1,1
+facility_candidate_universe,2025Q2,MAIN,BBDC,Main Street Capital,Barings,cross_manager,9,8,3
+facility_candidate_universe,2025Q2,MAIN,HPS,Main Street Capital,HPS Investment Partners,cross_manager,2,2,1
+facility_candidate_universe,2025Q2,MAIN,MFIC,Main Street Capital,Apollo Global Management,cross_manager,2,2,1
+facility_candidate_universe,2025Q2,MFIC,ASIF,Apollo Global Management,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,MFIC,BBDC,Apollo Global Management,Barings,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,MFIC,BCRED,Apollo Global Management,Blackstone Credit & Insurance,cross_manager,3,1,1
+facility_candidate_universe,2025Q2,MFIC,BXSL,Apollo Global Management,Blackstone Credit & Insurance,cross_manager,3,1,1
+facility_candidate_universe,2025Q2,MFIC,GBDC,Apollo Global Management,Golub Capital,cross_manager,2,2,2
+facility_candidate_universe,2025Q2,MFIC,HPS,Apollo Global Management,HPS Investment Partners,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,MFIC,MAIN,Apollo Global Management,Main Street Capital,cross_manager,2,1,1
+facility_candidate_universe,2025Q2,MFIC,OCSL,Apollo Global Management,Oaktree Capital Management,cross_manager,2,1,1
+facility_candidate_universe,2025Q2,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,29,17,9
+facility_candidate_universe,2025Q2,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,21,17,11
+facility_candidate_universe,2025Q2,NMFC,BBDC,New Mountain Capital,Barings,cross_manager,2,2,1
+facility_candidate_universe,2025Q2,NMFC,BCRED,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,94,66,37
+facility_candidate_universe,2025Q2,NMFC,BXSL,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,79,52,26
+facility_candidate_universe,2025Q2,NMFC,GBDC,New Mountain Capital,Golub Capital,cross_manager,5,5,1
+facility_candidate_universe,2025Q2,NMFC,HPS,New Mountain Capital,HPS Investment Partners,cross_manager,42,27,19
+facility_candidate_universe,2025Q2,NMFC,MAIN,New Mountain Capital,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,19,19,9
+facility_candidate_universe,2025Q2,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,41,35,24
+facility_candidate_universe,2025Q2,NMFC,OCSL,New Mountain Capital,Oaktree Capital Management,cross_manager,5,4,2
+facility_candidate_universe,2025Q2,OBDC,ARCC,Blue Owl Credit,Ares Management,cross_manager,7,6,5
+facility_candidate_universe,2025Q2,OBDC,ASIF,Blue Owl Credit,Ares Management,cross_manager,5,5,4
+facility_candidate_universe,2025Q2,OBDC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,26,18,12
+facility_candidate_universe,2025Q2,OBDC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,30,16,10
+facility_candidate_universe,2025Q2,OBDC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,20,13,12
+facility_candidate_universe,2025Q2,OBDC,MFIC,Blue Owl Credit,Apollo Global Management,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,20,12,10
+facility_candidate_universe,2025Q2,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,254,172,132
+facility_candidate_universe,2025Q2,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,3,3,2
+facility_candidate_universe,2025Q2,OCIC,ARCC,Blue Owl Credit,Ares Management,cross_manager,14,13,10
+facility_candidate_universe,2025Q2,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,34,27,19
+facility_candidate_universe,2025Q2,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,64,51,39
+facility_candidate_universe,2025Q2,OCIC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,41,26,18
+facility_candidate_universe,2025Q2,OCIC,GBDC,Blue Owl Credit,Golub Capital,cross_manager,4,1,1
+facility_candidate_universe,2025Q2,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,60,36,30
+facility_candidate_universe,2025Q2,OCIC,MFIC,Blue Owl Credit,Apollo Global Management,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,50,32,23
+facility_candidate_universe,2025Q2,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,207,172,135
+facility_candidate_universe,2025Q2,OCIC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,14,12,7
+facility_candidate_universe,2025Q2,OCSL,ARCC,Oaktree Capital Management,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2025Q2,OCSL,ASIF,Oaktree Capital Management,Ares Management,cross_manager,6,6,6
+facility_candidate_universe,2025Q2,OCSL,BCRED,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,13,12,12
+facility_candidate_universe,2025Q2,OCSL,HPS,Oaktree Capital Management,HPS Investment Partners,cross_manager,13,7,5
+facility_candidate_universe,2025Q2,OCSL,MFIC,Oaktree Capital Management,Apollo Global Management,cross_manager,2,2,2
+facility_candidate_universe,2025Q2,OCSL,NMFC,Oaktree Capital Management,New Mountain Capital,cross_manager,6,4,4
+facility_candidate_universe,2025Q2,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,3,2,2
+facility_candidate_universe,2025Q2,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,13,8,6
+facility_candidate_universe,2025Q3,ARCC,ASIF,Ares Management,Ares Management,same_manager,463,316,217
+facility_candidate_universe,2025Q3,ARCC,BBDC,Ares Management,Barings,cross_manager,11,8,5
+facility_candidate_universe,2025Q3,ARCC,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,59,35,23
+facility_candidate_universe,2025Q3,ARCC,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,59,30,20
+facility_candidate_universe,2025Q3,ARCC,GBDC,Ares Management,Golub Capital,cross_manager,25,12,3
+facility_candidate_universe,2025Q3,ARCC,HPS,Ares Management,HPS Investment Partners,cross_manager,55,29,24
+facility_candidate_universe,2025Q3,ARCC,MAIN,Ares Management,Main Street Capital,cross_manager,6,2,1
+facility_candidate_universe,2025Q3,ARCC,MFIC,Ares Management,Apollo Global Management,cross_manager,2,2,1
+facility_candidate_universe,2025Q3,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,27,14,10
+facility_candidate_universe,2025Q3,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,11,10,8
+facility_candidate_universe,2025Q3,ARCC,OCIC,Ares Management,Blue Owl Credit,cross_manager,15,12,11
+facility_candidate_universe,2025Q3,ARCC,OCSL,Ares Management,Oaktree Capital Management,cross_manager,3,2,2
+facility_candidate_universe,2025Q3,ASIF,ARCC,Ares Management,Ares Management,same_manager,440,296,219
+facility_candidate_universe,2025Q3,ASIF,BBDC,Ares Management,Barings,cross_manager,6,5,4
+facility_candidate_universe,2025Q3,ASIF,BCRED,Ares Management,Blackstone Credit & Insurance,cross_manager,59,51,43
+facility_candidate_universe,2025Q3,ASIF,BXSL,Ares Management,Blackstone Credit & Insurance,cross_manager,29,21,15
+facility_candidate_universe,2025Q3,ASIF,GBDC,Ares Management,Golub Capital,cross_manager,8,5,1
+facility_candidate_universe,2025Q3,ASIF,HPS,Ares Management,HPS Investment Partners,cross_manager,72,49,39
+facility_candidate_universe,2025Q3,ASIF,MAIN,Ares Management,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q3,ASIF,MFIC,Ares Management,Apollo Global Management,cross_manager,2,2,2
+facility_candidate_universe,2025Q3,ASIF,NMFC,Ares Management,New Mountain Capital,cross_manager,21,18,16
+facility_candidate_universe,2025Q3,ASIF,OBDC,Ares Management,Blue Owl Credit,cross_manager,8,7,6
+facility_candidate_universe,2025Q3,ASIF,OCIC,Ares Management,Blue Owl Credit,cross_manager,34,26,21
+facility_candidate_universe,2025Q3,ASIF,OCSL,Ares Management,Oaktree Capital Management,cross_manager,7,7,6
+facility_candidate_universe,2025Q3,BBDC,ARCC,Barings,Ares Management,cross_manager,10,6,3
+facility_candidate_universe,2025Q3,BBDC,ASIF,Barings,Ares Management,cross_manager,5,3,2
+facility_candidate_universe,2025Q3,BBDC,BCRED,Barings,Blackstone Credit & Insurance,cross_manager,9,5,5
+facility_candidate_universe,2025Q3,BBDC,BXSL,Barings,Blackstone Credit & Insurance,cross_manager,3,2,2
+facility_candidate_universe,2025Q3,BBDC,GBDC,Barings,Golub Capital,cross_manager,8,2,2
+facility_candidate_universe,2025Q3,BBDC,HPS,Barings,HPS Investment Partners,cross_manager,6,2,2
+facility_candidate_universe,2025Q3,BBDC,MAIN,Barings,Main Street Capital,cross_manager,7,2,1
+facility_candidate_universe,2025Q3,BBDC,MFIC,Barings,Apollo Global Management,cross_manager,4,4,2
+facility_candidate_universe,2025Q3,BBDC,NMFC,Barings,New Mountain Capital,cross_manager,2,1,1
+facility_candidate_universe,2025Q3,BCRED,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,65,40,24
+facility_candidate_universe,2025Q3,BCRED,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,70,54,43
+facility_candidate_universe,2025Q3,BCRED,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,8,7,4
+facility_candidate_universe,2025Q3,BCRED,BXSL,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,724,406,244
+facility_candidate_universe,2025Q3,BCRED,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,2,2,2
+facility_candidate_universe,2025Q3,BCRED,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,172,88,60
+facility_candidate_universe,2025Q3,BCRED,MFIC,Blackstone Credit & Insurance,Apollo Global Management,cross_manager,5,5,2
+facility_candidate_universe,2025Q3,BCRED,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,95,53,40
+facility_candidate_universe,2025Q3,BCRED,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,27,23,17
+facility_candidate_universe,2025Q3,BCRED,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,67,53,41
+facility_candidate_universe,2025Q3,BCRED,OCSL,Blackstone Credit & Insurance,Oaktree Capital Management,cross_manager,12,11,9
+facility_candidate_universe,2025Q3,BXSL,ARCC,Blackstone Credit & Insurance,Ares Management,cross_manager,61,40,22
+facility_candidate_universe,2025Q3,BXSL,ASIF,Blackstone Credit & Insurance,Ares Management,cross_manager,28,18,11
+facility_candidate_universe,2025Q3,BXSL,BBDC,Blackstone Credit & Insurance,Barings,cross_manager,8,6,4
+facility_candidate_universe,2025Q3,BXSL,BCRED,Blackstone Credit & Insurance,Blackstone Credit & Insurance,same_manager,812,440,247
+facility_candidate_universe,2025Q3,BXSL,GBDC,Blackstone Credit & Insurance,Golub Capital,cross_manager,2,2,2
+facility_candidate_universe,2025Q3,BXSL,HPS,Blackstone Credit & Insurance,HPS Investment Partners,cross_manager,108,48,29
+facility_candidate_universe,2025Q3,BXSL,MFIC,Blackstone Credit & Insurance,Apollo Global Management,cross_manager,6,6,2
+facility_candidate_universe,2025Q3,BXSL,NMFC,Blackstone Credit & Insurance,New Mountain Capital,cross_manager,80,36,25
+facility_candidate_universe,2025Q3,BXSL,OBDC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,24,21,11
+facility_candidate_universe,2025Q3,BXSL,OCIC,Blackstone Credit & Insurance,Blue Owl Credit,cross_manager,42,29,18
+facility_candidate_universe,2025Q3,GBDC,ARCC,Golub Capital,Ares Management,cross_manager,19,5,2
+facility_candidate_universe,2025Q3,GBDC,ASIF,Golub Capital,Ares Management,cross_manager,15,6,2
+facility_candidate_universe,2025Q3,GBDC,BBDC,Golub Capital,Barings,cross_manager,7,7,2
+facility_candidate_universe,2025Q3,GBDC,MFIC,Golub Capital,Apollo Global Management,cross_manager,2,2,2
+facility_candidate_universe,2025Q3,GBDC,NMFC,Golub Capital,New Mountain Capital,cross_manager,5,1,1
+facility_candidate_universe,2025Q3,GBDC,OCIC,Golub Capital,Blue Owl Credit,cross_manager,1,1,1
+facility_candidate_universe,2025Q3,HPS,ARCC,HPS Investment Partners,Ares Management,cross_manager,72,53,28
+facility_candidate_universe,2025Q3,HPS,ASIF,HPS Investment Partners,Ares Management,cross_manager,86,65,38
+facility_candidate_universe,2025Q3,HPS,BBDC,HPS Investment Partners,Barings,cross_manager,2,2,2
+facility_candidate_universe,2025Q3,HPS,BCRED,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,121,89,56
+facility_candidate_universe,2025Q3,HPS,BXSL,HPS Investment Partners,Blackstone Credit & Insurance,cross_manager,95,61,29
+facility_candidate_universe,2025Q3,HPS,MAIN,HPS Investment Partners,Main Street Capital,cross_manager,3,2,1
+facility_candidate_universe,2025Q3,HPS,MFIC,HPS Investment Partners,Apollo Global Management,cross_manager,3,3,2
+facility_candidate_universe,2025Q3,HPS,NMFC,HPS Investment Partners,New Mountain Capital,cross_manager,63,40,21
+facility_candidate_universe,2025Q3,HPS,OBDC,HPS Investment Partners,Blue Owl Credit,cross_manager,35,28,12
+facility_candidate_universe,2025Q3,HPS,OCIC,HPS Investment Partners,Blue Owl Credit,cross_manager,63,56,32
+facility_candidate_universe,2025Q3,HPS,OCSL,HPS Investment Partners,Oaktree Capital Management,cross_manager,7,6,5
+facility_candidate_universe,2025Q3,MAIN,ARCC,Main Street Capital,Ares Management,cross_manager,4,4,2
+facility_candidate_universe,2025Q3,MAIN,BBDC,Main Street Capital,Barings,cross_manager,5,5,1
+facility_candidate_universe,2025Q3,MAIN,HPS,Main Street Capital,HPS Investment Partners,cross_manager,5,3,1
+facility_candidate_universe,2025Q3,MAIN,MFIC,Main Street Capital,Apollo Global Management,cross_manager,2,2,1
+facility_candidate_universe,2025Q3,MFIC,ASIF,Apollo Global Management,Ares Management,cross_manager,1,1,1
+facility_candidate_universe,2025Q3,MFIC,BCRED,Apollo Global Management,Blackstone Credit & Insurance,cross_manager,4,4,4
+facility_candidate_universe,2025Q3,MFIC,BXSL,Apollo Global Management,Blackstone Credit & Insurance,cross_manager,2,2,2
+facility_candidate_universe,2025Q3,MFIC,GBDC,Apollo Global Management,Golub Capital,cross_manager,2,1,1
+facility_candidate_universe,2025Q3,MFIC,HPS,Apollo Global Management,HPS Investment Partners,cross_manager,7,2,2
+facility_candidate_universe,2025Q3,MFIC,MAIN,Apollo Global Management,Main Street Capital,cross_manager,2,1,1
+facility_candidate_universe,2025Q3,MFIC,OCIC,Apollo Global Management,Blue Owl Credit,cross_manager,3,2,2
+facility_candidate_universe,2025Q3,NMFC,ARCC,New Mountain Capital,Ares Management,cross_manager,25,17,11
+facility_candidate_universe,2025Q3,NMFC,ASIF,New Mountain Capital,Ares Management,cross_manager,23,17,13
+facility_candidate_universe,2025Q3,NMFC,BBDC,New Mountain Capital,Barings,cross_manager,2,2,1
+facility_candidate_universe,2025Q3,NMFC,BCRED,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,110,65,41
+facility_candidate_universe,2025Q3,NMFC,BXSL,New Mountain Capital,Blackstone Credit & Insurance,cross_manager,51,38,20
+facility_candidate_universe,2025Q3,NMFC,GBDC,New Mountain Capital,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q3,NMFC,HPS,New Mountain Capital,HPS Investment Partners,cross_manager,39,24,18
+facility_candidate_universe,2025Q3,NMFC,MAIN,New Mountain Capital,Main Street Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q3,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,20,15,8
+facility_candidate_universe,2025Q3,NMFC,OCIC,New Mountain Capital,Blue Owl Credit,cross_manager,42,37,24
+facility_candidate_universe,2025Q3,NMFC,OCSL,New Mountain Capital,Oaktree Capital Management,cross_manager,8,7,6
+facility_candidate_universe,2025Q3,OBDC,ARCC,Blue Owl Credit,Ares Management,cross_manager,9,7,7
+facility_candidate_universe,2025Q3,OBDC,ASIF,Blue Owl Credit,Ares Management,cross_manager,3,2,2
+facility_candidate_universe,2025Q3,OBDC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,36,25,18
+facility_candidate_universe,2025Q3,OBDC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,30,19,15
+facility_candidate_universe,2025Q3,OBDC,GBDC,Blue Owl Credit,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q3,OBDC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,24,14,14
+facility_candidate_universe,2025Q3,OBDC,MFIC,Blue Owl Credit,Apollo Global Management,cross_manager,3,3,2
+facility_candidate_universe,2025Q3,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,20,12,11
+facility_candidate_universe,2025Q3,OBDC,OCIC,Blue Owl Credit,Blue Owl Credit,same_manager,226,178,143
+facility_candidate_universe,2025Q3,OBDC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,3,2,2
+facility_candidate_universe,2025Q3,OCIC,ARCC,Blue Owl Credit,Ares Management,cross_manager,14,11,10
+facility_candidate_universe,2025Q3,OCIC,ASIF,Blue Owl Credit,Ares Management,cross_manager,25,23,20
+facility_candidate_universe,2025Q3,OCIC,BCRED,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,62,49,37
+facility_candidate_universe,2025Q3,OCIC,BXSL,Blue Owl Credit,Blackstone Credit & Insurance,cross_manager,29,20,16
+facility_candidate_universe,2025Q3,OCIC,HPS,Blue Owl Credit,HPS Investment Partners,cross_manager,57,34,30
+facility_candidate_universe,2025Q3,OCIC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,47,31,24
+facility_candidate_universe,2025Q3,OCIC,OBDC,Blue Owl Credit,Blue Owl Credit,same_manager,229,183,147
+facility_candidate_universe,2025Q3,OCIC,OCSL,Blue Owl Credit,Oaktree Capital Management,cross_manager,11,9,7
+facility_candidate_universe,2025Q3,OCSL,ASIF,Oaktree Capital Management,Ares Management,cross_manager,4,4,4
+facility_candidate_universe,2025Q3,OCSL,BCRED,Oaktree Capital Management,Blackstone Credit & Insurance,cross_manager,10,9,9
+facility_candidate_universe,2025Q3,OCSL,GBDC,Oaktree Capital Management,Golub Capital,cross_manager,1,1,1
+facility_candidate_universe,2025Q3,OCSL,HPS,Oaktree Capital Management,HPS Investment Partners,cross_manager,6,5,5
+facility_candidate_universe,2025Q3,OCSL,NMFC,Oaktree Capital Management,New Mountain Capital,cross_manager,5,3,2
+facility_candidate_universe,2025Q3,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,3,3,2
+facility_candidate_universe,2025Q3,OCSL,OCIC,Oaktree Capital Management,Blue Owl Credit,cross_manager,13,10,8
+untouched_movement_facilities,2024Q1,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,1,1,1
+untouched_movement_facilities,2024Q1,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,3,3,3
+untouched_movement_facilities,2024Q1,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,5,5,5
+untouched_movement_facilities,2024Q1,OCSL,ARCC,Oaktree Capital Management,Ares Management,cross_manager,1,1,1
+untouched_movement_facilities,2024Q1,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,1,1,1
+untouched_movement_facilities,2024Q2,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,2,2,2
+untouched_movement_facilities,2024Q2,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,4,4,3
+untouched_movement_facilities,2024Q2,ARCC,OCSL,Ares Management,Oaktree Capital Management,cross_manager,1,1,1
+untouched_movement_facilities,2024Q2,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,6,6,4
+untouched_movement_facilities,2024Q2,OCSL,OBDC,Oaktree Capital Management,Blue Owl Credit,cross_manager,1,1,1
+untouched_movement_facilities,2024Q3,ARCC,NMFC,Ares Management,New Mountain Capital,cross_manager,2,2,2
+untouched_movement_facilities,2024Q3,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,1,1,1
+untouched_movement_facilities,2024Q3,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,6,6,6
+untouched_movement_facilities,2024Q4,OBDC,NMFC,Blue Owl Credit,New Mountain Capital,cross_manager,1,1,1
+untouched_movement_facilities,2025Q1,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,1,1,1
+untouched_movement_facilities,2025Q1,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,1,1,1
+untouched_movement_facilities,2025Q2,ARCC,OBDC,Ares Management,Blue Owl Credit,cross_manager,1,1,1
+untouched_movement_facilities,2025Q2,NMFC,OBDC,New Mountain Capital,Blue Owl Credit,cross_manager,2,2,2

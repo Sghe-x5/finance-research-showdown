@@ -1,0 +1,41 @@
+{
+  "ambiguous_field_keys_not_applied": 0,
+  "conflict_examples": [],
+  "coverage_after": {
+    "acquisition_date": 6426,
+    "maturity": 14988,
+    "reference_rate": 12439
+  },
+  "coverage_before": {
+    "acquisition_date": 3077,
+    "maturity": 12668,
+    "reference_rate": 12430
+  },
+  "exact_join_key": [
+    "archive_id",
+    "adsh",
+    "observation_date",
+    "Investment Identifier Axis member"
+  ],
+  "exact_support_or_direct_matches": {
+    "acquisition_date": 6426,
+    "maturity": 14988,
+    "reference_rate": 6163
+  },
+  "filled_missing": {
+    "acquisition_date": 3349,
+    "maturity": 2320,
+    "reference_rate": 9
+  },
+  "identifier_text_used_to_infer_fields": false,
+  "input_sha256": "d5133ef097fafbccde2ebac7a886280c9615f9099cec8ce51580951f1df33082",
+  "official_sources_only": true,
+  "output_sha256": "884329bba9b9685928e2f506bb85e08e0976f5bf3865d96c05747fd682ca2863",
+  "replaced_inferred_reference_rate": {
+    "reference_rate": 2
+  },
+  "rows": 201164,
+  "schema_version": "lineage_v2",
+  "storage": "corrected normalized CSV cached outside Git; metadata and checksums committed",
+  "unmatched_unique_correction_keys": 1383
+}

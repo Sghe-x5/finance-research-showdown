@@ -13,15 +13,16 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-import requests
+try:
+    import requests
+except ModuleNotFoundError:  # Read-only helpers remain importable with stdlib-only Python.
+    requests = None
 
 DAY2 = Path(__file__).resolve().parents[1] / "day2"
-SHOWDOWN = Path(__file__).resolve().parents[2] / "02_showdown"
 sys.path.insert(0, str(DAY2))
-sys.path.insert(0, str(SHOWDOWN))
 
 from common import read_csv, sha256_file, write_csv, write_json  # noqa: E402
-from day1_bdc_reporting_order import (  # noqa: E402
+from reporting_text_utils import (  # noqa: E402
     classify_exhibit_text, normalize_html, parse_submission_documents,
 )
 
@@ -358,6 +359,8 @@ def main():
         funds[row["ticker"]] = str(int(row["cik"]))
         existing[(row["ticker"], row["period_end"])] = row
 
+    if requests is None:
+        raise SystemExit("requests is required to rebuild reporting_order_extended")
     session = requests.Session()
     output = []
     all_exclusions = []

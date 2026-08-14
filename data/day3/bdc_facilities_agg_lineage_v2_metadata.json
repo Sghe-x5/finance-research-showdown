@@ -1,0 +1,44 @@
+{
+  "aggregation_rule_version": "economic_facility_v2",
+  "cross_lender_tolerances_not_used_within_bdc": {
+    "maturity_45_days": true,
+    "maturity_month": true,
+    "spread_25bp": true
+  },
+  "current_period_facility_rows": 99366,
+  "economic_facility_rows": 188999,
+  "grouping": [
+    "BDC accession",
+    "observation date",
+    "normalized borrower",
+    "debt/equity",
+    "facility type",
+    "lien",
+    "currency",
+    "reference-rate family",
+    "exact spread",
+    "exact maturity",
+    "funded status",
+    "canonical tranche text"
+  ],
+  "input_sha256": "884329bba9b9685928e2f506bb85e08e0976f5bf3865d96c05747fd682ca2863",
+  "issuer_total_rows_dropped_to_avoid_double_counting": 9834,
+  "lot_count_distribution": {
+    "1": 188689,
+    "2": 310
+  },
+  "normalized_input_rows": 201164,
+  "output_sha256": "60aee6b26872b65a0845a58db286e3409518498532d2eb69d0ffc7c1d356bbec",
+  "position_periods": {
+    "2023-12-31": 11059,
+    "2024-03-31": 11446,
+    "2024-06-30": 12108,
+    "2024-09-30": 12712,
+    "2024-12-31": 12407,
+    "2025-03-31": 12812,
+    "2025-06-30": 13179,
+    "2025-09-30": 13643
+  },
+  "storage": "aggregated facility CSV cached outside Git; metadata and checksums committed",
+  "unknown_guard": "borrower-only or blank canonical tranche uses the source row ID and cannot merge"
+}

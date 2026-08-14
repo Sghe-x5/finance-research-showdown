@@ -1,0 +1,20 @@
+{
+  "exact_facility_mark_present": 0,
+  "fallback_rows_audited": 100,
+  "input_hashes": {
+    "facilities": "60aee6b26872b65a0845a58db286e3409518498532d2eb69d0ffc7c1d356bbec",
+    "reporting_order": "11bfabd0faf0507c47cee950d82dc89f77e6d2b827bba44b666df6f42005ca8b"
+  },
+  "movement_guard": 20,
+  "movement_guard_remains_met": true,
+  "movement_unique_facilities_after": 37,
+  "movement_unique_facilities_before": 37,
+  "output_sha256": "1c83294dc7390ff42b4b16482f69415931138b76035b6c2ac859aeda2ab1ad72",
+  "soi_present": 0,
+  "source_facility_timestamp_rule": "earliest exact facility mark; otherwise SOI/10-Q/10-K acceptance",
+  "source_mark_timestamp_shifted": 0,
+  "target_current_outcome_used": false,
+  "target_cutoff_rule": "earliest verified results/NAV disclosure",
+  "target_cutoff_shifted": 0,
+  "timestamps_differ": 0
+}
