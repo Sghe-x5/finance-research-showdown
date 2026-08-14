@@ -33,6 +33,18 @@ DISTRIBUTION_FIELDS = (
     "source_ticker_count",
     "target_ticker_count",
 )
+INCLUDED_SAMPLE_FIELDS = (
+    "review_observation_id",
+    "source_event_cluster_id",
+    "period_end",
+    "report_period_label",
+    "normalized_borrower",
+    "source_ticker",
+    "target_ticker",
+    "source_manager",
+    "target_manager",
+    "manager_relationship",
+)
 DUPLICATE_IDENTITY_FIELDS = (
     "report_period",
     "normalized_borrower",
@@ -209,6 +221,62 @@ def write_distribution(path: Path, rows: list[dict]) -> None:
         writer.writerows(rows)
 
 
+def materialize_final_consensus(
+    path: Path,
+    partial_rows: list[dict[str, str]],
+    adjudication_rows: list[dict[str, str]],
+) -> None:
+    """Write the signed consensus in its canonical, reviewer-facing schema."""
+    adjudication = {
+        row["review_observation_id"]: row for row in adjudication_rows
+    }
+    base_fields = [
+        field for field in partial_rows[0]
+        if not field.startswith("consensus_")
+    ]
+    fieldnames = [*base_fields, *MEASUREMENT_CHECKS, INCLUDE_FIELD, "review_notes"]
+    output = []
+    for partial in partial_rows:
+        observation_id = partial["review_observation_id"]
+        unresolved = partial.get("consensus_status") == "pending_adjudication"
+        adjudicated = adjudication.get(observation_id) if unresolved else None
+        if unresolved and adjudicated is None:
+            raise ValueError(f"Missing adjudication for {observation_id}")
+        row = {field: partial.get(field, "") for field in base_fields}
+        for field in (*MEASUREMENT_CHECKS, INCLUDE_FIELD):
+            row[field] = (
+                adjudicated[f"adjudicated_{field}"]
+                if adjudicated is not None
+                else partial[f"consensus_{field}"]
+            )
+        row["review_notes"] = (
+            adjudicated["adjudication_reason"]
+            if adjudicated is not None
+            else partial["consensus_review_notes"]
+        )
+        output.append(row)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(output)
+
+
+def write_included_sample(path: Path, included_rows: list[dict[str, str]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=INCLUDED_SAMPLE_FIELDS,
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerows(
+            {field: row[field] for field in INCLUDED_SAMPLE_FIELDS}
+            for row in included_rows
+        )
+
+
 def load_economic_id_index(path: Path) -> dict[str, dict[str, str]]:
     index = {}
     for row in read_csv(path):
@@ -356,6 +424,16 @@ def main() -> None:
         type=Path,
         default=Path("data/day4/confirmatory_duplicate_vote_audit.json"),
     )
+    parser.add_argument(
+        "--final-consensus-output",
+        type=Path,
+        default=Path("data/day4/day4_event_review_human_consensus.csv"),
+    )
+    parser.add_argument(
+        "--included-sample-output",
+        type=Path,
+        default=Path("data/day4/confirmatory_included_sample.csv"),
+    )
     args = parser.parse_args()
 
     partial_rows = read_csv(args.partial_consensus)
@@ -363,6 +441,13 @@ def main() -> None:
     packet_rows = read_csv(args.sanitized_packet)
     consensus = derive_final_consensus(partial_rows, adjudication_rows)
     summary = parse_consensus_summary(args.consensus_summary)
+    materialize_final_consensus(
+        args.final_consensus_output,
+        partial_rows,
+        adjudication_rows,
+    )
+    if sha256_file(args.final_consensus_output) != summary["consensus_sha256"]:
+        raise ValueError("Materialized consensus SHA conflicts with the signed summary")
     included = included_packet_rows(packet_rows, consensus)
     included_clusters = {
         row["source_event_cluster_id"] for row in included
@@ -378,6 +463,7 @@ def main() -> None:
         raise ValueError("Derived consensus counts conflict with the signed summary")
 
     distribution = build_borrower_distribution(included)
+    write_included_sample(args.included_sample_output, included)
     write_distribution(args.distribution_output, distribution)
     economic_index = load_economic_id_index(args.eligible_prefreeze)
     source_hashes = {

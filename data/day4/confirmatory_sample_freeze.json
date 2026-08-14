@@ -1,0 +1,27 @@
+{
+  "approval_record": {
+    "approval_date": "2026-08-15",
+    "approver": "Claude",
+    "blocking_requirements_confirmed": 3,
+    "decision": "APPROVE FOR PHASE B FREEZE",
+    "protected_data_accessed_before_freeze": false
+  },
+  "borrower_cluster_distribution_sha256": "cfd3b83d03c47041427dce98f731e1c1d9423408003aac946a10339d26a0344d",
+  "duplicate_vote_audit_sha256": "d62f9e30352ffb8b9574858b30881032022067c0a69c5c8d474695722d0a96e1",
+  "duplicate_vote_audit_status": "pass_no_duplicate_independent_vote",
+  "evaluator_sha256": "bcea297f43603316d4d3bc5fef9762bc2749eaddf36a3253222af66e8f132615",
+  "event_review_consensus_sha256": "2a0c763e423b5616b3f9093f54a0073d5e8577b0fe4f5769fb2ca60ff26f9591",
+  "final_preregistration_sha256": "6b19ee878c103122ae1734bfbd480aec2fdd88ae35b6368f24655a26b552fcdc",
+  "freeze_date": "2026-08-15",
+  "freeze_status": "phase_b_sample_frozen_outcome_blind",
+  "included_observation_count": 37,
+  "included_sample_sha256": "011da2ab9ccc39f5c2530295fee1b555377f4a2b36a302e45183873af603a670",
+  "maximum_source_event_clusters_per_borrower": 5,
+  "ordered_included_observation_id_sha256": "27794be82f7768a6695f59154d011f9c05d89aae1cfdc660ac1b2fec1d6b92ca",
+  "ordered_unique_source_event_cluster_id_sha256": "506a15321c58119c60836f7311e533cbf6e12b80f036a3460d0f6762cdbe119c",
+  "ordered_value_hash_encoding": "UTF-8 values joined by LF with a final LF; observation IDs preserve frozen CSV order; cluster IDs preserve first occurrence",
+  "sample_generation_script_sha256": "1afae3c8905b2189bbbbc6bf498545e42256b14ec87718e3c03b1ee6b6f52590",
+  "source_event_cluster_count": 34,
+  "uncertain_observations_excluded_without_replacement": 3,
+  "unique_normalized_borrower_count": 20
+}

@@ -237,7 +237,14 @@ def test_target_outcome_file_is_not_opened_before_phase_d_authorization(tmp_path
     assert not nonexistent_outcomes.exists()
 
 
-def phase_d_fixture(tmp_path, included_ids=("A", "B"), outcome_ids=("A", "B")):
+def phase_d_fixture(
+    tmp_path,
+    included_ids=("A", "B"),
+    outcome_ids=("A", "B"),
+    structural_ids=None,
+    structural_overrides=None,
+    outcome_overrides=None,
+):
     included = tmp_path / "included.csv"
     outcomes = tmp_path / "outcomes.csv"
     event = tmp_path / "event_consensus.csv"
@@ -245,18 +252,33 @@ def phase_d_fixture(tmp_path, included_ids=("A", "B"), outcome_ids=("A", "B")):
     prereg = tmp_path / "preregistration.md"
     authorization = tmp_path / "authorization.json"
     write_rows(included, [{"review_observation_id": value} for value in included_ids])
-    write_rows(
-        outcomes,
-        [
-            {
-                "review_observation_id": value,
-                "target_current_mark": "0.9",
-            }
-            for value in outcome_ids
-        ],
-    )
+    structural_ids = structural_ids or included_ids
+    structural_overrides = structural_overrides or {}
+    outcome_overrides = outcome_overrides or {}
+    structural_rows = []
+    for value in structural_ids:
+        row = {
+            "review_observation_id": value,
+            "target_current_same_facility": "yes",
+            "target_current_aggregation_valid": "yes",
+            "position_status": "continuing",
+        }
+        row.update(structural_overrides.get(value, {}))
+        structural_rows.append(row)
+    outcome_rows = []
+    for value in outcome_ids:
+        row = {
+            "review_observation_id": value,
+            "target_current_same_facility": "yes",
+            "target_current_aggregation_valid": "yes",
+            "position_status": "continuing",
+            "target_current_mark": "0.9",
+        }
+        row.update(outcome_overrides.get(value, {}))
+        outcome_rows.append(row)
+    write_rows(outcomes, outcome_rows)
     event.write_text("synthetic event consensus\n", encoding="utf-8")
-    structural.write_text("synthetic structural consensus\n", encoding="utf-8")
+    write_rows(structural, structural_rows)
     prereg.write_text("synthetic frozen preregistration\n", encoding="utf-8")
     sample_commit = subprocess.check_output(
         ["git", "rev-parse", "HEAD~1"], text=True
@@ -321,6 +343,40 @@ def test_complete_synthetic_phase_d_authorization_allows_exact_id_set(tmp_path):
     assert {row["review_observation_id"] for row in revealed} == {"A", "B"}
 
 
+@pytest.mark.parametrize(
+    ("field", "changed_value"),
+    [
+        ("position_status", "partial_repayment"),
+        ("target_current_same_facility", "no"),
+        ("target_current_aggregation_valid", "uncertain"),
+    ],
+)
+def test_numeric_outcomes_cannot_redefine_structural_consensus(
+    tmp_path, field, changed_value
+):
+    paths = phase_d_fixture(
+        tmp_path,
+        outcome_overrides={"A": {field: changed_value}},
+    )
+    outcomes, included, event, structural, prereg, authorization, _ = paths
+    with pytest.raises(PermissionError, match="cannot redefine"):
+        load_authorized_reveal(
+            outcomes, included, event, structural, prereg, authorization
+        )
+
+
+@pytest.mark.parametrize("structural_ids", [("A",), ("A", "B", "C")])
+def test_structural_consensus_ids_must_exactly_match_frozen_sample(
+    tmp_path, structural_ids
+):
+    paths = phase_d_fixture(tmp_path, structural_ids=structural_ids)
+    outcomes, included, event, structural, prereg, authorization, _ = paths
+    with pytest.raises(PermissionError, match="Structural consensus IDs"):
+        load_authorized_reveal(
+            outcomes, included, event, structural, prereg, authorization
+        )
+
+
 def test_missing_human_confirmed_continuing_mark_forces_data_quality_inconclusive():
     result = evaluate_revealed_rows([
         {
@@ -347,11 +403,48 @@ def test_missing_human_confirmed_continuing_mark_forces_data_quality_inconclusiv
 def test_day4_evaluator_hash_and_git_boundaries():
     meta = payload("data/day4/confirmatory_evaluator_meta.json")
     assert digest("scripts/day4/evaluate_confirmatory_shadow_nav.py") == meta["evaluator_sha256"]
-    assert meta["status"] == "prepared_synthetic_tests_only"
+    assert meta["status"] == "phase_b_frozen_synthetic_tests_only"
     assert meta["target_outcomes_opened"] is False
-    assert meta["freeze_authorized"] is False
+    assert meta["freeze_authorized"] is True
     assert meta["reveal_authorized"] is False
     assert meta["results_tag_authorized"] is False
-    assert not Path("data/day4/frozen_confirmatory_sample.json").exists()
+    assert Path("data/day4/confirmatory_sample_freeze.json").exists()
     tags = subprocess.check_output(["git", "tag", "--list"], text=True).splitlines()
     assert not any("day4" in tag.lower() for tag in tags)
+
+
+def test_phase_b_freeze_materializes_exact_consensus_sample_and_hashes():
+    consensus = rows("data/day4/day4_event_review_human_consensus.csv")
+    included = rows("data/day4/confirmatory_included_sample.csv")
+    distribution = rows("data/day4/confirmatory_borrower_cluster_distribution.csv")
+    freeze = payload("data/day4/confirmatory_sample_freeze.json")
+    assert digest("data/day4/day4_event_review_human_consensus.csv") == (
+        "2a0c763e423b5616b3f9093f54a0073d5e8577b0fe4f5769fb2ca60ff26f9591"
+    )
+    assert len(consensus) == 40
+    assert len(included) == 37
+    assert len({row["source_event_cluster_id"] for row in included}) == 34
+    assert len({row["normalized_borrower"] for row in included}) == 20
+    assert {row["manager_relationship"] for row in included} == {"cross_manager"}
+    assert "2025Q3" not in {row["report_period_label"] for row in included}
+    assert digest("data/day4/confirmatory_included_sample.csv") == freeze[
+        "included_sample_sha256"
+    ]
+    assert digest("data/day4/confirmatory_borrower_cluster_distribution.csv") == freeze[
+        "borrower_cluster_distribution_sha256"
+    ]
+    cluster_counts = [
+        int(row["included_source_event_cluster_count"]) for row in distribution
+    ]
+    assert {value: cluster_counts.count(value) for value in sorted(set(cluster_counts))} == {
+        1: 13,
+        2: 3,
+        3: 2,
+        4: 1,
+        5: 1,
+    }
+    assert freeze["maximum_source_event_clusters_per_borrower"] == 5
+    assert freeze["duplicate_vote_audit_status"] == "pass_no_duplicate_independent_vote"
+    assert freeze["approval_record"]["decision"] == "APPROVE FOR PHASE B FREEZE"
+    forbidden = ("target_current", "principal", "cost", "fair_value", "mark", "error")
+    assert not any(token in str(freeze).lower() for token in forbidden)

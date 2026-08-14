@@ -46,6 +46,12 @@ REQUIRED_AUTHORIZATION_FIELDS = (
     "evaluator_sha256",
     "revealed_outcomes_sha256",
 )
+STRUCTURAL_CONSENSUS_FIELDS = (
+    "target_current_same_facility",
+    "target_current_aggregation_valid",
+    "position_status",
+)
+ALLOWED_STRUCTURAL_DECISIONS = {"yes", "no", "uncertain"}
 
 
 def mean(values):
@@ -468,6 +474,46 @@ def read_frozen_included_ids(path: Path) -> list[str]:
     return ids
 
 
+def read_structural_consensus(
+    path: Path,
+    frozen_ids: list[str],
+) -> dict[str, dict[str, str]]:
+    with path.open(newline="", encoding="utf-8-sig") as handle:
+        rows = list(csv.DictReader(handle))
+    ids = [row.get("review_observation_id", "") for row in rows]
+    if (
+        any(not value for value in ids)
+        or len(ids) != len(set(ids))
+        or set(ids) != set(frozen_ids)
+    ):
+        raise PermissionError(
+            "Structural consensus IDs do not exactly match the frozen included sample"
+        )
+    for row in rows:
+        if row.get("target_current_same_facility") not in ALLOWED_STRUCTURAL_DECISIONS:
+            raise PermissionError("Structural same-facility consensus is invalid")
+        if row.get("target_current_aggregation_valid") not in ALLOWED_STRUCTURAL_DECISIONS:
+            raise PermissionError("Structural aggregation consensus is invalid")
+        if row.get("position_status") not in ALLOWED_POSITION_STATUSES:
+            raise PermissionError("Structural position-status consensus is invalid")
+    return {row["review_observation_id"]: row for row in rows}
+
+
+def verify_outcomes_match_structural_consensus(
+    outcome_rows: list[dict[str, str]],
+    structural_by_id: dict[str, dict[str, str]],
+) -> None:
+    for row in outcome_rows:
+        observation_id = row["review_observation_id"]
+        structural = structural_by_id[observation_id]
+        for field in STRUCTURAL_CONSENSUS_FIELDS:
+            if row.get(field, "") != structural.get(field, ""):
+                raise PermissionError(
+                    "Numeric outcomes cannot redefine frozen structural consensus: "
+                    f"{observation_id} {field}"
+                )
+
+
 def verify_commit_pair(sample_freeze_commit: str, structural_freeze_commit: str) -> None:
     for name, commit in (
         ("sample_freeze_commit", sample_freeze_commit),
@@ -550,6 +596,10 @@ def load_authorized_reveal(
         "Revealed outcomes",
     )
     frozen_ids = read_frozen_included_ids(included_sample_path)
+    structural_by_id = read_structural_consensus(
+        structural_consensus_path,
+        frozen_ids,
+    )
     with outcomes_path.open(newline="", encoding="utf-8-sig") as handle:
         rows = list(csv.DictReader(handle))
     revealed_ids = [row.get("review_observation_id", "") for row in rows]
@@ -561,6 +611,7 @@ def load_authorized_reveal(
         raise PermissionError(
             "Revealed outcome IDs do not exactly match the frozen included sample"
         )
+    verify_outcomes_match_structural_consensus(rows, structural_by_id)
     return rows
 
 
