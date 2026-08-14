@@ -1,0 +1,162 @@
+{
+  "generated_utc": "2026-08-14T20:27:24+00:00",
+  "base_commit_reference": "research/day4-shadow-nav-confirmatory @ 11cf1f44055beb88b1a0fed4c5bf09d5e2ae3414",
+  "file_count": 31,
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 2189,
+      "sha256": "87773bf727f6a6656fa769f937aa323dec4df96ffb270a61a8ca82d6bd999428"
+    },
+    {
+      "path": "01_PROJECT_GOAL_AND_CONSTRAINTS.md",
+      "bytes": 1961,
+      "sha256": "7fe88d354e8b6f272e82c31db12b7349854f1db40975877b34bf690999f5c54a"
+    },
+    {
+      "path": "02_CURRENT_STATE_2026-08-14.md",
+      "bytes": 2236,
+      "sha256": "64fa1527eb989185e6dae5b4b34d0beb49a82be528bedf61c834e66f36b5f9e4"
+    },
+    {
+      "path": "03_PROJECT_TIMELINE_AND_DECISIONS.md",
+      "bytes": 3296,
+      "sha256": "79ce62902fd0e2b2155d25e3e4421a05e49f1b10bec2fcf85ced888983ebe6fd"
+    },
+    {
+      "path": "04_SHADOWNAV_RESEARCH.md",
+      "bytes": 3864,
+      "sha256": "6138a37499a40cb8910d1f7dbf87f47678567520206ff3fa840920ad6363e7d5"
+    },
+    {
+      "path": "05_JAPAN_LANGUAGE_WALL_RESEARCH.md",
+      "bytes": 2106,
+      "sha256": "1ac25f405163329f79467e91aadbad817df35d8a2f79ce16cfc614653f3c30cd"
+    },
+    {
+      "path": "06_ALTERNATIVE_IDEAS_AND_KILL_REASONS.md",
+      "bytes": 2617,
+      "sha256": "dcaa2ca5f45b6596a5ffd20456949688313bf88e0d0c5d7355b11fe0a7109e22"
+    },
+    {
+      "path": "07_CHATGPT_VISIBLE_RESEARCH_NOTES.md",
+      "bytes": 1909,
+      "sha256": "ed9ae24952ad0120ba1be5628239e25696522bdcfd9e18387ef099968bf8a42e"
+    },
+    {
+      "path": "08_CLAUDE_VISIBLE_RESEARCH_NOTES.md",
+      "bytes": 2133,
+      "sha256": "c170d9b5e5ca859f3f88f768598db3572c9708f59c88374f49d5ee725d006233"
+    },
+    {
+      "path": "09_JOINT_DEBATE_AND_CONVERGENCE.md",
+      "bytes": 1407,
+      "sha256": "a6b2fd0068f4d9390c0d95a72042b80afd4c59ba3bddd6bbc084de2724db94f5"
+    },
+    {
+      "path": "10_METHODS_PREREGISTRATION_AND_GUARDS.md",
+      "bytes": 2604,
+      "sha256": "1910896ee3516e62bb850391f35f838397fac6c82d06e3c2732bf6f8dbe0ceb9"
+    },
+    {
+      "path": "11_DATA_PIPELINE_AND_REPOSITORY_STATE.md",
+      "bytes": 1911,
+      "sha256": "1d9cd03820e2aebd71ac9b6102d21cbbe31d3a35c6555f296e5aace2c85a5ada"
+    },
+    {
+      "path": "12_CURRENT_OPEN_QUESTIONS_AND_NEXT_STEPS.md",
+      "bytes": 1713,
+      "sha256": "d0409cd0d2185b8f650cc6c0a00a955fa5b06400e809265b125a0e18750e7b21"
+    },
+    {
+      "path": "13_SOURCE_REGISTRY.csv",
+      "bytes": 9315,
+      "sha256": "4d615664678c8799635cabaf96ee44c857b6c65403e1e2bbabd950b343f7984f"
+    },
+    {
+      "path": "13_SOURCE_REGISTRY.md",
+      "bytes": 12467,
+      "sha256": "752c6e14b84d3b2279f82e9c81aa0fbd9878a49946618ad6434d5767e554060f"
+    },
+    {
+      "path": "14_GLOSSARY.md",
+      "bytes": 1376,
+      "sha256": "c5b8bbc07bfe9640fa1c6cd3a80a23a1b08b9b6fca1e2cd3ae359cd69cbf3b64"
+    },
+    {
+      "path": "15_HANDOFF_PROMPT_NEW_CHATGPT.md",
+      "bytes": 1053,
+      "sha256": "a4736bfdf198a45d0caea19d4ee3012e7008c3896336e4ff1b59c158fca41ae5"
+    },
+    {
+      "path": "16_HANDOFF_PROMPT_NEW_CLAUDE.md",
+      "bytes": 1188,
+      "sha256": "f2958f8e65be9ea49a85a42e958f914b1ea85e230db5359bd21ecd45d7703a4c"
+    },
+    {
+      "path": "17_MAINTENANCE_PROTOCOL.md",
+      "bytes": 1585,
+      "sha256": "a7cca60fa1be691fe7eb389e76d99d52adfd8a6ec462c80d7da60f431285bc3f"
+    },
+    {
+      "path": "18_UPDATE_TEMPLATE.md",
+      "bytes": 372,
+      "sha256": "9e669b2583104654f9f1a57cc3544281b8d0fb51eebdd0340c1a85b8655c9fb6"
+    },
+    {
+      "path": "19_CODEX_INTEGRATION_PROMPT.md",
+      "bytes": 5179,
+      "sha256": "2ca03528afdb63b9d10da8e340e516ce24e2765da4c188c49627d920f29e83fd"
+    },
+    {
+      "path": "20_CLAIMS_LEDGER.md",
+      "bytes": 1952,
+      "sha256": "e14c04bc6853f02a643893c00b765ae8c2bb375c7b2d9b266d6a2d9598df524b"
+    },
+    {
+      "path": "21_DO_NOT_REPEAT.md",
+      "bytes": 1007,
+      "sha256": "3703f99a0a718cc7b77b3e956344d9e73b4521716f4e4a7e9e3339f5ca5c10f5"
+    },
+    {
+      "path": "22_REPOSITORY_RECOVERY_CHECKLIST.md",
+      "bytes": 598,
+      "sha256": "42b4e110afd3524babf414c3fef77af0dc9d5215377a99e8c219bdc49022eecf"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1019,
+      "sha256": "be9309c4962783534fad4ffc34941278619cac245c1f1e98a28c31f98943ebb3"
+    },
+    {
+      "path": "scripts/update_manifest.py",
+      "bytes": 1496,
+      "sha256": "942131cc86461c45ba01621bbe485c44bc8903d9238fd488038f4d27d1c5a6a1"
+    },
+    {
+      "path": "templates/CLAIMS_LEDGER_ROW_TEMPLATE.md",
+      "bytes": 97,
+      "sha256": "0db627b32278bb0b17f896c45c4abd276794ae284ef2f96ddb45e384a32b2f09"
+    },
+    {
+      "path": "templates/DECISION_RECORD_TEMPLATE.md",
+      "bytes": 243,
+      "sha256": "c4262541846414440c41794f6a75beef359e858921a0af340328f08b0c5fafac"
+    },
+    {
+      "path": "templates/SESSION_SNAPSHOT_TEMPLATE.md",
+      "bytes": 372,
+      "sha256": "9e669b2583104654f9f1a57cc3544281b8d0fb51eebdd0340c1a85b8655c9fb6"
+    },
+    {
+      "path": "templates/SOURCE_RECORD_TEMPLATE.csv",
+      "bytes": 68,
+      "sha256": "debb7d6f86fd71de858efe1cc631d5d2c2baa254f5895f8533f36382bc25b0f8"
+    },
+    {
+      "path": "updates/2026-08-14/SESSION_SNAPSHOT.md",
+      "bytes": 1414,
+      "sha256": "9075eeb7ef51d82d63041283c48a47da4074f42b3a2053b2a23bb37b1c5e93d0"
+    }
+  ]
+}
