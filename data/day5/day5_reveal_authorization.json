@@ -1,0 +1,13 @@
+{
+  "day4_statistical_logic_sha256": "bcea297f43603316d4d3bc5fef9762bc2749eaddf36a3253222af66e8f132615",
+  "evaluator_sha256": "ecc92fb08bbf18781b88a24ba44a2d2c152eb9ac2d8d62d582606b5091f73ac4",
+  "event_review_consensus_sha256": "aef9a7d0e5fc89ef9e6d019f0ea0f1f09495089fcad74590e4747b4e27c2902b",
+  "preregistration_sha256": "909b4068e335cedbe1c819ed47c0e35ffbd6f0ebc9b8bd89ad8f99365a39f1fb",
+  "reveal_authorized": true,
+  "revealed_outcomes_sha256": "24b8b38d214580a17ea6ba6b1d2a2666d422f65d0d3f6a6bca3bd2bc5cae20ee",
+  "sample_freeze_commit": "f7ee622aa256dd4ba136dc8de2b477076d8a0229",
+  "strict_included_sample_sha256": "a42c462a83d960ed241fc48d91b89035a7cd0be44aeca0dcac5d20453b5719dd",
+  "structural_mapping_consensus_sha256": "44cacbe1fd93b030a51e1e4a9bac270c746a0baef6558372fab384221a50365e",
+  "structural_mapping_freeze_commit": "a94cf7159bea7465990ff1c7b3d390e56aa74c68",
+  "supporting_included_sample_sha256": "d4890bcbce1f8880cb56ca9ffe86071d3514064d4ff8488c685ef5f3cb62b50f"
+}

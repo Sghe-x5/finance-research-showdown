@@ -99,7 +99,10 @@ def test_opaque_evidence_ids_are_non_navigable_and_unique():
     assert all(re.fullmatch(r"EVID_[0-9a-f]{28}", row["target_prior_evidence_id"]) for row in packet)
 
 
-def test_no_day5_numeric_result_or_tag_created():
-    assert not (ROOT / "data/day5/day5_replication_results.json").exists()
+def test_later_numeric_result_has_separate_authorization_and_no_tag():
+    result = ROOT / "data/day5/day5_replication_results.json"
+    if result.exists():
+        assert (ROOT / "data/day5/day5_reveal_authorization.json").exists()
+        assert (ROOT / "data/day5/day5_structural_mapping_freeze.json").exists()
     tags = subprocess.check_output(["git", "tag", "--list", "*day5*"], cwd=ROOT, text=True)
     assert tags.strip() == ""

@@ -410,7 +410,12 @@ def test_day4_evaluator_hash_and_git_boundaries():
     assert meta["results_tag_authorized"] is False
     assert Path("data/day4/confirmatory_sample_freeze.json").exists()
     tags = subprocess.check_output(["git", "tag", "--list"], text=True).splitlines()
-    assert not any("day4" in tag.lower() for tag in tags)
+    day4_tags = [tag for tag in tags if "day4" in tag.lower()]
+    assert day4_tags == ["shadownav-day4-confirmatory-2026-08-15"]
+    target = subprocess.check_output(
+        ["git", "rev-parse", f"{day4_tags[0]}^{{}}"], text=True
+    ).strip()
+    assert target == "fc4a874f7ca26aff364557c73f2b6765a8b7b2f7"
 
 
 def test_phase_b_freeze_materializes_exact_consensus_sample_and_hashes():

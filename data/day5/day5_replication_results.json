@@ -1,0 +1,48 @@
+{
+  "primary_status_determined_only_by_strict": true,
+  "primary_strict": {
+    "attrition_flow": {
+      "continuing": 14,
+      "full_repayment": 0,
+      "partial_repayment": 0,
+      "refinancing_amendment": 0,
+      "sale_exit": 0,
+      "uncertain": 1,
+      "unmatched_disappearance": 16
+    },
+    "continuing_rows_missing_marks": 2,
+    "continuing_rows_with_complete_marks": 12,
+    "independent_continuing_clusters_with_complete_marks": 12,
+    "marks_imputed_or_rows_replaced": false,
+    "primary_test_run": false,
+    "status": "data_quality_inconclusive"
+  },
+  "secondary_supporting": {
+    "attrition_flow": {
+      "continuing": 47,
+      "full_repayment": 0,
+      "partial_repayment": 0,
+      "refinancing_amendment": 1,
+      "sale_exit": 0,
+      "uncertain": 2,
+      "unmatched_disappearance": 17
+    },
+    "can_modify_primary_status": false,
+    "continuing_rows_missing_marks": 2,
+    "continuing_rows_with_complete_marks": 45,
+    "data_quality_inconclusive": true,
+    "independent_continuing_clusters_with_complete_marks": 45,
+    "label": "secondary_supporting",
+    "marks_imputed_or_rows_replaced": false,
+    "primary_test_run": false,
+    "six_criteria_all_true": false,
+    "underpowered_for_frozen_procedures": false
+  },
+  "status": "data_quality_inconclusive",
+  "supporting_overlap": {
+    "day4_borrower_overlap_observations": 13,
+    "development_borrower_overlap_observations": 11,
+    "metadata_is_structural_not_an_outcome_filter": true,
+    "observations": 67
+  }
+}

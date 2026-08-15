@@ -199,12 +199,11 @@ def test_evaluator_refuses_structural_label_mismatch(field, changed):
         evaluator.day4.verify_outcomes_match_structural_consensus([outcome], structural)
 
 
-def test_no_day5_freeze_reveal_or_result_artifacts_exist():
+def test_preparation_snapshot_remains_outcome_blind_after_later_phases():
     forbidden = (
         "day5_sample_freeze.json",
         "day5_structural_consensus.csv",
         "day5_revealed_outcomes.csv",
-        "day5_replication_results.json",
     )
     for name in forbidden:
         assert not (ROOT / "data/day5" / name).exists()

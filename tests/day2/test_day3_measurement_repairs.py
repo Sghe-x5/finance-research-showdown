@@ -311,10 +311,11 @@ def test_locked_blind_and_japan_samples_are_byte_identical_to_00ee149():
 
 def test_machine_phase_did_not_create_freeze_reveal_or_results_tag():
     tags = set(subprocess.check_output(["git", "tag", "--list"], text=True).splitlines())
-    assert tags == {
+    assert {
         "showdown-day1-reconciled-2026-08-12",
         "showdown-day2-mechanism-2026-08-13",
-    }
+    } <= tags
+    assert not any("day3" in tag.casefold() for tag in tags)
     assert not Path("data/day3/frozen_nowcast_sample_v3.json").exists()
     movement = json.loads(Path("data/day3/movement_power_guard_extended.json").read_text(encoding="utf-8"))
     assert movement["target_current_outcome_used"] is False

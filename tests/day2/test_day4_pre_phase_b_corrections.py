@@ -267,4 +267,6 @@ def test_current_consensus_distribution_and_duplicate_vote_outputs_are_locked():
 def test_no_phase_b_freeze_or_target_current_output_was_created():
     assert not Path("data/day4/frozen_confirmatory_sample.json").exists()
     assert not Path("data/day4/confirmatory_structural_review.csv").exists()
-    assert not Path("data/day4/revealed_confirmatory_outcomes.csv").exists()
+    if Path("data/day4/revealed_confirmatory_outcomes.csv").exists():
+        assert Path("data/day4/confirmatory_sample_freeze.json").exists()
+        assert Path("data/day4/structural_mapping_freeze.json").exists()
