@@ -1,0 +1,39 @@
+{
+  "consensus_origin_counts": {
+    "independent_reviewer_agreement": 64,
+    "outcome_blind_adjudication": 3
+  },
+  "consensus_sha256": "44cacbe1fd93b030a51e1e4a9bac270c746a0baef6558372fab384221a50365e",
+  "human_labels_modified": false,
+  "numeric_outcomes_accessed": false,
+  "phase": "Day 5 Phase C outcome-blind structural consensus",
+  "reviewer_file_sha256": {
+    "adjudicator_k": "6bdb2fff24719d019b615d9946347dadd896f5342ecbf53228d480e68ed6a60e",
+    "reviewer_i": "4052ac40e9143cf4049427baca5820dd447ba673008415d3d18b45d2fe84d505",
+    "reviewer_j": "ede4f83d07d9a4706f7a8e17873777ba2afb7149bc3f65b1de7274ce819fa8d7"
+  },
+  "strict": {
+    "continuing_observations": 14,
+    "continuing_source_event_clusters": 14,
+    "continuing_unique_borrowers": 10,
+    "observations": 31,
+    "position_status_counts": {
+      "continuing": 14,
+      "uncertain": 1,
+      "unmatched_disappearance": 16
+    }
+  },
+  "supplied_consensus_audit_sha256": "9419d0039a689d7ff8a4847f099ff72232bc1d69222c345d71751a003909c77f",
+  "supporting": {
+    "continuing_observations": 47,
+    "continuing_source_event_clusters": 47,
+    "continuing_unique_borrowers": 24,
+    "observations": 67,
+    "position_status_counts": {
+      "continuing": 47,
+      "refinancing_amendment": 1,
+      "uncertain": 2,
+      "unmatched_disappearance": 17
+    }
+  }
+}
