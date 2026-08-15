@@ -1,0 +1,1462 @@
+{
+  "analysis_label": "POST_REVEAL_EXPLORATORY_COMPLETE_CASE_SUPPORTING",
+  "cannot_change_official_day5_status": true,
+  "frozen_day4_logic_sha256": "bcea297f43603316d4d3bc5fef9762bc2749eaddf36a3253222af66e8f132615",
+  "no_additional_filtering_or_tuning": true,
+  "official_day5_status": "data_quality_inconclusive",
+  "primary_strict_complete_case": {
+    "cannot_change_official_day5_status": true,
+    "concentration": {
+      "borrower": {
+        "group_count": 8,
+        "groups": {
+          "idera": {
+            "absolute_group_contribution_share": 0.21560540431271563,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.01575622271818182,
+            "mean_paired_difference": 0.055907566200000036,
+            "signed_sum": 0.055907566200000036
+          },
+          "lab logistics": {
+            "absolute_group_contribution_share": 0.0414673333930526,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.019861211627272734,
+            "mean_paired_difference": 0.010752688199999971,
+            "signed_sum": 0.010752688199999971
+          },
+          "lift brands a": {
+            "absolute_group_contribution_share": 0.06923413009883408,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.021127325779999994,
+            "mean_paired_difference": 0.008976379150000047,
+            "signed_sum": 0.017952758300000093
+          },
+          "lift brands b": {
+            "absolute_group_contribution_share": 0.23582853405925605,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.016807449060000014,
+            "mean_paired_difference": 0.030575762749999957,
+            "signed_sum": 0.061151525499999915
+          },
+          "opco borrower": {
+            "absolute_group_contribution_share": 0.32764501113998307,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.013115092372727262,
+            "mean_paired_difference": 0.08496000000000015,
+            "signed_sum": 0.08496000000000015
+          },
+          "perkinelmer u s": {
+            "absolute_group_contribution_share": 0.019322909652585773,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.020383226218181824,
+            "mean_paired_difference": 0.005010527699999989,
+            "signed_sum": 0.005010527699999989
+          },
+          "statinmed": {
+            "absolute_group_contribution_share": 0.057999290262133255,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.02220595671818182,
+            "mean_paired_difference": -0.015039507799999963,
+            "signed_sum": -0.015039507799999963
+          },
+          "triplepoint acquisition": {
+            "absolute_group_contribution_share": 0.03289738708143955,
+            "clusters": 3,
+            "leave_group_out_mean_paired_difference": 0.0245217286777778,
+            "mean_paired_difference": 0.0028434859999999507,
+            "signed_sum": 0.008530457999999852
+          }
+        },
+        "largest_absolute_contribution_share": 0.32764501113998307,
+        "largest_absolute_contributor": "opco borrower",
+        "leave_one_group_out_all_negative": false,
+        "leave_one_group_out_max": 0.0245217286777778,
+        "leave_one_group_out_min": 0.013115092372727262,
+        "overall_mean_paired_difference": 0.019102168008333337
+      },
+      "fund_pair": {
+        "group_count": 7,
+        "groups": {
+          "CIK1869453\u2192MSDL": {
+            "absolute_group_contribution_share": 0.021612513451623166,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.020383226218181824,
+            "mean_paired_difference": 0.005010527699999989,
+            "signed_sum": 0.005010527699999989
+          },
+          "CIK1901037\u2192WHF": {
+            "absolute_group_contribution_share": 0.002812585319594705,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.020898006418181826,
+            "mean_paired_difference": -0.0006520545000000544,
+            "signed_sum": -0.0006520545000000544
+          },
+          "CION\u2192CSWC": {
+            "absolute_group_contribution_share": 0.30159649216521045,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.015930552389999984,
+            "mean_paired_difference": 0.03496024610000009,
+            "signed_sum": 0.06992049220000018
+          },
+          "CSWC\u2192WHF": {
+            "absolute_group_contribution_share": 0.38759091503917437,
+            "clusters": 5,
+            "leave_group_out_mean_paired_difference": 0.01990986344285715,
+            "mean_paired_difference": 0.017971394399999997,
+            "signed_sum": 0.08985697199999998
+          },
+          "OFS\u2192MSDL": {
+            "absolute_group_contribution_share": 0.2411528483407079,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.01575622271818182,
+            "mean_paired_difference": 0.055907566200000036,
+            "signed_sum": 0.055907566200000036
+          },
+          "SCM\u2192WHF": {
+            "absolute_group_contribution_share": 0.0028133035041264264,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.020898021554545464,
+            "mean_paired_difference": -0.0006522210000000639,
+            "signed_sum": -0.0006522210000000639
+          },
+          "WHF\u2192SCM": {
+            "absolute_group_contribution_share": 0.042421342179563,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.01994466205454546,
+            "mean_paired_difference": 0.00983473349999997,
+            "signed_sum": 0.00983473349999997
+          }
+        },
+        "largest_absolute_contribution_share": 0.38759091503917437,
+        "largest_absolute_contributor": "CSWC\u2192WHF",
+        "leave_one_group_out_all_negative": false,
+        "leave_one_group_out_max": 0.020898021554545464,
+        "leave_one_group_out_min": 0.01575622271818182,
+        "overall_mean_paired_difference": 0.019102168008333337
+      },
+      "period": {
+        "group_count": 5,
+        "groups": {
+          "2024Q1": {
+            "absolute_group_contribution_share": 0.3050286062184901,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.015930552389999984,
+            "mean_paired_difference": 0.03496024610000009,
+            "signed_sum": 0.06992049220000018
+          },
+          "2024Q2": {
+            "absolute_group_contribution_share": 0.1761492647605281,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.018884802190000004,
+            "mean_paired_difference": 0.020188997099999995,
+            "signed_sum": 0.04037799419999999
+          },
+          "2024Q3": {
+            "absolute_group_contribution_share": 0.0429040894542684,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.01994466205454546,
+            "mean_paired_difference": 0.00983473349999997,
+            "signed_sum": 0.00983473349999997
+          },
+          "2024Q4": {
+            "absolute_group_contribution_share": 0.21016245502859335,
+            "clusters": 5,
+            "leave_group_out_mean_paired_difference": 0.025864473400000025,
+            "mean_paired_difference": 0.009634940459999974,
+            "signed_sum": 0.04817470229999987
+          },
+          "2025Q1": {
+            "absolute_group_contribution_share": 0.26575558453812004,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.01683079222,
+            "mean_paired_difference": 0.030459046950000013,
+            "signed_sum": 0.060918093900000025
+          }
+        },
+        "largest_absolute_contribution_share": 0.3050286062184901,
+        "largest_absolute_contributor": "2024Q1",
+        "leave_one_group_out_all_negative": false,
+        "leave_one_group_out_max": 0.025864473400000025,
+        "leave_one_group_out_min": 0.015930552389999984,
+        "overall_mean_paired_difference": 0.019102168008333337
+      }
+    },
+    "frozen_day4_core_output": {
+      "attrition_flow": {
+        "continuing": 12,
+        "full_repayment": 0,
+        "partial_repayment": 0,
+        "refinancing_amendment": 0,
+        "sale_exit": 0,
+        "uncertain": 0,
+        "unmatched_disappearance": 0
+      },
+      "continuing_rows_missing_marks": 0,
+      "independent_continuing_clusters": 12,
+      "leave_one_borrower_out": {
+        "idera": 0.01575622271818182,
+        "lab logistics": 0.019861211627272734,
+        "lift brands a": 0.021127325779999994,
+        "lift brands b": 0.016807449060000014,
+        "opco borrower": 0.013115092372727262,
+        "perkinelmer u s": 0.020383226218181824,
+        "statinmed": 0.02220595671818182,
+        "triplepoint acquisition": 0.0245217286777778
+      },
+      "minimum_continuing_source_event_clusters": 25,
+      "minimum_unique_continuing_borrowers": 15,
+      "period_direction": {
+        "negative_periods": 0,
+        "period_mean_differences": {
+          "2024Q1": 0.03496024610000009,
+          "2024Q2": 0.020188997099999995,
+          "2024Q3": 0.00983473349999997,
+          "2024Q4": 0.009634940459999974,
+          "2025Q1": 0.030459046950000013
+        },
+        "represented_periods": 5,
+        "strict_majority_negative": false
+      },
+      "power_guard": {
+        "failure_reasons": [
+          "fewer_than_25_continuing_source_event_clusters",
+          "fewer_than_15_unique_continuing_borrowers"
+        ],
+        "independent_continuing_source_event_clusters": 12,
+        "maximum_clusters_from_one_borrower": 3,
+        "minimum_continuing_source_event_clusters": 25,
+        "minimum_unique_continuing_borrowers": 15,
+        "status": "underpowered_inconclusive",
+        "underpowered": true,
+        "unique_continuing_borrowers": 8
+      },
+      "primary": {
+        "borrower_cluster_bootstrap_95": {
+          "lower": 0.004622970258823496,
+          "upper": 0.03997554023400002
+        },
+        "borrower_clustered_one_sided_sign_flip_permutation_p": 0.979980200197998,
+        "cluster_level_mae_b0": 0.01529400557500001,
+        "cluster_level_mae_sn": 0.03439617358333335,
+        "criteria": {
+          "borrower_bootstrap_interval_below_zero": false,
+          "borrower_clustered_one_sided_sign_flip_permutation_p_lt_0_05": false,
+          "cluster_mae_sn_below_b0": false,
+          "leave_one_borrower_out_direction_robust": false,
+          "relative_mae_improvement_ge_10pct": false,
+          "strict_majority_periods_negative": false
+        },
+        "mean_paired_error_difference": 0.019102168008333337,
+        "relative_mae_improvement": -1.2489970606234282
+      },
+      "secondary": {
+        "by_period": {
+          "2024Q1": {
+            "fraction_improved": 0.5,
+            "mae_b0": 0.08035714285000001,
+            "mae_sn": 0.1153173889500001,
+            "median_absolute_error_b0": 0.08035714285000001,
+            "median_absolute_error_sn": 0.1153173889500001,
+            "observations": 2
+          },
+          "2024Q2": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.0,
+            "mae_sn": 0.020188997099999995,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.020188997099999995,
+            "observations": 2
+          },
+          "2024Q3": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.00024920039999998256,
+            "mae_sn": 0.010083933899999953,
+            "median_absolute_error_b0": 0.00024920039999998256,
+            "median_absolute_error_sn": 0.010083933899999953,
+            "observations": 1
+          },
+          "2024Q4": {
+            "fraction_improved": 0.4,
+            "mae_b0": 0.0031304276800000253,
+            "mae_sn": 0.01276536814,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.007785022400000008,
+            "observations": 5
+          },
+          "2025Q1": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.003456221199999998,
+            "mae_sn": 0.03391526815000001,
+            "median_absolute_error_b0": 0.003456221199999998,
+            "median_absolute_error_sn": 0.03391526815000001,
+            "observations": 2
+          }
+        },
+        "by_reporting_window": {
+          "gt_2_le_5_days": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.007826069200000063,
+            "mae_sn": 0.007173848199999999,
+            "median_absolute_error_b0": 0.007826069200000063,
+            "median_absolute_error_sn": 0.007173848199999999,
+            "observations": 1
+          },
+          "gt_5_days": {
+            "fraction_improved": 0.16666666666666666,
+            "mae_b0": 0.026785714283333335,
+            "mae_sn": 0.05600355365000004,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.043424416700000024,
+            "observations": 6
+          },
+          "le_2_days": {
+            "fraction_improved": 0.2,
+            "mae_b0": 0.0029975424000000086,
+            "mae_sn": 0.013911782579999987,
+            "median_absolute_error_b0": 0.00024920039999998256,
+            "median_absolute_error_sn": 0.010167735900000086,
+            "observations": 5
+          }
+        },
+        "by_source": {
+          "CIK1869453": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.006912442399999996,
+            "mae_sn": 0.011922970099999985,
+            "median_absolute_error_b0": 0.006912442399999996,
+            "median_absolute_error_sn": 0.011922970099999985,
+            "observations": 1
+          },
+          "CIK1901037": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.007826069200000063,
+            "mae_sn": 0.007174014700000009,
+            "median_absolute_error_b0": 0.007826069200000063,
+            "median_absolute_error_sn": 0.007174014700000009,
+            "observations": 1
+          },
+          "CION": {
+            "fraction_improved": 0.5,
+            "mae_b0": 0.08035714285000001,
+            "mae_sn": 0.1153173889500001,
+            "median_absolute_error_b0": 0.08035714285000001,
+            "median_absolute_error_sn": 0.1153173889500001,
+            "observations": 2
+          },
+          "CSWC": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.0,
+            "mae_sn": 0.017971394399999997,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.010752688199999971,
+            "observations": 5
+          },
+          "OFS": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.0,
+            "mae_sn": 0.055907566200000036,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.055907566200000036,
+            "observations": 1
+          },
+          "SCM": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.007826069200000063,
+            "mae_sn": 0.007173848199999999,
+            "median_absolute_error_b0": 0.007826069200000063,
+            "median_absolute_error_sn": 0.007173848199999999,
+            "observations": 1
+          },
+          "WHF": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.00024920039999998256,
+            "mae_sn": 0.010083933899999953,
+            "median_absolute_error_b0": 0.00024920039999998256,
+            "median_absolute_error_sn": 0.010083933899999953,
+            "observations": 1
+          }
+        },
+        "by_target": {
+          "CSWC": {
+            "fraction_improved": 0.5,
+            "mae_b0": 0.08035714285000001,
+            "mae_sn": 0.1153173889500001,
+            "median_absolute_error_b0": 0.08035714285000001,
+            "median_absolute_error_sn": 0.1153173889500001,
+            "observations": 2
+          },
+          "MSDL": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.003456221199999998,
+            "mae_sn": 0.03391526815000001,
+            "median_absolute_error_b0": 0.003456221199999998,
+            "median_absolute_error_sn": 0.03391526815000001,
+            "observations": 2
+          },
+          "SCM": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.00024920039999998256,
+            "mae_sn": 0.010083933899999953,
+            "median_absolute_error_b0": 0.00024920039999998256,
+            "median_absolute_error_sn": 0.010083933899999953,
+            "observations": 1
+          },
+          "WHF": {
+            "fraction_improved": 0.2857142857142857,
+            "mae_b0": 0.0022360197714285895,
+            "mae_sn": 0.014886404985714283,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.010167735900000086,
+            "observations": 7
+          }
+        },
+        "leave_one_source_out": {
+          "CIK1869453": {
+            "fraction_improved": 0.2727272727272727,
+            "mae_b0": 0.016055965863636376,
+            "mae_sn": 0.0364391920818182,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.010752688199999971,
+            "observations": 11
+          },
+          "CIK1901037": {
+            "fraction_improved": 0.18181818181818182,
+            "mae_b0": 0.015972908881818185,
+            "mae_sn": 0.036870915300000015,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.011922970099999985,
+            "observations": 11
+          },
+          "CION": {
+            "fraction_improved": 0.2,
+            "mae_b0": 0.0022813781200000105,
+            "mae_sn": 0.018211930509999995,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.010460212050000028,
+            "observations": 10
+          },
+          "CSWC": {
+            "fraction_improved": 0.42857142857142855,
+            "mae_b0": 0.026218295271428587,
+            "mae_sn": 0.04612815871428574,
+            "median_absolute_error_b0": 0.006912442399999996,
+            "median_absolute_error_sn": 0.011922970099999985,
+            "observations": 7
+          },
+          "OFS": {
+            "fraction_improved": 0.2727272727272727,
+            "mae_b0": 0.016684369718181827,
+            "mae_sn": 0.03244059243636365,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.010752688199999971,
+            "observations": 11
+          },
+          "SCM": {
+            "fraction_improved": 0.18181818181818182,
+            "mae_b0": 0.015972908881818185,
+            "mae_sn": 0.03687093043636365,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.011922970099999985,
+            "observations": 11
+          },
+          "WHF": {
+            "fraction_improved": 0.2727272727272727,
+            "mae_b0": 0.01666171513636365,
+            "mae_sn": 0.03660637719090911,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.011922970099999985,
+            "observations": 11
+          }
+        },
+        "leave_one_target_out": {
+          "CSWC": {
+            "fraction_improved": 0.2,
+            "mae_b0": 0.0022813781200000105,
+            "mae_sn": 0.018211930509999995,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.010460212050000028,
+            "observations": 10
+          },
+          "MSDL": {
+            "fraction_improved": 0.3,
+            "mae_b0": 0.01766156245000001,
+            "mae_sn": 0.03449235467000002,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.010460212050000028,
+            "observations": 10
+          },
+          "SCM": {
+            "fraction_improved": 0.2727272727272727,
+            "mae_b0": 0.01666171513636365,
+            "mae_sn": 0.03660637719090911,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.011922970099999985,
+            "observations": 11
+          },
+          "WHF": {
+            "fraction_improved": 0.2,
+            "mae_b0": 0.033575185699999996,
+            "mae_sn": 0.061709849620000035,
+            "median_absolute_error_b0": 0.00024920039999998256,
+            "median_absolute_error_sn": 0.055907566200000036,
+            "observations": 5
+          }
+        },
+        "target_observation": {
+          "fraction_improved": 0.25,
+          "mae_b0": 0.01529400557500001,
+          "mae_sn": 0.03439617358333335,
+          "median_absolute_error_b0": 0.0,
+          "median_absolute_error_sn": 0.011337829149999978,
+          "observations": 12
+        }
+      },
+      "status": "underpowered_inconclusive",
+      "unique_continuing_borrowers": 8
+    },
+    "independent_clusters": 12,
+    "label": "POST_REVEAL_EXPLORATORY_STRICT_UNDERPOWERED",
+    "leave_one_borrower_out_all_negative": false,
+    "leave_one_borrower_out_max": 0.0245217286777778,
+    "leave_one_borrower_out_min": 0.013115092372727262,
+    "observations": 12,
+    "unique_borrowers": 8
+  },
+  "protected_input_sha256": {
+    "data/day5/day5_event_review_human_consensus.csv": "aef9a7d0e5fc89ef9e6d019f0ea0f1f09495089fcad74590e4747b4e27c2902b",
+    "data/day5/day5_revealed_replication_outcomes.csv": "24b8b38d214580a17ea6ba6b1d2a2666d422f65d0d3f6a6bca3bd2bc5cae20ee",
+    "data/day5/day5_strict_included_sample.csv": "a42c462a83d960ed241fc48d91b89035a7cd0be44aeca0dcac5d20453b5719dd",
+    "data/day5/day5_structural_mapping_consensus.csv": "44cacbe1fd93b030a51e1e4a9bac270c746a0baef6558372fab384221a50365e",
+    "data/day5/day5_supporting_included_sample.csv": "d4890bcbce1f8880cb56ca9ffe86071d3514064d4ff8488c685ef5f3cb62b50f",
+    "docs/research/DAY5_REPLICATION_PREREGISTRATION.md": "909b4068e335cedbe1c819ed47c0e35ffbd6f0ebc9b8bd89ad8f99365a39f1fb"
+  },
+  "secondary_supporting_complete_case": {
+    "cannot_change_official_day5_status": true,
+    "concentration": {
+      "borrower": {
+        "group_count": 22,
+        "groups": {
+          "asurion": {
+            "absolute_group_contribution_share": 0.12073223645764557,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.007322582390697669,
+            "mean_paired_difference": -0.033842666650000075,
+            "signed_sum": -0.06768533330000015
+          },
+          "community brands parentco": {
+            "absolute_group_contribution_share": 0.01269957867282584,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.005582930855813948,
+            "mean_paired_difference": 0.003559841349999926,
+            "signed_sum": 0.007119682699999852
+          },
+          "connectwise": {
+            "absolute_group_contribution_share": 0.010364924459818656,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005749921138636354,
+            "mean_paired_difference": -0.005810820599999933,
+            "signed_sum": -0.005810820599999933
+          },
+          "greenway health": {
+            "absolute_group_contribution_share": 0.00019182409070171372,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005615412918181809,
+            "mean_paired_difference": 0.00010754109999999706,
+            "signed_sum": 0.00010754109999999706
+          },
+          "hyland software": {
+            "absolute_group_contribution_share": 0.052371676927308,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.00506569569302325,
+            "mean_paired_difference": 0.01468039734999993,
+            "signed_sum": 0.02936079469999986
+          },
+          "idera": {
+            "absolute_group_contribution_share": 0.09972390137037063,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.004347230529545445,
+            "mean_paired_difference": 0.055907566200000036,
+            "signed_sum": 0.055907566200000036
+          },
+          "kaseya": {
+            "absolute_group_contribution_share": 0.011463289870060388,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005763915899999989,
+            "mean_paired_difference": -0.006426590099999907,
+            "signed_sum": -0.006426590099999907
+          },
+          "lab logistics": {
+            "absolute_group_contribution_share": 0.01917987296544389,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005373477756818174,
+            "mean_paired_difference": 0.010752688199999971,
+            "signed_sum": 0.010752688199999971
+          },
+          "lift brands a": {
+            "absolute_group_contribution_share": 0.03202284090905948,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.0053309988651162685,
+            "mean_paired_difference": 0.008976379150000047,
+            "signed_sum": 0.017952758300000093
+          },
+          "lift brands b": {
+            "absolute_group_contribution_share": 0.10907769935457666,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.004326376372093017,
+            "mean_paired_difference": 0.030575762749999957,
+            "signed_sum": 0.061151525499999915
+          },
+          "logrhythm": {
+            "absolute_group_contribution_share": 0.019979796035530538,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005363285581818175,
+            "mean_paired_difference": 0.011201143899999932,
+            "signed_sum": 0.011201143899999932
+          },
+          "m2s intermediate": {
+            "absolute_group_contribution_share": 0.02823788047818234,
+            "clusters": 3,
+            "leave_group_out_mean_paired_difference": 0.005508449740476177,
+            "mean_paired_difference": 0.005276940133333389,
+            "signed_sum": 0.015830820400000167
+          },
+          "nellson nutraceutical": {
+            "absolute_group_contribution_share": 0.026803140677776418,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.005399052046511616,
+            "mean_paired_difference": 0.007513235750000069,
+            "signed_sum": 0.015026471500000138
+          },
+          "opco borrower": {
+            "absolute_group_contribution_share": 0.15154554627038472,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.0036869479431818064,
+            "mean_paired_difference": 0.08496000000000015,
+            "signed_sum": 0.08496000000000015
+          },
+          "perkinelmer u s": {
+            "absolute_group_contribution_share": 0.01786110992276656,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.005515636067441852,
+            "mean_paired_difference": 0.005006679299999983,
+            "signed_sum": 0.010013358599999966
+          },
+          "petvet care centers": {
+            "absolute_group_contribution_share": 0.05303912357561786,
+            "clusters": 6,
+            "leave_group_out_mean_paired_difference": 0.005575659705128197,
+            "mean_paired_difference": 0.004955830166666657,
+            "signed_sum": 0.029734980999999938
+          },
+          "pye barker fire and safety": {
+            "absolute_group_contribution_share": 0.08250604842293058,
+            "clusters": 3,
+            "leave_group_out_mean_paired_difference": 0.0047840684976190396,
+            "mean_paired_difference": 0.015418277533333321,
+            "signed_sum": 0.04625483259999996
+          },
+          "realpage": {
+            "absolute_group_contribution_share": 0.09175712399840462,
+            "clusters": 6,
+            "leave_group_out_mean_paired_difference": 0.007657100328205128,
+            "mean_paired_difference": -0.008573533883333392,
+            "signed_sum": -0.05144120330000035
+          },
+          "statinmed": {
+            "absolute_group_contribution_share": 0.02682639389346401,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005959664029545445,
+            "mean_paired_difference": -0.015039507799999963,
+            "signed_sum": -0.015039507799999963
+          },
+          "storable": {
+            "absolute_group_contribution_share": 0.0072536681740833645,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.00571027924090908,
+            "mean_paired_difference": -0.004066577099999913,
+            "signed_sum": -0.004066577099999913
+          },
+          "triplepoint acquisition": {
+            "absolute_group_contribution_share": 0.0152160183327042,
+            "clusters": 3,
+            "leave_group_out_mean_paired_difference": 0.005682267892857138,
+            "mean_paired_difference": 0.0028434859999999507,
+            "signed_sum": 0.008530457999999852
+          },
+          "xplor t1": {
+            "absolute_group_contribution_share": 0.011146305140343973,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005759877056818173,
+            "mean_paired_difference": -0.006248880999999984,
+            "signed_sum": -0.006248880999999984
+          }
+        },
+        "largest_absolute_contribution_share": 0.15154554627038472,
+        "largest_absolute_contributor": "opco borrower",
+        "leave_one_group_out_all_negative": false,
+        "leave_one_group_out_max": 0.007657100328205128,
+        "leave_one_group_out_min": 0.0036869479431818064,
+        "overall_mean_paired_difference": 0.0054930157666666585
+      },
+      "fund_pair": {
+        "group_count": 18,
+        "groups": {
+          "ARCC\u2192OTF": {
+            "absolute_group_contribution_share": 0.09088383014041701,
+            "clusters": 5,
+            "leave_group_out_mean_paired_difference": 0.005065123164999991,
+            "mean_paired_difference": 0.008916156580000001,
+            "signed_sum": 0.044580782900000004
+          },
+          "ASIF\u2192OTF": {
+            "absolute_group_contribution_share": 0.11466606521899467,
+            "clusters": 7,
+            "leave_group_out_mean_paired_difference": 0.005024714415789476,
+            "mean_paired_difference": 0.008035223099999933,
+            "signed_sum": 0.05624656169999953
+          },
+          "CIK1661306\u2192OTF": {
+            "absolute_group_contribution_share": 0.13798551605594894,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.007322582390697669,
+            "mean_paired_difference": -0.033842666650000075,
+            "signed_sum": -0.06768533330000015
+          },
+          "CIK1766037\u2192OTF": {
+            "absolute_group_contribution_share": 0.026779293454492255,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005916400456818175,
+            "mean_paired_difference": -0.013135910600000078,
+            "signed_sum": -0.013135910600000078
+          },
+          "CIK1781870\u2192OTF": {
+            "absolute_group_contribution_share": 0.026807314457355035,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.0059167128431818075,
+            "mean_paired_difference": -0.013149655599999921,
+            "signed_sum": -0.013149655599999921
+          },
+          "CIK1869453\u2192MSDL": {
+            "absolute_group_contribution_share": 0.01021462430173368,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005503981404545446,
+            "mean_paired_difference": 0.005010527699999989,
+            "signed_sum": 0.005010527699999989
+          },
+          "CIK1901037\u2192WHF": {
+            "absolute_group_contribution_share": 0.001329299455176223,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005632676454545447,
+            "mean_paired_difference": -0.0006520545000000544,
+            "signed_sum": -0.0006520545000000544
+          },
+          "CIK1925531\u2192OTF": {
+            "absolute_group_contribution_share": 0.026992824912650554,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.00591878096818181,
+            "mean_paired_difference": -0.0132406531,
+            "signed_sum": -0.0132406531
+          },
+          "CIK1976719\u2192OTF": {
+            "absolute_group_contribution_share": 0.026815709953462295,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.0059168064386363566,
+            "mean_paired_difference": -0.013153773800000046,
+            "signed_sum": -0.013153773800000046
+          },
+          "CION\u2192CSWC": {
+            "absolute_group_contribution_share": 0.14254218349402673,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.0041224469139534755,
+            "mean_paired_difference": 0.03496024610000009,
+            "signed_sum": 0.06992049220000018
+          },
+          "CSWC\u2192WHF": {
+            "absolute_group_contribution_share": 0.1831853379178813,
+            "clusters": 5,
+            "leave_group_out_mean_paired_difference": 0.003933218437499992,
+            "mean_paired_difference": 0.017971394399999997,
+            "signed_sum": 0.08985697199999998
+          },
+          "NMFC\u2192OTF": {
+            "absolute_group_contribution_share": 0.0033383674418967853,
+            "clusters": 9,
+            "leave_group_out_mean_paired_difference": 0.006820782141666658,
+            "mean_paired_difference": 0.0001819502666666627,
+            "signed_sum": 0.0016375523999999642
+          },
+          "OBDC\u2192MSDL": {
+            "absolute_group_contribution_share": 0.030633452231630273,
+            "clusters": 2,
+            "leave_group_out_mean_paired_difference": 0.005399052046511616,
+            "mean_paired_difference": 0.007513235750000069,
+            "signed_sum": 0.015026471500000138
+          },
+          "OCIC\u2192MSDL": {
+            "absolute_group_contribution_share": 0.010198933355583296,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005504156331818174,
+            "mean_paired_difference": 0.005002830899999977,
+            "signed_sum": 0.005002830899999977
+          },
+          "OCSL\u2192WHF": {
+            "absolute_group_contribution_share": 0.032273223990803075,
+            "clusters": 3,
+            "leave_group_out_mean_paired_difference": 0.005508449740476177,
+            "mean_paired_difference": 0.005276940133333389,
+            "signed_sum": 0.015830820400000167
+          },
+          "OFS\u2192MSDL": {
+            "absolute_group_contribution_share": 0.11397497799629092,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.004347230529545445,
+            "mean_paired_difference": 0.055907566200000036,
+            "signed_sum": 0.055907566200000036
+          },
+          "SCM\u2192WHF": {
+            "absolute_group_contribution_share": 0.0013296388874772032,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.0056326802386363565,
+            "mean_paired_difference": -0.0006522210000000639,
+            "signed_sum": -0.0006522210000000639
+          },
+          "WHF\u2192SCM": {
+            "absolute_group_contribution_share": 0.020049406734179764,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.0053943403636363555,
+            "mean_paired_difference": 0.00983473349999997,
+            "signed_sum": 0.00983473349999997
+          }
+        },
+        "largest_absolute_contribution_share": 0.1831853379178813,
+        "largest_absolute_contributor": "CSWC\u2192WHF",
+        "leave_one_group_out_all_negative": false,
+        "leave_one_group_out_max": 0.007322582390697669,
+        "leave_one_group_out_min": 0.003933218437499992,
+        "overall_mean_paired_difference": 0.0054930157666666585
+      },
+      "period": {
+        "group_count": 7,
+        "groups": {
+          "2024Q1": {
+            "absolute_group_contribution_share": 0.3255781484599776,
+            "clusters": 7,
+            "leave_group_out_mean_paired_difference": 0.0037005383736842022,
+            "mean_paired_difference": 0.01522360732857142,
+            "signed_sum": 0.10656525129999994
+          },
+          "2024Q2": {
+            "absolute_group_contribution_share": 0.16509978808317533,
+            "clusters": 4,
+            "leave_group_out_mean_paired_difference": 0.00471089663902438,
+            "mean_paired_difference": 0.013509736825000007,
+            "signed_sum": 0.05403894730000003
+          },
+          "2024Q3": {
+            "absolute_group_contribution_share": 0.12239911864790104,
+            "clusters": 10,
+            "leave_group_out_mean_paired_difference": 0.00820709330285714,
+            "mean_paired_difference": -0.004006255610000032,
+            "signed_sum": -0.04006255610000031
+          },
+          "2024Q4": {
+            "absolute_group_contribution_share": 0.13782234808400692,
+            "clusters": 11,
+            "leave_group_out_mean_paired_difference": 0.005943381279411761,
+            "mean_paired_difference": 0.004100976909090887,
+            "signed_sum": 0.04511074599999976
+          },
+          "2025Q1": {
+            "absolute_group_contribution_share": 0.084557718123256,
+            "clusters": 5,
+            "leave_group_out_mean_paired_difference": 0.005487726332499993,
+            "mean_paired_difference": 0.005535331239999985,
+            "signed_sum": 0.027676656199999927
+          },
+          "2025Q2": {
+            "absolute_group_contribution_share": 0.11759400651677333,
+            "clusters": 7,
+            "leave_group_out_mean_paired_difference": 0.00549199785789472,
+            "mean_paired_difference": 0.005498541557142895,
+            "signed_sum": 0.038489790900000265
+          },
+          "2026Q1": {
+            "absolute_group_contribution_share": 0.046948872084909776,
+            "clusters": 1,
+            "leave_group_out_mean_paired_difference": 0.005268609899999991,
+            "mean_paired_difference": 0.015366873900000022,
+            "signed_sum": 0.015366873900000022
+          }
+        },
+        "largest_absolute_contribution_share": 0.3255781484599776,
+        "largest_absolute_contributor": "2024Q1",
+        "leave_one_group_out_all_negative": false,
+        "leave_one_group_out_max": 0.00820709330285714,
+        "leave_one_group_out_min": 0.0037005383736842022,
+        "overall_mean_paired_difference": 0.0054930157666666585
+      }
+    },
+    "frozen_day4_core_output": {
+      "attrition_flow": {
+        "continuing": 45,
+        "full_repayment": 0,
+        "partial_repayment": 0,
+        "refinancing_amendment": 0,
+        "sale_exit": 0,
+        "uncertain": 0,
+        "unmatched_disappearance": 0
+      },
+      "continuing_rows_missing_marks": 0,
+      "independent_continuing_clusters": 45,
+      "leave_one_borrower_out": {
+        "asurion": 0.007322582390697669,
+        "community brands parentco": 0.005582930855813948,
+        "connectwise": 0.005749921138636354,
+        "greenway health": 0.005615412918181809,
+        "hyland software": 0.00506569569302325,
+        "idera": 0.004347230529545445,
+        "kaseya": 0.005763915899999989,
+        "lab logistics": 0.005373477756818174,
+        "lift brands a": 0.0053309988651162685,
+        "lift brands b": 0.004326376372093017,
+        "logrhythm": 0.005363285581818175,
+        "m2s intermediate": 0.005508449740476177,
+        "nellson nutraceutical": 0.005399052046511616,
+        "opco borrower": 0.0036869479431818064,
+        "perkinelmer u s": 0.005515636067441852,
+        "petvet care centers": 0.005575659705128197,
+        "pye barker fire and safety": 0.0047840684976190396,
+        "realpage": 0.007657100328205128,
+        "statinmed": 0.005959664029545445,
+        "storable": 0.00571027924090908,
+        "triplepoint acquisition": 0.005682267892857138,
+        "xplor t1": 0.005759877056818173
+      },
+      "minimum_continuing_source_event_clusters": 25,
+      "minimum_unique_continuing_borrowers": 15,
+      "period_direction": {
+        "negative_periods": 1,
+        "period_mean_differences": {
+          "2024Q1": 0.01522360732857142,
+          "2024Q2": 0.013509736825000007,
+          "2024Q3": -0.004006255610000032,
+          "2024Q4": 0.004100976909090887,
+          "2025Q1": 0.005535331239999985,
+          "2025Q2": 0.005498541557142895,
+          "2026Q1": 0.015366873900000022
+        },
+        "represented_periods": 7,
+        "strict_majority_negative": false
+      },
+      "power_guard": {
+        "failure_reasons": [],
+        "independent_continuing_source_event_clusters": 45,
+        "maximum_clusters_from_one_borrower": 6,
+        "minimum_continuing_source_event_clusters": 25,
+        "minimum_unique_continuing_borrowers": 15,
+        "status": "power_guard_passed",
+        "underpowered": false,
+        "unique_continuing_borrowers": 22
+      },
+      "primary": {
+        "borrower_cluster_bootstrap_95": {
+          "lower": -0.001156068629722242,
+          "upper": 0.01341551780337863
+        },
+        "borrower_clustered_one_sided_sign_flip_permutation_p": 0.9328406715932841,
+        "cluster_level_mae_b0": 0.010383834051111119,
+        "cluster_level_mae_sn": 0.015876849817777778,
+        "criteria": {
+          "borrower_bootstrap_interval_below_zero": false,
+          "borrower_clustered_one_sided_sign_flip_permutation_p_lt_0_05": false,
+          "cluster_mae_sn_below_b0": false,
+          "leave_one_borrower_out_direction_robust": false,
+          "relative_mae_improvement_ge_10pct": false,
+          "strict_majority_periods_negative": false
+        },
+        "mean_paired_error_difference": 0.0054930157666666585,
+        "relative_mae_improvement": -0.5289968752995317
+      },
+      "secondary": {
+        "by_period": {
+          "2024Q1": {
+            "fraction_improved": 0.14285714285714285,
+            "mae_b0": 0.025561490971428586,
+            "mae_sn": 0.0407850983,
+            "median_absolute_error_b0": 0.0024554373999999823,
+            "median_absolute_error_sn": 0.014373089000000006,
+            "observations": 7
+          },
+          "2024Q2": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.004380436074999994,
+            "mae_sn": 0.0178901729,
+            "median_absolute_error_b0": 0.0037615046000000207,
+            "median_absolute_error_sn": 0.015591348700000007,
+            "observations": 4
+          },
+          "2024Q3": {
+            "fraction_improved": 0.7,
+            "mae_b0": 0.008866982640000043,
+            "mae_sn": 0.004860727030000012,
+            "median_absolute_error_b0": 0.012342857149999997,
+            "median_absolute_error_sn": 0.0043681082999998955,
+            "observations": 10
+          },
+          "2024Q4": {
+            "fraction_improved": 0.45454545454545453,
+            "mae_b0": 0.009615764763636368,
+            "mae_sn": 0.013716741672727255,
+            "median_absolute_error_b0": 0.005053735900000023,
+            "median_absolute_error_sn": 0.007785022400000008,
+            "observations": 11
+          },
+          "2025Q1": {
+            "fraction_improved": 0.4,
+            "mae_b0": 0.011263581860000005,
+            "mae_sn": 0.01679891309999999,
+            "median_absolute_error_b0": 0.006912442399999996,
+            "median_absolute_error_sn": 0.011915273299999973,
+            "observations": 5
+          },
+          "2025Q2": {
+            "fraction_improved": 0.42857142857142855,
+            "mae_b0": 0.0028266594714285403,
+            "mae_sn": 0.008325201028571436,
+            "median_absolute_error_b0": 0.0008874983999999086,
+            "median_absolute_error_sn": 0.006390558800000057,
+            "observations": 7
+          },
+          "2026Q1": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.00027258679999997426,
+            "mae_sn": 0.015639460699999996,
+            "median_absolute_error_b0": 0.00027258679999997426,
+            "median_absolute_error_sn": 0.015639460699999996,
+            "observations": 1
+          }
+        },
+        "by_reporting_window": {
+          "gt_2_le_5_days": {
+            "fraction_improved": 0.5555555555555556,
+            "mae_b0": 0.006431485011111102,
+            "mae_sn": 0.00571833433333334,
+            "median_absolute_error_b0": 0.00458727120000002,
+            "median_absolute_error_sn": 0.006390558800000057,
+            "observations": 9
+          },
+          "gt_5_days": {
+            "fraction_improved": 0.34782608695652173,
+            "mae_b0": 0.013931620830434779,
+            "mae_sn": 0.023639292013043465,
+            "median_absolute_error_b0": 0.004992054500000065,
+            "median_absolute_error_sn": 0.010752688199999971,
+            "observations": 23
+          },
+          "le_2_days": {
+            "fraction_improved": 0.38461538461538464,
+            "mae_b0": 0.0068432221615385,
+            "mae_sn": 0.009176116653846168,
+            "median_absolute_error_b0": 0.006912442399999996,
+            "median_absolute_error_sn": 0.010083933899999953,
+            "observations": 13
+          }
+        },
+        "by_source": {
+          "ARCC": {
+            "fraction_improved": 0.4,
+            "mae_b0": 0.007504916599999967,
+            "mae_sn": 0.016421073179999968,
+            "median_absolute_error_b0": 0.004992054500000065,
+            "median_absolute_error_sn": 0.014373089000000006,
+            "observations": 5
+          },
+          "ASIF": {
+            "fraction_improved": 0.2857142857142857,
+            "mae_b0": 0.008006624642857159,
+            "mae_sn": 0.01604184774285709,
+            "median_absolute_error_b0": 0.008304761900000068,
+            "median_absolute_error_sn": 0.01169523809999995,
+            "observations": 7
+          },
+          "CIK1661306": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.03475491549999998,
+            "mae_sn": 0.0009122488499999082,
+            "median_absolute_error_b0": 0.03475491549999998,
+            "median_absolute_error_sn": 0.0009122488499999082,
+            "observations": 2
+          },
+          "CIK1766037": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.014685714300000097,
+            "mae_sn": 0.0015498037000000187,
+            "median_absolute_error_b0": 0.014685714300000097,
+            "median_absolute_error_sn": 0.0015498037000000187,
+            "observations": 1
+          },
+          "CIK1781870": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.014685714300000097,
+            "mae_sn": 0.0015360587000001757,
+            "median_absolute_error_b0": 0.014685714300000097,
+            "median_absolute_error_sn": 0.0015360587000001757,
+            "observations": 1
+          },
+          "CIK1869453": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.006912442399999996,
+            "mae_sn": 0.011922970099999985,
+            "median_absolute_error_b0": 0.006912442399999996,
+            "median_absolute_error_sn": 0.011922970099999985,
+            "observations": 1
+          },
+          "CIK1901037": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.007826069200000063,
+            "mae_sn": 0.007174014700000009,
+            "median_absolute_error_b0": 0.007826069200000063,
+            "median_absolute_error_sn": 0.007174014700000009,
+            "observations": 1
+          },
+          "CIK1925531": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.014685714300000097,
+            "mae_sn": 0.0014450612000000973,
+            "median_absolute_error_b0": 0.014685714300000097,
+            "median_absolute_error_sn": 0.0014450612000000973,
+            "observations": 1
+          },
+          "CIK1976719": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.014685714300000097,
+            "mae_sn": 0.0015319405000000508,
+            "median_absolute_error_b0": 0.014685714300000097,
+            "median_absolute_error_sn": 0.0015319405000000508,
+            "observations": 1
+          },
+          "CION": {
+            "fraction_improved": 0.5,
+            "mae_b0": 0.08035714285000001,
+            "mae_sn": 0.1153173889500001,
+            "median_absolute_error_b0": 0.08035714285000001,
+            "median_absolute_error_sn": 0.1153173889500001,
+            "observations": 2
+          },
+          "CSWC": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.0,
+            "mae_sn": 0.017971394399999997,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.010752688199999971,
+            "observations": 5
+          },
+          "NMFC": {
+            "fraction_improved": 0.4444444444444444,
+            "mae_b0": 0.005421617577777778,
+            "mae_sn": 0.005603567844444441,
+            "median_absolute_error_b0": 0.005911986300000005,
+            "median_absolute_error_sn": 0.006241384500000002,
+            "observations": 9
+          },
+          "OBDC": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.0,
+            "mae_sn": 0.007513235750000069,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.007513235750000069,
+            "observations": 2
+          },
+          "OCIC": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.006912442399999996,
+            "mae_sn": 0.011915273299999973,
+            "median_absolute_error_b0": 0.006912442399999996,
+            "median_absolute_error_sn": 0.011915273299999973,
+            "observations": 1
+          },
+          "OCSL": {
+            "fraction_improved": 0.3333333333333333,
+            "mae_b0": 0.0020712736999999684,
+            "mae_sn": 0.007348213833333357,
+            "median_absolute_error_b0": 0.0008874983999999086,
+            "median_absolute_error_sn": 0.006390558800000057,
+            "observations": 3
+          },
+          "OFS": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.0,
+            "mae_sn": 0.055907566200000036,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.055907566200000036,
+            "observations": 1
+          },
+          "SCM": {
+            "fraction_improved": 1.0,
+            "mae_b0": 0.007826069200000063,
+            "mae_sn": 0.007173848199999999,
+            "median_absolute_error_b0": 0.007826069200000063,
+            "median_absolute_error_sn": 0.007173848199999999,
+            "observations": 1
+          },
+          "WHF": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.00024920039999998256,
+            "mae_sn": 0.010083933899999953,
+            "median_absolute_error_b0": 0.00024920039999998256,
+            "median_absolute_error_sn": 0.010083933899999953,
+            "observations": 1
+          }
+        },
+        "by_target": {
+          "CSWC": {
+            "fraction_improved": 0.5,
+            "mae_b0": 0.08035714285000001,
+            "mae_sn": 0.1153173889500001,
+            "median_absolute_error_b0": 0.08035714285000001,
+            "median_absolute_error_sn": 0.1153173889500001,
+            "observations": 2
+          },
+          "MSDL": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.0027649769599999985,
+            "mae_sn": 0.018954456220000027,
+            "median_absolute_error_b0": 0.0,
+            "median_absolute_error_sn": 0.011915273299999973,
+            "observations": 5
+          },
+          "OTF": {
+            "fraction_improved": 0.5185185185185185,
+            "mae_b0": 0.010022896366666678,
+            "mae_sn": 0.009359917499999985,
+            "median_absolute_error_b0": 0.008304761900000068,
+            "median_absolute_error_sn": 0.006148934599999989,
+            "observations": 27
+          },
+          "SCM": {
+            "fraction_improved": 0.0,
+            "mae_b0": 0.00024920039999998256,
+            "mae_sn": 0.010083933899999953,
+            "median_absolute_error_b0": 0.00024920039999998256,
+            "median_absolute_error_sn": 0.010083933899999953,
+            "observations": 1
+          },
+          "WHF": {
+            "fraction_improved": 0.3,
+            "mae_b0": 0.002186595950000003,
+            "mae_sn": 0.012624947640000005,
+            "median_absolute_error_b0": 0.00013629339999998713,
+            "median_absolute_error_sn": 0.008976379150000047,
+            "observations": 10
+          }
+        },
+        "leave_one_source_out": {
+          "ARCC": {
+            "fraction_improved": 0.4,
+            "mae_b0": 0.010743698732500011,
+            "mae_sn": 0.015808821897500002,
+            "median_absolute_error_b0": 0.005482861100000014,
+            "median_absolute_error_sn": 0.007660143050000012,
+            "observations": 40
+          },
+          "ASIF": {
+            "fraction_improved": 0.42105263157894735,
+            "mae_b0": 0.010821741047368426,
+            "mae_sn": 0.015846455463157903,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.007949980249999933,
+            "observations": 38
+          },
+          "CIK1661306": {
+            "fraction_improved": 0.37209302325581395,
+            "mae_b0": 0.009250295379069776,
+            "mae_sn": 0.016572877769767444,
+            "median_absolute_error_b0": 0.004992054500000065,
+            "median_absolute_error_sn": 0.009985178300000008,
+            "observations": 43
+          },
+          "CIK1766037": {
+            "fraction_improved": 0.38636363636363635,
+            "mae_b0": 0.01028606404545455,
+            "mae_sn": 0.016202464502272727,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.009050058199999933,
+            "observations": 44
+          },
+          "CIK1781870": {
+            "fraction_improved": 0.38636363636363635,
+            "mae_b0": 0.01028606404545455,
+            "mae_sn": 0.016202776888636358,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.009050058199999933,
+            "observations": 44
+          },
+          "CIK1869453": {
+            "fraction_improved": 0.4090909090909091,
+            "mae_b0": 0.010462729315909098,
+            "mae_sn": 0.015966710720454545,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.007949980249999933,
+            "observations": 44
+          },
+          "CIK1901037": {
+            "fraction_improved": 0.38636363636363635,
+            "mae_b0": 0.010441965070454551,
+            "mae_sn": 0.016074641525,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.009050058199999933,
+            "observations": 44
+          },
+          "CIK1925531": {
+            "fraction_improved": 0.38636363636363635,
+            "mae_b0": 0.01028606404545455,
+            "mae_sn": 0.016204845013636362,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.009050058199999933,
+            "observations": 44
+          },
+          "CIK1976719": {
+            "fraction_improved": 0.38636363636363635,
+            "mae_b0": 0.01028606404545455,
+            "mae_sn": 0.016202870484090907,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.009050058199999933,
+            "observations": 44
+          },
+          "CION": {
+            "fraction_improved": 0.3953488372093023,
+            "mae_b0": 0.007129261548837217,
+            "mae_sn": 0.011251708462790692,
+            "median_absolute_error_b0": 0.005053735900000023,
+            "median_absolute_error_sn": 0.007785022400000008,
+            "observations": 43
+          },
+          "CSWC": {
+            "fraction_improved": 0.45,
+            "mae_b0": 0.011681813307500007,
+            "mae_sn": 0.015615031744999999,
+            "median_absolute_error_b0": 0.006912442399999996,
+            "median_absolute_error_sn": 0.007354639200000013,
+            "observations": 40
+          },
+          "NMFC": {
+            "fraction_improved": 0.3888888888888889,
+            "mae_b0": 0.011624388169444453,
+            "mae_sn": 0.01844517031111111,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.01012583490000002,
+            "observations": 36
+          },
+          "OBDC": {
+            "fraction_improved": 0.4186046511627907,
+            "mae_b0": 0.010866803076744194,
+            "mae_sn": 0.01626585512325581,
+            "median_absolute_error_b0": 0.005911986300000005,
+            "median_absolute_error_sn": 0.008114938099999858,
+            "observations": 43
+          },
+          "OCIC": {
+            "fraction_improved": 0.4090909090909091,
+            "mae_b0": 0.010462729315909098,
+            "mae_sn": 0.01596688564772727,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.007949980249999933,
+            "observations": 44
+          },
+          "OCSL": {
+            "fraction_improved": 0.40476190476190477,
+            "mae_b0": 0.010977588361904772,
+            "mae_sn": 0.01648603810238095,
+            "median_absolute_error_b0": 0.006412214350000001,
+            "median_absolute_error_sn": 0.009050058199999933,
+            "observations": 42
+          },
+          "OFS": {
+            "fraction_improved": 0.4090909090909091,
+            "mae_b0": 0.010619830279545462,
+            "mae_sn": 0.014967060809090908,
+            "median_absolute_error_b0": 0.005482861100000014,
+            "median_absolute_error_sn": 0.007949980249999933,
+            "observations": 44
+          },
+          "SCM": {
+            "fraction_improved": 0.38636363636363635,
+            "mae_b0": 0.010441965070454551,
+            "mae_sn": 0.016074645309090908,
+            "median_absolute_error_b0": 0.005022895200000044,
+            "median_absolute_error_sn": 0.009050058199999933,
+            "observations": 44
+          },
+          "WHF": {
+            "fraction_improved": 0.4090909090909091,
+            "mae_b0": 0.010614166634090916,
+            "mae_sn": 0.01600850699772727,
+            "median_absolute_error_b0": 0.005482861100000014,
+            "median_absolute_error_sn": 0.007949980249999933,
+            "observations": 44
+          }
+        },
+        "leave_one_target_out": {
+          "CSWC": {
+            "fraction_improved": 0.3953488372093023,
+            "mae_b0": 0.007129261548837217,
+            "mae_sn": 0.011251708462790692,
+            "median_absolute_error_b0": 0.005053735900000023,
+            "median_absolute_error_sn": 0.007785022400000008,
+            "observations": 43
+          },
+          "MSDL": {
+            "fraction_improved": 0.45,
+            "mae_b0": 0.011336191187500008,
+            "mae_sn": 0.015492149017499995,
+            "median_absolute_error_b0": 0.005482861100000014,
+            "median_absolute_error_sn": 0.007660143050000012,
+            "observations": 40
+          },
+          "OTF": {
+            "fraction_improved": 0.2222222222222222,
+            "mae_b0": 0.01092524057777778,
+            "mae_sn": 0.025652248294444464,
+            "median_absolute_error_b0": 0.00012460019999999128,
+            "median_absolute_error_sn": 0.010460212050000028,
+            "observations": 18
+          },
+          "SCM": {
+            "fraction_improved": 0.4090909090909091,
+            "mae_b0": 0.010614166634090916,
+            "mae_sn": 0.01600850699772727,
+            "median_absolute_error_b0": 0.005482861100000014,
+            "median_absolute_error_sn": 0.007949980249999933,
+            "observations": 44
+          },
+          "WHF": {
+            "fraction_improved": 0.42857142857142855,
+            "mae_b0": 0.012725902080000009,
+            "mae_sn": 0.016805964725714283,
+            "median_absolute_error_b0": 0.006912442399999996,
+            "median_absolute_error_sn": 0.008114938099999858,
+            "observations": 35
+          }
+        },
+        "target_observation": {
+          "fraction_improved": 0.4,
+          "mae_b0": 0.010383834051111119,
+          "mae_sn": 0.015876849817777778,
+          "median_absolute_error_b0": 0.005053735900000023,
+          "median_absolute_error_sn": 0.008114938099999858,
+          "observations": 45
+        }
+      },
+      "status": "exploratory_inconclusive",
+      "unique_continuing_borrowers": 22
+    },
+    "independent_clusters": 45,
+    "label": "POST_REVEAL_EXPLORATORY_COMPLETE_CASE_SUPPORTING",
+    "leave_one_borrower_out_all_negative": false,
+    "leave_one_borrower_out_max": 0.007657100328205128,
+    "leave_one_borrower_out_min": 0.0036869479431818064,
+    "observations": 45,
+    "unique_borrowers": 22
+  },
+  "selection_rule": "frozen membership AND event include=yes AND structural continuing AND all four frozen marks present"
+}
