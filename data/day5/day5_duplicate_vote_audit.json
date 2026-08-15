@@ -1,0 +1,18 @@
+{
+  "blockers": {},
+  "duplicate_identity_count": 0,
+  "identity_definition": [
+    "period_end",
+    "normalized_borrower",
+    "source_ticker",
+    "target_ticker",
+    "source_prior_facility_id",
+    "target_prior_facility_id"
+  ],
+  "identity_set_sha256": "29151cb481af512de2522e91930bd4c4b8555a4f5ddb4cd643158b9acf6805fe",
+  "included_observations_checked": 67,
+  "independent_vote_blocker_count": 0,
+  "status": "pass_no_duplicate_independent_vote",
+  "target_current_data_used": false,
+  "unique_duplicate_vote_identities": 67
+}

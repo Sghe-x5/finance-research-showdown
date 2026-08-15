@@ -1,0 +1,76 @@
+review_observation_id,source_event_cluster_id,period_end,report_period_label,normalized_borrower,source_ticker,target_ticker,pre_review_layer,human_include_for_replication,included_in_strict_sample,included_in_supporting_sample,retained_in_audit_denominator
+D5EV_d57ac7fd49b33f3394c88abc,D5EC_8c85826ce74d7f7af8420baf,2024-03-31,2024Q1,allen media,OFS,CION,strict,yes,True,True,True
+D5EV_f2bba31f83c7353b48576093,D5EC_d14c24de438d18275de4f4c3,2024-03-31,2024Q1,community brands parentco,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_80555cb61852d9d01a224395,D5EC_75320544e11a7f36b98026a6,2024-03-31,2024Q1,diligent,NMFC,OTF,supporting_only,uncertain,False,False,True
+D5EV_7c83982d1c79c64ac8affcb2,D5EC_b94b2012498895e5f2f778fd,2024-03-31,2024Q1,greenway health,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_0473fd1e79b97a345afb4fa5,D5EC_4ba8b635e3a54b1f5a5abab1,2024-03-31,2024Q1,hyland software,ARCC,OTF,supporting_only,yes,False,True,True
+D5EV_8ecf2aee1046f6fd7cced1b0,D5EC_9f9ebd17f4ff9e58c37206f4,2024-03-31,2024Q1,hyland software,ASIF,OTF,supporting_only,yes,False,True,True
+D5EV_6d74b1708e4e037b70790a05,D5EC_2826bf36875c4239e1d0b93a,2024-03-31,2024Q1,jp intermediate b,OFS,CION,strict,yes,True,True,True
+D5EV_0bf02eb5470056c7faa366b3,D5EC_c81aa886820df53368cc5bfd,2024-03-31,2024Q1,opco borrower,CION,CSWC,strict,yes,True,True,True
+D5EV_e669e9146b91bd3683498ae2,D5EC_3ba60992f749801e08ded97d,2024-03-31,2024Q1,realpage,ASIF,OTF,supporting_only,yes,False,True,True
+D5EV_56f5e033119fc6f7710f17e4,D5EC_c01d8f9d2b4b0baaacbaae48,2024-03-31,2024Q1,snap fitness a stock,WHF,CION,strict,yes,True,True,True
+D5EV_63ea16f00e9832bb6f6890a7,D5EC_1536e72484b100d474c9c517,2024-03-31,2024Q1,statinmed,CION,CSWC,strict,yes,True,True,True
+D5EV_569cd152db6e30a43d2ab998,D5EC_8697acaad0cd9c0c406dd8dc,2024-06-30,2024Q2,allen media,OFS,CION,strict,yes,True,True,True
+D5EV_deab4cbeab2e294dcf2d44e2,D5EC_f36d7a6823f20664245db17b,2024-06-30,2024Q2,community brands parentco,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_7b9a3eb8893e474f29a2a17c,D5EC_be5f932c2c95a41f48c0c341,2024-06-30,2024Q2,inw manufacturing,CSWC,CION,strict,yes,True,True,True
+D5EV_4e71db62dd760aa9577c481e,D5EC_7c9e8a416e6aac97106a086e,2024-06-30,2024Q2,lift brands a,CSWC,WHF,strict,yes,True,True,True
+D5EV_5e8755cc94dc4d48778758fd,D5EC_91c4bd3c4b21578fef61cf44,2024-06-30,2024Q2,lift brands b,CSWC,WHF,strict,yes,True,True,True
+D5EV_0e8e49fa34bce6522ebdf311,D5EC_ee20e041c64ff093603d0786,2024-06-30,2024Q2,petvet care centers,ARCC,OTF,supporting_only,yes,False,True,True
+D5EV_210d833e27e3a4b2bc514032,D5EC_abc2fffd1932452d417bdd7c,2024-06-30,2024Q2,statinmed,CSWC,CION,strict,yes,True,True,True
+D5EV_84d045c1c425e93bbf4e15ca,D5EC_e4360b224ff42b11714a8d09,2024-09-30,2024Q3,allen media,OFS,CION,strict,yes,True,True,True
+D5EV_21b6416a1dc96643d30b94c0,D5EC_b6a00626561f722303122990,2024-09-30,2024Q3,avenue food and provisions,ASIF,GLAD,supporting_only,uncertain,False,False,True
+D5EV_528e28cd9f932f606a886dfc,D5EC_02533430c56efca24fe1b5ab,2024-09-30,2024Q3,isagenix international,CSWC,CION,strict,yes,True,True,True
+D5EV_96fd27c17c4971c1b3c580e0,D5EC_418b1e0127c211fda3c9630e,2024-09-30,2024Q3,jp intermediate b,OFS,CION,strict,yes,True,True,True
+D5EV_8db09e90c91ed9cfa2d63914,D5EC_f7de0219c42bf43e6527653a,2024-09-30,2024Q3,nellson nutraceutical,OBDC,MSDL,supporting_only,yes,False,True,True
+D5EV_223148adf3c57f1ce429ef5e,D5EC_5f513e79f9d4babae29dba44,2024-09-30,2024Q3,petvet care centers,ARCC,OTF,supporting_only,yes,False,True,True
+D5EV_2c8443f93602d23959d6c67a,D5EC_6176c448c6117d8dfcaf88f3,2024-09-30,2024Q3,pye barker fire and safety,ASIF,OTF,supporting_only,yes,False,True,True
+D5EV_5faab35be7673c082434fcab,D5EC_2e10a4a2316e3730d442caa9,2024-09-30,2024Q3,realpage,ASIF,OTF,supporting_only,yes,False,True,True
+D5EV_40fd3f8ad25d3a39cff86129,D5EC_f24adc0d35cc52cf771e6cde,2024-09-30,2024Q3,realpage,CIK1766037,OTF,supporting_only,yes,False,True,True
+D5EV_79ecfa2da80651a349e27709,D5EC_0eebbe29e45a8e1feabfcba9,2024-09-30,2024Q3,realpage,CIK1781870,OTF,supporting_only,yes,False,True,True
+D5EV_0e7d36c356bb8ba344365cda,D5EC_86b28a4bd2517beeb7bb3146,2024-09-30,2024Q3,realpage,CIK1925531,OTF,supporting_only,yes,False,True,True
+D5EV_291a2a8e8508e0808d00ab51,D5EC_c9c324cc68aa6adbc418e529,2024-09-30,2024Q3,realpage,CIK1976719,OTF,supporting_only,yes,False,True,True
+D5EV_96ff5b4cbdaeba17d3cbf37b,D5EC_e524f27c3d20a789c5764eac,2024-09-30,2024Q3,rfs opco,ARCC,MSDL,supporting_only,uncertain,False,False,True
+D5EV_29193e8c4ade8d5fc4130f10,D5EC_ca768146091f11f0764109f7,2024-09-30,2024Q3,snap fitness a stock,WHF,CION,strict,yes,True,True,True
+D5EV_81b0639ef3a5df20b12adab1,D5EC_602c8530d231f9fba9925f00,2024-09-30,2024Q3,triplepoint acquisition,WHF,SCM,strict,yes,True,True,True
+D5EV_31024582486f6782c726e217,D5EC_7beb88050506f6633916e47d,2024-09-30,2024Q3,xplor t1,ASIF,OTF,supporting_only,yes,False,True,True
+D5EV_f1023e56f9a8a7322097c229,D5EC_9c901a90cb41a1d677b6d1af,2024-12-31,2024Q4,allen media,OFS,CION,strict,yes,True,True,True
+D5EV_929a38407e646825ce51d687,D5EC_f1107a6ae848144cdbaa0bb1,2024-12-31,2024Q4,asurion,CIK1661306,OTF,supporting_only,yes,False,True,True
+D5EV_9cb1d48eb2aed8e4c9da7e25,D5EC_2d572b423f82b275bfd30b07,2024-12-31,2024Q4,blackhawk network,OBDC,OFS,supporting_only,yes,False,True,True
+D5EV_b49ae18bce39e03f3ab75565,D5EC_cdef9e7b676f0779d305b4e7,2024-12-31,2024Q4,finastra usa,CIK1872371,OTF,strict,yes,True,True,True
+D5EV_2872475ec640faf7eb7b6f3a,D5EC_fb54ac0b4ddad64153990661,2024-12-31,2024Q4,forescout technologies,ARCC,OTF,supporting_only,yes,False,True,True
+D5EV_44167ecf393fca0a38b730cc,D5EC_482fd8bfe4a7eea7821e6620,2024-12-31,2024Q4,inw manufacturing,CSWC,CION,strict,yes,True,True,True
+D5EV_8d88b8aad171e0558438e1d7,D5EC_c63a45369ececb32ef550d49,2024-12-31,2024Q4,isagenix international,CSWC,CION,strict,yes,True,True,True
+D5EV_0886264549f8d1edc918c351,D5EC_13a13ce210b39f91047226c1,2024-12-31,2024Q4,lab logistics,CSWC,WHF,strict,yes,True,True,True
+D5EV_12cdbe603d26ce6ee557c68c,D5EC_d5cf15b8c686ce3e7be12091,2024-12-31,2024Q4,lift brands a,CSWC,WHF,strict,yes,True,True,True
+D5EV_ae9fddd6692c2d1fb78938ed,D5EC_ecb3c214ed5d800666f30c39,2024-12-31,2024Q4,lift brands b,CSWC,WHF,strict,yes,True,True,True
+D5EV_bdd36469d2423b4d784e3b98,D5EC_a1ca6aebbf08f4c8a07f6d2d,2024-12-31,2024Q4,m2s intermediate,OCSL,WHF,supporting_only,yes,False,True,True
+D5EV_6a95a1a785595ec2522cfccb,D5EC_23dcc5032e759dcd25eebc54,2024-12-31,2024Q4,nellson nutraceutical,OBDC,MSDL,supporting_only,yes,False,True,True
+D5EV_f1018b988fe4aa8a8e1b8ed0,D5EC_f7592964d5fbdb763f0e6b51,2024-12-31,2024Q4,petvet care centers,ARCC,OTF,supporting_only,yes,False,True,True
+D5EV_461b4522db818800b411cf81,D5EC_fbb4527273d8c3233b3a9d6b,2024-12-31,2024Q4,pye barker fire and safety,ASIF,OTF,supporting_only,yes,False,True,True
+D5EV_16089877a8f98d5b837ead2b,D5EC_fce2bb2fb601951ab0abd7cd,2024-12-31,2024Q4,pye barker fire and safety,ASIF,OTF,supporting_only,yes,False,True,True
+D5EV_e178d4f3cb3d637d081942e1,D5EC_7b1dc1a2b4315d00d576b5c1,2024-12-31,2024Q4,securities,CIK1715933,LIEN,strict,uncertain,False,False,True
+D5EV_87a178fe2605a2efcf55fba1,D5EC_4bd5456c38911048cbe47633,2024-12-31,2024Q4,triplepoint acquisition,CIK1901037,WHF,strict,yes,True,True,True
+D5EV_d41ba6669cd8282839502643,D5EC_64cedc5a52b94ccefb424b21,2024-12-31,2024Q4,triplepoint acquisition,SCM,WHF,strict,yes,True,True,True
+D5EV_0b9ed1b3b2fa2a359dc54177,D5EC_e997e27eca29c000298f067d,2025-03-31,2025Q1,asurion,CIK1661306,OTF,supporting_only,yes,False,True,True
+D5EV_6a4eed319e9f8fe7f99747fa,D5EC_f91d1d5046f1b999a4a753fd,2025-03-31,2025Q1,idera,OFS,MSDL,strict,yes,True,True,True
+D5EV_07f53562e71f2c262ca39721,D5EC_4f5cc89eaa5d909a9ce3fddd,2025-03-31,2025Q1,investments,PSBD,TCPC,strict,uncertain,False,False,True
+D5EV_0c52b634a145a52d3e9d6a2d,D5EC_fc24da716cf2426943bc3444,2025-03-31,2025Q1,jp intermediate b,OFS,CION,strict,yes,True,True,True
+D5EV_31b1d7de3c01a293b4a24e0c,D5EC_31431d4a01059178e2751dae,2025-03-31,2025Q1,perkinelmer u s,CIK1869453,MSDL,strict,yes,True,True,True
+D5EV_b1e33c72796a87433c6f92eb,D5EC_008f98e6b57f1ba835f0d6f2,2025-03-31,2025Q1,perkinelmer u s,OCIC,MSDL,supporting_only,yes,False,True,True
+D5EV_52d76106e233964c89f9b289,D5EC_8d23c51ec0de6a3b964f9b3e,2025-03-31,2025Q1,petvet care centers,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_b4a04858985c8819b11ec70c,D5EC_cf6af117b232c0cdac4b1d37,2025-03-31,2025Q1,total investments,PSBD,MSDL,strict,no,False,False,True
+D5EV_aebedff93315b84fc959cf91,D5EC_03d91dcc4a10080388206fcb,2025-06-30,2025Q2,allen media,OFS,CION,strict,yes,True,True,True
+D5EV_a795f9724c29c76da74028e9,D5EC_f5044dc2d12da60485eb5180,2025-06-30,2025Q2,asurion,NMFC,OTF,supporting_only,uncertain,False,False,True
+D5EV_acf04b681c78da5fb50b8e31,D5EC_ef8caf244788c204fb641c76,2025-06-30,2025Q2,asurion,NMFC,OTF,supporting_only,uncertain,False,False,True
+D5EV_56eb0926deb6208c9d3be8f5,D5EC_6b4dab625959afc45e6a930f,2025-06-30,2025Q2,athenahealth,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_4cc14157b528999eaa6b757e,D5EC_d3e0e97653f9760afcd4535b,2025-06-30,2025Q2,connectwise,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_dc436360ecc599e08c348c0e,D5EC_065bc29e31be5b5c0cd4e675,2025-06-30,2025Q2,jp intermediate b,OFS,CION,strict,yes,True,True,True
+D5EV_01b58c3f356725d63b6e1f86,D5EC_f7868be530205330ab464457,2025-06-30,2025Q2,kaseya,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_22b92172837e5c656ae8a4fc,D5EC_5b1c70198a9cf89b4e4c92d0,2025-06-30,2025Q2,logrhythm,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_b851a769bc41a0c684807a5d,D5EC_bfbedd0a01f4a64e85fa30b8,2025-06-30,2025Q2,m2s intermediate,OCSL,WHF,supporting_only,yes,False,True,True
+D5EV_0a4ad52bbd0c50e6cfb05514,D5EC_c329836f58a0d68dc3e1aca0,2025-06-30,2025Q2,petvet care centers,ARCC,OTF,supporting_only,yes,False,True,True
+D5EV_afb2092fc81ff6e4bc35d01a,D5EC_b29928f64e1072a69d247d21,2025-06-30,2025Q2,petvet care centers,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_9d95c851974603588ee9e63d,D5EC_5aab67edbb59c4864075f5ca,2025-06-30,2025Q2,storable,NMFC,OTF,supporting_only,yes,False,True,True
+D5EV_ee0d1f55a8626ec9e07a6819,D5EC_0d55e9d3a6a3517b978ce949,2026-03-31,2026Q1,m2s intermediate,OCSL,WHF,supporting_only,yes,False,True,True
+D5EV_4bcc43807ee299de5de2ca0a,D5EC_bdf50a40b8d90ef96b681429,2026-03-31,2026Q1,real chemistry intermediate iii,NCDL,BBDC,strict,yes,True,True,True
+D5EV_f438ca82f7a27e794a1837a9,D5EC_03ea18827a74bda0ec1f74a2,2026-03-31,2026Q1,swoop intermediate iii,NCDL,BBDC,strict,yes,True,True,True

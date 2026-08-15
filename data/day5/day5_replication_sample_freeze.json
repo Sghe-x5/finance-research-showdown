@@ -1,0 +1,136 @@
+{
+  "duplicate_vote_audit": {
+    "blockers": {},
+    "duplicate_identity_count": 0,
+    "identity_definition": [
+      "period_end",
+      "normalized_borrower",
+      "source_ticker",
+      "target_ticker",
+      "source_prior_facility_id",
+      "target_prior_facility_id"
+    ],
+    "identity_set_sha256": "29151cb481af512de2522e91930bd4c4b8555a4f5ddb4cd643158b9acf6805fe",
+    "included_observations_checked": 67,
+    "independent_vote_blocker_count": 0,
+    "status": "pass_no_duplicate_independent_vote",
+    "target_current_data_used": false,
+    "unique_duplicate_vote_identities": 67
+  },
+  "freeze_date": "2026-08-15",
+  "human_consensus_counts_by_layer": {
+    "strict": {
+      "no": 1,
+      "uncertain": 2,
+      "yes": 31
+    },
+    "supporting": {
+      "no": 1,
+      "uncertain": 7,
+      "yes": 67
+    },
+    "supporting_only": {
+      "uncertain": 5,
+      "yes": 36
+    }
+  },
+  "included_counts": {
+    "strict": {
+      "borrower_to_cluster_distribution": {
+        "1": 7,
+        "2": 6,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      },
+      "counts_by_period": {
+        "2024Q1": 5,
+        "2024Q2": 5,
+        "2024Q3": 5,
+        "2024Q4": 9,
+        "2025Q1": 3,
+        "2025Q2": 2,
+        "2026Q1": 2
+      },
+      "maximum_clusters_from_one_borrower": 5,
+      "observations": 31,
+      "source_event_clusters": 31,
+      "unique_borrowers": 16
+    },
+    "supporting": {
+      "borrower_to_cluster_distribution": {
+        "1": 15,
+        "2": 11,
+        "3": 3,
+        "4": 1,
+        "5": 1,
+        "6": 2
+      },
+      "counts_by_period": {
+        "2024Q1": 10,
+        "2024Q2": 7,
+        "2024Q3": 14,
+        "2024Q4": 17,
+        "2025Q1": 6,
+        "2025Q2": 10,
+        "2026Q1": 3
+      },
+      "maximum_clusters_from_one_borrower": 6,
+      "observations": 67,
+      "source_event_clusters": 67,
+      "unique_borrowers": 33
+    }
+  },
+  "membership_key_gitignored": true,
+  "membership_key_sha256": "6c8e142d9ff70af3bcee32a40fbbbb68ee459276d2a2ec449219123d61201733",
+  "phase_a_commit": "88f358cbfcc0783ca54b9d8329b2d3a393702819",
+  "phase_a_consensus_sha256": "aef9a7d0e5fc89ef9e6d019f0ea0f1f09495089fcad74590e4747b4e27c2902b",
+  "power_guard_pre_structural": {
+    "guaranteed_underpowered_before_structural_review": false,
+    "minimum_continuing_borrowers": 15,
+    "minimum_continuing_clusters": 25,
+    "strict_current_borrowers": 16,
+    "strict_current_clusters": 31
+  },
+  "pre_review_counts": {
+    "strict": {
+      "observations": 34,
+      "source_event_clusters": 34,
+      "unique_borrowers": 19
+    },
+    "supporting": {
+      "observations": 75,
+      "source_event_clusters": 75,
+      "unique_borrowers": 39
+    }
+  },
+  "prohibitions": {
+    "excluded_or_uncertain_rows_replaced": false,
+    "predictions_errors_or_statistics_calculated": false,
+    "result_status_calculated": false,
+    "result_tag_created": false,
+    "supporting_only_promoted_to_strict": false,
+    "target_current_numeric_marks_opened": false,
+    "target_current_structure_opened": false
+  },
+  "sha256": {
+    "duplicate_vote_audit": "7ccff4d8a11e856a85ad230aadca00e1f0dce377d427153e07898fc778fae2ce",
+    "evaluator": "ecc92fb08bbf18781b88a24ba44a2d2c152eb9ac2d8d62d582606b5091f73ac4",
+    "final_preregistration": "909b4068e335cedbe1c819ed47c0e35ffbd6f0ebc9b8bd89ad8f99365a39f1fb",
+    "membership_audit": "5090a016867d308ee1760190129ecb1cb0a4a1957af1e448f8a6c30f03801e9b",
+    "membership_key": "6c8e142d9ff70af3bcee32a40fbbbb68ee459276d2a2ec449219123d61201733",
+    "ordered_strict_observation_ids": "dcd3977eb60d932116bce5215b08588474b5f50848dbb23f885fe25bd221f981",
+    "ordered_supporting_observation_ids": "7ed358f31598e17f50b3074ed122c54a123544b320ca94e36f601c891a9d1c2a",
+    "sample_generation_code": "a69dcdbad3ce25e83e7307a1f7ec33bb25604d4d2ec3d549f3dfb9373852ae86",
+    "strict_borrower_set": "0ca218b755a59c676394944924bf0c4a624b17a7daabc60630176283d27d77b3",
+    "strict_included_sample": "a42c462a83d960ed241fc48d91b89035a7cd0be44aeca0dcac5d20453b5719dd",
+    "strict_observation_id_set": "7fba4a93ddbe1bc16df33e83abd326100159dac02293743b48d0cdd6771f8383",
+    "strict_source_event_cluster_set": "dd3ae96baf7b01206303bc808b3848f6efef22ffb3f1b12a8fe2d77738bbd82e",
+    "supporting_borrower_set": "0d02a755bee15d7306a6a0214a5ae0fdd1f4e2ababd47059114540588a8b017d",
+    "supporting_included_sample": "d4890bcbce1f8880cb56ca9ffe86071d3514064d4ff8488c685ef5f3cb62b50f",
+    "supporting_observation_id_set": "8f2b2057acbe52fbff1b5a1231142edd59546881e78b1fe2f48661ced7ab5d59",
+    "supporting_source_event_cluster_set": "13ac0d77a1801551f80a2b3436c3af3aad898dea83acc4a11fbcd9c374a97dbc"
+  },
+  "status": "phase_b_two_layer_samples_frozen_outcome_blind",
+  "strict_is_subset_of_supporting": true
+}
