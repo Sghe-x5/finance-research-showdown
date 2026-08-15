@@ -1,0 +1,11 @@
+{
+  "event_review_consensus_sha256": "2a0c763e423b5616b3f9093f54a0073d5e8577b0fe4f5769fb2ca60ff26f9591",
+  "included_sample_sha256": "011da2ab9ccc39f5c2530295fee1b555377f4a2b36a302e45183873af603a670",
+  "sample_freeze_commit": "d27dec28cc361db03680820997b2d9e7e7463cda",
+  "structural_mapping_consensus_sha256": "a64a484f32f79f0053e06f15f2c0557e4198535a163fd29cb2a35fc73d91b768",
+  "structural_mapping_freeze_commit": "ac843d68e3ca28a28d7162b1868ed0503c26a3b0",
+  "preregistration_sha256": "6b19ee878c103122ae1734bfbd480aec2fdd88ae35b6368f24655a26b552fcdc",
+  "evaluator_sha256": "bcea297f43603316d4d3bc5fef9762bc2749eaddf36a3253222af66e8f132615",
+  "revealed_outcomes_sha256": "275300250ed7a8a85cf27078bbbdcf37086bc2c6a5ab2e8deeacdc658d4909ce",
+  "reveal_authorized": true
+}

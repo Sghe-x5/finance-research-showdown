@@ -1,0 +1,15 @@
+{
+  "authorization_field_set_exact": true,
+  "authorization_sha256": "fc6c9cba483d14e6fce009d356a6e5f58f543249f45912cee7925b0d94cf691a",
+  "evaluator_actual_sha256": "bcea297f43603316d4d3bc5fef9762bc2749eaddf36a3253222af66e8f132615",
+  "evaluator_authorized_sha256": "bcea297f43603316d4d3bc5fef9762bc2749eaddf36a3253222af66e8f132615",
+  "evaluator_self_hash_verification": "passed",
+  "exact_frozen_outcome_id_verification": "passed",
+  "frozen_and_revealed_observation_count": 37,
+  "numeric_outcomes_match_frozen_structural_fields": true,
+  "results_sha256": "73fbd25f16457a4b4f7c65e71054bbbe4dc678639112833a2cba54db496eb2c3",
+  "reveal_authorized": true,
+  "revealed_outcomes_actual_sha256": "275300250ed7a8a85cf27078bbbdcf37086bc2c6a5ab2e8deeacdc658d4909ce",
+  "revealed_outcomes_authorized_sha256": "275300250ed7a8a85cf27078bbbdcf37086bc2c6a5ab2e8deeacdc658d4909ce",
+  "structural_mapping_freeze_commit": "ac843d68e3ca28a28d7162b1868ed0503c26a3b0"
+}
