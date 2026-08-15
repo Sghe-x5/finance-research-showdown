@@ -1,0 +1,42 @@
+{
+  "blind_packet_rows": 75,
+  "blind_packet_source_event_clusters": 75,
+  "human_review_may_remove_but_never_add_replace_or_move_rows": true,
+  "private_key_gitignored": true,
+  "private_key_path": "private/day5/day5_event_review_key.json",
+  "prohibitions": {
+    "final_sample_frozen": false,
+    "predictions_errors_or_statistics_calculated": false,
+    "result_tag_created": false,
+    "target_current_numeric_marks_opened": false,
+    "target_current_structure_opened": false
+  },
+  "review_universe_rule": "supporting_candidate_rows",
+  "reviewer_packet_exposes_layer_membership": false,
+  "sha256": {
+    "blind_review_packet": "4f7c0e8941a321a7e95d5395ce60182f380a063933dc2f2c8dc5373771172625",
+    "candidate_file": "5b0b79b0f274637e40a621d7fbcfc29ffa612bc990c25d2b784926506b39b246",
+    "evaluator": "ecc92fb08bbf18781b88a24ba44a2d2c152eb9ac2d8d62d582606b5091f73ac4",
+    "ordered_review_observation_ids": "97e1a1fb2b9cb82ef03b394afd2d9d05a2f3ad868e5130b5204bda11fd7dbca2",
+    "preregistration_draft": "65bf2b2a88cc61521eaaf2dd0e43af8a992a6fb4d1c1cc0dd4d8ef3bb434fd44",
+    "private_review_and_evidence_key": "6c8e142d9ff70af3bcee32a40fbbbb68ee459276d2a2ec449219123d61201733",
+    "strict_borrower_set": "f7f615a2f8f3c890fd91a46dc7cd2f15199abc3254169059fd1d04b96c65fc69",
+    "strict_candidate_observation_id_set": "eb1bc31254fdafbc6fe38009c687420cfcb00440f2b83d92124bdb6cb16ae215",
+    "strict_source_event_cluster_set": "3aea95185ecd85aa45bb23c846d04ac6c3e9e10dc732fa98bdfc73003705ed44",
+    "supporting_borrower_set": "d0cb742683f8f2e47cda8e7aff4559c6a68a2e0057871a97ea1d03a125a4303a",
+    "supporting_candidate_observation_id_set": "74a519cfe494c33a9c0755db6e7613977703e4f571ab211272005a301424b77b",
+    "supporting_source_event_cluster_set": "ea8fc26e78923485ab96df3d76d4590efdca24bef6079adbeab7a53ac3b3bc79"
+  },
+  "status": "outcome_blind_candidate_review_preparation_not_sample_freeze",
+  "strict_candidate_counts": {
+    "borrowers": 19,
+    "observations": 34,
+    "source_event_clusters": 34
+  },
+  "strict_is_subset_of_supporting": true,
+  "supporting_candidate_counts": {
+    "borrowers": 39,
+    "observations": 75,
+    "source_event_clusters": 75
+  }
+}
