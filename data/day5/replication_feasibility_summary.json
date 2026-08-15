@@ -1,0 +1,261 @@
+{
+  "candidate_file_sha256": "c7cbd80b8a9a181f384383507292555d0b536a306f7f783f0c38c10e89824284",
+  "candidate_rows_all_relationships": 2024,
+  "day4_result_status_carried_forward_without_reinterpretation": "exploratory_inconclusive",
+  "diagnostics": {
+    "duplicate_vote_identities": 0,
+    "duplicate_vote_rows": 0,
+    "exact_borrower_blocks": 7181,
+    "new_fund_exact_borrower_blocks": 2434,
+    "source_delta_not_computable": 27377,
+    "source_not_before_target_cutoff": 2852,
+    "source_not_movement": 38326,
+    "source_prior_not_unique": 167865,
+    "strict_new_borrower_exact_borrower_blocks": 1548,
+    "target_prior_not_unique_strict": 2305
+  },
+  "duplicate_vote_audit": {
+    "duplicate_identities": 0,
+    "duplicate_rows": 0,
+    "status": "clear"
+  },
+  "fund_screen": {
+    "additional_funds_in_any_candidate_relationship": 24,
+    "additional_funds_with_at_least_two_standard_periods": 143,
+    "additional_listed_fund_proxies": 37,
+    "day4_funds": 19
+  },
+  "input_sha256": {
+    "day3_manager_map": "e3850b8721d192cd93f758b79e4824bb7993fc74ac8f9b56da36d7e82934bdb6",
+    "day3_reporting_order_extended": "11bfabd0faf0507c47cee950d82dc89f77e6d2b827bba44b666df6f42005ca8b",
+    "day3_universe_expansion_estimate": "46890894e4df532b073a95f803aab2bf92d7edf0234474e44f2f3030ad6dee31",
+    "day4_frozen_included_sample": "011da2ab9ccc39f5c2530295fee1b555377f4a2b36a302e45183873af603a670",
+    "economic_facility_v2_all_funds_cache": "535ec3a3e8e0e986881dbaa417cba441dd913be6186224ce166da6caea523a71"
+  },
+  "locked_hypothesis": {
+    "B0": "target_prior_mark",
+    "ShadowNAV": "target_prior_mark + (source_current_mark - source_prior_mark)",
+    "bootstrap": "borrower-cluster bootstrap; 10000 draws; seed 20260814",
+    "day4_six_decision_criteria_unchanged": true,
+    "independent_event_unit": "unique source economic-facility movement event",
+    "movement_definition": "abs(source_current_mark - source_prior_mark) >= 0.005",
+    "multiple_targets": "average inside source_event_cluster_id before primary test",
+    "optimized_reporting_window_filter_added": false,
+    "permutation": "borrower-clustered sign-flip; 100000 draws; seed 20260814; add-one correction"
+  },
+  "new_fund": {
+    "all_additional_fund_ciks_in_selected_relationships": [
+      "17313",
+      "1143513",
+      "1370755",
+      "1487918",
+      "1534254",
+      "1551901",
+      "1552198",
+      "1661306",
+      "1715933",
+      "1747777",
+      "1782524",
+      "1794776",
+      "1843162",
+      "1872371",
+      "1901037",
+      "1923622"
+    ],
+    "candidate_new_funds": 16,
+    "counts_by_period": {
+      "2024Q1": 11,
+      "2024Q2": 7,
+      "2024Q3": 10,
+      "2024Q4": 17,
+      "2025Q1": 8,
+      "2025Q2": 12
+    },
+    "counts_by_source": {
+      "ARCC": 7,
+      "ASIF": 3,
+      "CICB": 3,
+      "CIK1661306": 1,
+      "CIK1715933": 1,
+      "CIK1872371": 1,
+      "CIK1901037": 2,
+      "CSWC": 10,
+      "GLAD": 1,
+      "NMFC": 13,
+      "OBDC": 3,
+      "OCSL": 2,
+      "OFS": 10,
+      "PSBD": 2,
+      "SCM": 1,
+      "WHF": 5
+    },
+    "counts_by_target": {
+      "CICB": 15,
+      "CSWC": 4,
+      "GLAD": 1,
+      "LIEN": 1,
+      "MSDL": 5,
+      "OFS": 1,
+      "OTF": 23,
+      "PGIM": 4,
+      "SCM": 1,
+      "TCPC": 1,
+      "WHF": 9
+    },
+    "exact_borrower_block_target_relations_considered": 2434,
+    "manager_relationship_before_cross_manager_primary_filter": {
+      "cross_manager": 65,
+      "same_manager": 1944,
+      "total": 2009
+    },
+    "new_source_funds": 11,
+    "new_target_funds": 11,
+    "reporting_window_days": {
+      "max": 36.207639,
+      "median": 6.082639,
+      "min": 0.04375,
+      "p25": 1.979861,
+      "p75": 10.790972
+    },
+    "requiring_human_facility_review": 65,
+    "source_event_clusters": 63,
+    "source_target_fund_pairs": 25,
+    "surviving_exact_borrower_and_unique_facility_match": 65,
+    "target_cutoff_timing": {
+      "periodic_filing_proxy_pending_review": 65,
+      "verified_earliest_results": 0
+    },
+    "target_observations_cross_manager": 65,
+    "unique_normalized_borrowers": 36
+  },
+  "overlap_audit": {
+    "day4_borrower_rows_all_candidates": 98,
+    "day4_borrower_rows_strict": 0,
+    "day4_source_event_rows_all_candidates": 15,
+    "day4_source_event_rows_new_fund": 0,
+    "development_borrower_rows_all_candidates": 56,
+    "development_borrower_rows_strict": 0
+  },
+  "period_availability": {
+    "aggregate_cache_standard_periods": [
+      "2023Q4",
+      "2024Q1",
+      "2024Q2",
+      "2024Q3",
+      "2024Q4",
+      "2025Q1",
+      "2025Q2",
+      "2025Q3"
+    ],
+    "development_2025Q3_excluded": true,
+    "later_untouched_quarters_available_in_existing_cache": [],
+    "requested_primary": [
+      "2024Q1",
+      "2024Q2",
+      "2024Q3",
+      "2024Q4",
+      "2025Q1",
+      "2025Q2"
+    ]
+  },
+  "planning_target": {
+    "appears_feasible_before_human_review": false,
+    "caveat": "Counts are pre-review maxima. Facility identity, added-fund manager family, listed-target status, and proxy reporting cutoffs must be verified without outcomes before any freeze.",
+    "independent_source_event_clusters": 80,
+    "not_a_pass_criterion": true,
+    "unique_borrowers": 50
+  },
+  "prohibitions": {
+    "confirmatory_decision_assigned": false,
+    "errors_calculated": false,
+    "inferential_statistics_calculated": false,
+    "predictions_materialized": false,
+    "replication_result_calculated": false,
+    "result_tag_created": false,
+    "sample_frozen": false,
+    "target_numeric_outcomes_materialized": false,
+    "target_same_period_numeric_fields_joined": false
+  },
+  "status": "outcome_blind_replication_feasibility_only",
+  "strict_new_borrower": {
+    "all_additional_fund_ciks_in_selected_relationships": [
+      "17313",
+      "1143513",
+      "1370755",
+      "1487918",
+      "1534254",
+      "1551901",
+      "1552198",
+      "1715933",
+      "1747777",
+      "1782524",
+      "1794776",
+      "1843162",
+      "1872371",
+      "1901037",
+      "1923622"
+    ],
+    "candidate_new_funds": 15,
+    "counts_by_period": {
+      "2024Q1": 5,
+      "2024Q2": 5,
+      "2024Q3": 6,
+      "2024Q4": 12,
+      "2025Q1": 6,
+      "2025Q2": 2
+    },
+    "counts_by_source": {
+      "CICB": 3,
+      "CIK1715933": 1,
+      "CIK1872371": 1,
+      "CIK1901037": 2,
+      "CSWC": 10,
+      "GLAD": 1,
+      "OFS": 10,
+      "PSBD": 2,
+      "SCM": 1,
+      "WHF": 5
+    },
+    "counts_by_target": {
+      "CICB": 15,
+      "CSWC": 4,
+      "LIEN": 1,
+      "MSDL": 2,
+      "OTF": 1,
+      "PGIM": 4,
+      "SCM": 1,
+      "TCPC": 1,
+      "WHF": 7
+    },
+    "exact_borrower_block_target_relations_considered": 1548,
+    "manager_relationship_before_cross_manager_primary_filter": {
+      "cross_manager": 36,
+      "same_manager": 1497,
+      "total": 1533
+    },
+    "new_source_funds": 10,
+    "new_target_funds": 9,
+    "reporting_window_days": {
+      "max": 36.207639,
+      "median": 6.054861000000001,
+      "min": 0.415972,
+      "p25": 2.3572914999999997,
+      "p75": 12.8753475
+    },
+    "requiring_human_facility_review": 36,
+    "source_event_clusters": 34,
+    "source_target_fund_pairs": 16,
+    "surviving_exact_borrower_and_unique_facility_match": 36,
+    "target_cutoff_timing": {
+      "periodic_filing_proxy_pending_review": 36,
+      "verified_earliest_results": 0
+    },
+    "target_observations_cross_manager": 36,
+    "unique_normalized_borrowers": 18
+  },
+  "universe_definitions": {
+    "manager_status": "Day 4 funds use the official map; added funds use deterministic filer-name family proxies and require canonical manager verification before freezing",
+    "new_fund": "at least one fund outside the Day 4 19-fund universe; Day 4 source events excluded; previously seen borrowers allowed; proxy cross-manager only",
+    "strict_new_borrower": "new source fund; borrower absent from Day 2/Day 3 development and Day 4; source event absent from Day 4; proxy cross-manager only"
+  }
+}
