@@ -1,0 +1,73 @@
+{
+  "aggregation_implementation": "scripts/day3/aggregate_facilities.py::economic_facility_v2",
+  "aggregation_rules_changed": false,
+  "by_archive": [
+    {
+      "archive_id": "2026_01",
+      "duplicate_rows_removed": 0,
+      "normalized_rows": 906,
+      "raw_soi_rows": 1040,
+      "status": "parsed_with_locked_normalization"
+    },
+    {
+      "archive_id": "2026_02",
+      "duplicate_rows_removed": 0,
+      "normalized_rows": 45714,
+      "raw_soi_rows": 62345,
+      "status": "parsed_with_locked_normalization"
+    },
+    {
+      "archive_id": "2026_03",
+      "duplicate_rows_removed": 0,
+      "normalized_rows": 57339,
+      "raw_soi_rows": 86757,
+      "status": "parsed_with_locked_normalization"
+    },
+    {
+      "archive_id": "2026_04",
+      "duplicate_rows_removed": 0,
+      "normalized_rows": 3766,
+      "raw_soi_rows": 4213,
+      "status": "parsed_with_locked_normalization"
+    },
+    {
+      "archive_id": "2026_05",
+      "duplicate_rows_removed": 0,
+      "normalized_rows": 113858,
+      "raw_soi_rows": 165099,
+      "status": "parsed_with_locked_normalization"
+    },
+    {
+      "archive_id": "2026_06",
+      "duplicate_rows_removed": 0,
+      "normalized_rows": 0,
+      "raw_soi_rows": 0,
+      "status": "no_financial_soi_table"
+    }
+  ],
+  "current_period_ends": {
+    "2025-11-30": 439,
+    "2025-12-31": 55825,
+    "2026-02-28": 424,
+    "2026-03-31": 58029
+  },
+  "current_period_facility_rows": 114717,
+  "economic_facility_rows": 215120,
+  "issuer_total_rows_dropped": 4700,
+  "manifest_sha256": "87da5c60ee2af82e743a294107e6ec4483314fcfc0d0e0cf9c809d62051db99c",
+  "matcher_rules_changed": false,
+  "normalization_implementation": "scripts/day2/parse_bdc_soi.py::normalize_row",
+  "normalization_rules_changed": false,
+  "normalized_rows": 221583,
+  "output_cache": "/private/tmp/finance-day5-sec-cache/bdc_facilities_2026_new_agg.csv",
+  "output_sha256": "4a02fc27bba48c48ded40e96d231b1487659b7733f60326796da2e7e67896925",
+  "raw_and_aggregate_storage": "outside Git",
+  "raw_archives": 6,
+  "required_periods_recovered": {
+    "2025-12-31": 55825,
+    "2026-03-31": 58029
+  },
+  "status": "new_months_parsed_with_locked_pipeline",
+  "target_current_numeric_outcomes_materialized_to_git": false,
+  "universe_ciks_in_new_months": 182
+}

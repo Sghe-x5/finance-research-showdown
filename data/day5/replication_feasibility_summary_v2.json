@@ -1,0 +1,184 @@
+{
+  "candidate_file_sha256": "5b0b79b0f274637e40a621d7fbcfc29ffa612bc990c25d2b784926506b39b246",
+  "contaminated_periods_excluded": [
+    "2025Q3",
+    "2025Q4"
+  ],
+  "duplicate_vote_audit": {
+    "duplicate_identities": 0,
+    "duplicate_rows": 0
+  },
+  "included_periods": [
+    "2024Q1",
+    "2024Q2",
+    "2024Q3",
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2026Q1"
+  ],
+  "incremental_2025Q4": {
+    "borrowers": 0,
+    "clusters": 0,
+    "observations": 0,
+    "reason": "excluded_contaminated_period"
+  },
+  "incremental_2026Q1": {
+    "strict_borrowers": 2,
+    "strict_clusters": 2,
+    "strict_observations": 2,
+    "supporting_borrowers": 3,
+    "supporting_clusters": 3,
+    "supporting_observations": 3
+  },
+  "input_sha256": {
+    "historical_facilities": "535ec3a3e8e0e986881dbaa417cba441dd913be6186224ce166da6caea523a71",
+    "independence_audit": "ff6d882257dc4d3cd277decd2ddf66676e907a65e906a6e55cbb677a593bef13",
+    "listing_verified": "07ffd14ea8adca9c6a3de6b9b18e48a693df0f6d2a82d302d74cd931a992bf8a",
+    "manager_verified": "c69d581ce59624f0f00b4a89fe53f1e3e9721e4e657e262fcc4b23352a561d41",
+    "new_facilities": "4a02fc27bba48c48ded40e96d231b1487659b7733f60326796da2e7e67896925",
+    "reporting_verified": "0d6f5f291a25e8dd4150376c316220b039512df1c7124d678d247eb1731c7c89"
+  },
+  "locked_rules": {
+    "decision_criteria_changed": false,
+    "economic_facility": "economic_facility_v2",
+    "hypothesis_changed": false,
+    "matcher_changed": false,
+    "movement_threshold": 0.005
+  },
+  "planning_target": {
+    "appears_feasible": false,
+    "borrowers": 50,
+    "clusters": 80,
+    "planning_only_not_decision_criterion": true
+  },
+  "prohibitions": {
+    "inferential_statistics_calculated": false,
+    "predictions_or_errors_calculated": false,
+    "result_tag_created": false,
+    "sample_frozen": false,
+    "target_same_period_numeric_values_materialized": false
+  },
+  "status": "outcome_blind_replication_feasibility_v2_only",
+  "strict_new_borrower": {
+    "additional_funds": 15,
+    "counts_by_quarter": {
+      "2024Q1": 5,
+      "2024Q2": 5,
+      "2024Q3": 5,
+      "2024Q4": 10,
+      "2025Q1": 5,
+      "2025Q2": 2,
+      "2026Q1": 2
+    },
+    "counts_by_source": {
+      "CIK1715933": 1,
+      "CIK1869453": 1,
+      "CIK1872371": 1,
+      "CIK1901037": 1,
+      "CION": 2,
+      "CSWC": 10,
+      "NCDL": 2,
+      "OFS": 10,
+      "PSBD": 2,
+      "SCM": 1,
+      "WHF": 3
+    },
+    "counts_by_target": {
+      "BBDC": 2,
+      "CION": 16,
+      "CSWC": 2,
+      "LIEN": 1,
+      "MSDL": 3,
+      "OTF": 1,
+      "SCM": 1,
+      "TCPC": 1,
+      "WHF": 7
+    },
+    "observations": 34,
+    "reporting_window_days": {
+      "max": 40.72728,
+      "median": 6.4375925,
+      "min": 0.169433,
+      "p25": 1.61431425,
+      "p75": 7.03863975
+    },
+    "requires_human_facility_review": 34,
+    "source_event_clusters": 34,
+    "source_target_pairs": 15,
+    "unique_borrowers": 19
+  },
+  "supporting_new_fund": {
+    "additional_funds": 21,
+    "counts_by_quarter": {
+      "2024Q1": 11,
+      "2024Q2": 7,
+      "2024Q3": 16,
+      "2024Q4": 18,
+      "2025Q1": 8,
+      "2025Q2": 12,
+      "2026Q1": 3
+    },
+    "counts_by_source": {
+      "ARCC": 7,
+      "ASIF": 8,
+      "CIK1661306": 2,
+      "CIK1715933": 1,
+      "CIK1766037": 1,
+      "CIK1781870": 1,
+      "CIK1869453": 1,
+      "CIK1872371": 1,
+      "CIK1901037": 1,
+      "CIK1925531": 1,
+      "CIK1976719": 1,
+      "CION": 2,
+      "CSWC": 10,
+      "NCDL": 2,
+      "NMFC": 13,
+      "OBDC": 3,
+      "OCIC": 1,
+      "OCSL": 3,
+      "OFS": 10,
+      "PSBD": 2,
+      "SCM": 1,
+      "WHF": 3
+    },
+    "counts_by_target": {
+      "BBDC": 2,
+      "CION": 16,
+      "CSWC": 2,
+      "GLAD": 1,
+      "LIEN": 1,
+      "MSDL": 7,
+      "OFS": 1,
+      "OTF": 33,
+      "SCM": 1,
+      "TCPC": 1,
+      "WHF": 10
+    },
+    "observations": 75,
+    "reporting_window_days": {
+      "max": 47.62103,
+      "median": 5.215648,
+      "min": 0.134711,
+      "p25": 1.8291145,
+      "p75": 9.170833
+    },
+    "requires_human_facility_review": 75,
+    "source_event_clusters": 75,
+    "source_target_pairs": 29,
+    "unique_borrowers": 39
+  },
+  "verification_attrition": {
+    "cutoff_timestamp_changes_on_common_candidates": 1924,
+    "provisional_candidate_rows": 2060,
+    "rows_newly_enabled_by_verified_cutoff": 280,
+    "same_manager_candidates": 2114,
+    "source_manager_unverified": 0,
+    "target_manager_unverified": 0,
+    "target_not_verified_listed_equity": 129,
+    "target_timing_proxy_rows_before_verification": 779,
+    "timing_proxy_rows_excluded_after_verification": 136,
+    "verified_candidate_rows": 2204
+  }
+}

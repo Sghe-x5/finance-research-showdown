@@ -1,0 +1,38 @@
+{
+  "audit_date": "2026-08-15",
+  "audit_scope": "Outcome-period independence for the Day 5 replication expansion",
+  "periods": {
+    "2025Q4": {
+      "conditions": {
+        "movement_threshold_not_formulated_from_period": "PASS",
+        "shadow_nav_formula_not_chosen_from_period": "PASS",
+        "matcher_thresholds_not_tuned_from_period": "PASS",
+        "target_outcomes_not_inspected": "FAIL",
+        "decision_criteria_not_chosen_from_period": "PASS"
+      },
+      "contamination_evidence": [
+        "data/day2/bdc_contaminated_examples.csv contains the quarantined Auctane and Medallia 2025Q4 calculation fixtures",
+        "docs/research/DAY2_RESULTS.md records those fixtures as inspected calculation checks excluded from estimates"
+      ],
+      "included_as_replication_outcome_period": false,
+      "allowed_use": "prior-quarter structural and source-prior context for 2026Q1 only",
+      "overall_status": "FAIL_CONTAMINATED_TARGET_OUTCOME_PERIOD"
+    },
+    "2026Q1": {
+      "conditions": {
+        "movement_threshold_not_formulated_from_period": "PASS",
+        "shadow_nav_formula_not_chosen_from_period": "PASS",
+        "matcher_thresholds_not_tuned_from_period": "PASS",
+        "target_outcomes_not_inspected": "PASS",
+        "decision_criteria_not_chosen_from_period": "PASS"
+      },
+      "contamination_evidence": [],
+      "included_as_replication_outcome_period": true,
+      "allowed_use": "outcome-blind feasibility construction only",
+      "overall_status": "PASS_UNTOUCHED"
+    }
+  },
+  "replication_result_evaluated": false,
+  "sample_freeze_authorized": false,
+  "target_same_period_numeric_values_opened": false
+}
